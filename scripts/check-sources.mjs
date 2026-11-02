@@ -3,7 +3,7 @@ import { readFile, writeFile, mkdir, readdir } from 'node:fs/promises';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-const allowedHosts = new Set(['www.fraxplus.org','fraxplus.org','www.va.gov','va.gov','www.pbm.va.gov','pbm.va.gov','department.va.gov','kdigo.org','diabetesjournals.org','doi.org','www.asge.org','asmbs.org','journal.chestnet.org','gastro.org','downloads.asam.org','www.acpjournals.org','journals.lww.com','pmc.ncbi.nlm.nih.gov', 'www.cdc.gov', 'cdc.gov', 'www.ahajournals.org', 'ahajournals.org', 'www.heart.org', 'heart.org', 'professional.heart.org', 'healthquality.va.gov', 'www.healthquality.va.gov', 'www.uspreventiveservicestaskforce.org', 'uspreventiveservicestaskforce.org']);
+const allowedHosts = new Set(['www.jacc.org','academic.oup.com','www.accessdata.fda.gov','www.dailymed.nlm.nih.gov','www.fraxplus.org','fraxplus.org','www.va.gov','va.gov','www.pbm.va.gov','pbm.va.gov','department.va.gov','kdigo.org','diabetesjournals.org','doi.org','www.asge.org','asmbs.org','journal.chestnet.org','gastro.org','downloads.asam.org','www.acpjournals.org','journals.lww.com','pmc.ncbi.nlm.nih.gov', 'www.cdc.gov', 'cdc.gov', 'www.ahajournals.org', 'ahajournals.org', 'www.heart.org', 'heart.org', 'professional.heart.org', 'healthquality.va.gov', 'www.healthquality.va.gov', 'www.uspreventiveservicestaskforce.org', 'uspreventiveservicestaskforce.org']);
 export function assertSourceUrl(value) {
   const url = new URL(value);
   if (url.protocol !== 'https:' || !allowedHosts.has(url.hostname) || url.username || url.password || url.port) throw new Error('Source URL is outside the maintained primary-source allowlist.');

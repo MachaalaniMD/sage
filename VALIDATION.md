@@ -4,7 +4,7 @@ This records software checks, not clinical approval. Every clinical recommendati
 
 ## Automated checks
 
-- 160 Vitest tests passed: 65 core rule/provenance tests, 17 expansion/VA tests, 34 PREVENT tests, 25 other risk-tool tests, 11 monitor tests and 8 VA importer tests.
+- 189 Vitest tests passed: 66 core rule/provenance tests, 28 HF/grade/dose tests, 17 expansion/VA tests, 34 PREVENT tests, 25 other risk-tool tests, 11 monitor tests and 8 VA importer tests.
 - PREVENT matches all 12 original spreadsheet outputs (sex × endpoint × horizon) within 1e-12, plus the primary paper’s rounded worked examples.
 - Post-MI tests cover ASCVD implication, explicit risk classification, lipid thresholds, ACS/CCD timing, bleeding/OAC exclusions and first-event score withholding.
 - TypeScript checking and the Vite production build passed.
@@ -41,9 +41,19 @@ This records software checks, not clinical approval. Every clinical recommendati
 - After both preview servers were stopped, a production reload still loaded the VA workspace; finerenone search and the West Haven context worked offline.
 - Production build precaches the separate VA data chunk alongside the app. Full-source standalone packaging includes the dataset and disables service-worker registration.
 
+## v0.4 heart-failure and cardiac checks
+
+- Automated tests cover EF 40/41/49/50, missing prior-EF or filling-pressure context, improved EF with prior LVEF ≤40%, and continued GDMT even at NYHA I.
+- HFpEF does not inherit the four Class 1/A HFrEF records. Both dated SGLT2 records appear only with the encoded context; renal, potassium, dialysis and current-MRA flags gate selected initiation references.
+- Conditional Class 2b options require explicit review context. Ivabradine, digoxin, vericiguat and post-MI beta blocker reassessment remain library references with their unmodeled criteria stated.
+- Class and evidence filters combine independently; Class 3 No Benefit and Harm stay distinct. ESC Roman-numeral classes retain original display values; ACC consensus has no fabricated COR/LOE.
+- HF finerenone label targets are 40 mg at baseline eGFR ≥60 and 20 mg at baseline eGFR 25–<60, with separate initial doses and label provenance. These are not case-specific prescriptions.
+- TypeScript and the production subpath build passed. The standalone package was regenerated.
+- Interactive browser verification of v0.4 was unavailable: the connected browser reported an unavailable user interface, including through its documented tab API. Native Codex control was denied. Previous-version browser checks above do not validate the new interface.
+
 ## Source-monitor check
 
-The live baseline attempt inspected 17 maintained documents/index pages. Twelve baseline fingerprints were captured. Five AHA/publisher endpoints returned HTTP 403 and remain flagged as access failures. No clinical data was modified. The report is included in `src/data/source-check-report.json` and exposed in the app’s updates screen. New v0.2/v0.3 sources and VA datasets additionally require initial fingerprints; the original report is not a new full live baseline. Scheduled monitoring is included in the repository; its execution status must be checked in GitHub Actions.
+The live baseline attempt inspected 17 maintained documents/index pages. Twelve baseline fingerprints were captured. Five AHA/publisher endpoints returned HTTP 403 and remain flagged as access failures. No clinical data was modified. The report is included in `src/data/source-check-report.json` and exposed in the app’s updates screen. New v0.2–v0.4 sources and VA datasets additionally require initial fingerprints; the original report is not a new full live baseline. Scheduled monitoring is included in the repository; its execution status must be checked in GitHub Actions.
 
 ## Public deployment
 

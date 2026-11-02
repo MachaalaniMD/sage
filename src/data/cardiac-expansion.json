@@ -1,0 +1,604 @@
+[
+  {
+    "id": "hfpef-sglt2",
+    "topic": "heart-failure",
+    "title": "HFpEF · SGLT2 inhibitors",
+    "summary": "SGLT2 inhibition can reduce HF events; diabetes is not required.",
+    "population": "Established HFpEF; LVEF ≥50%.",
+    "sourceId": "hf-2022",
+    "locator": "Official 2022 slide set, slide 111, recommendation 2",
+    "gradeSystem": "ACC/AHA COR / LOE",
+    "strength": "Class 2a",
+    "evidenceLevel": "B-R",
+    "evidenceNote": "Original source grade; recommendation class and evidence level are independent.",
+    "cautions": [
+      "2022 US grade retained; see the separate 2026 ACC pathway and ESC guideline.",
+      "HFpEF benefit is driven largely by fewer HF hospitalizations; do not promise a separately proven mortality benefit.",
+      "Check agent-specific renal eligibility, volume status and ketoacidosis risk."
+    ],
+    "tags": [
+      "hfpef",
+      "hfpef · sglt2 inhibitors"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "hfpef-sglt2",
+    "hfPhenotypes": [
+      "hfpef"
+    ]
+  },
+  {
+    "id": "hfpef-bp",
+    "topic": "heart-failure",
+    "title": "HFpEF · control hypertension",
+    "summary": "Titrate antihypertensives to guideline BP targets.",
+    "population": "HFpEF with hypertension.",
+    "sourceId": "hf-2022",
+    "locator": "Official 2022 slide set, slide 111, recommendation 1",
+    "gradeSystem": "ACC/AHA COR / LOE",
+    "strength": "Class 1",
+    "evidenceLevel": "C-LD",
+    "evidenceNote": "Original source grade; recommendation class and evidence level are independent.",
+    "cautions": [
+      "Reference only; assess contraindications, current therapy and monitoring."
+    ],
+    "tags": [
+      "hfpef",
+      "hfpef · control hypertension"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "hfpef-bp",
+    "hfPhenotypes": [
+      "hfpef"
+    ]
+  },
+  {
+    "id": "hfpef-af",
+    "topic": "heart-failure",
+    "title": "HFpEF · manage atrial fibrillation",
+    "summary": "AF management can improve symptoms.",
+    "population": "HFpEF with atrial fibrillation.",
+    "sourceId": "hf-2022",
+    "locator": "Official 2022 slide set, slide 111, recommendation 3",
+    "gradeSystem": "ACC/AHA COR / LOE",
+    "strength": "Class 2a",
+    "evidenceLevel": "C-EO",
+    "evidenceNote": "Original source grade; recommendation class and evidence level are independent.",
+    "cautions": [
+      "Assess rhythm/rate strategy and stroke prevention separately; HFpEF alone does not select an anticoagulant."
+    ],
+    "tags": [
+      "hfpef",
+      "hfpef · manage atrial fibrillation"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "hfpef-af",
+    "hfPhenotypes": [
+      "hfpef"
+    ]
+  },
+  {
+    "id": "hfpef-mra",
+    "topic": "heart-failure",
+    "title": "HFpEF · selected MRA use",
+    "summary": "MRA may reduce hospitalizations, particularly toward the lower EF range.",
+    "population": "Selected patients with established HFpEF.",
+    "sourceId": "hf-2022",
+    "locator": "Official 2022 slide set, slide 112, recommendation 4",
+    "gradeSystem": "ACC/AHA COR / LOE",
+    "strength": "Class 2b",
+    "evidenceLevel": "B-R",
+    "evidenceNote": "Original source grade; recommendation class and evidence level are independent.",
+    "cautions": [
+      "Selection requires clinician review; no universal EF cutoff is inferred from “lower end.”",
+      "These are separate options, not instructions to combine ACEi, ARB and ARNI or multiple MRAs.",
+      "The 2022 MRA evidence precedes the newer finerenone pathway."
+    ],
+    "tags": [
+      "hfpef",
+      "hfpef · selected mra use"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "hfpef-mra",
+    "hfPhenotypes": [
+      "hfpef"
+    ]
+  },
+  {
+    "id": "hfpef-arb",
+    "topic": "heart-failure",
+    "title": "HFpEF · selected ARB use",
+    "summary": "ARB may reduce hospitalizations, particularly toward the lower EF range.",
+    "population": "Selected patients with established HFpEF.",
+    "sourceId": "hf-2022",
+    "locator": "Official 2022 slide set, slide 112, recommendation 5",
+    "gradeSystem": "ACC/AHA COR / LOE",
+    "strength": "Class 2b",
+    "evidenceLevel": "B-R",
+    "evidenceNote": "Original source grade; recommendation class and evidence level are independent.",
+    "cautions": [
+      "Selection requires clinician review; no universal EF cutoff is inferred from “lower end.”",
+      "These are separate options, not instructions to combine ACEi, ARB and ARNI or multiple MRAs.",
+      "The 2022 MRA evidence precedes the newer finerenone pathway."
+    ],
+    "tags": [
+      "hfpef",
+      "hfpef · selected arb use"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "hfpef-arb",
+    "hfPhenotypes": [
+      "hfpef"
+    ]
+  },
+  {
+    "id": "hfpef-arni",
+    "topic": "heart-failure",
+    "title": "HFpEF · selected ARNI use",
+    "summary": "ARNI may reduce hospitalizations, particularly toward the lower EF range.",
+    "population": "Selected patients with established HFpEF.",
+    "sourceId": "hf-2022",
+    "locator": "Official 2022 slide set, slide 112, recommendation 6",
+    "gradeSystem": "ACC/AHA COR / LOE",
+    "strength": "Class 2b",
+    "evidenceLevel": "B-R",
+    "evidenceNote": "Original source grade; recommendation class and evidence level are independent.",
+    "cautions": [
+      "Selection requires clinician review; no universal EF cutoff is inferred from “lower end.”",
+      "These are separate options, not instructions to combine ACEi, ARB and ARNI or multiple MRAs.",
+      "The 2022 MRA evidence precedes the newer finerenone pathway."
+    ],
+    "tags": [
+      "hfpef",
+      "hfpef · selected arni use"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "hfpef-arni",
+    "hfPhenotypes": [
+      "hfpef"
+    ]
+  },
+  {
+    "id": "hfpef-nitrates",
+    "topic": "heart-failure",
+    "title": "HFpEF · routine nitrates / PDE-5 inhibitors",
+    "summary": "Routine use solely to improve activity or quality of life provides no benefit.",
+    "population": "HFpEF; routine activity/QoL indication.",
+    "sourceId": "hf-2022",
+    "locator": "Official 2022 slide set, slide 112, recommendation 7",
+    "gradeSystem": "ACC/AHA COR / LOE",
+    "strength": "Class 3: No Benefit",
+    "evidenceLevel": "B-R",
+    "evidenceNote": "Original source grade; recommendation class and evidence level are independent.",
+    "cautions": [
+      "This statement does not prohibit treatment for another established indication; it is not a stop order."
+    ],
+    "tags": [
+      "hfpef",
+      "hfpef · routine nitrates / pde-5 inhibitors"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "hfpef-nitrates",
+    "hfPhenotypes": [
+      "hfpef"
+    ]
+  },
+  {
+    "id": "hfmr-sglt2",
+    "topic": "heart-failure",
+    "title": "HFmrEF · SGLT2 inhibitors",
+    "summary": "SGLT2 inhibition can reduce HF events.",
+    "population": "Established HFmrEF; LVEF 41–49%.",
+    "sourceId": "hf-2022",
+    "locator": "Official 2022 slide set, slide 108, recommendation 1",
+    "gradeSystem": "ACC/AHA COR / LOE",
+    "strength": "Class 2a",
+    "evidenceLevel": "B-R",
+    "evidenceNote": "Original source grade; recommendation class and evidence level are independent.",
+    "cautions": [
+      "Check agent-specific renal and clinical eligibility.",
+      "See the separately dated 2026 ESC all-EF recommendation."
+    ],
+    "tags": [
+      "hfmref",
+      "hfmref · sglt2 inhibitors"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "hfmr-sglt2",
+    "hfPhenotypes": [
+      "hfmref"
+    ]
+  },
+  {
+    "id": "hfmr-selected",
+    "topic": "heart-failure",
+    "title": "HFmrEF · selected HFrEF therapies",
+    "summary": "Evidence-based beta blockers, ARNI/ACEi/ARB or MRA may be considered, especially at lower EF.",
+    "population": "Current or previously symptomatic HFmrEF.",
+    "sourceId": "hf-2022",
+    "locator": "Official 2022 slide set, slide 108, recommendation 2",
+    "gradeSystem": "ACC/AHA COR / LOE",
+    "strength": "Class 2b",
+    "evidenceLevel": "B-NR",
+    "evidenceNote": "Original source grade; recommendation class and evidence level are independent.",
+    "cautions": [
+      "This conditional reference is not an automatic four-pillar prescription.",
+      "Do not combine ACEi, ARB and ARNI or multiple MRAs; assess each agent separately."
+    ],
+    "tags": [
+      "hfmref",
+      "hfmref · selected hfref therapies"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "hfmr-selected",
+    "hfPhenotypes": [
+      "hfmref"
+    ]
+  },
+  {
+    "id": "hfimp-continue",
+    "topic": "heart-failure",
+    "title": "HFimpEF · continue GDMT",
+    "summary": "Continue GDMT after EF improves, even without symptoms, to prevent relapse.",
+    "population": "Prior LVEF ≤40%, now >40%.",
+    "sourceId": "hf-2022",
+    "locator": "Official 2022 slide set, slide 110, recommendation 1",
+    "gradeSystem": "ACC/AHA COR / LOE",
+    "strength": "Class 1",
+    "evidenceLevel": "B-R",
+    "evidenceNote": "Original source grade; recommendation class and evidence level are independent.",
+    "cautions": [
+      "Improved EF is not automatically HFpEF or a reason to stop HFrEF therapy.",
+      "Current adverse effects or contraindications still require individualized review."
+    ],
+    "tags": [
+      "hfimpef",
+      "hfimpef · continue gdmt"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "hfimp-continue",
+    "hfPhenotypes": [
+      "hfimpef"
+    ]
+  },
+  {
+    "id": "hf-diuretic",
+    "topic": "heart-failure",
+    "title": "HF · diuretics for congestion",
+    "summary": "Use diuretics to relieve fluid retention and symptoms.",
+    "population": "HF with clinical congestion, regardless of EF.",
+    "sourceId": "hf-2022",
+    "locator": "Official 2022 slide set, slide 68, recommendation 1",
+    "gradeSystem": "ACC/AHA COR / LOE",
+    "strength": "Class 1",
+    "evidenceLevel": "B-NR",
+    "evidenceNote": "Original source grade; recommendation class and evidence level are independent.",
+    "cautions": [
+      "Dose is individualized to volume status, renal function and electrolytes; no universal target dose."
+    ],
+    "tags": [
+      "hfref",
+      "hfmref",
+      "hfpef",
+      "hfimpef",
+      "hf · diuretics for congestion"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "hf-diuretic",
+    "hfPhenotypes": [
+      "hfref",
+      "hfmref",
+      "hfpef",
+      "hfimpef"
+    ]
+  },
+  {
+    "id": "hf-ivabradine",
+    "topic": "heart-failure",
+    "title": "HFrEF · selected ivabradine use",
+    "summary": "Ivabradine can reduce HF hospitalization and CV death.",
+    "population": "Stable NYHA II–III, EF ≤35%, sinus HR ≥70 despite maximally tolerated beta blocker and GDMT.",
+    "sourceId": "hf-2022",
+    "locator": "Official 2022 slide set, slide 93, recommendation 1",
+    "gradeSystem": "ACC/AHA COR / LOE",
+    "strength": "Class 2a",
+    "evidenceLevel": "B-R",
+    "evidenceNote": "Original source grade; recommendation class and evidence level are independent.",
+    "cautions": [
+      "Reference only: rhythm, resting pulse, stability and optimized therapy are not modeled by the engine."
+    ],
+    "tags": [
+      "hfref",
+      "hfref · selected ivabradine use"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "hf-ivabradine",
+    "hfPhenotypes": [
+      "hfref"
+    ]
+  },
+  {
+    "id": "hf-digoxin",
+    "topic": "heart-failure",
+    "title": "HFrEF · selected digoxin use",
+    "summary": "Digoxin may reduce HF hospitalizations.",
+    "population": "Symptomatic HFrEF despite GDMT or unable to tolerate it.",
+    "sourceId": "hf-2022",
+    "locator": "Official 2022 slide set, slide 94, recommendation 1",
+    "gradeSystem": "ACC/AHA COR / LOE",
+    "strength": "Class 2b",
+    "evidenceLevel": "B-R",
+    "evidenceNote": "Original source grade; recommendation class and evidence level are independent.",
+    "cautions": [
+      "Reference only: renal dosing, drug interactions and serum concentrations require review."
+    ],
+    "tags": [
+      "hfref",
+      "hfref · selected digoxin use"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "hf-digoxin",
+    "hfPhenotypes": [
+      "hfref"
+    ]
+  },
+  {
+    "id": "hf-vericiguat",
+    "topic": "heart-failure",
+    "title": "HFrEF · selected vericiguat use",
+    "summary": "Vericiguat may reduce HF hospitalization and CV death.",
+    "population": "Selected high-risk HFrEF with recent worsening despite GDMT.",
+    "sourceId": "hf-2022",
+    "locator": "Official 2022 slide set, slide 95, recommendation 1",
+    "gradeSystem": "ACC/AHA COR / LOE",
+    "strength": "Class 2b",
+    "evidenceLevel": "B-R",
+    "evidenceNote": "Original source grade; recommendation class and evidence level are independent.",
+    "cautions": [
+      "Reference only: recent worsening, stability, treatment history and labeling require review."
+    ],
+    "tags": [
+      "hfref",
+      "hfref · selected vericiguat use"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "hf-vericiguat",
+    "hfPhenotypes": [
+      "hfref"
+    ]
+  },
+  {
+    "id": "hf-nsaid-harm",
+    "topic": "heart-failure",
+    "title": "HFrEF · NSAID harm",
+    "summary": "NSAIDs can worsen HF; avoid or withdraw when possible.",
+    "population": "Patients with HFrEF.",
+    "sourceId": "hf-2022",
+    "locator": "Official 2022 slide set, slide 83, recommendation 7",
+    "gradeSystem": "ACC/AHA COR / LOE",
+    "strength": "Class 3: Harm",
+    "evidenceLevel": "B-NR",
+    "evidenceNote": "Original source grade; recommendation class and evidence level are independent.",
+    "cautions": [
+      "Review the medication and indication with a clinician; no automated medication stop instruction.",
+      "Do not interpret this as an instruction to stop indicated low-dose antiplatelet aspirin."
+    ],
+    "tags": [
+      "hfref",
+      "hfref · nsaid harm"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "hf-nsaid-harm",
+    "hfPhenotypes": [
+      "hfref"
+    ]
+  },
+  {
+    "id": "hfpef-acc2026-sglt2",
+    "topic": "heart-failure",
+    "title": "HFpEF · 2026 ACC SGLT2 pathway",
+    "summary": "The 2026 ACC pathway includes an SGLT2 inhibitor in optimal HFpEF therapy unless contraindicated.",
+    "population": "Established HFpEF; clinical eligibility reviewed.",
+    "sourceId": "acc-hfpef-2026",
+    "locator": "2026 ACC HFpEF pathway, optimal medical therapy text and Figure 6",
+    "gradeSystem": "ACC Expert Consensus Decision Pathway",
+    "strength": "Consensus guidance",
+    "evidenceLevel": null,
+    "evidenceNote": "Expert consensus pathway; no formal COR or separate LOE assigned here.",
+    "cautions": [
+      "Expert consensus, not a new Class 1/A recommendation.",
+      "Diabetes is not required; renal eligibility, volume status, ketoacidosis risks and product labeling still apply.",
+      "Reduced HF events should not be presented as a separately proven HFpEF mortality benefit."
+    ],
+    "tags": [
+      "hfpef",
+      "hfpef · 2026 acc sglt2 pathway"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "hfpef-acc2026-sglt2",
+    "hfPhenotypes": [
+      "hfpef"
+    ]
+  },
+  {
+    "id": "hfpef-acc2026-finerenone",
+    "topic": "heart-failure",
+    "title": "HFpEF · 2026 ACC nonsteroidal MRA pathway",
+    "summary": "The 2026 ACC pathway includes a nonsteroidal MRA (finerenone), unless contraindicated, alongside SGLT2 therapy.",
+    "population": "Established HFpEF; agent-specific renal and potassium eligibility.",
+    "sourceId": "acc-hfpef-2026",
+    "locator": "2026 ACC HFpEF pathway, optimal medical therapy text and Figure 6",
+    "gradeSystem": "ACC Expert Consensus Decision Pathway",
+    "strength": "Consensus guidance",
+    "evidenceLevel": null,
+    "evidenceNote": "Expert consensus pathway; no formal COR or separate LOE assigned here.",
+    "cautions": [
+      "FDA HF label covers LVEF ≥40%; this consensus record specifically concerns HFpEF.",
+      "Finerenone HF initiation: eGFR ≥25 and potassium ≤5.0; check potassium/eGFR at 4 weeks and after dose changes.",
+      "Do not automatically add to another MRA. Check strong CYP3A4 inhibitors, adrenal insufficiency and the full label.",
+      "VA access is a separate indication-specific CFU/formulary decision."
+    ],
+    "tags": [
+      "hfpef",
+      "hfpef · 2026 acc nonsteroidal mra pathway"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "hfpef-acc2026-finerenone",
+    "hfPhenotypes": [
+      "hfpef"
+    ]
+  },
+  {
+    "id": "hf-esc2026-sglt2",
+    "topic": "heart-failure",
+    "title": "HF across EF · 2026 ESC SGLT2 recommendation",
+    "summary": "Dapagliflozin or empagliflozin is recommended for symptomatic HF across EF to reduce HF hospitalization or CV death.",
+    "population": "Symptomatic HFrEF, HFmrEF or HFpEF.",
+    "sourceId": "esc-hf-2026",
+    "locator": "2026 ESC HF guideline, Recommendation Table 5: SGLT2 inhibitor row",
+    "gradeSystem": "ESC COR / LOE",
+    "strength": "Class I",
+    "evidenceLevel": "A",
+    "evidenceNote": "Original source grade; recommendation class and evidence level are independent.",
+    "cautions": [
+      "ESC grading is shown separately from US guideline grading.",
+      "In HFpEF, the composite benefit is driven primarily by fewer HF hospitalizations; assess drug-specific eligibility."
+    ],
+    "tags": [
+      "hfref",
+      "hfmref",
+      "hfpef",
+      "hf across ef · 2026 esc sglt2 recommendation"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "hf-esc2026-sglt2",
+    "hfPhenotypes": [
+      "hfref",
+      "hfmref",
+      "hfpef"
+    ]
+  },
+  {
+    "id": "hf-esc2026-mra",
+    "topic": "heart-failure",
+    "title": "HF across EF · 2026 ESC MRA recommendation",
+    "summary": "MRA therapy is recommended: steroidal MRA for HFrEF; steroidal or nonsteroidal MRA for HFpEF.",
+    "population": "Symptomatic HF; agent-specific eligibility.",
+    "sourceId": "esc-hf-2026",
+    "locator": "2026 ESC HF guideline, Recommendation Table 5: MRA row",
+    "gradeSystem": "ESC COR / LOE",
+    "strength": "Class I",
+    "evidenceLevel": "A",
+    "evidenceNote": "Original source grade; recommendation class and evidence level are independent.",
+    "cautions": [
+      "Do not combine MRA agents routinely. The guideline cautions with eGFR <25 and potassium ≥5.0.",
+      "Use each product’s labeled renal/potassium criteria and monitoring; US VA access remains separate."
+    ],
+    "tags": [
+      "hfref",
+      "hfmref",
+      "hfpef",
+      "hf across ef · 2026 esc mra recommendation"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "hf-esc2026-mra",
+    "hfPhenotypes": [
+      "hfref",
+      "hfmref",
+      "hfpef"
+    ]
+  },
+  {
+    "id": "hfpef-esc2026-ras",
+    "topic": "heart-failure",
+    "title": "HFpEF · 2026 ESC ACEi / ARB / ARNI option",
+    "summary": "ACEi, ARB or ARNI may be considered to reduce HF hospitalization.",
+    "population": "Symptomatic HFpEF.",
+    "sourceId": "esc-hf-2026",
+    "locator": "2026 ESC HF guideline, Recommendation Table 5: HFpEF ACEi/ARB/ARNI row",
+    "gradeSystem": "ESC COR / LOE",
+    "strength": "Class IIb",
+    "evidenceLevel": "C",
+    "evidenceNote": "Original source grade; recommendation class and evidence level are independent.",
+    "cautions": [
+      "Conditional ESC option; these agents are alternatives, not combined therapy.",
+      "Other indications such as hypertension or CKD should be assessed separately."
+    ],
+    "tags": [
+      "hfpef",
+      "hfpef · 2026 esc acei / arb / arni option"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "hfpef-esc2026-ras",
+    "hfPhenotypes": [
+      "hfpef"
+    ]
+  },
+  {
+    "id": "ccd-beta-review",
+    "topic": "secondary-prevention",
+    "title": "Prior MI · reassess long-term beta blocker indication",
+    "summary": "Beyond one year after MI, reassessing beta blocker need may be reasonable when no continuing indication remains.",
+    "population": "Prior MI; no current/past EF ≤50%, angina, arrhythmia or uncontrolled hypertension.",
+    "sourceId": "acc-ccd-2023",
+    "locator": "2023 CCD guideline, §4.3.1 Beta Blockers, recommendation 3",
+    "gradeSystem": "ACC/AHA COR / LOE",
+    "strength": "Class 2b",
+    "evidenceLevel": "B-NR",
+    "evidenceNote": "Original source grade; recommendation class and evidence level are independent.",
+    "cautions": [
+      "Reference only. Reassessment is not an instruction to stop medication or stop abruptly.",
+      "HFrEF/HFimpEF, angina, rhythm and BP indications require separate review."
+    ],
+    "tags": [
+      "prior mi · reassess long-term beta blocker indication"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "ccd-beta-review",
+    "hfPhenotypes": []
+  },
+  {
+    "id": "ccd-beta-no-benefit",
+    "topic": "secondary-prevention",
+    "title": "CCD · beta blocker without another indication",
+    "summary": "Beta blockers do not improve MACE solely for CCD without prior MI or EF ≤50%, absent another indication.",
+    "population": "CCD without prior MI, EF >50%, and no other primary beta blocker indication.",
+    "sourceId": "acc-ccd-2023",
+    "locator": "2023 CCD guideline, §4.3.1 Beta Blockers, recommendation 4",
+    "gradeSystem": "ACC/AHA COR / LOE",
+    "strength": "Class 3: No Benefit",
+    "evidenceLevel": "B-NR",
+    "evidenceNote": "Original source grade; recommendation class and evidence level are independent.",
+    "cautions": [
+      "Reference only. This narrow population differs from post-MI reassessment.",
+      "Symptom control, arrhythmias, hypertension and HF may provide separate indications."
+    ],
+    "tags": [
+      "ccd · beta blocker without another indication"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "ccd-beta-no-benefit",
+    "hfPhenotypes": []
+  }
+]

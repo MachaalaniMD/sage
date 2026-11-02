@@ -2,6 +2,9 @@ import sourceData from '../data/sources.json';
 import chronicSources from '../data/chronic-sources.json';
 import preventionSources from '../data/prevention-sources.json';
 import medicationSources from '../data/medication-sources.json';
+import cardiacSources from '../data/cardiac-sources.json';
+import cardiacData from '../data/cardiac-expansion.json';
+import preservedDoseData from '../data/hfpef-doses.json';
 import chronicData from '../data/chronic-expansion.json';
 import preventionData from '../data/prevention-expansion.json';
 import medicationData from '../data/medication-expansion.json';
@@ -15,17 +18,19 @@ import { calculatePrevent, displayRisk, type PreventInputs, type PreventResult }
 
 export type Topic = 'vaccinations' | 'dyslipidemia' | 'hypertension' | 'heart-failure' | 'prevention' | 'secondary-prevention' | 'screening' | 'diabetes' | 'ckd' | 'anticoagulation' | 'osteoporosis' | 'obesity' | 'infectious-disease' | 'cancer-surveillance' | 'monitoring' | 'deprescribing' | 'referral' | 'lifestyle';
 export type Source = { id:string;society:string;title:string;year:number;version:string;url:string;checkedAt:string;access:string;topic:string };
-export type Recommendation = Omit<(typeof recommendationData)[number], 'topic'> & { topic: Topic };
-export const sources = [...sourceData,...chronicSources,...preventionSources,...medicationSources];
-export const recommendations = [...recommendationData.map(r=>r.id.startsWith('prevention-osteoporosis')?{...r,topic:'osteoporosis'}:r), ...additionalData,...chronicData,...preventionData,...medicationData,...riskData] as Recommendation[];
+export type HfPhenotype = 'hfref' | 'hfmref' | 'hfpef' | 'hfimpef';
+export type Recommendation = Omit<(typeof recommendationData)[number], 'topic'> & { topic: Topic; hfPhenotypes?: HfPhenotype[] };
+export const sources = [...sourceData,...chronicSources,...preventionSources,...medicationSources,...cardiacSources];
+export const recommendations = [...recommendationData.map(r=>r.id.startsWith('prevention-osteoporosis')?{...r,topic:'osteoporosis'}:r.topic==='heart-failure'?{...r,hfPhenotypes:['hfref']}:r), ...additionalData,...chronicData,...preventionData,...medicationData,...riskData,...cardiacData] as Recommendation[];
 export const doses = doseData;
+export const preservedDoses = preservedDoseData;
 export const versions = versionData;
 export const sourceFor = (r: Recommendation) => sources.find(s => s.id === r.sourceId)!;
 export const topics: { id: Topic; title: string; short: string; description: string; society: string; color: string }[] = [
   { id: 'vaccinations', title: 'Adult vaccinations', short: 'Vaccinations', description: 'Age, history, and risk-based immunization guidance.', society: 'CDC / ACIP', color: 'sage' },
   { id: 'dyslipidemia', title: 'Dyslipidemia', short: 'Dyslipidemia', description: 'Statin eligibility, intensity, and LDL-C goals.', society: 'ACC / AHA · VA / DoD', color: 'blue' },
   { id: 'hypertension', title: 'Hypertension', short: 'Hypertension', description: 'Treatment thresholds and blood pressure goals.', society: 'ACC / AHA · VA / DoD', color: 'ochre' },
-  { id: 'heart-failure', title: 'Heart failure GDMT', short: 'Heart failure', description: 'The four pillars, with starting and target doses.', society: 'AHA / ACC / HFSA', color: 'rose' },
+  { id: 'heart-failure', title: 'Heart failure', short: 'Heart failure', description: 'HFrEF, HFpEF, mildly reduced and improved EF: therapy, eligibility and doses.', society: 'AHA / ACC / HFSA · ACC · ESC', color: 'rose' },
   { id: 'prevention', title: 'Primary prevention', short: 'Primary prevention', description: 'Selected aspirin initiation recommendations.', society: 'USPSTF', color: 'sage' },
   { id: 'secondary-prevention', title: 'Secondary prevention', short: 'Secondary prevention', description: 'After MI or ASCVD: lipid goals, antiplatelets, BP, and rehabilitation.', society: 'ACC / AHA · VA / DoD', color: 'rose' },
   {"id": "screening", "title": "Preventive screening", "short": "Screening", "description": "Cancer screening, AAA, and selected USPSTF preventive care.", "society": "USPSTF", "color": "blue"},
@@ -53,11 +58,28 @@ export function searchRecommendations(query: string, topic?: Topic, society = 'a
 }
 
 export type VaccineHistory = 'none' | 'complete' | 'partial' | 'unknown';
+export const cardiacTopics: Topic[] = ['heart-failure','dyslipidemia','hypertension','secondary-prevention','anticoagulation'];
+export type ClassFilter = 'all'|'1'|'2a'|'2b'|'3-no-benefit'|'3-harm'|'ungraded';
+export function recommendationClass(r: Recommendation): Exclude<ClassFilter,'all'> {
+  const strength=r.strength.toLowerCase();
+  if(!r.gradeSystem.includes('COR / LOE'))return 'ungraded';
+  if(strength.includes('harm'))return '3-harm';
+  if(strength.includes('no benefit'))return '3-no-benefit';
+  if(/^class (2a|iia)$/.test(strength))return '2a';
+  if(/^class (2b|iib)$/.test(strength))return '2b';
+  if(/^class (1|i)$/.test(strength))return '1';
+  return 'ungraded';
+}
+export function filterEvidence(rows: Recommendation[], strength:ClassFilter='all', evidence='all', phenotype:HfPhenotype|'all'='all') {
+  return rows.filter(r=>(strength==='all'||recommendationClass(r)===strength)&&(evidence==='all'||(r.evidenceLevel||'ungraded')===evidence)&&(phenotype==='all'||r.hfPhenotypes?.includes(phenotype)));
+}
 export interface FictionalCase extends PreventInputs {
   age: number; sex: 'female' | 'male'; diabetes: boolean; ckd: boolean;
   veteran: boolean; ascvd: boolean; multipleRiskFactors: boolean;
   sbp: number; dbp: number; ldl: number;
   hf: boolean; ef: number; nyha: 'I' | 'II' | 'III' | 'IV'; egfr: number; potassium: number;
+  hfEfHistory:'unknown'|'never-reduced'|'previously-reduced'; hfFillingPressureEvidence:boolean;
+  hfVolumeOverload:boolean; afKnown:boolean; hfSelectedAddOnReviewed:boolean;
   immunocompromised: boolean; secondaryBoneDisease: boolean;
   influenza: VaccineHistory; zoster: VaccineHistory;
   pneumococcal: VaccineHistory; hepb: VaccineHistory;
@@ -69,7 +91,7 @@ export interface FictionalCase extends PreventInputs {
   preventionContext:boolean; cervix:boolean; routineBreastScreening:boolean; everSmoked:boolean; packYears:number; yearsSinceQuit:number; lungTreatmentCandidate:boolean;
   hypertensionDiagnosis:boolean; onAceArb:boolean; maxAceArb:boolean; onMra:boolean; onMetformin:boolean; onPpi:boolean; onBenzodiazepine:boolean;
 }
-const riskDefaults = { diabetesType:'unknown' as const,type1Years:0,uacr:null,albuminuriaPersistent:false,preventionContext:false,cervix:false,routineBreastScreening:false,everSmoked:false,packYears:0,yearsSinceQuit:0,lungTreatmentCandidate:false,hypertensionDiagnosis:false,onAceArb:false,maxAceArb:false,onMra:false,onMetformin:false,onPpi:false,onBenzodiazepine:false, totalCholesterol:200,hdl:50,bmi:28,smoker:false,bpTreatment:false,statin:false,priorMi:false,dialysis:false,riskEnabled:true,subclinicalAtherosclerosis:false,miMonthsAgo:24,veryHighRisk:'unknown' as const,bleedingRisk:'unknown' as const,oralAnticoagulation:false,antiplateletContraindication:false,maxStatin:false };
+const riskDefaults = { hfEfHistory:'unknown' as const,hfFillingPressureEvidence:false,hfVolumeOverload:false,afKnown:false,hfSelectedAddOnReviewed:false,diabetesType:'unknown' as const,type1Years:0,uacr:null,albuminuriaPersistent:false,preventionContext:false,cervix:false,routineBreastScreening:false,everSmoked:false,packYears:0,yearsSinceQuit:0,lungTreatmentCandidate:false,hypertensionDiagnosis:false,onAceArb:false,maxAceArb:false,onMra:false,onMetformin:false,onPpi:false,onBenzodiazepine:false, totalCholesterol:200,hdl:50,bmi:28,smoker:false,bpTreatment:false,statin:false,priorMi:false,dialysis:false,riskEnabled:true,subclinicalAtherosclerosis:false,miMonthsAgo:24,veryHighRisk:'unknown' as const,bleedingRisk:'unknown' as const,oralAnticoagulation:false,antiplateletContraindication:false,maxStatin:false };
 export const profiles: { id: string; name: string; description: string; data: FictionalCase }[] = [
   { id: 'diabetes', name: 'Diabetes & lipids', description: 'Age 47 · diabetes · LDL-C 115', data: {
     ...riskDefaults, diabetesType:'type2',onMetformin:true,hypertensionDiagnosis:true, age: 47, sex: 'male', diabetes: true, ckd: false, veteran: true, ascvd: false,
@@ -102,8 +124,16 @@ export const profiles: { id: string; name: string; description: string; data: Fi
     influenza:'complete',zoster:'complete',pneumococcal:'complete',hepb:'complete'
   } }
 ];
+profiles.push({id:'hfpef',name:'HFpEF overview',description:'Age 72 · LVEF 60% · NYHA II',data:{...profiles[2].data,age:72,sex:'female',ef:60,egfr:55,hypertensionDiagnosis:true,hfEfHistory:'never-reduced',hfFillingPressureEvidence:true,hfVolumeOverload:true}});
 profiles.push({id:'kidney',name:'Diabetes & CKD',description:'Age 61 · eGFR 35 · UACR 450',data:{...profiles[0].data,age:61,ckd:true,diabetesType:'type2',uacr:450,albuminuriaPersistent:true,egfr:35,potassium:4.6,bmi:32,onAceArb:true,maxAceArb:true,hypertensionDiagnosis:true,bpTreatment:true,statin:true,ldl:90,preventionContext:false}});
 
+export function heartFailurePhenotype(c: FictionalCase): HfPhenotype|'none'|'unclassified' {
+  if(!c.hf)return 'none';
+  if(c.ef<=40)return 'hfref';
+  if(c.hfEfHistory==='previously-reduced')return 'hfimpef';
+  if(c.hfEfHistory!=='never-reduced'||!c.hfFillingPressureEvidence)return 'unclassified';
+  return c.ef<50?'hfmref':'hfpef';
+}
 export function validateCase(c: FictionalCase): string[] {
   const errors: string[] = [];
   const range = (value: number, min: number, max: number, label: string) => {
@@ -168,7 +198,10 @@ export function evaluateCase(c: FictionalCase): { matches: Match[]; gaps: string
   if(hasCvd&&c.dbp>=80)add('secondary-bp-diastolic','Established clinical CVD with average diastolic BP ≥80. No first-event risk score is needed.');
   if (c.veteran && (c.sbp >= 140 || c.dbp >= 90 || c.diabetes && c.sbp >= 130 || c.ckd && c.sbp >= 130)) add('va-hypertension', 'VA/DoD context with a hypertension reference pathway.');
   if (c.sbp >= 180 || c.dbp >= 120) gaps.push('Severely elevated fictional BP is outside routine prototype triage; no urgency assessment is provided.');
-  if (c.hf && c.ef <= 40) {
+  const hfType=heartFailurePhenotype(c);
+  if(c.hf&&c.hfVolumeOverload)add('hf-diuretic','Known HF with congestion explicitly selected; dose requires clinical assessment.');
+  if (hfType === 'hfref') {
+    add('hf-nsaid-harm','HFrEF medication-safety reference; NSAID use has not been assumed.');
     if (['II', 'III'].includes(c.nyha)) add('hf-arni', 'Fictional HFrEF with LVEF ≤40% and NYHA II–III.', 'Reference match only; BP, angioedema and ACE inhibitor washout not assessed.');
     add('hf-beta', 'Fictional HFrEF with current or previous symptoms selected.');
     if (c.nyha !== 'I') {
@@ -176,6 +209,29 @@ export function evaluateCase(c: FictionalCase): { matches: Match[]; gaps: string
       if (c.egfr > 30 && c.potassium < 5) add('hf-mra', 'NYHA II–IV, eGFR >30 and potassium <5.0 in the fictional case.');
       else gaps.push('The encoded MRA eligibility criteria are not met: eGFR must be >30 and potassium <5.0. This is not a complete contraindication assessment.');
     }
+  }
+  if(hfType==='hfimpef')add('hfimp-continue','Prior LVEF ≤40% explicitly confirmed, now >40%; continue-GDMT reference, including NYHA I.');
+  if(c.hf&&c.ef>40&&hfType==='unclassified')gaps.push('HF phenotype is unclassified: confirm prior EF trajectory and, for HFpEF/HFmrEF, objective evidence of elevated filling pressures. EF alone does not establish HFpEF.');
+  if(hfType==='hfpef'||hfType==='hfmref'){
+    const preserved=hfType==='hfpef';
+    const reason=`Established ${preserved?'HFpEF':'HFmrEF'} with EF ${c.ef}% and filling-pressure evidence explicitly confirmed.`;
+    if(c.nyha!=='I'&&c.egfr>=20&&!c.dialysis){
+      add(preserved?'hfpef-sglt2':'hfmr-sglt2',reason,'2022 US grade; review drug-specific renal eligibility. eGFR 20–24 does not establish dapagliflozin initiation eligibility.');
+      if(preserved)add('hfpef-acc2026-sglt2',reason,'Separate 2026 ACC expert consensus; no formal COR assigned.');
+    }else gaps.push('HFpEF/HFmrEF SGLT2 match withheld: current symptoms and product-specific renal eligibility need review (encoded lower bound eGFR 20; no dialysis).');
+    if(preserved){
+      if(c.hypertensionDiagnosis)add('hfpef-bp',reason+' Hypertension confirmed.');
+      if(c.afKnown)add('hfpef-af',reason+' Atrial fibrillation confirmed.');
+      add('hfpef-nitrates',reason,'No-benefit statement applies only to routine activity/QoL use, not another established indication.');
+      if(c.nyha!=='I'&&c.egfr>=25&&c.potassium<=5&&!c.dialysis&&!c.onMra)add('hfpef-acc2026-finerenone',reason,'Reference for consideration, not a prescription: FDA label eGFR ≥25 and K ≤5.0 only; complete contraindication/interaction and VA CFU review required.');
+      else gaps.push('Finerenone initiation reference withheld: review symptoms, eGFR ≥25, K ≤5.0, dialysis and existing MRA therapy. Do not automatically stack MRAs.');
+      if(c.hfSelectedAddOnReviewed){
+        add('hfpef-arb',reason+' Selected add-on review explicitly requested.');
+        add('hfpef-arni',reason+' Selected add-on review explicitly requested.','ARB and ARNI are alternatives; no combined therapy instruction.');
+        if(c.egfr>30&&c.potassium<5&&!c.onMra&&!c.dialysis)add('hfpef-mra',reason+' Selected add-on review; steroidal MRA renal/potassium gate met.','2022 steroidal MRA evidence; not an instruction to combine with finerenone.');
+      }
+    }else if(c.hfSelectedAddOnReviewed)add('hfmr-selected',reason+' Conditional therapy review explicitly requested.','Each option needs separate eligibility review; no automatic multi-drug regimen is generated.');
+    gaps.push('Selected 2022 US grades and the 2026 ACC HFpEF consensus are dated separately. The 2026 ESC recommendations are available in the library, with original ESC grades.');
   }
   if (!hasCvd && c.age >= 60) add('aspirin', 'Age ≥60 and no known clinical CVD selected; primary-prevention initiation reference.', 'Do not interpret this as advice to stop existing therapy. Bleeding risk was not assessed.');
   if (!c.secondaryBoneDisease) {

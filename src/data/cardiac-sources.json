@@ -1,0 +1,57 @@
+[
+  {
+    "id": "acc-hfpef-2026",
+    "society": "ACC",
+    "title": "2026 Expert Consensus Decision Pathway: Management of HFpEF",
+    "year": 2026,
+    "version": "2026; JACC 88(15):1817–1846; DOI 10.1016/j.jacc.2026.06.018",
+    "url": "https://www.jacc.org/doi/10.1016/j.jacc.2026.06.018",
+    "checkedAt": "2026-11-02",
+    "access": "Indexed primary publisher text checked; direct publisher access restricted",
+    "topic": "heart-failure"
+  },
+  {
+    "id": "esc-hf-2026",
+    "society": "ESC",
+    "title": "2026 ESC Guidelines for the management of heart failure",
+    "year": 2026,
+    "version": "2026; European Heart Journal 47(38):5346; Recommendation Table 5",
+    "url": "https://academic.oup.com/eurheartj/article/47/38/5346/8766302",
+    "checkedAt": "2026-11-02",
+    "access": "Indexed primary publisher recommendation table checked; direct access restricted",
+    "topic": "heart-failure"
+  },
+  {
+    "id": "fda-finerenone-hf",
+    "society": "FDA",
+    "title": "Kerendia (finerenone) prescribing information — HF with LVEF ≥40%",
+    "year": 2025,
+    "version": "Label revised July 2025; FDA-hosted 2026 copy; §§1, 2.1–2.3, 4, 5",
+    "url": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2026/215341Orig1s009lbl.pdf",
+    "checkedAt": "2026-11-02",
+    "access": "Primary FDA label PDF read; label date is July 2025, not the hosting folder year",
+    "topic": "heart-failure"
+  },
+  {
+    "id": "label-dapagliflozin-hf",
+    "society": "FDA / DailyMed",
+    "title": "Farxiga (dapagliflozin) prescribing information",
+    "year": 2026,
+    "version": "Revised June 2026; dosage and renal impairment sections",
+    "url": "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=72ad22ae-efe6-4cd6-a302-98aaee423d69",
+    "checkedAt": "2026-11-02",
+    "access": "Primary prescribing information checked",
+    "topic": "heart-failure"
+  },
+  {
+    "id": "label-empagliflozin-hf",
+    "society": "FDA",
+    "title": "Jardiance (empagliflozin) prescribing information",
+    "year": 2025,
+    "version": "2025 FDA label snapshot; §2.2 Table 1 and §8.6",
+    "url": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2025/204629s063lbl.pdf",
+    "checkedAt": "2026-11-02",
+    "access": "Primary FDA label checked; dated snapshot, verify latest labeling before use",
+    "topic": "heart-failure"
+  }
+]

@@ -1,5 +1,42 @@
 [
- {"id":"kdigo-2027-draft","title":"KDIGO 2027 CKD medication update is a public-review draft","checkedAt":"2026-11-02","status":"Draft · not promoted","summary":"The official index advertises public review through November 4, 2026. Sage retains the 2024 final guideline; draft content does not replace active recommendations.","url":"https://kdigo.org/guidelines/ckd-evaluation--and-management/"},
- {"id":"covid-date-review","title":"CDC COVID-19 schedule needs source-date review","checkedAt":"2026-11-02","status":"Manual review required","summary":"The linked page’s narrative and table-date metadata are inconsistent. Sage links the source and withholds automatic COVID dose scheduling.","url":"https://www.cdc.gov/covid/hcp/vaccine-considerations/routine-guidance.html"},
- {"id":"va-snapshot-refresh","title":"VA formulary snapshot has a separate refresh date","checkedAt":"2026-11-02","status":"Source snapshot · verify live","summary":"The downloaded VA refresh metadata reports October 29, 2026. Weekly monitoring watches drug rows, document links and refresh metadata; changes require review before a new snapshot is committed.","url":"https://www.va.gov/formularyadvisor/VERSIONS.json"}
+  {
+    "id": "hfpef-acc-2026-review",
+    "title": "2026 ACC HFpEF pathway: new consensus draft records",
+    "checkedAt": "2026-11-02",
+    "status": "Extracted · medical review pending",
+    "summary": "Selected SGLT2 and nonsteroidal-MRA pathway records have been added alongside, rather than replacing, the 2022 formal US guideline grades. The consensus is not assigned a COR or LOE. Indexed primary publisher text was checked; clinical verification remains pending.",
+    "url": "https://www.jacc.org/doi/10.1016/j.jacc.2026.06.018"
+  },
+  {
+    "id": "hf-esc-2026-review",
+    "title": "2026 ESC HF guideline: separate society-specific grades",
+    "checkedAt": "2026-11-02",
+    "status": "Extracted · medical review pending",
+    "summary": "Selected all-EF SGLT2/MRA and conditional HFpEF RAS-therapy recommendations retain their original ESC class and level. They do not silently change the 2022 US grades. Direct publisher access was restricted; independent source and clinical review remain required.",
+    "url": "https://academic.oup.com/eurheartj/article/47/38/5346/8766302"
+  },
+  {
+    "id": "kdigo-2027-draft",
+    "title": "KDIGO 2027 CKD medication update is a public-review draft",
+    "checkedAt": "2026-11-02",
+    "status": "Draft · not promoted",
+    "summary": "The official index advertises public review through November 4, 2026. Sage retains the 2024 final guideline; draft content does not replace active recommendations.",
+    "url": "https://kdigo.org/guidelines/ckd-evaluation--and-management/"
+  },
+  {
+    "id": "covid-date-review",
+    "title": "CDC COVID-19 schedule needs source-date review",
+    "checkedAt": "2026-11-02",
+    "status": "Manual review required",
+    "summary": "The linked page’s narrative and table-date metadata are inconsistent. Sage links the source and withholds automatic COVID dose scheduling.",
+    "url": "https://www.cdc.gov/covid/hcp/vaccine-considerations/routine-guidance.html"
+  },
+  {
+    "id": "va-snapshot-refresh",
+    "title": "VA formulary snapshot has a separate refresh date",
+    "checkedAt": "2026-11-02",
+    "status": "Source snapshot · verify live",
+    "summary": "The downloaded VA refresh metadata reports October 29, 2026. Weekly monitoring watches drug rows, document links and refresh metadata; changes require review before a new snapshot is committed.",
+    "url": "https://www.va.gov/formularyadvisor/VERSIONS.json"
+  }
 ]

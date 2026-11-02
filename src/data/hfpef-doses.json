@@ -1,0 +1,34 @@
+[
+  {
+    "drug": "Dapagliflozin",
+    "start": "10 mg once daily",
+    "target": "10 mg once daily",
+    "note": "HF indication: initiation not recommended if eGFR <25; assess volume and ketoacidosis risk.",
+    "sourceId": "label-dapagliflozin-hf",
+    "locator": "Dosage: HF and renal impairment"
+  },
+  {
+    "drug": "Empagliflozin",
+    "start": "10 mg once daily",
+    "target": "10 mg once daily",
+    "note": "HF trials did not enroll eGFR <20 or dialysis; this is not a complete eligibility rule.",
+    "sourceId": "label-empagliflozin-hf",
+    "locator": "§2.2 Table 1; §8.6 renal impairment"
+  },
+  {
+    "drug": "Finerenone · baseline eGFR ≥60",
+    "start": "20 mg once daily",
+    "target": "40 mg once daily",
+    "note": "HF label LVEF ≥40%; do not initiate if K >5.0. Check K/eGFR at 4 weeks and after dose changes; target depends on baseline eGFR and tolerability.",
+    "sourceId": "fda-finerenone-hf",
+    "locator": "§§2.1–2.3, Tables 1 and 3"
+  },
+  {
+    "drug": "Finerenone · baseline eGFR 25–<60",
+    "start": "10 mg once daily",
+    "target": "20 mg once daily",
+    "note": "HF label LVEF ≥40%; do not initiate if K >5.0. Check K/eGFR at 4 weeks and after dose changes; target depends on baseline eGFR and tolerability.",
+    "sourceId": "fda-finerenone-hf",
+    "locator": "§§2.1–2.3, Tables 1 and 3"
+  }
+]

@@ -3,6 +3,7 @@ import { ArrowRight, ArrowUpRight, Search, Info } from 'lucide-react';
 import { topics,recommendations,type Topic } from '../lib/guidelines';
 import { topicIcons } from './Dashboard';
 const scope:Partial<Record<Topic,string>>={
+ 'heart-failure':'HFrEF, HFpEF, HFmrEF and HFimpEF are distinct. The engine requires EF history and filling-pressure context for preserved/mildly reduced EF. Selected add-ons remain conditional; 2026 ACC consensus and ESC grades are separately attributed. Dose tables are references, not prescriptions.',
  vaccinations:'Selected routine and risk-based references include schedules and booster intervals. The engine calculates no personalized catch-up date; COVID scheduling remains deferred for source review.',
  screening:'Selected final USPSTF screening references. Symptoms, family/genetic risk, prior cancer, anatomy and previous results may change eligibility. A screening interval is not a surveillance interval.',
  diabetes:'ADA and VA/DoD goals are displayed separately. An individualized A1c goal is not automatically selected from age alone; frailty, hypoglycemia, function and life expectancy require review.',
