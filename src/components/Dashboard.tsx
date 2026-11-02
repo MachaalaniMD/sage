@@ -1,0 +1,33 @@
+import { useState } from 'react';
+import { ArrowRight, ArrowUpRight, BookOpen, ChevronRight, FlaskConical, Heart, Leaf, Search, ShieldCheck, Sparkles, Syringe, Activity, Droplets, History } from 'lucide-react';
+import { topics, recommendations, sources, versions, type Topic } from '../lib/guidelines';
+import { Button } from './ui/button';
+export const topicIcons = { vaccinations: Syringe, dyslipidemia: Droplets, hypertension: Activity, 'heart-failure': Heart, prevention: ShieldCheck };
+export function Dashboard({ navigate, search, chooseProfile, openUpdate }: {
+  navigate: (page: string) => void; search: (query: string) => void;
+  chooseProfile: (id: string) => void; openUpdate: (id: string) => void;
+}) {
+  const [query, setQuery] = useState('');
+  return <div className="dashboard page-enter">
+    <section className="welcome">
+      <div className="welcome-copy"><div className="eyebrow"><span className="eyebrow-line"/>YOUR CLINICAL COMPASS</div><h1>Good care starts with<br/><span>good evidence.</span></h1><p>A clearer path from clinical question to guideline.<br className="desktop-break"/> Find the recommendation. Know the source.</p>
+      <form className="hero-search" onSubmit={e => { e.preventDefault(); search(query); }}><Search size={20}/><input aria-label="Search guidelines" placeholder="What are you looking for?" value={query} onChange={e => setQuery(e.target.value)} autoComplete="off" spellCheck={false}/><button type="submit" aria-label="Search recommendations"><ArrowRight size={20}/></button></form>
+      <div className="suggestions"><span>TRY</span><button onClick={() => search('statin')}>Statin eligibility <ArrowUpRight size={12}/></button><button onClick={() => chooseProfile('vaccines')}>Vaccine check <ArrowUpRight size={12}/></button><button onClick={() => navigate('heart-failure')}>GDMT doses <ArrowUpRight size={12}/></button></div></div>
+      <div className="hero-art" aria-hidden="true"><div className="art-grid"/><div className="art-circle outer"/><div className="art-circle inner"/><div className="art-cross horizontal"/><div className="art-cross vertical"/><svg viewBox="0 0 240 280" className="botanical"><path d="M110 250C105 212 120 163 139 115C150 88 155 65 155 35" stroke="#78917c" strokeWidth="2" fill="none"/><path d="M121 202C70 193 64 160 69 140C103 142 129 163 121 202Z" fill="#9eb09a"/><path d="M130 164C174 162 202 133 197 106C160 110 134 135 130 164Z" fill="#74977d"/><path d="M143 120C106 112 91 85 97 61C128 65 148 86 143 120Z" fill="#c0cbb5"/><path d="M153 80C183 72 195 48 189 25C165 30 149 48 153 80Z" fill="#8aa48b"/><path d="M112 242C72 231 59 205 64 185C95 189 115 210 112 242Z" fill="#c0cbb5"/><path d="M120 206L77 151M130 163L187 117M143 118L103 71M154 78L184 34M111 241L71 193" stroke="#526e59" strokeOpacity=".45" strokeWidth="1" fill="none"/></svg><span className="art-star star-one">✳</span><span className="art-star star-two">+</span><div className="art-note"><BookOpen size={14}/><span>Rooted in evidence.</span></div></div>
+    </section>
+    <div className="dashboard-columns"><div className="guideline-section"><div className="section-heading"><div><h2>Explore guidelines</h2><p>Practical answers, organized around your day.</p></div><span className="count-label">5 clinical areas</span></div>
+      <div className="topic-grid">{topics.slice(0, 4).map(topic => <TopicCard key={topic.id} topic={topic} onClick={() => navigate(topic.id)}/>)}</div>
+      <button className="prevention-link" onClick={() => navigate('prevention')}><span className="prevention-icon"><ShieldCheck size={19}/></span><div><strong>Primary prevention</strong><span>Aspirin & osteoporosis screening · USPSTF</span></div><ArrowRight size={18}/></button>
+      <div className="traceability-note"><span className="little-leaf"><Leaf size={19}/></span><div><strong>Every recommendation has a paper trail.</strong><p>Source, publication year, population, and the original evidence grade.<br/>No invented citations. No silent guideline replacements.</p></div></div>
+    </div>
+    <aside className="dashboard-aside"><section className="engine-promo"><div className="promo-top"><span><Sparkles size={16}/> DECISION ENGINE</span><span className="mini-beta">PREVIEW</span></div><h2>A few variables.<br/>A clearer starting point.</h2><p>Explore which guideline pathways match a fictional clinical scenario.</p><Button onClick={() => navigate('engine')}>Explore a case <ArrowRight size={17}/></Button><div className="promo-foot"><FlaskConical size={13}/> Fictional examples only · nothing saved</div></section>
+      <section className="recent-updates"><div className="section-heading"><h2>On the radar</h2><History size={17}/></div><p className="aside-description">Newer versions, awaiting medical review.</p>{[versions[1], versions[0], versions[2]].map(v => <button className="update-mini" key={v.id} onClick={() => openUpdate(v.id)}><span className="update-dot"/><div><span className="update-mini-kicker">{v.society} <span>{v.current}</span></span><strong>{v.title}</strong><span className="update-mini-link">{v.previous} → {v.current} <ChevronRight size={12}/></span></div></button>)}<button className="text-link" onClick={() => navigate('updates')}>View version history <ArrowRight size={14}/></button></section>
+    </aside></div>
+    <section className="source-strip"><div><span className="eyebrow">PRIMARY SOURCES, CONNECTED</span><p>Different societies. One place to start.</p></div><div className="society-names"><span>CDC<small>PUBLIC HEALTH</small></span><span className="acc-logo">ACC <b>/</b> AHA<small>CARDIOVASCULAR CARE</small></span><span>USPSTF<small>PREVENTIVE CARE</small></span><span className="va-logo">VA <b>/</b> DoD<small>VETERAN & MILITARY HEALTH</small></span></div></section>
+    <div className="dashboard-foot"><span>{recommendations.length} draft recommendations · {sources.length} source records</span><button onClick={() => navigate('sources')}>Explore the source library <ArrowUpRight size={13}/></button></div>
+  </div>;
+}
+function TopicCard({ topic, onClick }: { topic: typeof topics[number]; onClick: () => void }) {
+  const Icon = topicIcons[topic.id as Topic];
+  return <button className={`topic-card topic-${topic.color}`} onClick={onClick}><div className="topic-card-top"><span className="topic-icon"><Icon size={24} strokeWidth={1.65}/></span><ArrowUpRight size={18}/></div><h3>{topic.title}</h3><p>{topic.description}</p><div className="topic-card-bottom"><span>{topic.society}</span><span>{recommendations.filter(r => r.topic === topic.id).length} references <ChevronRight size={12}/></span></div></button>;
+}

@@ -1,0 +1,46 @@
+name: Review guideline source changes
+on:
+  schedule:
+    - cron: '17 13 * * 1'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: source-monitor
+  cancel-in-progress: false
+jobs:
+  sources:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Restore prior observed fingerprints
+        uses: actions/cache/restore@v4
+        with:
+          path: .source-monitor/baseline.json
+          key: source-baseline-${{ github.run_id }}-${{ github.run_attempt }}
+          restore-keys: |
+            source-baseline-
+      - name: Use the tracked baseline when the cache is empty
+        run: |
+          mkdir -p .source-monitor
+          if [ ! -f .source-monitor/baseline.json ] && [ -f src/data/source-fingerprints.json ]; then
+            cp src/data/source-fingerprints.json .source-monitor/baseline.json
+          fi
+      - name: Check source documents and publication indexes
+        run: node scripts/check-sources.mjs --baseline-file .source-monitor/baseline.json --report .source-monitor/report.json --initialize-missing
+      - name: Retain initial observations without advancing changed fingerprints
+        if: always()
+        uses: actions/cache/save@v4
+        with:
+          path: .source-monitor/baseline.json
+          key: source-baseline-${{ github.run_id }}-${{ github.run_attempt }}
+      - name: Upload the review report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: guideline-source-review
+          path: .source-monitor/report.json
+          retention-days: 90

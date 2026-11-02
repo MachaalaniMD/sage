@@ -1,0 +1,10 @@
+node_modules/
+dist/
+.DS_Store
+coverage/
+*.tsbuildinfo
+source-check-results.json
+.source-monitor/
+.standalone/
+standalone.html
+.env*

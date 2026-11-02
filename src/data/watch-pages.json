@@ -1,0 +1,7 @@
+[
+  {"id":"discovery-va-guidelines","society":"VA / DoD","title":"VA/DoD guideline index — publication discovery","url":"https://www.healthquality.va.gov/","kind":"discovery"},
+  {"id":"discovery-va-lipids","society":"VA / DoD","title":"VA/DoD lipid management landing page","url":"https://www.healthquality.va.gov/guidelines/CD/lipids/index.asp","kind":"discovery"},
+  {"id":"discovery-va-hypertension","society":"VA / DoD","title":"VA/DoD hypertension landing page","url":"https://www.healthquality.va.gov/guidelines/CD/htn/index.asp","kind":"discovery"},
+  {"id":"discovery-aha-guidelines","society":"AHA / ACC","title":"AHA guidelines and statements — publication discovery","url":"https://professional.heart.org/en/guidelines-and-statements","kind":"discovery"},
+  {"id":"discovery-cdc-schedule","society":"CDC / ACIP","title":"CDC adult immunization schedule — publication discovery","url":"https://www.cdc.gov/vaccines/hcp/imz-schedules/adult-age.html","kind":"discovery"}
+]

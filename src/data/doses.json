@@ -1,0 +1,10 @@
+[
+  {"drug":"Sacubitril / valsartan","pillar":"ARNI","start":"49/51 mg twice daily*","target":"97/103 mg twice daily","note":"*24/26 mg twice daily may be used initially.","sourceId":"hf-doses-2022","locator":"Table 14, slide 88"},
+  {"drug":"Carvedilol","pillar":"Beta blocker","start":"3.125 mg twice daily","target":"25–50 mg twice daily","note":"Individual target depends on tolerance and clinical context.","sourceId":"hf-doses-2022","locator":"Table 14, slide 89"},
+  {"drug":"Metoprolol succinate ER","pillar":"Beta blocker","start":"12.5–25 mg once daily","target":"200 mg once daily","note":"Extended-release formulation.","sourceId":"hf-doses-2022","locator":"Table 14, slide 89"},
+  {"drug":"Bisoprolol","pillar":"Beta blocker","start":"1.25 mg once daily","target":"10 mg once daily","note":"Choose one evidence-based beta blocker.","sourceId":"hf-doses-2022","locator":"Table 14, slide 89"},
+  {"drug":"Spironolactone","pillar":"MRA","start":"12.5–25 mg once daily","target":"25–50 mg once daily","note":"Renal function and potassium monitoring required.","sourceId":"hf-doses-2022","locator":"Table 14, slide 89"},
+  {"drug":"Eplerenone","pillar":"MRA","start":"25 mg once daily","target":"50 mg once daily","note":"Renal function and potassium monitoring required.","sourceId":"hf-doses-2022","locator":"Table 14, slide 89"},
+  {"drug":"Dapagliflozin","pillar":"SGLT2i","start":"10 mg once daily","target":"10 mg once daily","note":"Check current product labeling and eligibility.","sourceId":"hf-doses-2022","locator":"Table 14, slide 90"},
+  {"drug":"Empagliflozin","pillar":"SGLT2i","start":"10 mg once daily","target":"10 mg once daily","note":"Check current product labeling and eligibility.","sourceId":"hf-doses-2022","locator":"Table 14, slide 90"}
+]

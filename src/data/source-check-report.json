@@ -1,0 +1,188 @@
+{
+  "checkedAt": "2026-11-02T01:39:44.695Z",
+  "clinicalDataModified": false,
+  "results": [
+    {
+      "id": "cdc-adult-2025",
+      "title": "Adult Immunization Schedule Notes",
+      "url": "https://www.cdc.gov/vaccines/hcp/imz-schedules/adult-notes.html",
+      "kind": "source",
+      "status": "baseline-needed",
+      "fingerprint": "44554f657c39f4ec2bbd2121ea7c24bb091f1c7b26df55ba2d910a1e654bae06",
+      "format": "normalized-main-text-sha256",
+      "finalUrl": "https://www.cdc.gov/vaccines/hcp/imz-schedules/adult-notes.html",
+      "checkedAt": "2026-11-02T01:39:44.695Z"
+    },
+    {
+      "id": "cdc-pneumo-2026",
+      "title": "Pneumococcal Vaccine Recommendations",
+      "url": "https://www.cdc.gov/pneumococcal/hcp/vaccine-recommendations/",
+      "kind": "source",
+      "status": "baseline-needed",
+      "fingerprint": "803d6c0094f2e130bcb27cd0945a8afb5c89a1a0018a0f95c97bec3889d6a33c",
+      "format": "normalized-main-text-sha256",
+      "finalUrl": "https://www.cdc.gov/pneumococcal/hcp/vaccine-recommendations/",
+      "checkedAt": "2026-11-02T01:39:44.695Z"
+    },
+    {
+      "id": "cdc-zoster-2024",
+      "title": "Shingles Vaccine Recommendations",
+      "url": "https://www.cdc.gov/shingles/hcp/vaccine-considerations/index.html",
+      "kind": "source",
+      "status": "baseline-needed",
+      "fingerprint": "d4987f85463f451504a22ec28a89a1669ce6780775bfce906646aa0996ca71a0",
+      "format": "normalized-main-text-sha256",
+      "finalUrl": "https://www.cdc.gov/shingles/hcp/vaccine-considerations/index.html",
+      "checkedAt": "2026-11-02T01:39:44.695Z"
+    },
+    {
+      "id": "cdc-flu-2026",
+      "title": "Clinical Considerations for Influenza Vaccination",
+      "url": "https://www.cdc.gov/flu/hcp/vax-summary/",
+      "kind": "source",
+      "status": "baseline-needed",
+      "fingerprint": "e01637715dc8cf63bb139b3637bf9ab0f66db5489990eca2fd44f866ca24caa1",
+      "format": "normalized-main-text-sha256",
+      "finalUrl": "https://www.cdc.gov/flu/hcp/vax-summary/",
+      "checkedAt": "2026-11-02T01:39:44.695Z"
+    },
+    {
+      "id": "acc-lipids-2026",
+      "title": "2026 Guideline on the Management of Dyslipidemia",
+      "url": "https://www.ahajournals.org/doi/10.1161/CIR.0000000000001423",
+      "kind": "source",
+      "status": "access-error",
+      "error": "HTTP 403; source access requires review.",
+      "checkedAt": "2026-11-02T01:39:44.695Z"
+    },
+    {
+      "id": "va-lipids-2025",
+      "title": "Lipid Management for Cardiovascular Disease Risk Reduction — Provider Summary",
+      "url": "https://healthquality.va.gov/HEALTHQUALITY/guidelines/CD/lipids/Lipids-CPG_2025-Provider-Summary_final_20260106.pdf",
+      "kind": "source",
+      "status": "baseline-needed",
+      "fingerprint": "bf6dc95af59b4d1fbb18e9ff070aff66a14299d198231159d99414f892b33b23",
+      "format": "pdf-sha256",
+      "finalUrl": "https://healthquality.va.gov/HEALTHQUALITY/guidelines/CD/lipids/Lipids-CPG_2025-Provider-Summary_final_20260106.pdf",
+      "checkedAt": "2026-11-02T01:39:44.695Z"
+    },
+    {
+      "id": "acc-htn-2025",
+      "title": "2025 Guideline for High Blood Pressure in Adults",
+      "url": "https://www.ahajournals.org/doi/10.1161/CIR.0000000000001356",
+      "kind": "source",
+      "status": "access-error",
+      "error": "HTTP 403; source access requires review.",
+      "checkedAt": "2026-11-02T01:39:44.695Z"
+    },
+    {
+      "id": "va-htn-2026",
+      "title": "Diagnosis and Management of Hypertension in Primary Care",
+      "url": "https://www.healthquality.va.gov/HEALTHQUALITY/guidelines/CD/htn/HTN-CPG_2026-Guideline_final_20260827.pdf",
+      "kind": "source",
+      "status": "baseline-needed",
+      "fingerprint": "10da68d049fb4d964b53a786905e0ce6c6c1b9e8f74eb855f7f671f8cae45f50",
+      "format": "pdf-sha256",
+      "finalUrl": "https://www.healthquality.va.gov/HEALTHQUALITY/guidelines/CD/htn/HTN-CPG_2026-Guideline_final_20260827.pdf",
+      "checkedAt": "2026-11-02T01:39:44.695Z"
+    },
+    {
+      "id": "hf-2022",
+      "title": "2022 Guideline for the Management of Heart Failure",
+      "url": "https://www.ahajournals.org/doi/10.1161/CIR.0000000000001063",
+      "kind": "source",
+      "status": "access-error",
+      "error": "HTTP 403; source access requires review.",
+      "checkedAt": "2026-11-02T01:39:44.695Z"
+    },
+    {
+      "id": "hf-doses-2022",
+      "title": "2022 Heart Failure Guideline — Official Slide Set, Table 14",
+      "url": "https://www.heart.org/-/media/832EA0F4E73948848612F228F7FA2D35.pdf",
+      "kind": "source",
+      "status": "access-error",
+      "error": "HTTP 403; source access requires review.",
+      "checkedAt": "2026-11-02T01:39:44.695Z"
+    },
+    {
+      "id": "uspstf-aspirin-2022",
+      "title": "Aspirin Use to Prevent Cardiovascular Disease: Preventive Medication",
+      "url": "https://www.uspreventiveservicestaskforce.org/uspstf/document/RecommendationStatementFinal/aspirin-to-prevent-cardiovascular-disease-preventive-medication",
+      "kind": "source",
+      "status": "baseline-needed",
+      "fingerprint": "8b69b3165084bee02d98e0adc05138e7ae7334d0e61922c12c6ba5987e18542b",
+      "format": "normalized-main-text-sha256",
+      "finalUrl": "https://www.uspreventiveservicestaskforce.org/uspstf/document/RecommendationStatementFinal/aspirin-to-prevent-cardiovascular-disease-preventive-medication",
+      "checkedAt": "2026-11-02T01:39:44.695Z"
+    },
+    {
+      "id": "uspstf-bone-2025",
+      "title": "Osteoporosis to Prevent Fractures: Screening",
+      "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/osteoporosis-screening",
+      "kind": "source",
+      "status": "baseline-needed",
+      "fingerprint": "31c837b3903a9551eead4627039c410f9756ff934e51ec0b487d83e569c3214c",
+      "format": "normalized-main-text-sha256",
+      "finalUrl": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/osteoporosis-screening",
+      "checkedAt": "2026-11-02T01:39:44.695Z"
+    },
+    {
+      "id": "discovery-va-guidelines",
+      "title": "VA/DoD guideline index — publication discovery",
+      "url": "https://www.healthquality.va.gov/",
+      "kind": "discovery",
+      "status": "baseline-needed",
+      "fingerprint": "14eb7e0b29409a9286f584c369131460183acdc9ce34668550b8955141bf933e",
+      "format": "normalized-main-text-sha256",
+      "finalUrl": "https://www.healthquality.va.gov/",
+      "checkedAt": "2026-11-02T01:39:44.695Z"
+    },
+    {
+      "id": "discovery-va-lipids",
+      "title": "VA/DoD lipid management landing page",
+      "url": "https://www.healthquality.va.gov/guidelines/CD/lipids/index.asp",
+      "kind": "discovery",
+      "status": "baseline-needed",
+      "fingerprint": "f8bc82a6d4ef60d8b1e58116702514e6b473195a5e25efa20b8b08f459bc5058",
+      "format": "normalized-main-text-sha256",
+      "finalUrl": "https://www.healthquality.va.gov/guidelines/CD/lipids/index.asp",
+      "checkedAt": "2026-11-02T01:39:44.695Z"
+    },
+    {
+      "id": "discovery-va-hypertension",
+      "title": "VA/DoD hypertension landing page",
+      "url": "https://www.healthquality.va.gov/guidelines/CD/htn/index.asp",
+      "kind": "discovery",
+      "status": "baseline-needed",
+      "fingerprint": "d7a1c14a45290374f16e5b7dff2b61c45bfa3ec223d8fe59048bcb5cbb349193",
+      "format": "normalized-main-text-sha256",
+      "finalUrl": "https://www.healthquality.va.gov/guidelines/CD/htn/index.asp",
+      "checkedAt": "2026-11-02T01:39:44.695Z"
+    },
+    {
+      "id": "discovery-aha-guidelines",
+      "title": "AHA guidelines and statements — publication discovery",
+      "url": "https://professional.heart.org/en/guidelines-and-statements",
+      "kind": "discovery",
+      "status": "access-error",
+      "error": "HTTP 403; source access requires review.",
+      "checkedAt": "2026-11-02T01:39:44.695Z"
+    },
+    {
+      "id": "discovery-cdc-schedule",
+      "title": "CDC adult immunization schedule — publication discovery",
+      "url": "https://www.cdc.gov/vaccines/hcp/imz-schedules/adult-age.html",
+      "kind": "discovery",
+      "status": "baseline-needed",
+      "fingerprint": "6492e4ce3a118a66b4db6f42495216203bada4c0f8885a1924a861526c2cdc6a",
+      "format": "normalized-main-text-sha256",
+      "finalUrl": "https://www.cdc.gov/vaccines/hcp/imz-schedules/adult-age.html",
+      "checkedAt": "2026-11-02T01:39:44.695Z"
+    }
+  ],
+  "needsReview": true,
+  "summary": {
+    "baseline-needed": 12,
+    "access-error": 5
+  }
+}
