@@ -1,8 +1,64 @@
 import { describe, expect, it } from 'vitest';
 import { doses, evaluateCase, profiles, recommendations, searchRecommendations, sources, validateCase, versions, type FictionalCase } from './guidelines';
+import published from '../data/prevent-coefficients.json';
 
 const run = (overrides: Partial<FictionalCase> = {}, profile = 'diabetes') => evaluateCase({ ...profiles.find(p => p.id === profile)!.data, ...overrides });
 const ids = (overrides: Partial<FictionalCase> = {}, profile = 'diabetes') => run(overrides, profile).matches.map(m => m.recommendation.id);
+describe('secondary prevention and risk calculator integration', () => {
+  it('shows post-MI goals, add-on therapy and CCD aspirin without first-event scores', () => {
+    const result = run({}, 'post-mi');
+    expect(result.risk?.tenYear).toBeNull();
+    expect(ids({}, 'post-mi')).toEqual(expect.arrayContaining(['secondary-lipids-very-high','secondary-lipids-add-on','secondary-va-lipids','secondary-aspirin','secondary-bp-systolic','secondary-bp-diastolic']));
+    expect(ids({}, 'post-mi')).not.toContain('prevention-aspirin');
+  });
+  it('treats prior MI as ASCVD even if the separate ASCVD box is unchecked', () => {
+    expect(ids({ascvd:false}, 'post-mi')).toContain('secondary-lipids-very-high');
+    expect(ids({ascvd:false}, 'post-mi')).not.toContain('lipids-diabetes');
+    expect(run({ascvd:false}, 'post-mi').risk?.tenYear).toBeNull();
+  });
+  it('does not infer very-high-risk status from a single MI', () => {
+    const result=run({veryHighRisk:'unknown'}, 'post-mi');
+    expect(result.matches.filter(m=>m.recommendation.id.startsWith('secondary-lipids'))).toHaveLength(0);
+    expect(result.gaps.some(g=>g.includes('Figure 10'))).toBe(true);
+    expect(ids({veryHighRisk:'no'}, 'post-mi')).toContain('secondary-lipids-standard');
+    expect(ids({veryHighRisk:'no'}, 'post-mi')).not.toContain('secondary-lipids-very-high');
+  });
+  it('requires maximally tolerated statin context and the inclusive LDL threshold for the add-on reference', () => {
+    expect(ids({ldl:55}, 'post-mi')).toContain('secondary-lipids-add-on');
+    for(const change of [{ldl:54},{maxStatin:false},{statin:false}]) expect(ids(change,'post-mi')).not.toContain('secondary-lipids-add-on');
+  });
+  it('distinguishes first-year ACS from chronic coronary antiplatelet references at 12 months', () => {
+    expect(ids({miMonthsAgo:11},'post-mi')).toEqual(expect.arrayContaining(['secondary-dapt','secondary-rehab']));
+    expect(ids({miMonthsAgo:11},'post-mi')).not.toContain('secondary-aspirin');
+    expect(ids({miMonthsAgo:12},'post-mi')).toContain('secondary-aspirin');
+    expect(ids({miMonthsAgo:12},'post-mi')).not.toContain('secondary-dapt');
+  });
+  it.each([{bleedingRisk:'unknown' as const},{bleedingRisk:'high' as const},{oralAnticoagulation:true},{antiplateletContraindication:true}])('withholds default antiplatelet pathways for %j', change => {
+    expect(ids(change,'post-mi')).not.toContain('secondary-aspirin');
+    expect(ids({...change,miMonthsAgo:2},'post-mi')).not.toContain('secondary-dapt');
+  });
+  it('does not apply coronary aspirin solely from a generic ASCVD history', () => expect(ids({priorMi:false},'post-mi')).not.toContain('secondary-aspirin'));
+  it('keeps VA/DoD secondary scope exclusions explicit', () => {
+    for(const change of [{veteran:false},{hf:true,ef:35},{dialysis:true},{egfr:14}]) expect(ids(change,'post-mi')).not.toContain('secondary-va-lipids');
+  });
+  it('uses total CVD for BP and ASCVD for lipids from the same inputs', () => {
+    const result=run({...published.fixtureInputs,sex:'female',age:60,diabetes:false,ckd:false,veteran:false,ldl:115,dbp:82});
+    expect(result.risk!.tenYear!.cvd).toBeGreaterThanOrEqual(.075);
+    expect(result.risk!.tenYear!.ascvd).toBeLessThan(.10);
+    const found=result.matches.map(m=>m.recommendation.id);
+    expect(found).toContain('htn-diabetes');
+    expect(found).toContain('lipids-prevent-intermediate');
+    expect(found).not.toContain('lipids-prevent-high');
+  });
+  it('withholds risk-based matches for invalid model input, but preserves independent diabetes guidance', () => {
+    const result=run({totalCholesterol:NaN});
+    expect(result.errors).toEqual([]);
+    expect(result.risk?.errors.length).toBeGreaterThan(0);
+    expect(result.matches.map(m=>m.recommendation.id)).toContain('lipids-diabetes');
+    expect(result.matches.map(m=>m.recommendation.id)).not.toContain('lipids-prevent-high');
+  });
+  it('withholds the general risk lipid pathway for known subclinical disease', () => expect(ids({diabetes:false,subclinicalAtherosclerosis:true,age:65,smoker:true,sbp:160})).not.toContain('lipids-prevent-high'));
+});
 describe('diabetes and primary prevention boundaries', () => {
   it.each([40, 47, 75])('matches ACC diabetes statin at age %i', age => expect(ids({ age })).toContain('lipids-diabetes'));
   it.each([39, 76])('withholds the 40–75 ACC pathway at age %i', age => expect(ids({ age })).not.toContain('lipids-diabetes'));
@@ -22,7 +78,7 @@ describe('diabetes and primary prevention boundaries', () => {
     const result = run({ ascvd: true, age: 64 });
     expect(result.matches.map(m => m.recommendation.id)).not.toEqual(expect.arrayContaining(['lipids-diabetes', 'va-lipids-primary', 'prevention-aspirin']));
     expect(result.matches.filter(m => ['lipids-diabetes','va-lipids-primary','prevention-aspirin'].includes(m.recommendation.id))).toHaveLength(0);
-    expect(result.gaps.some(g => g.includes('Secondary prevention is not encoded'))).toBe(true);
+    expect(result.gaps.some(g => g.includes('Secondary prevention is shown separately'))).toBe(true);
   });
   it('keeps VA context explicit and respects the HFrEF scope exclusion', () => {
     expect(ids({ veteran: false })).not.toContain('va-lipids-primary');

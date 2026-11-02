@@ -4,7 +4,9 @@ This records software checks, not clinical approval. Every clinical recommendati
 
 ## Automated checks
 
-- 59 Vitest tests passed: 49 clinical-rule, search and provenance checks; 10 source-monitor fixture checks.
+- 108 Vitest tests passed: 64 clinical-rule, search and provenance checks; 34 PREVENT checks; 10 source-monitor fixture checks.
+- PREVENT matches all 12 original spreadsheet outputs (sex × endpoint × horizon) within 1e-12, plus the primary paper’s rounded worked examples.
+- Post-MI tests cover ASCVD implication, explicit risk classification, lipid thresholds, ACS/CCD timing, bleeding/OAC exclusions and first-event score withholding.
 - TypeScript checking and the Vite production build passed.
 - The `/sage/` repository-subpath build emitted scoped asset URLs, manifest start URL and service-worker scope.
 - The PWA build includes 192px and 512px icons and a precached static snapshot. Case values are not persisted or cached.
@@ -22,9 +24,16 @@ This records software checks, not clinical approval. Every clinical recommendati
 - Production app loaded successfully at `/sage/` with no console errors in that session.
 - The production app reported its bundled snapshot ready offline. After both local servers were stopped, a reload succeeded and the fictional age-58 vaccine case still generated all four encoded vaccination references.
 
+## v0.2 browser checks
+
+- Dedicated PREVENT calculator displays the published female example: 14.7% total CVD, 9.2% ASCVD, 8.1% HF at 10 years; all three 30-year outputs appear separately.
+- Editing a value flags stale results and disables transfer until recalculation. Transfer preserves fictional PREVENT inputs and labels other fields as fictional defaults.
+- The post-MI example returns secondary lipid and antiplatelet references, withholds first-event PREVENT estimates, and does not display primary-prevention aspirin advice.
+- Mobile navigation includes Risk calculators and Secondary prevention. Calculator and post-MI engine pages have no horizontal page overflow at 390px. Desktop engine has no horizontal page overflow at 1440px.
+
 ## Source-monitor check
 
-The live baseline attempt inspected 17 maintained documents/index pages. Twelve baseline fingerprints were captured. Five AHA/publisher endpoints returned HTTP 403 and remain flagged as access failures. No clinical data was modified. The report is included in `src/data/source-check-report.json` and exposed in the app’s updates screen. Scheduled GitHub monitoring is prepared but is not active until this repository is hosted on GitHub.
+The live baseline attempt inspected 17 maintained documents/index pages. Twelve baseline fingerprints were captured. Five AHA/publisher endpoints returned HTTP 403 and remain flagged as access failures. No clinical data was modified. The report is included in `src/data/source-check-report.json` and exposed in the app’s updates screen. Three v0.2 sources additionally require initial fingerprints. Scheduled monitoring is included in the repository; its execution status must be checked in GitHub Actions.
 
 ## Verification limits
 
@@ -32,4 +41,4 @@ The live baseline attempt inspected 17 maintained documents/index pages. Twelve 
 - Native app installation, iOS Safari, Android Chrome, and external guideline availability on every device were not tested.
 - This is a selected guideline snapshot, not comprehensive coverage or proof that no newer statement exists.
 - Clinical accuracy, safety, prescribing, diagnostic performance, and suitability for patient care are not validated by these software tests.
-- No GitHub repository, public deployment, domain reservation, or cloud schedule was created.
+- Target repository: MachaalaniMD/sage. Pages activation and workflow status are tracked separately from software validation; a configured workflow alone does not establish a successful public deployment.

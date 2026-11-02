@@ -1,6 +1,6 @@
 # Sage
 
-A responsive, static Progressive Web App for exploring selected clinical guideline references using **fictional cases only**. Built with React, TypeScript, Vite, Tailwind CSS, shadcn-style Radix UI primitives, and Fuse.js. Ready for GitHub Pages; no backend, paid service, or API key is needed.
+A responsive, static Progressive Web App for exploring selected clinical guideline references using **fictional cases only**. Built with React, TypeScript, Vite, Tailwind CSS, shadcn-style Radix UI primitives, and Fuse.js. Configured for [machaalanimd.github.io/sage](https://machaalanimd.github.io/sage/); no backend, paid service, or API key is needed.
 
 **Prototype, not clinically validated. Every clinical record and dose table awaits independent medical verification.** Source access was checked on November 1, 2026. This is a selected snapshot and does not claim comprehensive or perpetually current coverage.
 
@@ -27,9 +27,11 @@ For a self-contained local demonstration, open the included `standalone.html` in
 
 ## What works
 
-- Overview with five clinical areas: adult vaccinations, dyslipidemia, hypertension, heart failure GDMT, and selected primary prevention.
+- Overview with six clinical areas: adult vaccinations, dyslipidemia, hypertension, heart failure GDMT, selected primary prevention, and secondary prevention after MI/ASCVD.
 - Search by recommendation, condition, medication, or society; topic and society filters.
 - Fictional-case matching with age, comorbidities, labs, average BP, vaccine history, and VA/DoD context.
+- PREVENT simplified base equations: 10-year total CVD, ASCVD and HF; 30-year estimates at ages 30–59. Results can populate the fictional decision engine.
+- Post-MI lipid goals, maximally tolerated statin/add-on context, first-year ACS versus chronic-coronary antiplatelet references, BP thresholds, rehabilitation and VA/DoD lipid context.
 - Explicit matching reasons, missing coverage, pending-review labels, and society-specific grading.
 - Recommendation detail records with source location, original publication version, evidence metadata, and direct primary links.
 - Selected HFrEF starting and target doses, with separate Table 14 source provenance.
@@ -46,18 +48,27 @@ The service worker caches static application assets and the bundled source snaps
 
 ## Clinical scope and known limits
 
-The engine is deterministic selected-pathway matching, **not an exhaustive decision engine, diagnosis, treatment plan, risk calculator, prescribing tool, or safety assessment**. A missing match does not mean no care is indicated. The app does not compute PREVENT or ASCVD scores and never substitutes one score for another.
+The engine is deterministic selected-pathway matching, **not an exhaustive decision engine, diagnosis, treatment plan, prescribing tool, or safety assessment**. A missing match does not mean no care is indicated. ACC/AHA BP pathways use total CVD risk; lipid pathways use ASCVD risk. First-event estimates are withheld with prior MI, known ASCVD or HF. No recurrent-event score is provided.
 
-The fictional cases illustrate the age-47 diabetes/statin question, age-58 routine vaccines, HFrEF pillars, and selected prevention. Rules intentionally defer incomplete pneumococcal/RZV histories, immunocompromised RZV schedules, secondary prevention, younger-woman fracture risk assessment, and unencoded pathways. COVID-19, RSV, Tdap, and other vaccination pathways are not implemented. No exact catch-up dose date is calculated.
+The fictional cases illustrate the age-47 diabetes/statin question, age-58 routine vaccines, HFrEF pillars, selected prevention, and secondary prevention after prior MI. Rules intentionally defer incomplete pneumococcal/RZV histories, immunocompromised RZV schedules, younger-woman fracture risk assessment, and unencoded pathways. COVID-19, RSV, Tdap, and other vaccination pathways are not implemented. No exact catch-up dose date is calculated.
 
-HFrEF records and doses cite the 2022 AHA/ACC/HFSA guideline and official slide set. The MRA match checks only the encoded NYHA, renal and potassium conditions. Other pillars also need clinical assessment. Medication history, current therapy, contraindications, pregnancy, frailty, interactions, volume status and many other safety factors are not fully assessed. The VA lipid pathway withholds matches for the encoded HFrEF ≤35% and very low eGFR exclusions; other scope exclusions still need review.
+HFrEF records and doses cite the 2022 AHA/ACC/HFSA guideline and official slide set. The MRA match checks only the encoded NYHA, renal and potassium conditions. Other pillars also need clinical assessment. Medication history, current therapy, contraindications, pregnancy, frailty, interactions, volume status and many other safety factors are not fully assessed. The VA lipid pathway withholds matches for the encoded HFrEF ≤35%, dialysis and very low eGFR exclusions; other scope exclusions still need review.
 
 CDC recommendations, USPSTF grades, VA/DoD GRADE strength, and ACC/AHA classes and levels retain their original systems. Missing evidence levels are explicitly null, never inferred. The broad hypertension threshold overview does not have a single fabricated class or evidence level. Indexed publisher text was used where direct access was restricted; that access limitation is recorded.
+
+## PREVENT implementation and provenance
+
+This is an independent implementation of the **publicly published simplified base equations** from Khan et al., *Circulation* 2024, [primary paper and supplementary Tables S12A/S12F](https://pmc.ncbi.nlm.nih.gov/articles/PMC10910659/). It does not use AHA's gated software and is not official AHA software or endorsed by AHA. Coefficients retain table, sheet and cell-range provenance and the downloaded supplement checksum. The full source workbook is not redistributed.
+
+All 12 sex/outcome/horizon outputs match the original spreadsheet's stored example results within 1e-12, and the paper's worked examples match after published rounding. This checks implementation fidelity, not clinical validity. Eligibility follows the [current AHA calculator guidance](https://professional.heart.org/en/guidelines-and-statements/prevent-calculator): 10-year ages 30–79; 30-year ages 30–59. Input bounds are checked without clamping. UACR, HbA1c and SDI extensions are not implemented. eGFR is a supplied lab value, not calculated here. Risks overlap and must not be added.
+
+Very-high-risk ASCVD status requires explicit confirmation against Figure 10; one prior MI does not automatically determine it. Antithrombotic references require explicit bleeding, anticoagulation and contraindication context. These remain selected references, without full regimen selection, PCI review or medication safety assessment. VA/DoD risk-only automatic statin matching is deferred pending confirmation of the intended PREVENT endpoint; diabetes and LDL criteria are encoded. FRAX and other uncovered calculators are not implemented; their dependent pathways are explicitly deferred.
 
 ## Structured source and version data
 
 - `src/data/sources.json`: source IDs, society, publication year, version, URL, access check and access method.
-- `src/data/recommendations.json`: record revision, population, source locator, evidence system, original grade when extracted, cautions, and `pending-medical-review` status.
+- `src/data/recommendations.json` and `additional-recommendations.json`: record revision, population, source locator, evidence system, original grade when extracted, cautions, and `pending-medical-review` status.
+- `src/data/prevent-coefficients.json`: public model coefficients, source cell ranges, checksum and original numerical fixtures.
 - `src/data/doses.json`: selected Table 14 initial/target doses, with row-level source and locator.
 - `src/data/versions.json`: selected before/after summaries linked to the source's update table; not complete historical guideline reproductions.
 - `src/data/watch-pages.json`: publication-discovery indexes alongside individual source documents.
@@ -76,15 +87,15 @@ The baseline command establishes **missing** fingerprints only; it never advance
 
 Reports distinguish `baseline-needed`, `unchanged`, `changed-review-required`, `baseline-mismatch`, and `access-error`. Access failures and anti-bot challenges are never treated as unchanged. The checker exits 2 on access errors and 1 on changes requiring review, while retaining the full report. A changed hash can reflect page maintenance rather than clinical content. Discovery index monitoring flags possible new publications for a person to inspect; it does not guarantee detection of every guideline release.
 
-The initial live baseline attempt recorded 12 of 17 monitored pages/documents. Five AHA/publisher endpoints returned HTTP 403 and remain flagged; those documents cannot currently be monitored automatically from this environment. The initial report is retained in `src/data/source-check-report.json` and summarized in the app. Readable indexed text and official PDFs accessed through the research tools supported the source catalog, but automated access and medical verification remain separate questions.
+The initial v0.1 baseline attempt recorded 12 of 17 monitored pages/documents. Three sources were added in v0.2 and require initial fingerprints. Five AHA/publisher endpoints returned HTTP 403 and remain flagged; those documents cannot currently be monitored automatically from this environment. The initial report is retained in `src/data/source-check-report.json` and summarized in the app. Readable indexed text and official PDFs accessed through the research tools supported the source catalog, but automated access and medical verification remain separate questions.
 
 The included weekly GitHub workflow checks source documents and discovery pages, restores the original baseline, writes a workflow summary, and uploads the report. Baseline cache eviction can cause reinitialization; preserve a medically reviewed baseline in the tracked JSON file to avoid this. Changed fingerprints never replace active recommendation data. After reviewing a change, update the corresponding fingerprint deliberately in a reviewed commit. No issues, emails, or messages are automatically sent. GitHub's normal workflow-failure notification preferences may apply to access failures.
 
 ## Publish on GitHub Pages
 
-This deliverable has not been published and does not reserve a domain.
+Repository: [MachaalaniMD/sage](https://github.com/MachaalaniMD/sage). Intended Pages URL: [machaalanimd.github.io/sage](https://machaalanimd.github.io/sage/). The workflow run and live URL determine actual deployment status.
 
-1. Create a GitHub repository (for example `sage`) and push this directory's contents to its `main` branch, keeping `package.json` at repository root.
+1. Keep this directory's contents on the repository’s `main` branch, with `package.json` at repository root.
 2. In repository Settings → Pages → Build and deployment, select **GitHub Actions**.
 3. The included `pages.yml` runs tests, builds the app with the correct repository base path from `configure-pages`, and deploys the static `dist/` artifact.
 4. Check the workflow's actual returned Pages URL. For a project repository this is usually `https://USERNAME.github.io/sage/`. A root user site uses a repository named `USERNAME.github.io`.

@@ -3,7 +3,7 @@ import { readFile, writeFile, mkdir } from 'node:fs/promises';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-const allowedHosts = new Set(['www.cdc.gov', 'cdc.gov', 'www.ahajournals.org', 'ahajournals.org', 'www.heart.org', 'heart.org', 'professional.heart.org', 'healthquality.va.gov', 'www.healthquality.va.gov', 'www.uspreventiveservicestaskforce.org', 'uspreventiveservicestaskforce.org']);
+const allowedHosts = new Set(['pmc.ncbi.nlm.nih.gov', 'www.cdc.gov', 'cdc.gov', 'www.ahajournals.org', 'ahajournals.org', 'www.heart.org', 'heart.org', 'professional.heart.org', 'healthquality.va.gov', 'www.healthquality.va.gov', 'www.uspreventiveservicestaskforce.org', 'uspreventiveservicestaskforce.org']);
 export function assertSourceUrl(value) {
   const url = new URL(value);
   if (url.protocol !== 'https:' || !allowedHosts.has(url.hostname) || url.username || url.password || url.port) throw new Error('Source URL is outside the maintained primary-source allowlist.');
