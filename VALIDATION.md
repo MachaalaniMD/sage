@@ -35,10 +35,18 @@ This records software checks, not clinical approval. Every clinical recommendati
 
 The live baseline attempt inspected 17 maintained documents/index pages. Twelve baseline fingerprints were captured. Five AHA/publisher endpoints returned HTTP 403 and remain flagged as access failures. No clinical data was modified. The report is included in `src/data/source-check-report.json` and exposed in the app’s updates screen. Three v0.2 sources additionally require initial fingerprints. Scheduled monitoring is included in the repository; its execution status must be checked in GitHub Actions.
 
+## Public deployment
+
+- Source published to [MachaalaniMD/sage](https://github.com/MachaalaniMD/sage), preserving the repository’s existing MIT license.
+- GitHub CI test/build run 41378574824 passed. Pages workflow 41378574800, attempt 2, built and deployed successfully after Pages was enabled for Actions.
+- Verified [machaalanimd.github.io/sage](https://machaalanimd.github.io/sage/) in the browser: v0.2 PREVENT calculator loaded, produced the expected published example outputs, and reported no browser console errors.
+- The updated production PWA was reloaded after both local preview servers were stopped. The calculator still produced its expected output offline.
+- Weekly source monitoring is configured in GitHub Actions. The weekly job has not yet executed; the initial source access limitations above remain applicable.
+
 ## Verification limits
 
 - The browser environment permits HTTP(S) pages and refused a `file:` URL, so launching `standalone.html` directly from disk was not browser-tested. Its source uses the same compiled application with the PWA registration disabled and passed packaging/static syntax checks.
 - Native app installation, iOS Safari, Android Chrome, and external guideline availability on every device were not tested.
 - This is a selected guideline snapshot, not comprehensive coverage or proof that no newer statement exists.
 - Clinical accuracy, safety, prescribing, diagnostic performance, and suitability for patient care are not validated by these software tests.
-- Target repository: MachaalaniMD/sage. Pages activation and workflow status are tracked separately from software validation; a configured workflow alone does not establish a successful public deployment.
+- Public deployment does not confer medical verification or comprehensive guideline coverage.

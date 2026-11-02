@@ -1,6 +1,6 @@
 # Sage
 
-A responsive, static Progressive Web App for exploring selected clinical guideline references using **fictional cases only**. Built with React, TypeScript, Vite, Tailwind CSS, shadcn-style Radix UI primitives, and Fuse.js. Configured for [machaalanimd.github.io/sage](https://machaalanimd.github.io/sage/); no backend, paid service, or API key is needed.
+A responsive, static Progressive Web App for exploring selected clinical guideline references using **fictional cases only**. Built with React, TypeScript, Vite, Tailwind CSS, shadcn-style Radix UI primitives, and Fuse.js. Live at [machaalanimd.github.io/sage](https://machaalanimd.github.io/sage/); no backend, paid service, or API key is needed.
 
 **Prototype, not clinically validated. Every clinical record and dose table awaits independent medical verification.** Source access was checked on November 1, 2026. This is a selected snapshot and does not claim comprehensive or perpetually current coverage.
 
@@ -93,7 +93,7 @@ The included weekly GitHub workflow checks source documents and discovery pages,
 
 ## Publish on GitHub Pages
 
-Repository: [MachaalaniMD/sage](https://github.com/MachaalaniMD/sage). Intended Pages URL: [machaalanimd.github.io/sage](https://machaalanimd.github.io/sage/). The workflow run and live URL determine actual deployment status.
+Repository: [MachaalaniMD/sage](https://github.com/MachaalaniMD/sage). Pages URL: [machaalanimd.github.io/sage](https://machaalanimd.github.io/sage/). The workflow run and live URL determine actual deployment status.
 
 1. Keep this directory's contents on the repository’s `main` branch, with `package.json` at repository root.
 2. In repository Settings → Pages → Build and deployment, select **GitHub Actions**.
