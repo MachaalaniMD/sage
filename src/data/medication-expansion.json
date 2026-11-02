@@ -1,0 +1,408 @@
+[
+  {
+    "id": "af-anticoagulation-high",
+    "topic": "anticoagulation",
+    "title": "AF: anticoagulation at higher stroke risk",
+    "summary": "Anticoagulation is recommended at annual thromboembolic risk ≥2%, exemplified by CHA₂DS₂-VASc ≥2 in men or ≥3 in women.",
+    "population": "Adults with diagnosed AF.",
+    "sourceId": "acc-af-2023",
+    "locator": "Section 6.3.1, recommendation 1",
+    "gradeSystem": "ACC/AHA COR / LOE",
+    "strength": "Class 1",
+    "evidenceLevel": "A",
+    "evidenceNote": "Original recommendation grade.",
+    "cautions": [
+      "Assess bleeding, contraindications and preferences."
+    ],
+    "tags": [
+      "AF",
+      "CHA2DS2VASc",
+      "stroke",
+      "anticoagulant"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "af-anticoagulation-high"
+  },
+  {
+    "id": "af-anticoagulation-intermediate",
+    "topic": "anticoagulation",
+    "title": "AF: intermediate-risk anticoagulation discussion",
+    "summary": "Anticoagulation is reasonable at annual thromboembolic risk 1% to <2%, corresponding to CHA₂DS₂-VASc 1 in men or 2 in women.",
+    "population": "Adults with diagnosed AF.",
+    "sourceId": "acc-af-2023",
+    "locator": "Section 6.3.1, recommendation 3",
+    "gradeSystem": "ACC/AHA COR / LOE",
+    "strength": "Class 2a",
+    "evidenceLevel": "A",
+    "evidenceNote": "Original recommendation grade.",
+    "cautions": [
+      "Risk modifiers and shared decisions matter."
+    ],
+    "tags": [
+      "AF",
+      "CHA2DS2VASc",
+      "risk"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "af-anticoagulation-intermediate"
+  },
+  {
+    "id": "af-doac-preference",
+    "topic": "anticoagulation",
+    "title": "AF: DOAC versus warfarin",
+    "summary": "DOACs are preferred over warfarin for eligible AF anticoagulation candidates without mechanical valves or moderate-to-severe rheumatic mitral stenosis.",
+    "population": "Eligible anticoagulation candidates with AF.",
+    "sourceId": "acc-af-2023",
+    "locator": "Section 6.3.1, recommendation 2",
+    "gradeSystem": "ACC/AHA COR / LOE",
+    "strength": "Class 1",
+    "evidenceLevel": "A",
+    "evidenceNote": "Original recommendation grade.",
+    "cautions": [
+      "Review renal function, interactions and dosing."
+    ],
+    "tags": [
+      "DOAC",
+      "warfarin",
+      "AF"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "af-doac-preference"
+  },
+  {
+    "id": "periop-factor-xa",
+    "topic": "anticoagulation",
+    "title": "Elective procedures: factor Xa inhibitor interruption",
+    "summary": "Apixaban, edoxaban or rivaroxaban: selected elective procedures use 1 full day off before low/moderate bleeding risk, or 2 before high risk.",
+    "population": "When interruption is required; renal eligibility reviewed.",
+    "sourceId": "chest-perioperative-2022",
+    "locator": "Recommendations 22, 24–25; implementation considerations",
+    "gradeSystem": "CHEST GRADE",
+    "strength": "Conditional",
+    "evidenceLevel": null,
+    "evidenceNote": "Very low certainty.",
+    "cautions": [
+      "Also omit procedure-day doses. Urgent, neuraxial and severe-CKD pathways need separate review."
+    ],
+    "tags": [
+      "DOAC",
+      "perioperative",
+      "apixaban",
+      "rivaroxaban",
+      "edoxaban"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "periop-factor-xa"
+  },
+  {
+    "id": "periop-dabigatran",
+    "topic": "anticoagulation",
+    "title": "Dabigatran: interruption depends on CrCl",
+    "summary": "Low/moderate versus high bleeding risk: CrCl ≥50 mL/min, 1 versus 2 days off; CrCl 30–<50, 2 versus 4 days.",
+    "population": "Selected elective procedures requiring interruption.",
+    "sourceId": "chest-perioperative-2022",
+    "locator": "Recommendation 23; implementation considerations",
+    "gradeSystem": "CHEST GRADE",
+    "strength": "Conditional",
+    "evidenceLevel": null,
+    "evidenceNote": "Very low certainty.",
+    "cautions": [
+      "Also omit procedure-day doses. CrCl <30, urgent and neuraxial pathways need separate review."
+    ],
+    "tags": [
+      "dabigatran",
+      "CrCl",
+      "perioperative"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "periop-dabigatran"
+  },
+  {
+    "id": "periop-doac-resumption",
+    "topic": "anticoagulation",
+    "title": "After procedures: DOAC resumption",
+    "summary": "Resume after ≥24 hours for low/moderate bleeding risk or 48–72 hours for high risk, once hemostasis permits.",
+    "population": "After elective procedural interruption.",
+    "sourceId": "chest-perioperative-2022",
+    "locator": "Recommendation 27; implementation considerations",
+    "gradeSystem": "CHEST GRADE",
+    "strength": "Conditional",
+    "evidenceLevel": null,
+    "evidenceNote": "Very low certainty.",
+    "cautions": [
+      "Ongoing bleeding overrides the interval."
+    ],
+    "tags": [
+      "DOAC",
+      "resumption",
+      "surgery"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "periop-doac-resumption"
+  },
+  {
+    "id": "vte-primary-duration",
+    "topic": "anticoagulation",
+    "title": "DVT/PE: primary-treatment duration",
+    "summary": "ASH suggests 3–6 months of primary anticoagulation rather than 6–12 months. Most temporary-risk-factor VTE does not need continued secondary prevention afterward.",
+    "population": "Adults with DVT/PE; cancer-specific guidance separate.",
+    "sourceId": "ash-vte-2020",
+    "locator": "Recommendations 12–14 and remarks",
+    "gradeSystem": "ASH GRADE",
+    "strength": "Conditional",
+    "evidenceLevel": null,
+    "evidenceNote": "Moderate certainty of evidence.",
+    "cautions": [
+      "Recurrent events and persistent risk factors change duration decisions."
+    ],
+    "tags": [
+      "VTE",
+      "DVT",
+      "PE",
+      "provoked",
+      "duration"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "vte-primary-duration"
+  },
+  {
+    "id": "vte-unprovoked-extended",
+    "topic": "anticoagulation",
+    "title": "Unprovoked DVT/PE: extended prevention",
+    "summary": "After primary treatment for unprovoked DVT/PE, indefinite antithrombotic therapy is suggested over stopping.",
+    "population": "Adults after unprovoked DVT/PE.",
+    "sourceId": "ash-vte-2020",
+    "locator": "Recommendation 19 and remarks",
+    "gradeSystem": "ASH GRADE",
+    "strength": "Conditional",
+    "evidenceLevel": null,
+    "evidenceNote": "Moderate certainty of evidence.",
+    "cautions": [
+      "Does not apply to high bleeding risk; reassess benefit and harm regularly."
+    ],
+    "tags": [
+      "VTE",
+      "unprovoked",
+      "indefinite",
+      "duration"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "vte-unprovoked-extended"
+  },
+  {
+    "id": "monitor-ace-arb",
+    "topic": "monitoring",
+    "title": "ACE inhibitor / ARB: kidney and potassium checks",
+    "summary": "Check BP, creatinine and potassium within 2–4 weeks after initiation or dose increase; timing depends on GFR and potassium.",
+    "population": "People with CKD receiving ACEi/ARB.",
+    "sourceId": "kdigo-ckd-2024",
+    "locator": "Practice Point 3.6.2",
+    "gradeSystem": "KDIGO practice point",
+    "strength": "Ungraded practice point",
+    "evidenceLevel": null,
+    "evidenceNote": "Ungraded advice.",
+    "cautions": [
+      "Earlier checks may be needed with instability or hyperkalemia risk."
+    ],
+    "tags": [
+      "ACEi",
+      "ARB",
+      "creatinine",
+      "potassium",
+      "monitoring"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "monitor-ace-arb"
+  },
+  {
+    "id": "monitor-mra-hf",
+    "topic": "monitoring",
+    "title": "HFrEF MRA: potassium and renal monitoring",
+    "summary": "After MRA initiation or intensification, check potassium and renal function around 1 week, 4 weeks and every 6 months.",
+    "population": "HFrEF receiving steroidal MRA therapy.",
+    "sourceId": "hf-2022",
+    "locator": "Section 7.3.3, supportive text for recommendation 1",
+    "gradeSystem": "Guideline supportive text",
+    "strength": "Supportive-text schedule",
+    "evidenceLevel": null,
+    "evidenceNote": "Intervals are supportive text, not a separate graded recommendation.",
+    "cautions": [
+      "Monitor more often with instability; eligibility and safety assessment remain necessary."
+    ],
+    "tags": [
+      "MRA",
+      "spironolactone",
+      "eplerenone",
+      "potassium",
+      "renal",
+      "monitoring"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "monitor-mra-hf"
+  },
+  {
+    "id": "monitor-lipid-treatment",
+    "topic": "monitoring",
+    "title": "Lipid-lowering therapy: response monitoring",
+    "summary": "Check a lipid profile 4–12 weeks after starting or adjusting therapy, then every 6–12 months to assess response and adherence.",
+    "population": "Individuals receiving lipid-lowering therapy.",
+    "sourceId": "acc-lipids-2026",
+    "locator": "Section 3.5, recommendation 1",
+    "gradeSystem": "ACC/AHA COR / LOE",
+    "strength": "Class 1",
+    "evidenceLevel": "A",
+    "evidenceNote": "Original monitoring recommendation.",
+    "cautions": [
+      "Do not replace individual medication safety monitoring."
+    ],
+    "tags": [
+      "statin",
+      "lipid",
+      "LDL",
+      "monitoring",
+      "interval"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "monitor-lipid-treatment"
+  },
+  {
+    "id": "monitor-metformin-b12",
+    "topic": "monitoring",
+    "title": "Metformin: vitamin B12 assessment",
+    "summary": "Consider periodic B12 testing with long-term metformin, especially anemia or neuropathy. Supportive text advises annual testing after >4 years or with other deficiency risks.",
+    "population": "Individuals receiving long-term metformin.",
+    "sourceId": "ada-metformin-monitor-2026",
+    "locator": "Recommendation 3.10 and supportive text",
+    "gradeSystem": "ADA evidence grading",
+    "strength": "Grade B",
+    "evidenceLevel": null,
+    "evidenceNote": "Grade B applies to periodic assessment; annual interval is supportive text.",
+    "cautions": [
+      "Evaluate symptoms promptly rather than waiting for routine testing."
+    ],
+    "tags": [
+      "metformin",
+      "B12",
+      "anemia",
+      "neuropathy",
+      "monitoring"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "monitor-metformin-b12"
+  },
+  {
+    "id": "deprescribe-ppi-review",
+    "topic": "deprescribing",
+    "title": "PPI: review indication and dose",
+    "summary": "Regularly document the ongoing indication. Without a definitive chronic indication, consider a deprescribing trial; most long-term twice-daily users can be considered for once-daily dosing.",
+    "population": "Adults receiving long-term PPI.",
+    "sourceId": "aga-ppi-2022",
+    "locator": "Best Practice Advice 1–3",
+    "gradeSystem": "AGA Best Practice Advice",
+    "strength": "Expert best-practice advice",
+    "evidenceLevel": null,
+    "evidenceNote": "No GRADE strength assigned.",
+    "cautions": [
+      "Assess upper-GI bleeding risk first."
+    ],
+    "tags": [
+      "PPI",
+      "omeprazole",
+      "deprescribing",
+      "dose",
+      "duration"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "deprescribe-ppi-review"
+  },
+  {
+    "id": "deprescribe-ppi-exclusions",
+    "topic": "deprescribing",
+    "title": "PPI: situations favoring continuation",
+    "summary": "Generally avoid discontinuation with complicated GERD, Barrett’s esophagus, eosinophilic esophagitis, or high upper-GI bleeding risk.",
+    "population": "PPI users considered for deprescribing.",
+    "sourceId": "aga-ppi-2022",
+    "locator": "Best Practice Advice 4–8",
+    "gradeSystem": "AGA Best Practice Advice",
+    "strength": "Expert best-practice advice",
+    "evidenceLevel": null,
+    "evidenceNote": "No GRADE strength assigned.",
+    "cautions": [
+      "Discuss transient rebound symptoms after withdrawal; review the full indication."
+    ],
+    "tags": [
+      "PPI",
+      "GERD",
+      "Barrett",
+      "bleeding",
+      "deprescribing"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "deprescribe-ppi-exclusions"
+  },
+  {
+    "id": "deprescribe-bzd-older",
+    "topic": "deprescribing",
+    "title": "Benzodiazepines in older adults",
+    "summary": "Generally taper benzodiazepines in adults aged ≥65 unless compelling reasons favor continuation, after individualized benefit–harm review.",
+    "population": "Older adults receiving benzodiazepines.",
+    "sourceId": "asam-bzd-2025",
+    "locator": "Older Adults, recommendation 27",
+    "gradeSystem": "ASAM joint guideline",
+    "strength": "Strong recommendation",
+    "evidenceLevel": null,
+    "evidenceNote": "Clinical consensus, not an ACC/AHA evidence level.",
+    "cautions": [
+      "Coordinate tapering and management of underlying conditions."
+    ],
+    "tags": [
+      "benzodiazepine",
+      "older",
+      "adults",
+      "taper",
+      "deprescribing"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "deprescribe-bzd-older"
+  },
+  {
+    "id": "deprescribe-bzd-withdrawal",
+    "topic": "deprescribing",
+    "title": "Benzodiazepine withdrawal: avoid abrupt cessation",
+    "summary": "Do not abruptly stop when physical dependence is likely. A typical initial taper is 5–10% every 2–4 weeks, adjusted to symptoms.",
+    "population": "Adults for whom benzodiazepine risks outweigh benefits.",
+    "sourceId": "asam-bzd-2025",
+    "locator": "Tapering process; general tapering strategy",
+    "gradeSystem": "ASAM joint guideline",
+    "strength": "Guideline tapering advice",
+    "evidenceLevel": null,
+    "evidenceNote": "Individualized guidance; no separate grade extracted here.",
+    "cautions": [
+      "Not an automatic taper prescription; severe withdrawal may require higher-level care."
+    ],
+    "tags": [
+      "benzodiazepine",
+      "taper",
+      "withdrawal",
+      "duration"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "deprescribe-bzd-withdrawal"
+  }
+]

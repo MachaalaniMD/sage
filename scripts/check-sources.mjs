@@ -1,9 +1,9 @@
 import { createHash } from 'node:crypto';
-import { readFile, writeFile, mkdir } from 'node:fs/promises';
+import { readFile, writeFile, mkdir, readdir } from 'node:fs/promises';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-const allowedHosts = new Set(['pmc.ncbi.nlm.nih.gov', 'www.cdc.gov', 'cdc.gov', 'www.ahajournals.org', 'ahajournals.org', 'www.heart.org', 'heart.org', 'professional.heart.org', 'healthquality.va.gov', 'www.healthquality.va.gov', 'www.uspreventiveservicestaskforce.org', 'uspreventiveservicestaskforce.org']);
+const allowedHosts = new Set(['www.fraxplus.org','fraxplus.org','www.va.gov','va.gov','www.pbm.va.gov','pbm.va.gov','department.va.gov','kdigo.org','diabetesjournals.org','doi.org','www.asge.org','asmbs.org','journal.chestnet.org','gastro.org','downloads.asam.org','www.acpjournals.org','journals.lww.com','pmc.ncbi.nlm.nih.gov', 'www.cdc.gov', 'cdc.gov', 'www.ahajournals.org', 'ahajournals.org', 'www.heart.org', 'heart.org', 'professional.heart.org', 'healthquality.va.gov', 'www.healthquality.va.gov', 'www.uspreventiveservicestaskforce.org', 'uspreventiveservicestaskforce.org']);
 export function assertSourceUrl(value) {
   const url = new URL(value);
   if (url.protocol !== 'https:' || !allowedHosts.has(url.hostname) || url.username || url.password || url.port) throw new Error('Source URL is outside the maintained primary-source allowlist.');
@@ -67,7 +67,8 @@ if (isDirectRun) {
   const arg = name => { const at = process.argv.indexOf(name); return at >= 0 ? process.argv[at + 1] : null; };
   const baselineFile = resolve(root, arg('--baseline-file') || 'src/data/source-fingerprints.json');
   const reportFile = resolve(root, arg('--report') || 'source-check-results.json');
-  const sourceEntries = JSON.parse(await readFile(resolve(root, 'src/data/sources.json'), 'utf8'));
+  const sourceFiles=(await readdir(resolve(root,'src/data'))).filter(n=>n==='sources.json'||n.endsWith('-sources.json'));
+  const sourceEntries=(await Promise.all(sourceFiles.map(n=>readFile(resolve(root,'src/data',n),'utf8').then(JSON.parse)))).flat();
   const watchEntries = JSON.parse(await readFile(resolve(root, 'src/data/watch-pages.json'), 'utf8'));
   let baseline = {};
   try { baseline = JSON.parse(await readFile(baselineFile, 'utf8')); } catch (e) { if (e.code !== 'ENOENT') throw e; }

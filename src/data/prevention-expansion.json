@@ -1,0 +1,883 @@
+[
+  {
+    "id": "vax-tdap-interval",
+    "topic": "vaccinations",
+    "title": "Tdap / Td: routine and catch-up intervals",
+    "summary": "After a completed primary series, give one Tdap if never received, then Td or Tdap every 10 years. An incomplete series uses Tdap, Td/Tdap ≥4 weeks later, then Td/Tdap 6–12 months later.",
+    "population": "Adults with incomplete or unknown tetanus/pertussis history.",
+    "sourceId": "cdc-adult-2025",
+    "locator": "Tetanus, diphtheria, and pertussis — routine vaccination",
+    "gradeSystem": "CDC recommendation",
+    "strength": "Routine recommendation",
+    "evidenceLevel": null,
+    "evidenceNote": "CDC schedule; recommendation-specific certainty not extracted.",
+    "cautions": [
+      "Pregnancy and wound management have separate timing. Review prior doses; do not restart a completed series."
+    ],
+    "tags": [
+      "Tdap",
+      "Td",
+      "booster",
+      "10 years",
+      "catch-up"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "reference-vax-tdap-interval"
+  },
+  {
+    "id": "vax-rsv-age-risk",
+    "topic": "vaccinations",
+    "title": "RSV: age and risk eligibility",
+    "summary": "Give one RSV vaccine dose at age ≥75, or age 50–74 with increased severe-RSV risk. It is not an annual vaccine; do not repeat a previous dose under this guidance.",
+    "population": "Adults ≥75; adults 50–74 with guideline-defined risk.",
+    "sourceId": "cdc-rsv-2026",
+    "locator": "Recommendations; number of doses; risk conditions",
+    "gradeSystem": "CDC recommendation",
+    "strength": "Routine / risk-based recommendation",
+    "evidenceLevel": null,
+    "evidenceNote": "No separate certainty grade extracted from this CDC guidance.",
+    "cautions": [
+      "Review the full risk-condition list and vaccine precautions. Pregnancy is a separate pathway."
+    ],
+    "tags": [
+      "RSV",
+      "Arexvy",
+      "Abrysvo",
+      "mResvia",
+      "booster"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "reference-vax-rsv-age-risk"
+  },
+  {
+    "id": "vax-pneumo-risk-younger",
+    "topic": "vaccinations",
+    "title": "Pneumococcal: risk-based vaccination before age 50",
+    "summary": "At age 19–49 with a qualifying risk condition and no prior pneumococcal vaccine, use PCV20/PCV21 alone or PCV15 followed by PPSV23, usually ≥1 year later.",
+    "population": "Adults 19–49 with diabetes, specified chronic disease, smoking, or other listed risks.",
+    "sourceId": "cdc-pneumo-risk-2026",
+    "locator": "Adults 19 through 49 — never received vaccine; risk conditions",
+    "gradeSystem": "CDC recommendation",
+    "strength": "Risk-based recommendation",
+    "evidenceLevel": null,
+    "evidenceNote": "CDC risk-based schedule; no separate certainty grade extracted.",
+    "cautions": [
+      "Minimum PPSV23 interval may be 8 weeks with immunocompromise, CSF leak or cochlear implant. Prior doses and regional serotype 4 risk alter choices. Hypertension alone is not chronic-heart-disease eligibility."
+    ],
+    "tags": [
+      "PCV",
+      "PPSV23",
+      "diabetes",
+      "smoking",
+      "risk-based vaccine"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "reference-vax-pneumo-risk-younger"
+  },
+  {
+    "id": "vax-rzv-immunocompromised",
+    "topic": "vaccinations",
+    "title": "RZV: immunocompromised adults ≥19",
+    "summary": "Use two RZV doses, usually 2–6 months apart. A 1–2 month interval can be used when earlier completion before more intense immunosuppression would help.",
+    "population": "Adults ≥19 who are or will be immunodeficient or immunosuppressed due to disease or treatment.",
+    "sourceId": "cdc-zoster-immunocompromised-2024",
+    "locator": "Dosing schedule; timing of vaccination",
+    "gradeSystem": "CDC / ACIP recommendation",
+    "strength": "Risk-based recommendation",
+    "evidenceLevel": null,
+    "evidenceNote": "Guidance supplements the 2022 ACIP policy; separate certainty not extracted.",
+    "cautions": [
+      "Coordinate with the treating specialist. Review varicella history, precautions, and prior-dose timing; this is not an individualized schedule."
+    ],
+    "tags": [
+      "RZV",
+      "Shingrix",
+      "immunocompromised",
+      "19",
+      "dosing"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "reference-vax-rzv-immunocompromised"
+  },
+  {
+    "id": "vax-covid-seasonal-source",
+    "topic": "vaccinations",
+    "title": "COVID-19: current seasonal schedule review",
+    "summary": "CDC’s September 2026 page recommends a 2026–2027 vaccine for adults ≥18; dose count and interval depend on age, product, history and immune status. Use its current tables for scheduling.",
+    "population": "Adults considering 2026–2027 COVID-19 vaccination.",
+    "sourceId": "cdc-covid-2026",
+    "locator": "Introduction; Table 1d and Table 1e",
+    "gradeSystem": "CDC recommendation",
+    "strength": "Schedule review required",
+    "evidenceLevel": null,
+    "evidenceNote": "No single recommendation-level certainty grade extracted; source date discrepancy is explicitly retained for review.",
+    "cautions": [
+      "Automatic dose matching is withheld: the page retains an inconsistent table-heading date, and identifies some uses as off-label. Immunocompromised schedules are separate."
+    ],
+    "tags": [
+      "COVID",
+      "SARS-CoV-2",
+      "2026–2027",
+      "booster",
+      "interval"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "reference-vax-covid-seasonal-source"
+  },
+  {
+    "id": "screen-crc-45-49",
+    "topic": "screening",
+    "title": "Colorectal screening: age 45–49",
+    "summary": "Offer colorectal cancer screening starting at age 45.",
+    "population": "Asymptomatic average-risk adults aged 45–49.",
+    "sourceId": "uspstf-crc-2021",
+    "locator": "Recommendation summary — adults 45 to 49",
+    "gradeSystem": "USPSTF",
+    "strength": "Grade B",
+    "evidenceLevel": null,
+    "evidenceNote": "Original USPSTF grade retained; no ACC/AHA evidence level assigned.",
+    "cautions": [
+      "Options include annual FIT or colonoscopy every 10 years. Abnormal non-colonoscopy tests need colonoscopy. High-risk histories need separate pathways."
+    ],
+    "tags": [
+      "colorectal",
+      "FIT",
+      "colonoscopy",
+      "45"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "reference-screen-crc-45-49"
+  },
+  {
+    "id": "screen-crc-50-75",
+    "topic": "screening",
+    "title": "Colorectal screening: age 50–75",
+    "summary": "Screen adults aged 50–75. Annual FIT and colonoscopy every 10 years are two recommended strategies.",
+    "population": "Asymptomatic average-risk adults aged 50–75.",
+    "sourceId": "uspstf-crc-2021",
+    "locator": "Recommendation summary; screening strategies",
+    "gradeSystem": "USPSTF",
+    "strength": "Grade A",
+    "evidenceLevel": null,
+    "evidenceNote": "Original USPSTF grade retained; no ACC/AHA evidence level assigned.",
+    "cautions": [
+      "Match modality to preferences and follow-up capacity; abnormal stool tests require colonoscopy."
+    ],
+    "tags": [
+      "colorectal",
+      "FIT",
+      "colonoscopy",
+      "50",
+      "75"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "reference-screen-crc-50-75"
+  },
+  {
+    "id": "screen-crc-older",
+    "topic": "screening",
+    "title": "Colorectal screening: individualized age 76–85",
+    "summary": "Selectively offer screening at ages 76–85 using health, prior screening and preferences.",
+    "population": "Average-risk adults aged 76–85.",
+    "sourceId": "uspstf-crc-2021",
+    "locator": "Recommendation summary — adults 76 to 85",
+    "gradeSystem": "USPSTF",
+    "strength": "Grade C",
+    "evidenceLevel": null,
+    "evidenceNote": "Original USPSTF grade retained; no ACC/AHA evidence level assigned.",
+    "cautions": [
+      "Previously unscreened adults may benefit more. Routine screening stops after 85."
+    ],
+    "tags": [
+      "colorectal",
+      "76",
+      "85",
+      "life expectancy"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "reference-screen-crc-older"
+  },
+  {
+    "id": "screen-breast-40-74",
+    "topic": "screening",
+    "title": "Breast screening: biennial mammography",
+    "summary": "Screen every two years from age 40 through 74.",
+    "population": "Women and other people assigned female at birth at average breast-cancer risk.",
+    "sourceId": "uspstf-breast-2024",
+    "locator": "Recommendation summary — women 40 to 74",
+    "gradeSystem": "USPSTF",
+    "strength": "Grade B",
+    "evidenceLevel": null,
+    "evidenceNote": "Original USPSTF grade retained; no ACC/AHA evidence level assigned.",
+    "cautions": [
+      "Prior breast cancer, high-risk lesions, pathogenic variants or high-dose chest radiation need separate pathways. Evidence is insufficient for routine screening at ≥75 or supplemental imaging solely for dense breasts."
+    ],
+    "tags": [
+      "breast",
+      "mammography",
+      "40",
+      "74",
+      "2 years"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "reference-screen-breast-40-74"
+  },
+  {
+    "id": "screen-cervical-final",
+    "topic": "screening",
+    "title": "Cervical screening: final USPSTF intervals",
+    "summary": "At age 21–29, use cytology every 3 years. At age 30–65, use cytology every 3 years, primary high-risk HPV every 5 years, or cotesting every 5 years.",
+    "population": "Average-risk people with a cervix, age 21–65.",
+    "sourceId": "uspstf-cervical-2018",
+    "locator": "Recommendation summary; clinician summary",
+    "gradeSystem": "USPSTF",
+    "strength": "Grade A",
+    "evidenceLevel": null,
+    "evidenceNote": "Original USPSTF grade retained; no ACC/AHA evidence level assigned.",
+    "cautions": [
+      "This is the 2018 final statement, not the 2024 draft. Prior CIN2+, cancer, immunocompromise or DES exposure needs individualized surveillance; do not apply average-risk exit criteria."
+    ],
+    "tags": [
+      "cervical",
+      "Pap",
+      "HPV",
+      "3 years",
+      "5 years",
+      "draft"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "reference-screen-cervical-final"
+  },
+  {
+    "id": "screen-lung-ldct",
+    "topic": "screening",
+    "title": "Lung screening: annual low-dose CT",
+    "summary": "Screen annually at age 50–80 with ≥20 pack-years and current smoking or quitting within 15 years.",
+    "population": "Asymptomatic adults meeting all USPSTF age and smoking criteria.",
+    "sourceId": "uspstf-lung-2021",
+    "locator": "Recommendation summary; screening interval and stopping criteria",
+    "gradeSystem": "USPSTF",
+    "strength": "Grade B",
+    "evidenceLevel": null,
+    "evidenceNote": "Original USPSTF grade retained; no ACC/AHA evidence level assigned.",
+    "cautions": [
+      "Stop after 15 years without smoking, or if health limits life expectancy or ability/willingness for curative lung surgery. Include shared decision-making and cessation support."
+    ],
+    "tags": [
+      "lung",
+      "LDCT",
+      "20 pack-years",
+      "smoking",
+      "annual"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "reference-screen-lung-ldct"
+  },
+  {
+    "id": "screen-aaa-ever-smoked",
+    "topic": "screening",
+    "title": "AAA: one-time ultrasound after smoking",
+    "summary": "Offer one-time abdominal ultrasound to men aged 65–75 who have ever smoked.",
+    "population": "Asymptomatic men age 65–75; ever smoking commonly means ≥100 lifetime cigarettes.",
+    "sourceId": "uspstf-aaa-2019",
+    "locator": "Recommendation summary; how often",
+    "gradeSystem": "USPSTF",
+    "strength": "Grade B",
+    "evidenceLevel": null,
+    "evidenceNote": "Original USPSTF grade retained; no ACC/AHA evidence level assigned.",
+    "cautions": [
+      "Family history and other risks still matter. Women have separate Grade D or I pathways; this record does not apply to them."
+    ],
+    "tags": [
+      "AAA",
+      "ultrasound",
+      "65",
+      "75",
+      "smoking"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "reference-screen-aaa-ever-smoked"
+  },
+  {
+    "id": "screen-aaa-never-smoked",
+    "topic": "screening",
+    "title": "AAA: selective screening without smoking",
+    "summary": "Selectively offer one-time ultrasound after considering family history, other risks and preferences.",
+    "population": "Asymptomatic men age 65–75 who never smoked.",
+    "sourceId": "uspstf-aaa-2019",
+    "locator": "Recommendation summary — men who never smoked",
+    "gradeSystem": "USPSTF",
+    "strength": "Grade C",
+    "evidenceLevel": null,
+    "evidenceNote": "Original USPSTF grade retained; no ACC/AHA evidence level assigned.",
+    "cautions": [
+      "The small average benefit does not support automatically screening everyone in this group."
+    ],
+    "tags": [
+      "AAA",
+      "ultrasound",
+      "never smoked",
+      "selective"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "reference-screen-aaa-never-smoked"
+  },
+  {
+    "id": "screen-prostate-shared",
+    "topic": "screening",
+    "title": "PSA screening: shared decision at age 55–69",
+    "summary": "Decide individually about periodic PSA screening after discussion of benefits, false positives, overdiagnosis and treatment harms.",
+    "population": "Men aged 55–69 without prostate-cancer symptoms.",
+    "sourceId": "uspstf-prostate-2018",
+    "locator": "Recommendation summary — men 55 to 69",
+    "gradeSystem": "USPSTF",
+    "strength": "Grade C",
+    "evidenceLevel": null,
+    "evidenceNote": "Original USPSTF grade retained; no ACC/AHA evidence level assigned.",
+    "cautions": [
+      "Do not screen someone who does not prefer screening after discussion. Family history and other risk factors inform the discussion; no universal interval is assigned here."
+    ],
+    "tags": [
+      "prostate",
+      "PSA",
+      "55",
+      "69",
+      "shared decision"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "reference-screen-prostate-shared"
+  },
+  {
+    "id": "screen-prostate-older",
+    "topic": "screening",
+    "title": "PSA screening: age ≥70",
+    "summary": "Do not routinely use PSA-based screening in men aged 70 or older.",
+    "population": "Asymptomatic men aged ≥70.",
+    "sourceId": "uspstf-prostate-2018",
+    "locator": "Recommendation summary — men 70 and older",
+    "gradeSystem": "USPSTF",
+    "strength": "Grade D",
+    "evidenceLevel": null,
+    "evidenceNote": "Original USPSTF grade retained; no ACC/AHA evidence level assigned.",
+    "cautions": [
+      "This concerns screening, not evaluation of symptoms or surveillance after a cancer diagnosis."
+    ],
+    "tags": [
+      "prostate",
+      "PSA",
+      "70"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "reference-screen-prostate-older"
+  },
+  {
+    "id": "infection-hiv",
+    "topic": "infectious-disease",
+    "title": "HIV screening: routine and increased risk",
+    "summary": "Screen at age 15–65; screen outside that range when risk is increased. Screen every pregnancy, including labor/delivery if status is unknown.",
+    "population": "Adolescents and adults without a known HIV diagnosis.",
+    "sourceId": "uspstf-hiv-2019",
+    "locator": "Recommendation summary; screening intervals",
+    "gradeSystem": "USPSTF",
+    "strength": "Grade A",
+    "evidenceLevel": null,
+    "evidenceNote": "Original USPSTF grade retained; no ACC/AHA evidence level assigned.",
+    "cautions": [
+      "Repeat screening is reasonable with ongoing risk; USPSTF has not established one optimal repeat interval."
+    ],
+    "tags": [
+      "HIV",
+      "15",
+      "65",
+      "pregnancy",
+      "screening"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "reference-infection-hiv"
+  },
+  {
+    "id": "infection-hcv",
+    "topic": "infectious-disease",
+    "title": "HCV screening: age 18–79",
+    "summary": "Screen once for most adults aged 18–79 using antibody testing with confirmatory HCV RNA.",
+    "population": "Asymptomatic adults 18–79 without known liver disease.",
+    "sourceId": "uspstf-hcv-2020",
+    "locator": "Clinician summary; how often",
+    "gradeSystem": "USPSTF",
+    "strength": "Grade B",
+    "evidenceLevel": null,
+    "evidenceNote": "Original USPSTF grade retained; no ACC/AHA evidence level assigned.",
+    "cautions": [
+      "Repeat testing with continuing exposure risk; no single optimal repeat interval is established. High-risk people outside the age range may also merit testing."
+    ],
+    "tags": [
+      "HCV",
+      "hepatitis C",
+      "RNA",
+      "18",
+      "79"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "reference-infection-hcv"
+  },
+  {
+    "id": "infection-hbv",
+    "topic": "infectious-disease",
+    "title": "HBV screening: CDC universal triple panel",
+    "summary": "Screen adults ≥18 at least once with HBsAg, anti-HBs and total anti-HBc.",
+    "population": "Adults not previously screened with the complete triple panel.",
+    "sourceId": "cdc-hbv-2023",
+    "locator": "CDC recommendations — universal screening of adults",
+    "gradeSystem": "CDC recommendation",
+    "strength": "Universal screening recommendation",
+    "evidenceLevel": null,
+    "evidenceNote": "CDC recommendation; no USPSTF grade or ACC/AHA level substituted.",
+    "cautions": [
+      "Periodic risk-based testing and pregnancy screening are separate. Vaccination does not replace recommended screening; interpret all three results together."
+    ],
+    "tags": [
+      "HBV",
+      "hepatitis B",
+      "triple panel",
+      "HBsAg",
+      "anti-HBs",
+      "anti-HBc"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "reference-infection-hbv"
+  },
+  {
+    "id": "infection-tb",
+    "topic": "infectious-disease",
+    "title": "Latent TB: screen increased-risk adults",
+    "summary": "Screen asymptomatic adults at increased risk, including birth/former residence in high-prevalence countries or high-risk congregate settings.",
+    "population": "Adults ≥18 at increased LTBI risk, without active-TB symptoms.",
+    "sourceId": "uspstf-tb-2023",
+    "locator": "Clinician summary — assessment of risk and frequency",
+    "gradeSystem": "USPSTF",
+    "strength": "Grade B",
+    "evidenceLevel": null,
+    "evidenceNote": "Original USPSTF grade retained; no ACC/AHA evidence level assigned.",
+    "cautions": [
+      "Use IGRA or TST; IGRA has advantages after BCG vaccination. Repeat frequency depends on exposure risk. Positive tests require evaluation to exclude active TB before LTBI treatment."
+    ],
+    "tags": [
+      "TB",
+      "LTBI",
+      "IGRA",
+      "TST",
+      "BCG"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "reference-infection-tb"
+  },
+  {
+    "id": "infection-gc-ct",
+    "topic": "infectious-disease",
+    "title": "Chlamydia and gonorrhea: age and risk",
+    "summary": "Screen sexually active women age ≤24, and women ≥25 with increased infection risk, using NAAT.",
+    "population": "Asymptomatic sexually active women, including pregnant persons.",
+    "sourceId": "uspstf-sti-2021",
+    "locator": "Recommendation summary — chlamydia and gonorrhea",
+    "gradeSystem": "USPSTF",
+    "strength": "Grade B",
+    "evidenceLevel": null,
+    "evidenceNote": "Original USPSTF grade retained; no ACC/AHA evidence level assigned.",
+    "cautions": [
+      "Consider anatomy and exposure sites. USPSTF evidence is insufficient for routine screening in men; CDC has additional population-specific screening recommendations."
+    ],
+    "tags": [
+      "STI",
+      "chlamydia",
+      "gonorrhea",
+      "NAAT",
+      "24"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "reference-infection-gc-ct"
+  },
+  {
+    "id": "infection-syphilis",
+    "topic": "infectious-disease",
+    "title": "Syphilis screening: increased risk",
+    "summary": "Screen asymptomatic nonpregnant adolescents and adults at increased risk.",
+    "population": "Risk assessment includes exposures, local epidemiology and other STIs.",
+    "sourceId": "uspstf-syphilis-2022",
+    "locator": "Clinician summary — risk assessment and interval",
+    "gradeSystem": "USPSTF",
+    "strength": "Grade A",
+    "evidenceLevel": null,
+    "evidenceNote": "Original USPSTF grade retained; no ACC/AHA evidence level assigned.",
+    "cautions": [
+      "MSM or people with HIV may benefit from at least annual testing, or every 3–6 months with continuing high risk. Pregnancy and symptomatic disease need separate pathways."
+    ],
+    "tags": [
+      "STI",
+      "syphilis",
+      "RPR",
+      "HIV",
+      "MSM"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "reference-infection-syphilis"
+  },
+  {
+    "id": "surveillance-small-adenomas",
+    "topic": "cancer-surveillance",
+    "title": "After 1–2 small tubular adenomas",
+    "summary": "Repeat colonoscopy in 7–10 years after complete removal of 1–2 tubular adenomas <10 mm at a high-quality exam.",
+    "population": "Average-risk adults after high-quality, complete colonoscopy.",
+    "sourceId": "usmstf-polyp-2020",
+    "locator": "Table 4 — 1–2 tubular adenomas <10 mm",
+    "gradeSystem": "USMSTF strength / certainty",
+    "strength": "Strong recommendation",
+    "evidenceLevel": null,
+    "evidenceNote": "Moderate-quality evidence in the original table; no ACC/AHA equivalent assigned.",
+    "cautions": [
+      "Hereditary syndromes, IBD, prior CRC, malignant polyps or CRC family history require separate assessment."
+    ],
+    "tags": [
+      "adenoma",
+      "polyp",
+      "colonoscopy",
+      "7–10 years"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "reference-surveillance-small-adenomas"
+  },
+  {
+    "id": "surveillance-large-adenoma",
+    "topic": "cancer-surveillance",
+    "title": "After an adenoma ≥10 mm",
+    "summary": "Repeat colonoscopy in 3 years after complete removal of an adenoma ≥10 mm at a high-quality exam.",
+    "population": "Average-risk adults; complete resection and adequate bowel preparation confirmed.",
+    "sourceId": "usmstf-polyp-2020",
+    "locator": "Table 4 — adenoma ≥10 mm",
+    "gradeSystem": "USMSTF strength / certainty",
+    "strength": "Strong recommendation",
+    "evidenceLevel": null,
+    "evidenceNote": "High-quality evidence in the original table; no ACC/AHA equivalent assigned.",
+    "cautions": [
+      "Piecemeal resection of lesions ≥20 mm needs an earlier pathway. Pathology, examination quality and other history can shorten intervals."
+    ],
+    "tags": [
+      "adenoma",
+      "polyp",
+      "10 mm",
+      "3 years"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "reference-surveillance-large-adenoma"
+  },
+  {
+    "id": "surveillance-after-crc",
+    "topic": "cancer-surveillance",
+    "title": "Colonoscopy after curative CRC resection",
+    "summary": "After perioperative clearing, perform surveillance colonoscopy at 1 year; if no neoplasia, next at 3 years, then 5 years, then every 5 years while benefit persists.",
+    "population": "Adults after curative colorectal cancer resection.",
+    "sourceId": "usmstf-resection-2016",
+    "locator": "Surveillance intervals after CRC resection — recommendations 2 and 3",
+    "gradeSystem": "USMSTF strength / certainty",
+    "strength": "Strong recommendation",
+    "evidenceLevel": null,
+    "evidenceNote": "Low-quality evidence for these colonoscopic surveillance recommendations.",
+    "cautions": [
+      "Intervals are measured from the preceding surveillance exam. Lynch syndrome, polyps and rectal-cancer local surveillance alter the plan. This is not the full oncology follow-up schedule."
+    ],
+    "tags": [
+      "CRC",
+      "cancer survivor",
+      "resection",
+      "1 year",
+      "3 years",
+      "5 years"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "reference-surveillance-after-crc"
+  },
+  {
+    "id": "surveillance-cin2-treatment",
+    "topic": "cancer-surveillance",
+    "title": "After CIN2+ treatment: HPV-based surveillance",
+    "summary": "After CIN2+ treatment, obtain negative HPV tests or cotests at 6, 18 and 30 months before spacing to every 3 years; continue long-term surveillance for at least 25 years.",
+    "population": "People treated for high-grade cervical precancer.",
+    "sourceId": "asccp-update-2023",
+    "locator": "Clarification of post-treatment surveillance; corrected Figure 7",
+    "gradeSystem": "ASCCP consensus",
+    "strength": "Risk-based consensus guidance",
+    "evidenceLevel": null,
+    "evidenceNote": "2023 update clarifies timing; no separate new evidence grade is inferred.",
+    "cautions": [
+      "Prior results, histology, treatment and immune status determine management. Abnormal follow-up results need the full ASCCP pathway. This is not routine average-risk screening."
+    ],
+    "tags": [
+      "CIN2",
+      "CIN3",
+      "HSIL",
+      "HPV",
+      "6 months",
+      "25 years"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "reference-surveillance-cin2-treatment"
+  },
+  {
+    "id": "bone-screen-younger",
+    "topic": "osteoporosis",
+    "title": "Osteoporosis screening before age 65",
+    "summary": "Screen postmenopausal women younger than 65 when clinical risk assessment identifies increased fracture risk.",
+    "population": "Postmenopausal women <65 without known osteoporosis or secondary causes.",
+    "sourceId": "uspstf-bone-2025",
+    "locator": "Recommendation summary — postmenopausal women younger than 65",
+    "gradeSystem": "USPSTF",
+    "strength": "Grade B",
+    "evidenceLevel": null,
+    "evidenceNote": "Original USPSTF grade retained; no ACC/AHA evidence level assigned.",
+    "cautions": [
+      "First assess risk factors, then use a risk tool if indicated. A universal FRAX screening cutoff is not specified by USPSTF."
+    ],
+    "tags": [
+      "DXA",
+      "postmenopausal",
+      "osteoporosis",
+      "under 65"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "reference-bone-screen-younger"
+  },
+  {
+    "id": "bone-frax-treatment",
+    "topic": "osteoporosis",
+    "title": "Osteopenia: U.S. FRAX treatment thresholds",
+    "summary": "Consider treatment for osteopenia at the femoral neck or total hip when 10-year U.S. FRAX risk is ≥3% for hip fracture or ≥20% for major osteoporotic fracture.",
+    "population": "Postmenopausal women and men ≥50; appropriate U.S. FRAX model.",
+    "sourceId": "bhof-2022",
+    "locator": "Synopsis — pharmacologic treatment; Table 12",
+    "gradeSystem": "BHOF guideline",
+    "strength": "Guideline treatment consideration",
+    "evidenceLevel": null,
+    "evidenceNote": "Separate recommendation-level certainty not extracted; no ACC/AHA equivalent assigned.",
+    "cautions": [
+      "These are treatment thresholds, not a USPSTF screening cutoff. FRAX is externally calculated; assess secondary causes and individual context."
+    ],
+    "tags": [
+      "FRAX",
+      "3%",
+      "20%",
+      "osteopenia",
+      "treatment"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "reference-bone-frax-treatment"
+  },
+  {
+    "id": "bone-fracture-bmd-treatment",
+    "topic": "osteoporosis",
+    "title": "Hip/vertebral fracture or osteoporosis-range BMD",
+    "summary": "Consider pharmacologic therapy after hip or vertebral fracture regardless of BMD, or with DXA T-score ≤−2.5 at guideline-specified sites.",
+    "population": "Postmenopausal women and men ≥50.",
+    "sourceId": "bhof-2022",
+    "locator": "Pharmacologic treatment considerations; Table 12",
+    "gradeSystem": "BHOF guideline",
+    "strength": "Guideline treatment consideration",
+    "evidenceLevel": null,
+    "evidenceNote": "Separate recommendation-level certainty not extracted; no ACC/AHA equivalent assigned.",
+    "cautions": [
+      "Exclude secondary bone disease; renal function, drug safety and fracture risk guide selection."
+    ],
+    "tags": [
+      "osteoporosis",
+      "hip fracture",
+      "vertebral fracture",
+      "T-score",
+      "2.5"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "reference-bone-fracture-bmd-treatment"
+  },
+  {
+    "id": "obesity-pharmacotherapy",
+    "topic": "obesity",
+    "title": "Weight-management medication: BMI and comorbidity",
+    "summary": "ACP suggests semaglutide or tirzepatide with lifestyle measures as first-line medication at BMI ≥30, or BMI ≥27 to <30 with specified weight-related comorbidity.",
+    "population": "Nonpregnant adults in outpatient care; comorbidities include diabetes, dyslipidemia, hypertension, OSA or CVD.",
+    "sourceId": "acp-obesity-2026",
+    "locator": "Recommendations 1 and 2 — first-line therapies",
+    "gradeSystem": "ACP GRADE",
+    "strength": "Conditional recommendation",
+    "evidenceLevel": null,
+    "evidenceNote": "Moderate-certainty evidence for semaglutide and tirzepatide; no ACC/AHA level substituted.",
+    "cautions": [
+      "Assess contraindications, preferences and access. Guideline eligibility does not establish FDA indication, VA formulary status or authorization. Other options have separate rankings."
+    ],
+    "tags": [
+      "BMI",
+      "30",
+      "27",
+      "obesity",
+      "semaglutide",
+      "tirzepatide"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "reference-obesity-pharmacotherapy"
+  },
+  {
+    "id": "obesity-bariatric-thresholds",
+    "topic": "obesity",
+    "title": "Bariatric surgery: society eligibility thresholds",
+    "summary": "ASMBS/IFSO recommends surgery at BMI ≥35 regardless of comorbidity. Consider surgery at BMI 30–34.9 with metabolic disease or inadequate durable response to nonsurgical care.",
+    "population": "Adults evaluated by a multidisciplinary metabolic/bariatric service.",
+    "sourceId": "asmbs-ifso-2022",
+    "locator": "Major updates; class I and class II obesity; conclusions",
+    "gradeSystem": "ASMBS / IFSO guidance",
+    "strength": "Society recommendation",
+    "evidenceLevel": null,
+    "evidenceNote": "No recommendation-specific evidence grade extracted; original society guidance is not an ACC/AHA class.",
+    "cautions": [
+      "Asian-population thresholds are lower. Clinical guideline eligibility differs from insurer or VA program approval; assess operative risk and long-term follow-up."
+    ],
+    "tags": [
+      "bariatric",
+      "metabolic surgery",
+      "BMI",
+      "35",
+      "30"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "reference-obesity-bariatric-thresholds"
+  },
+  {
+    "id": "lifestyle-activity",
+    "topic": "lifestyle",
+    "title": "Physical activity: weekly adult targets",
+    "summary": "Aim for 150–300 minutes of moderate or 75–150 minutes of vigorous aerobic activity weekly, plus muscle strengthening on ≥2 days.",
+    "population": "Adults able to participate safely; adapt to health and function.",
+    "sourceId": "hhs-activity-2018",
+    "locator": "Key guidelines for adults and older adults",
+    "gradeSystem": "HHS guideline",
+    "strength": "Federal guideline recommendation",
+    "evidenceLevel": null,
+    "evidenceNote": "No single recommendation-specific certainty grade extracted from the federal key-guidelines summary.",
+    "cautions": [
+      "Some activity is better than none. Older adults also need balance work; chronic disease may require an individualized plan."
+    ],
+    "tags": [
+      "exercise",
+      "150 minutes",
+      "75 minutes",
+      "strength",
+      "balance"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "reference-lifestyle-activity"
+  },
+  {
+    "id": "lifestyle-diet",
+    "topic": "lifestyle",
+    "title": "Heart-healthy nutrition: the 2026 AHA pattern",
+    "summary": "Emphasize varied produce, whole grains, plant-rich proteins and unsaturated fats; reduce sodium, added sugar and ultraprocessed food. Do not start alcohol for heart health.",
+    "population": "Adults pursuing cardiovascular risk reduction.",
+    "sourceId": "aha-diet-2026",
+    "locator": "Nine features of a heart-healthy dietary pattern",
+    "gradeSystem": "AHA scientific statement",
+    "strength": "Scientific statement guidance",
+    "evidenceLevel": null,
+    "evidenceNote": "Scientific statement; no recommendation-specific class or evidence level assigned.",
+    "cautions": [
+      "Adapt to culture, food access, energy needs and relevant disease-specific restrictions. This statement does not prescribe one universal meal plan."
+    ],
+    "tags": [
+      "nutrition",
+      "Mediterranean",
+      "DASH",
+      "sodium",
+      "plant-based",
+      "alcohol"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "reference-lifestyle-diet"
+  },
+  {
+    "id": "lifestyle-tobacco",
+    "topic": "lifestyle",
+    "title": "Tobacco cessation: counseling and medication",
+    "summary": "Ask about tobacco, advise stopping, and offer behavioral support plus FDA-approved cessation medication to nonpregnant adults who use tobacco.",
+    "population": "Nonpregnant adults who use tobacco.",
+    "sourceId": "uspstf-tobacco-2021",
+    "locator": "Recommendation summary — nonpregnant adults",
+    "gradeSystem": "USPSTF",
+    "strength": "Grade A",
+    "evidenceLevel": null,
+    "evidenceNote": "Original USPSTF grade retained; no ACC/AHA evidence level assigned.",
+    "cautions": [
+      "Pregnancy has a separate behavioral-intervention recommendation and insufficient pharmacotherapy evidence. E-cigarettes are not an established cessation intervention in this statement."
+    ],
+    "tags": [
+      "smoking cessation",
+      "tobacco",
+      "nicotine",
+      "varenicline",
+      "bupropion"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "reference-lifestyle-tobacco"
+  },
+  {
+    "id": "lifestyle-alcohol",
+    "topic": "lifestyle",
+    "title": "Alcohol: screen and provide brief counseling",
+    "summary": "Screen adults ≥18 for unhealthy alcohol use and offer brief behavioral counseling for risky or hazardous use.",
+    "population": "Adults in primary care, including pregnancy.",
+    "sourceId": "uspstf-alcohol-2018",
+    "locator": "Recommendation summary; clinician summary",
+    "gradeSystem": "USPSTF",
+    "strength": "Grade B",
+    "evidenceLevel": null,
+    "evidenceNote": "Original USPSTF grade retained; no ACC/AHA evidence level assigned.",
+    "cautions": [
+      "AUDIT-C or a brief single-question screen can be used. A positive screen requires assessment; no universal repeat interval or safe alcohol intake is inferred."
+    ],
+    "tags": [
+      "alcohol",
+      "AUDIT-C",
+      "brief intervention",
+      "counseling"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "reference-lifestyle-alcohol"
+  }
+]

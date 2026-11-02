@@ -1,0 +1,24 @@
+import { useState } from 'react';
+import { ArrowRight, ArrowUpRight, Search, Info } from 'lucide-react';
+import { topics,recommendations,type Topic } from '../lib/guidelines';
+import { topicIcons } from './Dashboard';
+const scope:Partial<Record<Topic,string>>={
+ vaccinations:'Selected routine and risk-based references include schedules and booster intervals. The engine calculates no personalized catch-up date; COVID scheduling remains deferred for source review.',
+ screening:'Selected final USPSTF screening references. Symptoms, family/genetic risk, prior cancer, anatomy and previous results may change eligibility. A screening interval is not a surveillance interval.',
+ diabetes:'ADA and VA/DoD goals are displayed separately. An individualized A1c goal is not automatically selected from age alone; frailty, hypoglycemia, function and life expectancy require review.',
+ ckd:'Selected screening, kidney-protective therapy and referral references. UACR and eGFR are distinct inputs. CKD chronicity, contraindications and product labeling require review.',
+ anticoagulation:'AF and VTE indications are separate. The AF calculator links to score thresholds; drug/dose selection and perioperative plans require full renal, procedure and bleeding assessment. No automatic interruption date is generated.',
+ osteoporosis:'Screening, diagnosis and treatment are different decisions. The official FRAX calculator opens externally; Sage can interpret entered U.S. outputs against selected BHOF thresholds.',
+ obesity:'ACP medication and ASMBS/IFSO surgery criteria are distinct from VA authorization and product labeling. Pregnancy, contraindications and treatment history are not fully assessed.',
+ 'infectious-disease':'Selected HIV, hepatitis, TB and STI screening references. Pregnancy, exposure, ongoing risk and infection history may require additional or repeated testing.',
+ 'cancer-surveillance':'Selected colorectal and cervical surveillance only. Histology, resection quality, stage and prior follow-up determine intervals. No case-specific surveillance schedule is generated.',
+ monitoring:'Selected drug-class laboratory intervals. Review baseline values, renal function, dose changes, drug interactions and abnormal results; no monitoring calendar is created.',
+ deprescribing:'Review the original indication and harms. A reference match is not a stop order. Benzodiazepines and other dependence-forming drugs require an individualized supervised taper.',
+ referral:'Selected kidney and liver thresholds. FIB-4 is available in calculators; KFRE is not implemented. Urgency, local referral pathways and other indications require clinical assessment.',
+ lifestyle:'Counseling targets are adapted to health, function, readiness and preferences. These references do not prescribe a personalized exercise or nutrition plan.'
+};
+export function TopicCoverage({topic}:{topic:Topic}){return <div className="coverage-summary"><Info size={17}/><p>{scope[topic]||'Selected pathways and references only. A missing match does not mean no guideline care is indicated. Review the source and full clinical context.'}{['osteoporosis','referral','anticoagulation'].includes(topic)&&<> <a href="#calculators">Open linked risk tools <ArrowUpRight size={12}/></a></>}</p></div>;}
+export function AreasDirectory({navigate}:{navigate:(p:string)=>void}){
+ const [query,setQuery]=useState('');const hits=topics.filter(t=>`${t.title} ${t.description} ${t.society}`.toLowerCase().includes(query.toLowerCase()));
+ return <div className="page-enter"><div className="page-heading"><div className="eyebrow">A BROADER PRIMARY CARE REFERENCE</div><h1>Your clinical reference, organized.</h1><p>{topics.length} areas, with selected source-linked recommendations and explicit coverage limits. Clinical content awaits independent medical verification.</p></div><div className="library-search area-search"><Search size={18}/><input value={query} onChange={e=>setQuery(e.target.value)} placeholder="Find a clinical area…" aria-label="Find a clinical area"/></div><div className="area-directory">{hits.map(t=>{const Icon=topicIcons[t.id];return <button className={`area-card topic-${t.color}`} key={t.id} onClick={()=>navigate(t.id)}><span className="topic-icon"><Icon size={23}/></span><div><h2>{t.title}</h2><p>{t.description}</p><small>{recommendations.filter(r=>r.topic===t.id).length} draft references · {t.society}</small></div><ArrowRight size={17}/></button>;})}</div>{!hits.length&&<div className="no-results">No matching clinical area.</div>}<div className="coverage-summary"><Info size={18}/><p>All requested subject areas are represented by selected references. They are not exhaustive decision algorithms. Cancer surveillance, perioperative anticoagulation, and deprescribing remain reference pathways requiring detailed review.</p></div></div>;
+}

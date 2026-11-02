@@ -1,7 +1,7 @@
 {
   "name": "sage-clinical-reference",
   "private": true,
-  "version": "0.2.0",
+  "version": "0.3.0",
   "type": "module",
   "scripts": {
     "dev": "vite --host 127.0.0.1",
@@ -10,7 +10,8 @@
     "standalone": "tsc -b && vite build --mode standalone --outDir .standalone && node scripts/package-standalone.mjs",
     "test": "vitest run",
     "sources:check": "node scripts/check-sources.mjs",
-    "sources:baseline": "node scripts/check-sources.mjs --baseline"
+    "sources:baseline": "node scripts/check-sources.mjs --baseline",
+    "va:proposal": "node scripts/import-va-formulary.mjs"
   },
   "dependencies": {
     "@radix-ui/react-dialog": "^1.1.15",

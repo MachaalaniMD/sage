@@ -5,6 +5,7 @@ import { VitePWA } from 'vite-plugin-pwa';
 
 export default defineConfig(({ mode }) => ({
   base: process.env.BASE_PATH || '/',
+  build: { rollupOptions:{output:mode==='standalone'?{inlineDynamicImports:true}:undefined} },
   resolve: { alias: mode === 'standalone' ? [{ find: 'virtual:pwa-register/react', replacement: new URL('./src/lib/pwa-standalone.ts', import.meta.url).pathname }] : [] },
   plugins: [react(), tailwindcss(), ...(mode === 'standalone' ? [] : [VitePWA({
     registerType: 'prompt',

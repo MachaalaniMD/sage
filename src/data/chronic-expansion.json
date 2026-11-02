@@ -1,0 +1,482 @@
+[
+  {
+    "id": "diabetes-ada-a1c",
+    "topic": "diabetes",
+    "title": "ADA: A1c goal for many adults",
+    "summary": "An A1c below 7% suits many nonpregnant adults when significant hypoglycemia is absent.",
+    "population": "Nonpregnant adults with diabetes.",
+    "sourceId": "ada-glycemia-2026",
+    "locator": "Recommendation 6.3a",
+    "gradeSystem": "ADA evidence grade",
+    "strength": "Evidence grade A",
+    "evidenceLevel": null,
+    "evidenceNote": "ADA evidence grades are retained in the strength field; they are not ACC/AHA classes or levels.",
+    "cautions": [
+      "Individualize the goal; do not convert this reference into an automatic treatment target."
+    ],
+    "tags": [
+      "A1c",
+      "diabetes",
+      "glycemic goal"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "diabetes-ada-a1c"
+  },
+  {
+    "id": "diabetes-ada-a1c-frequency",
+    "topic": "diabetes",
+    "title": "Glycemic assessment interval",
+    "summary": "Assess glycemia at least twice yearly; consider every three months after treatment changes or when goals are unmet.",
+    "population": "People with diabetes.",
+    "sourceId": "ada-glycemia-2026",
+    "locator": "Recommendation 6.2",
+    "gradeSystem": "ADA evidence grade",
+    "strength": "Expert consensus E",
+    "evidenceLevel": null,
+    "evidenceNote": "ADA evidence grades are retained in the strength field; they are not ACC/AHA classes or levels.",
+    "cautions": [
+      "Review A1c reliability and clinical context."
+    ],
+    "tags": [
+      "A1c",
+      "monitoring",
+      "three months",
+      "six months"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "diabetes-ada-a1c-frequency"
+  },
+  {
+    "id": "diabetes-ada-individualized",
+    "topic": "diabetes",
+    "title": "Individualize glycemic goals",
+    "summary": "A lower goal, such as <6.5%, may suit low treatment risk; frailty or substantial treatment harms may justify less stringent goals.",
+    "population": "Adults with diabetes.",
+    "sourceId": "ada-glycemia-2026",
+    "locator": "Recommendations 6.4–6.5",
+    "gradeSystem": "ADA evidence grade",
+    "strength": "Evidence grade B",
+    "evidenceLevel": null,
+    "evidenceNote": "ADA evidence grades are retained in the strength field; they are not ACC/AHA classes or levels.",
+    "cautions": [
+      "This prototype does not calculate an individualized A1c goal."
+    ],
+    "tags": [
+      "A1c",
+      "frailty",
+      "hypoglycemia",
+      "shared decision"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "diabetes-ada-individualized"
+  },
+  {
+    "id": "diabetes-va-a1c",
+    "topic": "diabetes",
+    "title": "VA/DoD: individualized A1c range",
+    "summary": "VA/DoD suggests 7.0–8.5% for most adults with type 2 diabetes when safely achievable, individualized for complications, comorbidities and life expectancy.",
+    "population": "Adults with type 2 diabetes.",
+    "sourceId": "va-diabetes-2023",
+    "locator": "Recommendations 9–10; printed pages 14 and 17, Table 2",
+    "gradeSystem": "VA/DoD GRADE",
+    "strength": "Weak for",
+    "evidenceLevel": null,
+    "evidenceNote": "Original VA/DoD strength retained; separate evidence certainty not extracted.",
+    "cautions": [
+      "Table 2 supplies more specific ranges; veteran status alone does not select an A1c target.",
+      "ADA and VA/DoD targets are presented separately."
+    ],
+    "tags": [
+      "VA",
+      "DoD",
+      "A1c",
+      "glycemic goal"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "diabetes-va-a1c"
+  },
+  {
+    "id": "diabetes-older-a1c",
+    "topic": "diabetes",
+    "title": "Older adults: health-based A1c goals",
+    "summary": "Consider <7.0–7.5% with stable health and intact function; <8.0% may suit complex health. With very poor health, prioritize avoiding hypoglycemia and symptomatic hyperglycemia.",
+    "population": "Older adults with diabetes.",
+    "sourceId": "ada-older-2026",
+    "locator": "Recommendations 13.7a–13.7c",
+    "gradeSystem": "ADA evidence grade",
+    "strength": "Evidence grade C",
+    "evidenceLevel": null,
+    "evidenceNote": "ADA evidence grades are retained in the strength field; they are not ACC/AHA classes or levels.",
+    "cautions": [
+      "A birthday alone does not determine the goal."
+    ],
+    "tags": [
+      "A1c",
+      "older adult",
+      "frailty",
+      "cognition"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "diabetes-older-a1c"
+  },
+  {
+    "id": "htn-older-diabetes",
+    "topic": "hypertension",
+    "title": "Older adults with diabetes: BP goals",
+    "summary": "Aim for <130/80 mmHg when safe (A); a relaxed goal, such as <140/90, may suit poor health, limited life expectancy or treatment harms (E).",
+    "population": "Older adults with diabetes.",
+    "sourceId": "ada-older-2026",
+    "locator": "Recommendation 13.9",
+    "gradeSystem": "ADA evidence grade",
+    "strength": "Evidence grades A / E",
+    "evidenceLevel": null,
+    "evidenceNote": "Grade A applies to the usual goal; E applies to the relaxed-goal option. No single combined grade is inferred.",
+    "cautions": [
+      "Draft reference; verify the full recommendation before applying it."
+    ],
+    "tags": [
+      "older adult",
+      "diabetes",
+      "blood pressure",
+      "frailty"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "htn-older-diabetes"
+  },
+  {
+    "id": "ckd-diabetes-annual",
+    "topic": "ckd",
+    "title": "Diabetes: annual kidney screening",
+    "summary": "Check UACR and eGFR at least annually in all type 2 diabetes and in type 1 diabetes of ≥5 years’ duration.",
+    "population": "Adults with diabetes.",
+    "sourceId": "ada-kidney-2026",
+    "locator": "Recommendation 11.1a",
+    "gradeSystem": "ADA evidence grade",
+    "strength": "Evidence grade B",
+    "evidenceLevel": null,
+    "evidenceNote": "ADA evidence grades are retained in the strength field; they are not ACC/AHA classes or levels.",
+    "cautions": [
+      "Albuminuria and eGFR are separate measurements."
+    ],
+    "tags": [
+      "UACR",
+      "eGFR",
+      "albuminuria",
+      "annual",
+      "screening"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "ckd-diabetes-annual"
+  },
+  {
+    "id": "ckd-monitor-frequency",
+    "topic": "ckd",
+    "title": "Established CKD: monitoring frequency",
+    "summary": "In established CKD, monitor UACR and eGFR 1–4 times yearly according to stage.",
+    "population": "People with diabetes and CKD.",
+    "sourceId": "ada-kidney-2026",
+    "locator": "Recommendation 11.1b; Figure 11.1",
+    "gradeSystem": "ADA evidence grade",
+    "strength": "Evidence grade B",
+    "evidenceLevel": null,
+    "evidenceNote": "ADA evidence grades are retained in the strength field; they are not ACC/AHA classes or levels.",
+    "cautions": [
+      "Use the stage-specific figure and clinical circumstances to choose an interval."
+    ],
+    "tags": [
+      "UACR",
+      "eGFR",
+      "monitoring",
+      "CKD stage"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "ckd-monitor-frequency"
+  },
+  {
+    "id": "diabetes-eye-screening",
+    "topic": "diabetes",
+    "title": "Retinopathy screening intervals",
+    "summary": "Start a comprehensive dilated exam at type 2 diagnosis or five years after type 1 onset. If prior annual exams are normal and glycemia is at goal, consider 1–2-year intervals.",
+    "population": "Adults with diabetes.",
+    "sourceId": "ada-eye-foot-2026",
+    "locator": "Recommendations 12.3–12.5",
+    "gradeSystem": "ADA evidence grade",
+    "strength": "Evidence grade B",
+    "evidenceLevel": null,
+    "evidenceNote": "ADA evidence grades are retained in the strength field; they are not ACC/AHA classes or levels.",
+    "cautions": [
+      "Existing retinopathy requires at least annual, and sometimes more frequent, eye assessment."
+    ],
+    "tags": [
+      "eye exam",
+      "retinopathy",
+      "screening",
+      "interval"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "diabetes-eye-screening"
+  },
+  {
+    "id": "diabetes-foot-screening",
+    "topic": "diabetes",
+    "title": "Comprehensive foot examination",
+    "summary": "Perform a comprehensive foot evaluation at least annually. Inspect at every visit with sensory loss, previous ulceration or amputation.",
+    "population": "People with diabetes.",
+    "sourceId": "ada-eye-foot-2026",
+    "locator": "Recommendations 12.23 and 12.25",
+    "gradeSystem": "ADA evidence grade",
+    "strength": "Evidence grade A",
+    "evidenceLevel": null,
+    "evidenceNote": "ADA evidence grades are retained in the strength field; they are not ACC/AHA classes or levels.",
+    "cautions": [
+      "This reference does not replace an examination or determine wound urgency."
+    ],
+    "tags": [
+      "foot exam",
+      "neuropathy",
+      "annual",
+      "ulcer"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "diabetes-foot-screening"
+  },
+  {
+    "id": "htn-diabetes-goal",
+    "topic": "hypertension",
+    "title": "ADA: BP treatment goals in diabetes",
+    "summary": "When safe, target <130/80 mmHg; encourage systolic BP <120 in people with high cardiovascular or kidney risk.",
+    "population": "Adults with diabetes and hypertension.",
+    "sourceId": "ada-cvd-2026",
+    "locator": "Recommendations 10.3–10.4",
+    "gradeSystem": "ADA evidence grade",
+    "strength": "Evidence grade A",
+    "evidenceLevel": null,
+    "evidenceNote": "Grade A applies to recommendation 10.4; individualization in recommendation 10.3 is grade B.",
+    "cautions": [
+      "Individualize for adverse effects and preferences."
+    ],
+    "tags": [
+      "diabetes",
+      "blood pressure",
+      "130",
+      "120",
+      "kidney risk"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "htn-diabetes-goal"
+  },
+  {
+    "id": "ckd-va-testing",
+    "topic": "ckd",
+    "title": "VA/DoD: who to test for CKD",
+    "summary": "Consider UACR and eGFR testing with age >60, diabetes, hypertension, or cardiovascular disease, including heart failure.",
+    "population": "Adults at CKD risk.",
+    "sourceId": "va-ckd-2025",
+    "locator": "Recommendation 1; printed page 35",
+    "gradeSystem": "VA/DoD GRADE",
+    "strength": "Weak for",
+    "evidenceLevel": null,
+    "evidenceNote": "Original VA/DoD strength retained; separate evidence certainty not extracted.",
+    "cautions": [
+      "Draft reference; verify the full recommendation before applying it."
+    ],
+    "tags": [
+      "VA",
+      "DoD",
+      "UACR",
+      "eGFR",
+      "screening"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "ckd-va-testing"
+  },
+  {
+    "id": "ckd-va-finerenone",
+    "topic": "ckd",
+    "title": "VA/DoD: finerenone eligibility",
+    "summary": "Consider finerenone on maximally tolerated ACEi/ARB with type 2 diabetes, UACR >30 mg/g, eGFR ≥25 mL/min/1.73 m² and potassium <4.8 mEq/L.",
+    "population": "Adults with albuminuric CKD.",
+    "sourceId": "va-ckd-2025",
+    "locator": "Recommendation 18; printed page 63",
+    "gradeSystem": "VA/DoD GRADE",
+    "strength": "Weak for",
+    "evidenceLevel": null,
+    "evidenceNote": "Original VA/DoD strength retained; separate evidence certainty not extracted.",
+    "cautions": [
+      "Guideline eligibility and VA formulary approval are separate checks."
+    ],
+    "tags": [
+      "VA",
+      "finerenone",
+      "nonsteroidal MRA",
+      "albuminuria"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "ckd-va-finerenone"
+  },
+  {
+    "id": "ckd-va-glp1",
+    "topic": "ckd",
+    "title": "VA/DoD: GLP-1 therapy in CKD",
+    "summary": "Add a GLP-1 receptor agonist to ACEi/ARB therapy in type 2 diabetes with albuminuric CKD to improve kidney and cardiovascular outcomes.",
+    "population": "Type 2 diabetes with albuminuric CKD.",
+    "sourceId": "va-ckd-2025",
+    "locator": "Recommendation 16; printed page 34",
+    "gradeSystem": "VA/DoD GRADE",
+    "strength": "Strong for",
+    "evidenceLevel": null,
+    "evidenceNote": "Original VA/DoD strength retained; separate evidence certainty not extracted.",
+    "cautions": [
+      "Confirm the agent’s evidence, labeling and VA Criteria for Use."
+    ],
+    "tags": [
+      "VA",
+      "GLP-1",
+      "kidney protection",
+      "diabetes"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "ckd-va-glp1"
+  },
+  {
+    "id": "ckd-kdigo-sglt2",
+    "topic": "ckd",
+    "title": "CKD: SGLT2 indication",
+    "summary": "Use an SGLT2 inhibitor with type 2 diabetes, CKD and eGFR ≥20; also in CKD with eGFR ≥20 plus UACR ≥200 mg/g, or heart failure regardless of albuminuria.",
+    "population": "Adults with CKD.",
+    "sourceId": "kdigo-ckd-2024",
+    "locator": "Recommendations 3.7.1–3.7.2",
+    "gradeSystem": "KDIGO GRADE",
+    "strength": "1A · Strong",
+    "evidenceLevel": null,
+    "evidenceNote": "The source grades both recommendations 1A.",
+    "cautions": [
+      "Verify full eligibility and product labeling."
+    ],
+    "tags": [
+      "SGLT2",
+      "eGFR",
+      "UACR",
+      "kidney protection"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "ckd-kdigo-sglt2"
+  },
+  {
+    "id": "referral-kidney",
+    "topic": "referral",
+    "title": "Nephrology referral thresholds",
+    "summary": "A five-year kidney-failure risk of 3–5% can support referral. Other criteria include eGFR <30 mL/min/1.73 m² or persistent UACR >700 mg/g.",
+    "population": "Adults with CKD.",
+    "sourceId": "kdigo-ckd-2024",
+    "locator": "Practice Points 2.2.1/5.1.1; Figure 48",
+    "gradeSystem": "KDIGO GRADE",
+    "strength": "Practice point · ungraded",
+    "evidenceLevel": null,
+    "evidenceNote": "Ungraded practice points.",
+    "cautions": [
+      "Selected criteria; verify the full referral figure and risk-model eligibility."
+    ],
+    "tags": [
+      "nephrology",
+      "KFRE",
+      "referral",
+      "eGFR"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "referral-kidney"
+  },
+  {
+    "id": "htn-kdigo-goal",
+    "topic": "hypertension",
+    "title": "KDIGO: standardized systolic BP goal",
+    "summary": "For high BP with nondialysis CKD, consider systolic BP <120 mmHg when tolerated, using standardized office measurement.",
+    "population": "Adults with high BP and CKD.",
+    "sourceId": "kdigo-bp-2021",
+    "locator": "Recommendation 3.1.1; Practice Points 3.1.1–3.1.2",
+    "gradeSystem": "KDIGO GRADE",
+    "strength": "2B · Suggestion",
+    "evidenceLevel": null,
+    "evidenceNote": "Original KDIGO 2B retained; not an ACC/AHA evidence level.",
+    "cautions": [
+      "Do not apply this target to nonstandardized readings.",
+      "Limited life expectancy or symptomatic postural hypotension may justify less intensive therapy."
+    ],
+    "tags": [
+      "CKD",
+      "blood pressure",
+      "120",
+      "standardized measurement"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "htn-kdigo-goal"
+  },
+  {
+    "id": "ckd-kdigo-acearb",
+    "topic": "ckd",
+    "title": "Albuminuric diabetic CKD: ACEi or ARB",
+    "summary": "Start an ACE inhibitor or ARB for high BP with diabetic CKD G1–G4 and moderately or severely increased albuminuria (A2/A3).",
+    "population": "Adults with high BP and diabetic CKD.",
+    "sourceId": "kdigo-bp-2021",
+    "locator": "Recommendation 3.2.3",
+    "gradeSystem": "KDIGO GRADE",
+    "strength": "1B · Strong",
+    "evidenceLevel": null,
+    "evidenceNote": "Original KDIGO 1B retained; not an ACC/AHA evidence level.",
+    "cautions": [
+      "Assess contraindications and monitoring before prescribing."
+    ],
+    "tags": [
+      "ACE inhibitor",
+      "ARB",
+      "albuminuria",
+      "diabetes"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "ckd-kdigo-acearb"
+  },
+  {
+    "id": "htn-va-diastolic-goal",
+    "topic": "hypertension",
+    "title": "VA/DoD: diastolic BP goal",
+    "summary": "At age ≥30 with hypertension, VA/DoD suggests diastolic BP <90 mmHg. Evidence is insufficient to favor <80 over <90.",
+    "population": "Adults with hypertension, age ≥30.",
+    "sourceId": "va-htn-2026",
+    "locator": "Recommendations 5–6; printed page 26",
+    "gradeSystem": "VA/DoD GRADE",
+    "strength": "Weak for",
+    "evidenceLevel": null,
+    "evidenceNote": "Weak for applies to <90; recommendation 6 is neither for nor against <80 versus <90.",
+    "cautions": [
+      "Keep this distinct from ACC/AHA targets; individualize treatment."
+    ],
+    "tags": [
+      "VA",
+      "DoD",
+      "blood pressure",
+      "diastolic",
+      "90"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "htn-va-diastolic-goal"
+  }
+]

@@ -1,0 +1,16 @@
+{
+ "title":"West Haven · VA Connecticut",
+ "facility":"West Haven VA Medical Center, VA Connecticut Healthcare System",
+ "checkedAt":"2026-11-02",
+ "localApprovalStatus":"not-publicly-verified",
+ "resources":[
+  {"title":"VA Connecticut pharmacy","url":"https://www.va.gov/connecticut-health-care/pharmacy/","summary":"Official outpatient pharmacy and prescription-support information. West Haven pharmacy support: 203-932-5711. The page lists Building 2, second floor.","sourceVersion":"Page last updated December 1, 2023; link checked November 2, 2026. Confirm current contact details and hours."},
+  {"title":"West Haven VA Medical Center","url":"https://www.va.gov/connecticut-health-care/locations/west-haven-va-medical-center/","summary":"Official facility and service directory, including primary care and specialty services.","sourceVersion":"Public facility directory checked November 2, 2026."},
+  {"title":"VA facility contacts for community care","url":"https://department.va.gov/vha/community-care/care-coordination/facility-contacts/","summary":"Official West Haven / VA Connecticut care-coordination contacts. Community care providers can use the referring facility to obtain the correct pharmacy submission contact.","sourceVersion":"Public directory checked November 2, 2026."}
+ ],
+ "limitations":[
+  "National formulary status and national CFU apply as the starting point; they do not establish an individual West Haven approval or current stock.",
+  "No current public West Haven-specific PADR order name, local adjudication checklist, approval turnaround, or escalation route was verified.",
+  "VA staff should confirm facility workflow with VA Connecticut pharmacy using approved VA systems. Do not enter or upload clinical documentation into Sage."
+ ]
+}

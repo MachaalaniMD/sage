@@ -1,10 +1,10 @@
-# Prototype validation — November 1, 2026
+# Prototype validation — November 2, 2026
 
 This records software checks, not clinical approval. Every clinical recommendation, comparison, and dose remains pending independent medical verification.
 
 ## Automated checks
 
-- 108 Vitest tests passed: 64 clinical-rule, search and provenance checks; 34 PREVENT checks; 10 source-monitor fixture checks.
+- 160 Vitest tests passed: 65 core rule/provenance tests, 17 expansion/VA tests, 34 PREVENT tests, 25 other risk-tool tests, 11 monitor tests and 8 VA importer tests.
 - PREVENT matches all 12 original spreadsheet outputs (sex × endpoint × horizon) within 1e-12, plus the primary paper’s rounded worked examples.
 - Post-MI tests cover ASCVD implication, explicit risk classification, lipid thresholds, ACS/CCD timing, bleeding/OAC exclusions and first-event score withholding.
 - TypeScript checking and the Vite production build passed.
@@ -31,9 +31,19 @@ This records software checks, not clinical approval. Every clinical recommendati
 - The post-MI example returns secondary lipid and antiplatelet references, withholds first-event PREVENT estimates, and does not display primary-prevention aspirin advice.
 - Mobile navigation includes Risk calculators and Secondary prevention. Calculator and post-MI engine pages have no horizontal page overflow at 390px. Desktop engine has no horizontal page overflow at 1440px.
 
+## v0.3 browser checks
+
+- Clinical directory displays all18 areas; mobile directory and VA search show no horizontal overflow at390px.
+- The diabetes/CKD fictional case matches SGLT2 and VA finerenone reference criteria with explicit UACR, chronicity, potassium and current-therapy context.
+- VA medication search distinguishes semaglutide formulations, national status and indication-specific CFU. Ozempic links its April2026 CFU and September2026 guidance. West Haven context shows official public local resources and unverified local approval steps.
+- FIB-4 default example returns2.00. The AF example meets the score threshold. FRAX interpretation accepts entered fictional3% hip/15% major outputs while explicitly stating it does not calculate FRAX.
+- No browser console errors were observed during these checks.
+- After both preview servers were stopped, a production reload still loaded the VA workspace; finerenone search and the West Haven context worked offline.
+- Production build precaches the separate VA data chunk alongside the app. Full-source standalone packaging includes the dataset and disables service-worker registration.
+
 ## Source-monitor check
 
-The live baseline attempt inspected 17 maintained documents/index pages. Twelve baseline fingerprints were captured. Five AHA/publisher endpoints returned HTTP 403 and remain flagged as access failures. No clinical data was modified. The report is included in `src/data/source-check-report.json` and exposed in the app’s updates screen. Three v0.2 sources additionally require initial fingerprints. Scheduled monitoring is included in the repository; its execution status must be checked in GitHub Actions.
+The live baseline attempt inspected 17 maintained documents/index pages. Twelve baseline fingerprints were captured. Five AHA/publisher endpoints returned HTTP 403 and remain flagged as access failures. No clinical data was modified. The report is included in `src/data/source-check-report.json` and exposed in the app’s updates screen. New v0.2/v0.3 sources and VA datasets additionally require initial fingerprints; the original report is not a new full live baseline. Scheduled monitoring is included in the repository; its execution status must be checked in GitHub Actions.
 
 ## Public deployment
 

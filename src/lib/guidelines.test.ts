@@ -184,9 +184,9 @@ describe('data provenance and library search', () => {
       expect(source, r.id).toBeDefined(); expect(r.locator.length).toBeGreaterThan(8);
       expect(r.population.length).toBeGreaterThan(10); expect(r.status).toBe('pending-medical-review');
       expect(r.revision).toBeGreaterThan(0); expect(r.evidenceNote).toBeTruthy();
-      expect(source!.year).toBeLessThanOrEqual(2026); expect(source!.checkedAt).toBe('2026-11-01');
+      expect(source!.year).toBeLessThanOrEqual(2026); expect(['2026-11-01','2026-11-02']).toContain(source!.checkedAt);
       const url = new URL(source!.url); expect(url.protocol).toBe('https:');
-      expect(['www.cdc.gov','www.ahajournals.org','healthquality.va.gov','www.healthquality.va.gov','www.heart.org','www.uspreventiveservicestaskforce.org']).toContain(url.hostname);
+      expect(['www.cdc.gov','www.ahajournals.org','healthquality.va.gov','www.healthquality.va.gov','www.heart.org','www.uspreventiveservicestaskforce.org','pmc.ncbi.nlm.nih.gov','diabetesjournals.org','doi.org','kdigo.org','www.asge.org','asmbs.org','journal.chestnet.org','gastro.org','downloads.asam.org','professional.heart.org']).toContain(url.hostname);
     }
   });
   it('does not invent an ACC evidence grade for other grading systems', () => {
@@ -207,7 +207,8 @@ describe('data provenance and library search', () => {
   });
   it('combines topic and society filters', () => {
     const results = searchRecommendations('', 'hypertension', 'VA');
-    expect(results.map(r => r.id)).toEqual(['va-htn-target']);
+    expect(results.map(r => r.id)).toEqual(expect.arrayContaining(['va-htn-target','htn-va-diastolic-goal']));
+    expect(results.every(r=>r.sourceId==='va-htn-2026')).toBe(true);
     expect(searchRecommendations('', 'heart-failure', 'CDC')).toEqual([]);
   });
 });

@@ -59,3 +59,9 @@ describe('source monitor review workflow', () => {
     expect(normalizeHtml('<nav>Noise</nav><main><style>body{color:red}</style><script>track()</script>Hello    world</main>')).toBe('Hello world');
   });
 });
+
+it('keeps every bundled source and watch URL on the maintained primary-source allowlist',async()=>{
+ const {readdir,readFile}=await import('node:fs/promises');
+ const files=(await readdir(new URL('../src/data/',import.meta.url))).filter(n=>n==='sources.json'||n.endsWith('-sources.json')||n==='watch-pages.json');
+ for(const file of files){const rows=JSON.parse(await readFile(new URL('../src/data/'+file,import.meta.url),'utf8'));for(const row of rows)expect(()=>assertSourceUrl(row.url),row.url).not.toThrow();}
+});

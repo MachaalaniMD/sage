@@ -1,7 +1,79 @@
 [
-  {"id":"discovery-va-guidelines","society":"VA / DoD","title":"VA/DoD guideline index — publication discovery","url":"https://www.healthquality.va.gov/","kind":"discovery"},
-  {"id":"discovery-va-lipids","society":"VA / DoD","title":"VA/DoD lipid management landing page","url":"https://www.healthquality.va.gov/guidelines/CD/lipids/index.asp","kind":"discovery"},
-  {"id":"discovery-va-hypertension","society":"VA / DoD","title":"VA/DoD hypertension landing page","url":"https://www.healthquality.va.gov/guidelines/CD/htn/index.asp","kind":"discovery"},
-  {"id":"discovery-aha-guidelines","society":"AHA / ACC","title":"AHA guidelines and statements — publication discovery","url":"https://professional.heart.org/en/guidelines-and-statements","kind":"discovery"},
-  {"id":"discovery-cdc-schedule","society":"CDC / ACIP","title":"CDC adult immunization schedule — publication discovery","url":"https://www.cdc.gov/vaccines/hcp/imz-schedules/adult-age.html","kind":"discovery"}
+  {
+    "id": "discovery-va-guidelines",
+    "society": "VA / DoD",
+    "title": "VA/DoD guideline index \u2014 publication discovery",
+    "url": "https://www.healthquality.va.gov/",
+    "kind": "discovery"
+  },
+  {
+    "id": "discovery-va-lipids",
+    "society": "VA / DoD",
+    "title": "VA/DoD lipid management landing page",
+    "url": "https://www.healthquality.va.gov/guidelines/CD/lipids/index.asp",
+    "kind": "discovery"
+  },
+  {
+    "id": "discovery-va-hypertension",
+    "society": "VA / DoD",
+    "title": "VA/DoD hypertension landing page",
+    "url": "https://www.healthquality.va.gov/guidelines/CD/htn/index.asp",
+    "kind": "discovery"
+  },
+  {
+    "id": "discovery-aha-guidelines",
+    "society": "AHA / ACC",
+    "title": "AHA guidelines and statements \u2014 publication discovery",
+    "url": "https://professional.heart.org/en/guidelines-and-statements",
+    "kind": "discovery"
+  },
+  {
+    "id": "discovery-cdc-schedule",
+    "society": "CDC / ACIP",
+    "title": "CDC adult immunization schedule \u2014 publication discovery",
+    "url": "https://www.cdc.gov/vaccines/hcp/imz-schedules/adult-age.html",
+    "kind": "discovery"
+  },
+  {
+    "id": "discovery-va-formulary",
+    "society": "VA PBM",
+    "title": "VA national formulary publication index",
+    "url": "https://www.pbm.va.gov/nationalformulary.asp",
+    "kind": "discovery"
+  },
+  {
+    "id": "va-formulary-data",
+    "society": "VA PBM",
+    "title": "VA Formulary Advisor source rows",
+    "url": "https://www.va.gov/formularyadvisor/VANF.json",
+    "kind": "dataset"
+  },
+  {
+    "id": "va-cfu-index",
+    "society": "VA PBM",
+    "title": "VA current CFU and guidance index",
+    "url": "https://www.va.gov/formularyadvisor/DOC.json",
+    "kind": "dataset"
+  },
+  {
+    "id": "va-formulary-refresh",
+    "society": "VA PBM",
+    "title": "VA formulary source refresh metadata",
+    "url": "https://www.va.gov/formularyadvisor/VERSIONS.json",
+    "kind": "dataset"
+  },
+  {
+    "id": "discovery-kdigo",
+    "society": "KDIGO",
+    "title": "KDIGO CKD final guideline and draft discovery index",
+    "url": "https://kdigo.org/guidelines/ckd-evaluation--and-management/",
+    "kind": "discovery"
+  },
+  {
+    "id": "west-haven-pharmacy",
+    "society": "VA Connecticut",
+    "title": "West Haven / VA Connecticut public pharmacy resources",
+    "url": "https://www.va.gov/connecticut-health-care/pharmacy/",
+    "kind": "discovery"
+  }
 ]

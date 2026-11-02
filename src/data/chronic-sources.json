@@ -1,0 +1,101 @@
+[
+  {
+    "id": "ada-glycemia-2026",
+    "society": "ADA",
+    "title": "Glycemic Goals, Hypoglycemia, and Hyperglycemic Crises: Standards of Care in Diabetes—2026",
+    "year": 2026,
+    "version": "2026 Standards of Care; section 6",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12690178/",
+    "checkedAt": "2026-11-02",
+    "access": "Primary guideline text read",
+    "topic": "diabetes"
+  },
+  {
+    "id": "ada-older-2026",
+    "society": "ADA",
+    "title": "Older Adults: Standards of Care in Diabetes—2026",
+    "year": 2026,
+    "version": "2026 Standards of Care; section 13",
+    "url": "https://diabetesjournals.org/care/article-pdf/49/Supplement_1/S277/848834/dc26s013.pdf",
+    "checkedAt": "2026-11-02",
+    "access": "Primary publisher indexed recommendation table checked; direct publisher access restricted",
+    "topic": "diabetes"
+  },
+  {
+    "id": "ada-kidney-2026",
+    "society": "ADA",
+    "title": "Chronic Kidney Disease and Risk Management: Standards of Care in Diabetes—2026",
+    "year": 2026,
+    "version": "2026 Standards of Care; section 11",
+    "url": "https://diabetesjournals.org/care/article/49/Supplement_1/S246/163914/11-Chronic-Kidney-Disease-and-Risk-Management",
+    "checkedAt": "2026-11-02",
+    "access": "Primary publisher indexed recommendation table checked; direct publisher access restricted",
+    "topic": "ckd"
+  },
+  {
+    "id": "ada-eye-foot-2026",
+    "society": "ADA",
+    "title": "Retinopathy, Neuropathy, and Foot Care: Standards of Care in Diabetes—2026",
+    "year": 2026,
+    "version": "2026 Standards of Care; section 12",
+    "url": "https://diabetesjournals.org/care/article-lookup/doi/10.2337/dc26-S012",
+    "checkedAt": "2026-11-02",
+    "access": "Primary publisher indexed recommendation table checked; direct publisher access restricted",
+    "topic": "diabetes"
+  },
+  {
+    "id": "ada-cvd-2026",
+    "society": "ADA",
+    "title": "Cardiovascular Disease and Risk Management: Standards of Care in Diabetes—2026",
+    "year": 2026,
+    "version": "2026 Standards of Care; section 10",
+    "url": "https://doi.org/10.2337/dc26-s010",
+    "checkedAt": "2026-11-02",
+    "access": "Primary publisher indexed recommendation table checked; direct publisher access restricted",
+    "topic": "hypertension"
+  },
+  {
+    "id": "va-diabetes-2023",
+    "society": "VA / DoD",
+    "title": "Management of Type 2 Diabetes Mellitus — Provider Summary",
+    "year": 2023,
+    "version": "Version 6.0; May 2023",
+    "url": "https://www.healthquality.va.gov/HEALTHQUALITY/guidelines/CD/diabetes/VADOD-Diabetes-CPG-Provider-Summary_final_508.pdf",
+    "checkedAt": "2026-11-02",
+    "access": "Primary source PDF read; VA guideline index checked",
+    "topic": "diabetes"
+  },
+  {
+    "id": "va-ckd-2025",
+    "society": "VA / DoD",
+    "title": "Primary Care Management of Chronic Kidney Disease",
+    "year": 2025,
+    "version": "April 2025; published file May 9, 2025",
+    "url": "https://www.healthquality.va.gov/HEALTHQUALITY/guidelines/CD/ckd/CKD-CPG_2025-Guideline_final_20250509.pdf",
+    "checkedAt": "2026-11-02",
+    "access": "Primary source PDF read; VA guideline index checked",
+    "topic": "ckd"
+  },
+  {
+    "id": "kdigo-ckd-2024",
+    "society": "KDIGO",
+    "title": "Evaluation and Management of Chronic Kidney Disease",
+    "year": 2024,
+    "version": "Kidney International 105 (Suppl 4S); April 2024",
+    "url": "https://kdigo.org/wp-content/uploads/2024/03/KDIGO-2024-CKD-Guideline.pdf",
+    "checkedAt": "2026-11-02",
+    "access": "Primary source PDF read",
+    "topic": "ckd"
+  },
+  {
+    "id": "kdigo-bp-2021",
+    "society": "KDIGO",
+    "title": "Management of Blood Pressure in Chronic Kidney Disease",
+    "year": 2021,
+    "version": "Kidney International 99 (Suppl 3S); March 2021",
+    "url": "https://kdigo.org/wp-content/uploads/2016/10/KDIGO-2021-BP-GL.pdf",
+    "checkedAt": "2026-11-02",
+    "access": "Primary source PDF read",
+    "topic": "hypertension"
+  }
+]

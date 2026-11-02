@@ -1,0 +1,56 @@
+[
+  {
+    "id": "referral-fib4",
+    "topic": "referral",
+    "title": "FIB-4: age-specific liver assessment thresholds",
+    "summary": "At ages 35–64, FIB-4 ≥1.3 prompts VCTE or ELF assessment; at age ≥65 the threshold is ≥2.0. A value >2.67 prompts hepatology referral.",
+    "population": "Adults at increased MASLD risk in the 2026 CKM pathway, outside acute illness.",
+    "sourceId": "acc-ckm-2026",
+    "locator": "Table 17: Increased Risk of MASLD",
+    "gradeSystem": "Guideline table",
+    "strength": "Threshold table · separate grade not extracted",
+    "evidenceLevel": null,
+    "evidenceNote": "Thresholds are table entries, not an independently graded drug recommendation.",
+    "cautions": [
+      "Not applicable below age 35; do not use during acute illness.",
+      "FIB-4 stratifies risk and does not establish a diagnosis."
+    ],
+    "tags": [
+      "FIB-4",
+      "liver",
+      "MASLD",
+      "hepatology",
+      "referral"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "reference-fib4"
+  },
+  {
+    "id": "htn-acc-general-goal",
+    "topic": "hypertension",
+    "title": "ACC/AHA: overarching BP treatment goal",
+    "summary": "The overarching adult treatment goal is <130/80 mmHg, with additional considerations for institutional care, limited predicted lifespan and pregnancy.",
+    "population": "Adults being treated for hypertension; individualized exceptions require review.",
+    "sourceId": "aha-bp-goal-2025",
+    "locator": "Top Things to Know, item 1",
+    "gradeSystem": "ACC/AHA guideline summary",
+    "strength": "Goal summary · table grade review pending",
+    "evidenceLevel": null,
+    "evidenceNote": "The society summary does not supply a separate COR/LOE for this combined overarching statement; no single grade inferred.",
+    "cautions": [
+      "Assess tolerability, standardized measurements and individual clinical circumstances."
+    ],
+    "tags": [
+      "blood pressure",
+      "target",
+      "130",
+      "80",
+      "ACC",
+      "AHA"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "reference-htn-acc-goal"
+  }
+]

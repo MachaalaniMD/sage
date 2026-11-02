@@ -1,4 +1,11 @@
 import sourceData from '../data/sources.json';
+import chronicSources from '../data/chronic-sources.json';
+import preventionSources from '../data/prevention-sources.json';
+import medicationSources from '../data/medication-sources.json';
+import chronicData from '../data/chronic-expansion.json';
+import preventionData from '../data/prevention-expansion.json';
+import medicationData from '../data/medication-expansion.json';
+import riskData from '../data/risk-expansion.json';
 import recommendationData from '../data/recommendations.json';
 import additionalData from '../data/additional-recommendations.json';
 import doseData from '../data/doses.json';
@@ -6,11 +13,11 @@ import versionData from '../data/versions.json';
 import Fuse from 'fuse.js';
 import { calculatePrevent, displayRisk, type PreventInputs, type PreventResult } from './prevent';
 
-export type Topic = 'vaccinations' | 'dyslipidemia' | 'hypertension' | 'heart-failure' | 'prevention' | 'secondary-prevention';
-export type Source = (typeof sourceData)[number];
+export type Topic = 'vaccinations' | 'dyslipidemia' | 'hypertension' | 'heart-failure' | 'prevention' | 'secondary-prevention' | 'screening' | 'diabetes' | 'ckd' | 'anticoagulation' | 'osteoporosis' | 'obesity' | 'infectious-disease' | 'cancer-surveillance' | 'monitoring' | 'deprescribing' | 'referral' | 'lifestyle';
+export type Source = { id:string;society:string;title:string;year:number;version:string;url:string;checkedAt:string;access:string;topic:string };
 export type Recommendation = Omit<(typeof recommendationData)[number], 'topic'> & { topic: Topic };
-export const sources = sourceData;
-export const recommendations = [...recommendationData, ...additionalData] as Recommendation[];
+export const sources = [...sourceData,...chronicSources,...preventionSources,...medicationSources];
+export const recommendations = [...recommendationData.map(r=>r.id.startsWith('prevention-osteoporosis')?{...r,topic:'osteoporosis'}:r), ...additionalData,...chronicData,...preventionData,...medicationData,...riskData] as Recommendation[];
 export const doses = doseData;
 export const versions = versionData;
 export const sourceFor = (r: Recommendation) => sources.find(s => s.id === r.sourceId)!;
@@ -19,8 +26,20 @@ export const topics: { id: Topic; title: string; short: string; description: str
   { id: 'dyslipidemia', title: 'Dyslipidemia', short: 'Dyslipidemia', description: 'Statin eligibility, intensity, and LDL-C goals.', society: 'ACC / AHA · VA / DoD', color: 'blue' },
   { id: 'hypertension', title: 'Hypertension', short: 'Hypertension', description: 'Treatment thresholds and blood pressure goals.', society: 'ACC / AHA · VA / DoD', color: 'ochre' },
   { id: 'heart-failure', title: 'Heart failure GDMT', short: 'Heart failure', description: 'The four pillars, with starting and target doses.', society: 'AHA / ACC / HFSA', color: 'rose' },
-  { id: 'prevention', title: 'Primary prevention', short: 'Primary prevention', description: 'Selected aspirin and osteoporosis recommendations.', society: 'USPSTF', color: 'sage' },
-  { id: 'secondary-prevention', title: 'Secondary prevention', short: 'Secondary prevention', description: 'After MI or ASCVD: lipid goals, antiplatelets, BP, and rehabilitation.', society: 'ACC / AHA · VA / DoD', color: 'rose' }
+  { id: 'prevention', title: 'Primary prevention', short: 'Primary prevention', description: 'Selected aspirin initiation recommendations.', society: 'USPSTF', color: 'sage' },
+  { id: 'secondary-prevention', title: 'Secondary prevention', short: 'Secondary prevention', description: 'After MI or ASCVD: lipid goals, antiplatelets, BP, and rehabilitation.', society: 'ACC / AHA · VA / DoD', color: 'rose' },
+  {"id": "screening", "title": "Preventive screening", "short": "Screening", "description": "Cancer screening, AAA, and selected USPSTF preventive care.", "society": "USPSTF", "color": "blue"},
+  {"id": "diabetes", "title": "Diabetes targets", "short": "Diabetes", "description": "Individualized A1c targets and eye, foot, and lab screening intervals.", "society": "ADA · VA / DoD", "color": "sage"},
+  {"id": "ckd", "title": "CKD recommendations", "short": "CKD", "description": "Albuminuria, kidney-protective therapy, monitoring, and referral.", "society": "KDIGO · ADA · VA / DoD", "color": "blue"},
+  {"id": "anticoagulation", "title": "Anticoagulation", "short": "Anticoagulation", "description": "AF and VTE indications, duration, and elective procedure guidance.", "society": "ACC / AHA · ASH · CHEST", "color": "rose"},
+  {"id": "osteoporosis", "title": "Osteoporosis", "short": "Osteoporosis", "description": "DXA screening, fracture history, FRAX thresholds, and treatment.", "society": "USPSTF · BHOF", "color": "ochre"},
+  {"id": "obesity", "title": "Obesity", "short": "Obesity", "description": "Medication and metabolic surgery eligibility, by society.", "society": "ACP · ASMBS / IFSO", "color": "sage"},
+  {"id": "infectious-disease", "title": "Infectious disease screening", "short": "Infection screening", "description": "HIV, HCV, HBV, TB, and risk-based STI screening.", "society": "CDC · USPSTF", "color": "blue"},
+  {"id": "cancer-surveillance", "title": "Cancer surveillance", "short": "Cancer surveillance", "description": "Selected post-polyp, colorectal cancer, and cervical follow-up.", "society": "USMSTF · ASCCP", "color": "rose"},
+  {"id": "monitoring", "title": "Medication monitoring", "short": "Drug monitoring", "description": "Selected laboratory checks after starting or changing therapy.", "society": "ACC / AHA · KDIGO · ADA", "color": "ochre"},
+  {"id": "deprescribing", "title": "Deprescribing", "short": "Deprescribing", "description": "Review indications, benefit, harm, and safe tapering principles.", "society": "AGA · ASAM", "color": "sage"},
+  {"id": "referral", "title": "Specialist referral", "short": "Referral criteria", "description": "Kidney and liver thresholds that prompt specialist assessment.", "society": "KDIGO · ACC / AHA", "color": "blue"},
+  {"id": "lifestyle", "title": "Lifestyle recommendations", "short": "Lifestyle", "description": "Physical activity, nutrition, tobacco, and alcohol counseling.", "society": "HHS · AHA · USPSTF", "color": "sage"}
 ];
 
 const index = new Fuse(recommendations.map(r => ({ ...r, society: sourceFor(r).society })), {
@@ -46,11 +65,14 @@ export interface FictionalCase extends PreventInputs {
   miMonthsAgo: number; veryHighRisk: 'unknown' | 'yes' | 'no';
   bleedingRisk: 'unknown' | 'not-high' | 'high'; oralAnticoagulation: boolean;
   antiplateletContraindication: boolean; maxStatin: boolean;
+  diabetesType:'unknown'|'type1'|'type2'; type1Years:number; uacr:number|null; albuminuriaPersistent:boolean;
+  preventionContext:boolean; cervix:boolean; routineBreastScreening:boolean; everSmoked:boolean; packYears:number; yearsSinceQuit:number; lungTreatmentCandidate:boolean;
+  hypertensionDiagnosis:boolean; onAceArb:boolean; maxAceArb:boolean; onMra:boolean; onMetformin:boolean; onPpi:boolean; onBenzodiazepine:boolean;
 }
-const riskDefaults = { totalCholesterol:200,hdl:50,bmi:28,smoker:false,bpTreatment:false,statin:false,priorMi:false,dialysis:false,riskEnabled:true,subclinicalAtherosclerosis:false,miMonthsAgo:24,veryHighRisk:'unknown' as const,bleedingRisk:'unknown' as const,oralAnticoagulation:false,antiplateletContraindication:false,maxStatin:false };
+const riskDefaults = { diabetesType:'unknown' as const,type1Years:0,uacr:null,albuminuriaPersistent:false,preventionContext:false,cervix:false,routineBreastScreening:false,everSmoked:false,packYears:0,yearsSinceQuit:0,lungTreatmentCandidate:false,hypertensionDiagnosis:false,onAceArb:false,maxAceArb:false,onMra:false,onMetformin:false,onPpi:false,onBenzodiazepine:false, totalCholesterol:200,hdl:50,bmi:28,smoker:false,bpTreatment:false,statin:false,priorMi:false,dialysis:false,riskEnabled:true,subclinicalAtherosclerosis:false,miMonthsAgo:24,veryHighRisk:'unknown' as const,bleedingRisk:'unknown' as const,oralAnticoagulation:false,antiplateletContraindication:false,maxStatin:false };
 export const profiles: { id: string; name: string; description: string; data: FictionalCase }[] = [
   { id: 'diabetes', name: 'Diabetes & lipids', description: 'Age 47 · diabetes · LDL-C 115', data: {
-    ...riskDefaults, age: 47, sex: 'male', diabetes: true, ckd: false, veteran: true, ascvd: false,
+    ...riskDefaults, diabetesType:'type2',onMetformin:true,hypertensionDiagnosis:true, age: 47, sex: 'male', diabetes: true, ckd: false, veteran: true, ascvd: false,
     multipleRiskFactors: false, sbp: 134, dbp: 82, ldl: 115,
     hf: false, ef: 55, nyha: 'II', egfr: 78, potassium: 4.2, immunocompromised: false,
     secondaryBoneDisease: false, influenza: 'unknown', zoster: 'unknown', pneumococcal: 'unknown', hepb: 'unknown'
@@ -68,18 +90,19 @@ export const profiles: { id: string; name: string; description: string; data: Fi
     secondaryBoneDisease: false, influenza: 'complete', zoster: 'complete', pneumococcal: 'complete', hepb: 'complete'
   } },
   { id: 'prevention', name: 'Primary prevention', description: 'Age 67 · routine prevention', data: {
-    ...riskDefaults, age: 67, sex: 'female', diabetes: false, ckd: false, veteran: false, ascvd: false,
+    ...riskDefaults,preventionContext:true,routineBreastScreening:true, age: 67, sex: 'female', diabetes: false, ckd: false, veteran: false, ascvd: false,
     multipleRiskFactors: false, sbp: 144, dbp: 88, ldl: 120,
     hf: false, ef: 60, nyha: 'II', egfr: 85, potassium: 4.2, immunocompromised: false,
     secondaryBoneDisease: false, influenza: 'complete', zoster: 'complete', pneumococcal: 'complete', hepb: 'complete'
   } },
   { id:'post-mi',name:'After a prior MI',description:'Age 62 · MI 18 months ago',data:{
-    ...riskDefaults,age:62,sex:'male',diabetes:true,ckd:false,veteran:true,ascvd:true,priorMi:true,miMonthsAgo:18,veryHighRisk:'yes',bleedingRisk:'not-high',bpTreatment:true,statin:true,maxStatin:true,
+    ...riskDefaults,diabetesType:'type2',age:62,sex:'male',diabetes:true,ckd:false,veteran:true,ascvd:true,priorMi:true,miMonthsAgo:18,veryHighRisk:'yes',bleedingRisk:'not-high',bpTreatment:true,statin:true,maxStatin:true,
     multipleRiskFactors:true,sbp:134,dbp:82,ldl:85,totalCholesterol:160,hdl:45,
     hf:false,ef:55,nyha:'II',egfr:72,potassium:4.2,immunocompromised:false,secondaryBoneDisease:false,
     influenza:'complete',zoster:'complete',pneumococcal:'complete',hepb:'complete'
   } }
 ];
+profiles.push({id:'kidney',name:'Diabetes & CKD',description:'Age 61 · eGFR 35 · UACR 450',data:{...profiles[0].data,age:61,ckd:true,diabetesType:'type2',uacr:450,albuminuriaPersistent:true,egfr:35,potassium:4.6,bmi:32,onAceArb:true,maxAceArb:true,hypertensionDiagnosis:true,bpTreatment:true,statin:true,ldl:90,preventionContext:false}});
 
 export function validateCase(c: FictionalCase): string[] {
   const errors: string[] = [];
@@ -93,6 +116,8 @@ export function validateCase(c: FictionalCase): string[] {
   range(c.ldl, 10, 500, 'LDL-C'); range(c.egfr, 0, 150, 'eGFR');
   range(c.ef, 5, 80, 'LVEF'); range(c.potassium, 2, 7, 'Potassium');
   if(c.priorMi) range(c.miMonthsAgo,0,960,'Months since MI');
+  if(c.uacr!==null)range(c.uacr,0,10000,'UACR');
+  range(c.bmi,10,80,'BMI');range(c.packYears,0,200,'Pack-years');range(c.yearsSinceQuit,0,100,'Years since quitting');range(c.type1Years,0,100,'Type 1 diabetes duration');
   return errors;
 }
 export interface Match { recommendation: Recommendation; reason: string; context?: string }
@@ -116,7 +141,7 @@ export function evaluateCase(c: FictionalCase): { matches: Match[]; gaps: string
   if (c.influenza !== 'complete') add('influenza', 'Adult age; no current-season vaccination documented in this fictional case.');
   if (c.age >= 50 && c.zoster !== 'complete' && !c.immunocompromised && c.zoster !== 'partial') add('zoster', 'Age ≥50; fictional RZV history is absent or unknown.');
   if (c.zoster === 'partial') gaps.push('Incomplete RZV series: review actual dose dates in the primary schedule; no dose is calculated here.');
-  if (c.immunocompromised) gaps.push('Immunocompromised vaccination pathways are not encoded; review the primary schedule.');
+  if (c.immunocompromised) gaps.push('Immunocompromised vaccination schedules require separate source review; selected references are available in the library.');
   if (c.age >= 50 && ['none', 'unknown'].includes(c.pneumococcal)) add('pneumococcal', 'Age ≥50; fictional conjugate vaccine history is absent or unknown.');
   if (c.pneumococcal === 'partial') gaps.push('Prior pneumococcal doses require product and date review; no catch-up pathway is encoded.');
   if (c.age >= 19 && c.age <= 59 && c.hepb !== 'complete') add('hepb', 'Age 19–59; fictional HepB series is not documented as complete.', 'Review prior products and dates before completing a series.');
@@ -174,6 +199,61 @@ export function evaluateCase(c: FictionalCase): { matches: Match[]; gaps: string
       else gaps.push('Chronic-coronary-disease aspirin pathway withheld pending antithrombotic and bleeding review.');
     }else gaps.push('Coronary antiplatelet pathways require prior-MI/CCD context; other ASCVD may require stroke- or PAD-specific guidance.');
   }
-  gaps.push('COVID-19, RSV, Tdap, other vaccines, younger-adult risk pathways, and complete screening recommendations are not encoded.');
+  const addId=(id:string,reason:string,context?:string)=>{const r=recommendations.find(r=>r.id===id);if(r)matches.push({recommendation:r,reason,context});};
+  if(c.diabetes){
+    addId('diabetes-ada-a1c','Diabetes selected; review the general adult target, not an automatically individualized goal.');
+    addId('diabetes-ada-individualized','Diabetes selected; frailty, hypoglycemia and treatment harms require individual goal review.');
+    addId('diabetes-ada-a1c-frequency','Diabetes selected; reference interval depends on stability and treatment changes.');
+    addId('diabetes-foot-screening','Diabetes selected; review foot assessment and any higher-risk follow-up.');
+    if(c.age>=65)addId('diabetes-older-a1c','Older adult with diabetes; health and functional status determine the target.');
+    if(c.diabetesType==='type2'){
+      addId('ckd-diabetes-annual','Type 2 diabetes explicitly selected; annual UACR and eGFR screening reference.');
+      addId('diabetes-eye-screening','Type 2 diabetes explicitly selected; review initial and follow-up eye assessment intervals.');
+      if(c.veteran)addId('diabetes-va-a1c','Type 2 diabetes with VA/DoD context; compare the individualized VA/DoD range separately from ADA.');
+    }else if(c.diabetesType==='type1'&&c.type1Years>=5)addId('ckd-diabetes-annual','Type 1 diabetes duration ≥5 years explicitly entered.');
+    else gaps.push('Diabetes type/duration is incomplete for type-specific screening and kidney-protective drug pathways.');
+  }
+  if(c.ckd){
+    if(c.diabetes)addId('ckd-monitor-frequency','Diabetes and established CKD explicitly selected; reference frequency varies by stage.');
+    if(c.egfr>=20&&(c.diabetes&&c.diabetesType==='type2'||c.uacr!==null&&c.uacr>=200&&c.albuminuriaPersistent||c.hf))addId('ckd-kdigo-sglt2','CKD with eGFR ≥20 plus explicitly entered type 2 diabetes, persistent UACR ≥200, or HF.','Medication safety and product-specific eligibility are not fully assessed.');
+    if(c.egfr<30||c.uacr!==null&&c.uacr>700&&c.albuminuriaPersistent)addId('referral-kidney','Established CKD with eGFR <30 or persistent UACR >700.','KFRE is not calculated. Other referral criteria and urgency require review.');
+    if(c.diabetes&&c.hypertensionDiagnosis&&c.egfr>=15&&c.uacr!==null&&c.uacr>=30&&c.albuminuriaPersistent)addId('ckd-kdigo-acearb','Diabetic CKD, diagnosed hypertension, eGFR ≥15 and persistent UACR ≥30 explicitly entered.');
+    if(c.veteran&&c.diabetes&&c.diabetesType==='type2'&&c.uacr!==null&&c.uacr>30&&c.albuminuriaPersistent&&c.egfr>=25&&c.potassium<4.8&&c.onAceArb&&c.maxAceArb)addId('ckd-va-finerenone','Type 2 diabetes, CKD, persistent UACR >30, eGFR ≥25, K <4.8 and maximally tolerated ACEi/ARB explicitly entered.','Clinical guideline eligibility does not determine VA formulary authorization.');
+    if(c.uacr===null)gaps.push('UACR is absent: albuminuria-dependent kidney therapy matches are withheld. eGFR does not substitute for UACR.');
+  }
+  if(c.hypertensionDiagnosis){
+    addId('htn-acc-general-goal','Diagnosed hypertension; compare the overarching ACC/AHA goal with individualized and other-society guidance.');
+    if(c.veteran){if(!matches.some(m=>m.recommendation.id==='va-htn-target'))addId('va-htn-target','Diagnosed hypertension with VA/DoD context.');if(c.age>=30)addId('htn-va-diastolic-goal','Diagnosed hypertension, age ≥30, with VA/DoD context.');}
+    if(c.diabetes)addId(c.age>=65?'htn-older-diabetes':'htn-diabetes-goal','Diagnosed hypertension and diabetes; individual safety and tolerability require review.');
+    if(c.ckd)addId('htn-kdigo-goal','Diagnosed hypertension with CKD.','KDIGO <120 uses standardized office readings; do not equate it with routine casual BP.');
+  }
+  if(c.onAceArb)addId('monitor-ace-arb','ACEi/ARB use explicitly selected; review start/dose-change monitoring.');
+  if(c.onMra&&c.hf)addId('monitor-mra-hf','HF and MRA use explicitly selected.');
+  if(c.statin)addId('monitor-lipid-treatment','Statin use explicitly selected; review monitoring after initiation or dose change.');
+  if(c.onMetformin)addId('monitor-metformin-b12','Metformin use explicitly selected; assess duration and deficiency risk.');
+  if(c.onPpi){addId('deprescribe-ppi-review','Long-term PPI use selected; review the ongoing indication.');addId('deprescribe-ppi-exclusions','Long-term PPI use selected; assess indications that support continuation.');}
+  if(c.onBenzodiazepine){if(c.age>=65)addId('deprescribe-bzd-older','Age ≥65 with benzodiazepine use selected; individualized review required.');addId('deprescribe-bzd-withdrawal','Benzodiazepine use selected; do not infer an abrupt stop or a personalized taper.');}
+  if(c.bmi>=30||c.bmi>=27&&(c.diabetes||c.hypertensionDiagnosis||hasCvd))addId('obesity-pharmacotherapy','Fictional BMI and selected comorbidities reach the ACP reference population.','Pregnancy, contraindications and VA access are not assessed.');
+  if(c.bmi>=35||c.bmi>=30&&c.diabetes)addId('obesity-bariatric-thresholds','Fictional BMI reaches a selected ASMBS/IFSO pathway.','Multidisciplinary assessment and program approval remain separate.');
+  if(c.preventionContext){
+    const why='Asymptomatic routine-screening context explicitly confirmed; prior results and preferences still require review.';
+    if(c.age>=45&&c.age<=49)addId('screen-crc-45-49',why);
+    if(c.age>=50&&c.age<=75)addId('screen-crc-50-75',why);
+    if(c.age>=76&&c.age<=85)addId('screen-crc-older',why,'Selective screening requires prior-screening, health and life-expectancy review.');
+    if(c.routineBreastScreening&&c.age>=40&&c.age<=74)addId('screen-breast-40-74',why);
+    if(c.cervix&&!c.immunocompromised&&c.age>=21&&c.age<=65)addId('screen-cervical-final',why);
+    if(c.sex==='male'&&c.age>=65&&c.age<=75)addId(c.everSmoked?'screen-aaa-ever-smoked':'screen-aaa-never-smoked',why);
+    if(c.sex==='male'&&c.age>=55&&c.age<=69)addId('screen-prostate-shared',why);
+    if(c.sex==='male'&&c.age>=70)addId('screen-prostate-older',why);
+    if(c.age>=50&&c.age<=80&&c.packYears>=20&&(c.smoker||c.yearsSinceQuit<15)&&c.lungTreatmentCandidate)addId('screen-lung-ldct','Age 50–80, ≥20 pack-years, current smoking or quit <15 years, and curative-treatment candidacy explicitly confirmed.');
+    if(c.age<=65)addId('infection-hiv',why);
+    if(c.age<=79)addId('infection-hcv',why);
+    addId('infection-hbv',why);
+  }
+  addId('lifestyle-activity','Adult reference; adapt activity to clinical stability, function and ability.');
+  addId('lifestyle-diet','Adult reference; personalize nutrition to health and preferences.');
+  if(c.smoker)addId('lifestyle-tobacco','Current smoking explicitly selected; review cessation treatment and pregnancy-specific differences.');
+  gaps.push('Broader references are available in all clinical areas. Cancer surveillance, TB/STI exposure pathways, individualized catch-up vaccines, perioperative anticoagulation and tapering are not automatic schedules.');
+
   return { matches, gaps, errors: [], risk };
 }
