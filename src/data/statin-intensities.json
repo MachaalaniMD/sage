@@ -1,0 +1,85 @@
+[
+  {
+    "id": "high",
+    "label": "High intensity",
+    "ldlReduction": "≥50%",
+    "sourceId": "acc-statin-intensity-2026",
+    "locator": "2026 guideline Table 6: high intensity",
+    "drugs": [
+      {
+        "name": "Atorvastatin",
+        "dose": "40 or 80 mg once daily"
+      },
+      {
+        "name": "Rosuvastatin",
+        "dose": "20 or 40 mg once daily"
+      }
+    ]
+  },
+  {
+    "id": "moderate",
+    "label": "Moderate intensity",
+    "ldlReduction": "30–49%",
+    "sourceId": "acc-statin-intensity-2026",
+    "locator": "2026 guideline Table 6: moderate intensity",
+    "drugs": [
+      {
+        "name": "Atorvastatin",
+        "dose": "10 or 20 mg once daily"
+      },
+      {
+        "name": "Rosuvastatin",
+        "dose": "5 or 10 mg once daily"
+      },
+      {
+        "name": "Simvastatin",
+        "dose": "20 or 40 mg once daily"
+      },
+      {
+        "name": "Pravastatin",
+        "dose": "40 or 80 mg once daily"
+      },
+      {
+        "name": "Lovastatin",
+        "dose": "40 or 80 mg total daily dose"
+      },
+      {
+        "name": "Fluvastatin XL",
+        "dose": "80 mg once daily"
+      },
+      {
+        "name": "Fluvastatin",
+        "dose": "40 mg twice daily"
+      },
+      {
+        "name": "Pitavastatin",
+        "dose": "1, 2 or 4 mg once daily"
+      }
+    ]
+  },
+  {
+    "id": "low",
+    "label": "Low intensity",
+    "ldlReduction": "<30%",
+    "sourceId": "acc-statin-intensity-2026",
+    "locator": "2026 guideline Table 6: low intensity",
+    "drugs": [
+      {
+        "name": "Simvastatin",
+        "dose": "10 mg once daily"
+      },
+      {
+        "name": "Pravastatin",
+        "dose": "10 or 20 mg once daily"
+      },
+      {
+        "name": "Lovastatin",
+        "dose": "20 mg total daily dose"
+      },
+      {
+        "name": "Fluvastatin",
+        "dose": "20 or 40 mg total daily dose"
+      }
+    ]
+  }
+]

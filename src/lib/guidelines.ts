@@ -3,6 +3,8 @@ import chronicSources from '../data/chronic-sources.json';
 import preventionSources from '../data/prevention-sources.json';
 import medicationSources from '../data/medication-sources.json';
 import cardiacSources from '../data/cardiac-sources.json';
+import refreshSources from '../data/refresh-sources.json';
+import refreshData from '../data/refresh-recommendations.json';
 import cardiacData from '../data/cardiac-expansion.json';
 import preservedDoseData from '../data/hfpef-doses.json';
 import chronicData from '../data/chronic-expansion.json';
@@ -20,8 +22,8 @@ export type Topic = 'vaccinations' | 'dyslipidemia' | 'hypertension' | 'heart-fa
 export type Source = { id:string;society:string;title:string;year:number;version:string;url:string;checkedAt:string;access:string;topic:string };
 export type HfPhenotype = 'hfref' | 'hfmref' | 'hfpef' | 'hfimpef';
 export type Recommendation = Omit<(typeof recommendationData)[number], 'topic'> & { topic: Topic; hfPhenotypes?: HfPhenotype[] };
-export const sources = [...sourceData,...chronicSources,...preventionSources,...medicationSources,...cardiacSources];
-export const recommendations = [...recommendationData.map(r=>r.id.startsWith('prevention-osteoporosis')?{...r,topic:'osteoporosis'}:r.topic==='heart-failure'?{...r,hfPhenotypes:['hfref']}:r), ...additionalData,...chronicData,...preventionData,...medicationData,...riskData,...cardiacData] as Recommendation[];
+export const sources = [...sourceData,...chronicSources,...preventionSources,...medicationSources,...cardiacSources,...refreshSources];
+export const recommendations = [...recommendationData.map(r=>r.id.startsWith('prevention-osteoporosis')?{...r,topic:'osteoporosis'}:r.topic==='heart-failure'?{...r,hfPhenotypes:['hfref']}:r), ...additionalData,...chronicData,...preventionData,...medicationData,...riskData,...cardiacData,...refreshData] as Recommendation[];
 export const doses = doseData;
 export const preservedDoses = preservedDoseData;
 export const versions = versionData;
@@ -33,7 +35,7 @@ export const topics: { id: Topic; title: string; short: string; description: str
   { id: 'heart-failure', title: 'Heart failure', short: 'Heart failure', description: 'HFrEF, HFpEF, mildly reduced and improved EF: therapy, eligibility and doses.', society: 'AHA / ACC / HFSA · ACC · ESC', color: 'rose' },
   { id: 'prevention', title: 'Primary prevention', short: 'Primary prevention', description: 'Selected aspirin initiation recommendations.', society: 'USPSTF', color: 'sage' },
   { id: 'secondary-prevention', title: 'Secondary prevention', short: 'Secondary prevention', description: 'After MI or ASCVD: lipid goals, antiplatelets, BP, and rehabilitation.', society: 'ACC / AHA · VA / DoD', color: 'rose' },
-  {"id": "screening", "title": "Preventive screening", "short": "Screening", "description": "Cancer screening, AAA, and selected USPSTF preventive care.", "society": "USPSTF", "color": "blue"},
+  {"id": "screening", "title": "Preventive screening", "short": "Screening", "description": "Cancer screening, AAA, and selected USPSTF preventive care.", "society": "USPSTF · ACS", "color": "blue"},
   {"id": "diabetes", "title": "Diabetes targets", "short": "Diabetes", "description": "Individualized A1c targets and eye, foot, and lab screening intervals.", "society": "ADA · VA / DoD", "color": "sage"},
   {"id": "ckd", "title": "CKD recommendations", "short": "CKD", "description": "Albuminuria, kidney-protective therapy, monitoring, and referral.", "society": "KDIGO · ADA · VA / DoD", "color": "blue"},
   {"id": "anticoagulation", "title": "Anticoagulation", "short": "Anticoagulation", "description": "AF and VTE indications, duration, and elective procedure guidance.", "society": "ACC / AHA · ASH · CHEST", "color": "rose"},
@@ -47,8 +49,8 @@ export const topics: { id: Topic; title: string; short: string; description: str
   {"id": "lifestyle", "title": "Lifestyle recommendations", "short": "Lifestyle", "description": "Physical activity, nutrition, tobacco, and alcohol counseling.", "society": "HHS · AHA · USPSTF", "color": "sage"}
 ];
 
-const index = new Fuse(recommendations.map(r => ({ ...r, society: sourceFor(r).society })), {
-  keys: [{ name: 'title', weight: 2 }, 'tags', 'summary', 'population', 'society'],
+const index = new Fuse(recommendations.map(r => ({ ...r, society: sourceFor(r).society, statinTerms:/\bstatins?\b/i.test(r.title+' '+r.summary)?'atorvastatin rosuvastatin simvastatin pravastatin lovastatin fluvastatin pitavastatin statin intensity dose':'' })), {
+  keys: [{ name: 'title', weight: 2 }, 'tags', 'summary', 'population', 'society', 'statinTerms'],
   threshold: 0.28, ignoreLocation: true
 });
 export function searchRecommendations(query: string, topic?: Topic, society = 'all') {
@@ -308,6 +310,7 @@ export function evaluateCase(c: FictionalCase): { matches: Match[]; gaps: string
   }
   addId('lifestyle-activity','Adult reference; adapt activity to clinical stability, function and ability.');
   addId('lifestyle-diet','Adult reference; personalize nutrition to health and preferences.');
+  if(c.smoker&&c.veteran){addId('lifestyle-va-combination-nrt','Current tobacco use with VA/DoD context; review combination NRT suitability.');addId('lifestyle-va-varenicline','Current tobacco use with VA/DoD context; monotherapy comparison reference.');}
   if(c.smoker)addId('lifestyle-tobacco','Current smoking explicitly selected; review cessation treatment and pregnancy-specific differences.');
   gaps.push('Broader references are available in all clinical areas. Cancer surveillance, TB/STI exposure pathways, individualized catch-up vaccines, perioperative anticoagulation and tapering are not automatic schedules.');
 

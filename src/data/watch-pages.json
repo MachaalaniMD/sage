@@ -2,7 +2,7 @@
   {
     "id": "discovery-va-guidelines",
     "society": "VA / DoD",
-    "title": "VA/DoD guideline index \u2014 publication discovery",
+    "title": "VA/DoD guideline index — publication discovery",
     "url": "https://www.healthquality.va.gov/",
     "kind": "discovery"
   },
@@ -23,14 +23,14 @@
   {
     "id": "discovery-aha-guidelines",
     "society": "AHA / ACC",
-    "title": "AHA guidelines and statements \u2014 publication discovery",
+    "title": "AHA guidelines and statements — publication discovery",
     "url": "https://professional.heart.org/en/guidelines-and-statements",
     "kind": "discovery"
   },
   {
     "id": "discovery-cdc-schedule",
     "society": "CDC / ACIP",
-    "title": "CDC adult immunization schedule \u2014 publication discovery",
+    "title": "CDC adult immunization schedule — publication discovery",
     "url": "https://www.cdc.gov/vaccines/hcp/imz-schedules/adult-age.html",
     "kind": "discovery"
   },
@@ -74,6 +74,468 @@
     "society": "VA Connecticut",
     "title": "West Haven / VA Connecticut public pharmacy resources",
     "url": "https://www.va.gov/connecticut-health-care/pharmacy/",
+    "kind": "discovery"
+  },
+  {
+    "id": "refresh-vaccinations-0",
+    "society": "Primary-source publication audit",
+    "title": "CDC adult schedule notes (2025 schedule, July 2, 2025)",
+    "url": "https://www.cdc.gov/vaccines/hcp/imz-schedules/adult-notes.html",
+    "kind": "discovery"
+  },
+  {
+    "id": "refresh-vaccinations-1",
+    "society": "Primary-source publication audit",
+    "title": "CDC influenza clinical considerations (September 1, 2026)",
+    "url": "https://www.cdc.gov/flu/hcp/vax-summary/",
+    "kind": "discovery"
+  },
+  {
+    "id": "refresh-vaccinations-2",
+    "society": "Primary-source publication audit",
+    "title": "CDC pneumococcal vaccine recommendations (February 25, 2026)",
+    "url": "https://www.cdc.gov/pneumococcal/hcp/vaccine-recommendations/",
+    "kind": "discovery"
+  },
+  {
+    "id": "refresh-vaccinations-3",
+    "society": "Primary-source publication audit",
+    "title": "CDC RSV guidance for adults (2026)",
+    "url": "https://www.cdc.gov/rsv/hcp/vaccine-clinical-guidance/adults.html",
+    "kind": "discovery"
+  },
+  {
+    "id": "refresh-vaccinations-4",
+    "society": "Primary-source publication audit",
+    "title": "CDC 2026–2027 COVID guidance (September 23, 2026)",
+    "url": "https://www.cdc.gov/covid/hcp/vaccine-considerations/routine-guidance.html",
+    "kind": "discovery"
+  },
+  {
+    "id": "refresh-screening-0",
+    "society": "Primary-source publication audit",
+    "title": "ACS 2026 colorectal cancer screening guideline, full article",
+    "url": "https://acsjournals.onlinelibrary.wiley.com/doi/10.3322/caac.70083",
+    "kind": "discovery"
+  },
+  {
+    "id": "refresh-screening-1",
+    "society": "Primary-source publication audit",
+    "title": "ACS official colorectal screening guideline landing page",
+    "url": "https://www.cancer.org/health-care-professionals/american-cancer-society-prevention-early-detection-guidelines/colorectal-cancer-screening-guidelines.html",
+    "kind": "discovery"
+  },
+  {
+    "id": "refresh-screening-2",
+    "society": "Primary-source publication audit",
+    "title": "USPSTF colorectal screening final",
+    "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/colorectal-cancer-screening",
+    "kind": "discovery"
+  },
+  {
+    "id": "refresh-screening-3",
+    "society": "Primary-source publication audit",
+    "title": "ACS cervical self-collection and screening-exit update",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12677112/",
+    "kind": "discovery"
+  },
+  {
+    "id": "refresh-screening-4",
+    "society": "Primary-source publication audit",
+    "title": "ACOG Screening for Cervical Cancer, Committee Statement 28",
+    "url": "https://www.acog.org/clinical/clinical-guidance/committee-statement/articles/2026/07/screening-for-cervical-cancer",
+    "kind": "discovery"
+  },
+  {
+    "id": "refresh-screening-5",
+    "society": "Primary-source publication audit",
+    "title": "HRSA updated cervical-screening guideline announcement",
+    "url": "https://www.hrsa.gov/about/news/press-releases/new-cervical-cancer-screening-guidelines",
+    "kind": "discovery"
+  },
+  {
+    "id": "refresh-screening-6",
+    "society": "Primary-source publication audit",
+    "title": "USPSTF cervical screening final (2018)",
+    "url": "https://www.uspreventiveservicestaskforce.org/uspstf/document/RecommendationStatementFinal/cervical-cancer-screening",
+    "kind": "discovery"
+  },
+  {
+    "id": "refresh-prevention-0",
+    "society": "Primary-source publication audit",
+    "title": "USPSTF Aspirin Use to Prevent Cardiovascular Disease: Preventive Medication",
+    "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/aspirin-to-prevent-cardiovascular-disease-preventive-medication",
+    "kind": "discovery"
+  },
+  {
+    "id": "refresh-osteoporosis-0",
+    "society": "Primary-source publication audit",
+    "title": "USPSTF osteoporosis screening final (January 14, 2025)",
+    "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/osteoporosis-screening",
+    "kind": "discovery"
+  },
+  {
+    "id": "refresh-osteoporosis-1",
+    "society": "Primary-source publication audit",
+    "title": "BHOF 2022 clinician guide, primary open-access article",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9546973/",
+    "kind": "discovery"
+  },
+  {
+    "id": "refresh-infectious-disease-0",
+    "society": "Primary-source publication audit",
+    "title": "USPSTF syphilis screening during pregnancy final (May 13, 2025)",
+    "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/syphilis-infection-in-pregnancy-screening",
+    "kind": "discovery"
+  },
+  {
+    "id": "refresh-infectious-disease-1",
+    "society": "Primary-source publication audit",
+    "title": "ACOG HIV Screening and Preexposure Prophylaxis",
+    "url": "https://www.acog.org/clinical/clinical-guidance/committee-statement/articles/2026/08/human-immunodeficiency-virus-screening-and-preexposure-prophylaxis",
+    "kind": "discovery"
+  },
+  {
+    "id": "refresh-infectious-disease-2",
+    "society": "Primary-source publication audit",
+    "title": "USPSTF HIV screening final and update-in-progress notice",
+    "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/human-immunodeficiency-virus-hiv-infection-screening",
+    "kind": "discovery"
+  },
+  {
+    "id": "refresh-infectious-disease-3",
+    "society": "Primary-source publication audit",
+    "title": "CDC STI treatment guidelines index",
+    "url": "https://www.cdc.gov/std/treatment-guidelines/",
+    "kind": "discovery"
+  },
+  {
+    "id": "refresh-infectious-disease-4",
+    "society": "Primary-source publication audit",
+    "title": "CDC Clinical Testing Guidance for HIV (2026 page update)",
+    "url": "https://www.cdc.gov/hivnexus/hcp/diagnosis-testing/index.html",
+    "kind": "discovery"
+  },
+  {
+    "id": "refresh-cancer-surveillance-0",
+    "society": "Primary-source publication audit",
+    "title": "ASCCP Enduring Guidelines official publication index",
+    "url": "https://www.asccp.org/guidelines/management-guidelines-enduring-guidelines-process/enduring-guidelines-process/",
+    "kind": "discovery"
+  },
+  {
+    "id": "refresh-cancer-surveillance-1",
+    "society": "Primary-source publication audit",
+    "title": "ASCCP Enduring Guidelines on self-collected vaginal specimens",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11939108/",
+    "kind": "discovery"
+  },
+  {
+    "id": "refresh-cancer-surveillance-2",
+    "society": "Primary-source publication audit",
+    "title": "ASCCP at-home self-collection Enduring Guidelines publication",
+    "url": "https://journals.lww.com/jlgtd/fulltext/2026/04000/re__self_collected_vaginal_specimens_at_home_for.1.aspx",
+    "kind": "discovery"
+  },
+  {
+    "id": "refresh-cancer-surveillance-3",
+    "society": "Primary-source publication audit",
+    "title": "ASGE practice-guideline index",
+    "url": "https://www.asge.org/home/resources/publications/guidelines",
+    "kind": "discovery"
+  },
+  {
+    "id": "refresh-hypertension-0",
+    "society": "Primary-source publication audit",
+    "title": "2025 AHA/ACC High Blood Pressure Guideline hub",
+    "url": "https://professional.heart.org/en/guidelines-statements/2025-ahaaccaanpaapaabcaccpacpmagsamaaspcnmapcnasgim-guideline-for-thecir0000000000001356",
+    "kind": "discovery"
+  },
+  {
+    "id": "refresh-hypertension-2",
+    "society": "Primary-source publication audit",
+    "title": "2026 ESC CVD and CKD guideline",
+    "url": "https://doi.org/10.1093/eurheartj/ehag098",
+    "kind": "discovery"
+  },
+  {
+    "id": "refresh-diabetes-0",
+    "society": "Primary-source publication audit",
+    "title": "ADA Standards of Care in Diabetes official hub",
+    "url": "https://professional.diabetes.org/standards-of-care",
+    "kind": "discovery"
+  },
+  {
+    "id": "refresh-diabetes-1",
+    "society": "Primary-source publication audit",
+    "title": "VA/DoD Management of Type 2 Diabetes Mellitus",
+    "url": "https://www.healthquality.va.gov/guidelines/cd/diabetes/",
+    "kind": "discovery"
+  },
+  {
+    "id": "refresh-diabetes-2",
+    "society": "Primary-source publication audit",
+    "title": "KDIGO Diabetes and CKD publication/draft status",
+    "url": "https://kdigo.org/guidelines/diabetes-ckd/",
+    "kind": "discovery"
+  },
+  {
+    "id": "refresh-ckd-0",
+    "society": "Primary-source publication audit",
+    "title": "2026 ESC guideline for CVD and CKD official society page",
+    "url": "https://www.escardio.org/guidelines/clinical-practice-guidelines/all-esc-practice-guidelines/cvd-chronic-kidney-disease/",
+    "kind": "discovery"
+  },
+  {
+    "id": "refresh-ckd-2",
+    "society": "Primary-source publication audit",
+    "title": "KDIGO CKD current final and 2027 public-review draft index",
+    "url": "https://kdigo.org/guidelines/ckd--evaluation-and-management/",
+    "kind": "discovery"
+  },
+  {
+    "id": "refresh-obesity-0",
+    "society": "Primary-source publication audit",
+    "title": "ADA Standards of Care in Overweight and Obesity collection",
+    "url": "https://diabetesjournals.org/collection/26328/Standards-of-Care-in-Overweight-and-Obesity",
+    "kind": "discovery"
+  },
+  {
+    "id": "refresh-obesity-1",
+    "society": "Primary-source publication audit",
+    "title": "ADA pharmacologic treatment of obesity in adults",
+    "url": "https://doi.org/10.2337/doci25-0008",
+    "kind": "discovery"
+  },
+  {
+    "id": "refresh-obesity-2",
+    "society": "Primary-source publication audit",
+    "title": "ADA obesity screening, diagnosis, evaluation and staging",
+    "url": "https://doi.org/10.2337/doci26-0003",
+    "kind": "discovery"
+  },
+  {
+    "id": "refresh-obesity-3",
+    "society": "Primary-source publication audit",
+    "title": "VA/DoD Management of Overweight and Obesity in Adults, final guideline",
+    "url": "https://www.healthquality.va.gov/HEALTHQUALITY/guidelines/CD/obesity/OBE-CPG_2025-Guideline_final_20251105.pdf",
+    "kind": "discovery"
+  },
+  {
+    "id": "refresh-obesity-4",
+    "society": "Primary-source publication audit",
+    "title": "ACP current clinical guidelines index",
+    "url": "https://www.acponline.org/clinical-information/clinical-guidelines-recommendations",
+    "kind": "discovery"
+  },
+  {
+    "id": "refresh-referral-1",
+    "society": "Primary-source publication audit",
+    "title": "KDIGO 2024 CKD final guideline",
+    "url": "https://kdigo.org/wp-content/uploads/2024/03/KDIGO-2024-CKD-Guideline.pdf",
+    "kind": "discovery"
+  },
+  {
+    "id": "refresh-anticoagulation-0",
+    "society": "Primary-source publication audit",
+    "title": "2026 AHA/ACC multisociety acute pulmonary embolism guideline",
+    "url": "https://www.jacc.org/doi/10.1016/j.jacc.2025.11.005",
+    "kind": "discovery"
+  },
+  {
+    "id": "refresh-anticoagulation-1",
+    "society": "Primary-source publication audit",
+    "title": "AHA official 2026 acute PE guideline hub",
+    "url": "https://professional.heart.org/en/guidelines-statements/2026-ahaaccaccpchestscaishmsirsvmsvn-guideline-for-the-evaluation-andcir0000000000001415",
+    "kind": "discovery"
+  },
+  {
+    "id": "refresh-anticoagulation-2",
+    "society": "Primary-source publication audit",
+    "title": "2026 AHA/ACC multisociety perioperative cardiovascular management guideline",
+    "url": "https://www.jacc.org/doi/10.1016/j.jacc.2026.06.017",
+    "kind": "discovery"
+  },
+  {
+    "id": "refresh-anticoagulation-3",
+    "society": "Primary-source publication audit",
+    "title": "2024 ESC atrial fibrillation guideline",
+    "url": "https://www.escardio.org/guidelines/clinical-practice-guidelines/all-esc-practice-guidelines/atrial-fibrillation",
+    "kind": "discovery"
+  },
+  {
+    "id": "refresh-anticoagulation-4",
+    "society": "Primary-source publication audit",
+    "title": "CHEST elective perioperative antithrombotic guideline",
+    "url": "https://prodweb02.chestnet.org/guidelines-and-topic-collections/guidelines/pulmonary-vascular/perioperative-management-of-antithrombotic-therapy",
+    "kind": "discovery"
+  },
+  {
+    "id": "refresh-monitoring-0",
+    "society": "Primary-source publication audit",
+    "title": "ADA 2026 prevention section, recommendation 3.10 and supportive text",
+    "url": "https://diabetesjournals.org/care/article/49/Supplement_1/S50/163924/3-Prevention-or-Delay-of-Diabetes-and-Associated",
+    "kind": "discovery"
+  },
+  {
+    "id": "refresh-monitoring-1",
+    "society": "Primary-source publication audit",
+    "title": "ADA 2026 older adults: metformin safety and monitoring",
+    "url": "https://diabetesjournals.org/care/article/49/Supplement_1/S277/163928/13-Older-Adults-Standards-of-Care-in-Diabetes-2026",
+    "kind": "discovery"
+  },
+  {
+    "id": "refresh-monitoring-2",
+    "society": "Primary-source publication audit",
+    "title": "KDIGO 2027 CKD focused update public review announcement",
+    "url": "https://kdigo.org/kdigo-2027-ckd-guideline-focused-update-public-review-open/",
+    "kind": "discovery"
+  },
+  {
+    "id": "refresh-deprescribing-0",
+    "society": "Primary-source publication audit",
+    "title": "AGA PPI deprescribing best-practice advice",
+    "url": "https://gastro.org/clinical-guidance/de-prescribing-proton-pump-inhibitors-ppis/",
+    "kind": "discovery"
+  },
+  {
+    "id": "refresh-deprescribing-1",
+    "society": "Primary-source publication audit",
+    "title": "ASAM joint benzodiazepine tapering guideline landing page",
+    "url": "https://www.asam.org/quality-care/clinical-guidelines/benzodiazepine-tapering",
+    "kind": "discovery"
+  },
+  {
+    "id": "refresh-deprescribing-2",
+    "society": "Primary-source publication audit",
+    "title": "ASAM 2025 primary guideline PDF",
+    "url": "https://downloads.asam.org/sitefinity-production-blobs/docs/default-source/guidelines/benzodiazepine-tapering-2025/bzd-tapering-document---final-approved-version-for-distribution-02-28-25.pdf",
+    "kind": "discovery"
+  },
+  {
+    "id": "refresh-lifestyle-0",
+    "society": "Primary-source publication audit",
+    "title": "VA/DoD Tobacco Use Treatment 2026 official index",
+    "url": "https://www.healthquality.va.gov/HEALTHQUALITY/guidelines/CD/tobacco/index.asp",
+    "kind": "discovery"
+  },
+  {
+    "id": "refresh-lifestyle-1",
+    "society": "Primary-source publication audit",
+    "title": "VA/DoD Tobacco Use Treatment 2026 full guideline, Table 4",
+    "url": "https://www.healthquality.va.gov/HEALTHQUALITY/guidelines/CD/tobacco/Tobacco-Cessation-CPG_2026-Guideline_final_20260109.pdf",
+    "kind": "discovery"
+  },
+  {
+    "id": "refresh-lifestyle-2",
+    "society": "Primary-source publication audit",
+    "title": "AHA 2026 dietary guidance official summary",
+    "url": "https://professional.heart.org/en/science-news/2026-dietary-guidance-to-improve-cardiovascular-health/",
+    "kind": "discovery"
+  },
+  {
+    "id": "refresh-lifestyle-3",
+    "society": "Primary-source publication audit",
+    "title": "HHS current physical activity guidelines",
+    "url": "https://odphp.health.gov/our-work/nutrition-physical-activity/physical-activity-guidelines/current-guidelines",
+    "kind": "discovery"
+  },
+  {
+    "id": "refresh-lifestyle-4",
+    "society": "Primary-source publication audit",
+    "title": "USPSTF alcohol update-in-progress summary",
+    "url": "https://www.uspreventiveservicestaskforce.org/uspstf/draft-update-summary/unhealthy-alcohol-use-adolescents-adults-behavioral-counseling-interventions",
+    "kind": "discovery"
+  },
+  {
+    "id": "refresh-lifestyle-5",
+    "society": "Primary-source publication audit",
+    "title": "USPSTF tobacco cessation final research plan",
+    "url": "https://www.uspreventiveservicestaskforce.org/uspstf/document/final-research-plan/tobacco-cessation-adults-interventions",
+    "kind": "discovery"
+  },
+  {
+    "id": "refresh-heart-failure-0",
+    "society": "Primary-source publication audit",
+    "title": "2026 Second Universal Definition of Heart Failure, joint AHA/ACC/ESC/WHF with HFSA/HFA/JHFS",
+    "url": "https://www.ahajournals.org/doi/10.1161/CIR.0000000000001455",
+    "kind": "discovery"
+  },
+  {
+    "id": "refresh-heart-failure-1",
+    "society": "Primary-source publication audit",
+    "title": "HFSA clinical documents index",
+    "url": "https://www.hfsa.org/research/hfsa-clinical-documents",
+    "kind": "discovery"
+  },
+  {
+    "id": "refresh-heart-failure-2",
+    "society": "Primary-source publication audit",
+    "title": "HFSA scientific statements index",
+    "url": "https://hfsa.org/research/hfsa-scientific-statements",
+    "kind": "discovery"
+  },
+  {
+    "id": "refresh-heart-failure-3",
+    "society": "Primary-source publication audit",
+    "title": "HFSA 2026 HFmrEF official statement page",
+    "url": "https://hfsa.org/heart-failure-mildly-reduced-ejection-fraction-hfsa-scientific-statement",
+    "kind": "discovery"
+  },
+  {
+    "id": "refresh-heart-failure-4",
+    "society": "Primary-source publication audit",
+    "title": "HFSA 2026 HFmrEF primary author manuscript",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13240707/",
+    "kind": "discovery"
+  },
+  {
+    "id": "refresh-heart-failure-5",
+    "society": "Primary-source publication audit",
+    "title": "HFSA 2026 right-heart-failure scientific statement",
+    "url": "https://doi.org/10.1016/j.cardfail.2026.04.026",
+    "kind": "discovery"
+  },
+  {
+    "id": "refresh-heart-failure-6",
+    "society": "Primary-source publication audit",
+    "title": "HFSA/American Association of Heart Failure Nurses 2026 integrated technologies statement",
+    "url": "https://doi.org/10.1016/j.cardfail.2025.08.029",
+    "kind": "discovery"
+  },
+  {
+    "id": "refresh-dyslipidemia-0",
+    "society": "Primary-source publication audit",
+    "title": "ACC Lipid Manager: 2026 Table 6 statin intensities",
+    "url": "https://tools.acc.org/LDL/",
+    "kind": "discovery"
+  },
+  {
+    "id": "refresh-dyslipidemia-1",
+    "society": "Primary-source publication audit",
+    "title": "2025 ESC/EAS dyslipidaemia focused update",
+    "url": "https://www.escardio.org/guidelines/clinical-practice-guidelines/all-esc-practice-guidelines/dyslipidaemias/",
+    "kind": "discovery"
+  },
+  {
+    "id": "refresh-secondary-prevention-0",
+    "society": "Primary-source publication audit",
+    "title": "Fifth Universal Definition of MI (2026), joint ESC/ACC/AHA/WHF",
+    "url": "https://www.jacc.org/doi/10.1016/j.jacc.2026.07.025",
+    "kind": "discovery"
+  },
+  {
+    "id": "refresh-secondary-prevention-1",
+    "society": "Primary-source publication audit",
+    "title": "AHA 2026 MI definition official hub",
+    "url": "https://professional.heart.org/en/science-news/fifth-universal-definition-of-myocardial-infarction-2026",
+    "kind": "discovery"
+  },
+  {
+    "id": "refresh-secondary-prevention-2",
+    "society": "Primary-source publication audit",
+    "title": "2025 ACS treatment guideline hub",
+    "url": "https://www.jacc.org/guidelines/acute-coronary-syndromes",
     "kind": "discovery"
   }
 ]

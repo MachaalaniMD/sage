@@ -1,0 +1,203 @@
+[
+  {
+    "id": "hf-definition-universal-2026",
+    "topic": "heart-failure",
+    "title": "HF definition · 2026 universal framework",
+    "summary": "The 2026 consensus groups HF into reduced, preserved and improved EF, moving beyond rigid EF cutoffs and describing improvement, remission and recovery trajectories.",
+    "population": "Clinical HF assessment using symptoms, cardiac abnormalities and disease trajectory.",
+    "sourceId": "hf-definition-2026",
+    "locator": "2026 universal definition: classification and disease-trajectory framework",
+    "gradeSystem": "International consensus definition",
+    "strength": "Consensus definition",
+    "evidenceLevel": null,
+    "evidenceNote": "Original source system retained. No separate ACC/AHA COR or LOE inferred.",
+    "cautions": [
+      "Diagnostic framework, not a replacement set of drug recommendation classes.",
+      "The EF cutoffs used in Sage’s 2022 treatment pathways are source-specific treatment criteria, not an automated application of the 2026 definition.",
+      "Improvement does not establish durable recovery or permission to stop therapy."
+    ],
+    "tags": [
+      "HFSA",
+      "universal definition",
+      "diagnosis",
+      "trajectory",
+      "remission",
+      "recovery"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "hf-definition-universal-2026",
+    "hfPhenotypes": [
+      "hfref",
+      "hfmref",
+      "hfpef",
+      "hfimpef"
+    ]
+  },
+  {
+    "id": "mi-definition-universal-2026",
+    "topic": "secondary-prevention",
+    "title": "MI definition · 2026 universal framework",
+    "summary": "MI requires acute myocardial injury with evidence of ischemia. The 2026 definition distinguishes primary, secondary and procedure-related MI; troponin elevation alone is insufficient.",
+    "population": "Diagnostic assessment of suspected myocardial injury or infarction.",
+    "sourceId": "mi-definition-2026",
+    "locator": "§5 Definition of myocardial infarction; §6 myocardial injury; classification framework",
+    "gradeSystem": "International consensus definition",
+    "strength": "Consensus definition",
+    "evidenceLevel": null,
+    "evidenceNote": "Original source system retained. No separate ACC/AHA COR or LOE inferred.",
+    "cautions": [
+      "This prototype does not diagnose acute MI or assess emergency symptoms.",
+      "Secondary MI or myocardial injury does not by itself establish atherothrombotic ASCVD or an ACS antiplatelet indication.",
+      "Definition and treatment guidance have distinct roles; retain source-specific ACS/CCD eligibility."
+    ],
+    "tags": [
+      "MI",
+      "troponin",
+      "ischemia",
+      "primary MI",
+      "secondary MI",
+      "procedure-related",
+      "universal definition"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "mi-definition-universal-2026"
+  },
+  {
+    "id": "hfmr-hfsa-2026-framework",
+    "topic": "heart-failure",
+    "title": "HFmrEF · 2026 HFSA individualized GDMT framework",
+    "summary": "Evaluate the cause and EF trajectory. The HFSA statement considers HFrEF-style quadruple therapy reasonable when individually appropriate, while acknowledging limited dedicated HFmrEF trials.",
+    "population": "Adults with established HFmrEF in the statement's 41–49% treatment framework.",
+    "sourceId": "hfsa-hfmr-2026",
+    "locator": "Evaluation of HFmrEF / Figure 4; Management and Follow Up, concluding synthesis",
+    "gradeSystem": "HFSA scientific statement",
+    "strength": "Scientific statement guidance",
+    "evidenceLevel": null,
+    "evidenceNote": "Original source system retained. No separate ACC/AHA COR or LOE inferred.",
+    "cautions": [
+      "Reference only; no automatic four-drug regimen. Review each agent's eligibility, current therapy, blood pressure, kidney function, potassium and contraindications.",
+      "The April 2026 statement's numerical EF treatment framework is not the June 2026 universal definition's complete classification."
+    ],
+    "tags": [
+      "HFSA",
+      "HFmrEF",
+      "quadruple therapy",
+      "scientific statement"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "hfmr-hfsa-2026-framework",
+    "hfPhenotypes": [
+      "hfmref"
+    ]
+  },
+  {
+    "id": "screen-crc-acs2026-stool-options",
+    "topic": "screening",
+    "title": "ACS 2026 · preferred stool-based screening options",
+    "summary": "Multitarget stool RNA is a preferred option every 3 years; original/next-generation stool DNA every 3 years and annual high-sensitivity FIT remain options.",
+    "population": "Average-risk asymptomatic adults eligible for screening; age, health, prior results and life expectancy still govern continuation.",
+    "sourceId": "acs-crc-2026",
+    "locator": "Table 1, Preferred screening options; Table 2, stool-based tests",
+    "gradeSystem": "ACS guideline",
+    "strength": "ACS recommendation · no separate test-specific grade",
+    "evidenceLevel": null,
+    "evidenceNote": "Original source system retained. No separate ACC/AHA COR or LOE inferred.",
+    "cautions": [
+      "Positive non-colonoscopy tests require timely colonoscopy; the narrative prefers completion within 6 months.",
+      "This does not apply to prior CRC/polyps, IBD, hereditary/strong family risk or prior abdominal/pelvic radiation."
+    ],
+    "tags": [
+      "colorectal",
+      "screening",
+      "ACS",
+      "stool RNA",
+      "blood-based"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "screen-crc-acs2026-stool-options"
+  },
+  {
+    "id": "screen-crc-acs2026-blood-conditional",
+    "topic": "screening",
+    "title": "ACS 2026 · blood-based testing when preferred options are not completed",
+    "summary": "Blood-based screening is nonpreferred; consider only after preferred stool or visual testing is declined or not completed, with discussion of limitations.",
+    "population": "Average-risk asymptomatic screening-eligible adults who decline or have not completed a preferred screening test.",
+    "sourceId": "acs-crc-2026",
+    "locator": "Table 1, Recommendation for blood-based colorectal cancer screening; Recommendations and Rationale",
+    "gradeSystem": "ACS guideline",
+    "strength": "ACS recommendation · no separate test-specific grade",
+    "evidenceLevel": null,
+    "evidenceNote": "Original source system retained. No separate ACC/AHA COR or LOE inferred.",
+    "cautions": [
+      "Lower sensitivity for precancerous lesions and stage I cancer than preferred tests; a positive result needs colonoscopy.",
+      "Do not encode a 3-year blood-test interval as an ACS clinical recommendation: Table 1 identifies that as CMS coverage, with optimal interval unestablished."
+    ],
+    "tags": [
+      "colorectal",
+      "screening",
+      "ACS",
+      "stool RNA",
+      "blood-based"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "screen-crc-acs2026-blood-conditional"
+  },
+  {
+    "id": "lifestyle-va-combination-nrt",
+    "topic": "lifestyle",
+    "title": "VA/DoD · combination nicotine replacement",
+    "summary": "For adults using tobacco, combination nicotine replacement is recommended over a single NRT product.",
+    "population": "Adults using tobacco; treatment suitability and preferences reviewed.",
+    "sourceId": "va-tobacco-2026",
+    "locator": "Table 4, recommendation 3: combination NRT over single NRT",
+    "gradeSystem": "VA/DoD GRADE",
+    "strength": "Strong for",
+    "evidenceLevel": null,
+    "evidenceNote": "Original source system retained. No separate ACC/AHA COR or LOE inferred.",
+    "cautions": [
+      "Reference only; review product doses, contraindications and behavioral support.",
+      "National treatment recommendation does not establish local formulary authorization."
+    ],
+    "tags": [
+      "tobacco",
+      "smoking",
+      "VA",
+      "nicotine replacement",
+      "NRT"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "lifestyle-va-combination-nrt"
+  },
+  {
+    "id": "lifestyle-va-varenicline",
+    "topic": "lifestyle",
+    "title": "VA/DoD · varenicline among monotherapies",
+    "summary": "Varenicline is recommended over other pharmacotherapy monotherapies for tobacco cessation.",
+    "population": "Adults using tobacco for whom cessation pharmacotherapy is appropriate.",
+    "sourceId": "va-tobacco-2026",
+    "locator": "Table 4, recommendation 4: varenicline over other monotherapies",
+    "gradeSystem": "VA/DoD GRADE",
+    "strength": "Strong for",
+    "evidenceLevel": null,
+    "evidenceNote": "Original source system retained. No separate ACC/AHA COR or LOE inferred.",
+    "cautions": [
+      "This compares monotherapies; it does not claim superiority over combination NRT.",
+      "Assess renal dosing, current medicines, prior treatment and contraindications. VA availability requires separate CFU/formulary review."
+    ],
+    "tags": [
+      "tobacco",
+      "smoking",
+      "VA",
+      "varenicline"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "lifestyle-va-varenicline"
+  }
+]

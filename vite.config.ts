@@ -26,5 +26,5 @@ export default defineConfig(({ mode }) => ({
       runtimeCaching: []
     }
   })])],
-  test: { include: ['src/**/*.test.ts', 'scripts/**/*.test.mjs'] }
+  test: { include: ['src/**/*.test.{ts,tsx}', 'scripts/**/*.test.mjs'] }
 }));

@@ -3,9 +3,9 @@ import { ArrowRight, ArrowUpRight, Search, Info } from 'lucide-react';
 import { topics,recommendations,type Topic } from '../lib/guidelines';
 import { topicIcons } from './Dashboard';
 const scope:Partial<Record<Topic,string>>={
- 'heart-failure':'HFrEF, HFpEF, HFmrEF and HFimpEF are distinct. The engine requires EF history and filling-pressure context for preserved/mildly reduced EF. Selected add-ons remain conditional; 2026 ACC consensus and ESC grades are separately attributed. Dose tables are references, not prescriptions.',
+ 'heart-failure':'HF definitions and treatment criteria are separately dated. Fixed EF bands below follow the 2022 treatment guideline; the 2026 universal definition uses a broader dynamic framework. The engine requires EF history and filling-pressure context for preserved/mildly reduced EF. Selected add-ons remain conditional; 2026 ACC consensus and ESC grades are separately attributed. Dose tables are references, not prescriptions.',
  vaccinations:'Selected routine and risk-based references include schedules and booster intervals. The engine calculates no personalized catch-up date; COVID scheduling remains deferred for source review.',
- screening:'Selected final USPSTF screening references. Symptoms, family/genetic risk, prior cancer, anatomy and previous results may change eligibility. A screening interval is not a surveillance interval.',
+ screening:'Selected final USPSTF screening references and separately attributed ACS colorectal test options. Symptoms, family/genetic risk, prior cancer, anatomy and previous results may change eligibility. A screening interval is not a surveillance interval.',
  diabetes:'ADA and VA/DoD goals are displayed separately. An individualized A1c goal is not automatically selected from age alone; frailty, hypoglycemia, function and life expectancy require review.',
  ckd:'Selected screening, kidney-protective therapy and referral references. UACR and eGFR are distinct inputs. CKD chronicity, contraindications and product labeling require review.',
  anticoagulation:'AF and VTE indications are separate. The AF calculator links to score thresholds; drug/dose selection and perioperative plans require full renal, procedure and bleeding assessment. No automatic interruption date is generated.',

@@ -4,7 +4,7 @@ This records software checks, not clinical approval. Every clinical recommendati
 
 ## Automated checks
 
-- 189 Vitest tests passed: 66 core rule/provenance tests, 28 HF/grade/dose tests, 17 expansion/VA tests, 34 PREVENT tests, 25 other risk-tool tests, 11 monitor tests and 8 VA importer tests.
+- 211 Vitest tests passed: 22 statin/grouping/source-refresh and render checks, 66 core rule/provenance tests, 28 HF/grade/dose tests, 17 expansion/VA tests, 34 PREVENT tests, 25 other risk-tool tests, 11 monitor tests and 8 VA importer tests.
 - PREVENT matches all 12 original spreadsheet outputs (sex × endpoint × horizon) within 1e-12, plus the primary paper’s rounded worked examples.
 - Post-MI tests cover ASCVD implication, explicit risk classification, lipid thresholds, ACS/CCD timing, bleeding/OAC exclusions and first-event score withholding.
 - TypeScript checking and the Vite production build passed.
@@ -51,9 +51,21 @@ This records software checks, not clinical approval. Every clinical recommendati
 - TypeScript and the production subpath build passed. The standalone package was regenerated.
 - Interactive browser verification of v0.4 was unavailable: the connected browser reported an unavailable user interface, including through its documented tab API. Native Codex control was denied. Previous-version browser checks above do not validate the new interface.
 
+## v0.5 statin, grouping and publication-review checks
+
+- ACC 2026 Table 6 supports the three intensity categories and their drug/dose matrix. Tests verify high- and moderate-intensity atorvastatin/rosuvastatin, low-intensity examples, omission of simvastatin 80 as an initiation option, and the maximally tolerated distinction.
+- Grouping tests preserve every record once, its original source and grade, filtered/saved subsets, colorectal age matching, and the screening/surveillance distinction. Render checks confirm one colorectal parent retains all five child records and primary links.
+- A bounded primary-source audit covers all 18 topics once, with direct links, implementation status and draft safeguards. Reviewed links enter publication discovery; monitoring never promotes their recommendations automatically.
+- The 2026 HF/MI definitions and HFSA scientific statement are ungraded. Fixed EF bands are explicitly labeled as 2022 US treatment criteria, not an automated new universal-definition diagnosis. The prior-MI field explicitly requires coronary ASCVD context.
+- Current browser verification succeeded using a new agent-owned preview tab. Desktop 1440×1000 and mobile 390×844 displayed the new views without horizontal page overflow; the statin matrix scrolls within its table container on mobile. Old localhost preview ports retained older PWA snapshots; preview also needed the same `/sage/` base path as the build. A fresh origin with matching base path served the current build.
+
+- The colorectal parent expanded to five child references with USPSTF age-specific A/B/C grades and two distinct ACS2026 test-option records. Statin quick help and individual bookmarks worked inside grouped entries.
+- The PWA update prompt successfully loaded a rebuilt snapshot. The source-review screen displayed all18 areas and the CKD final-versus-draft distinction. The HF view labeled its2022 treatment bands, and HFSA filtering retained separate source attribution.
+- The HFpEF fictional example generated grouped SGLT2 and MRA references with explicit matching reasons. No browser console errors were observed.
+
 ## Source-monitor check
 
-The live baseline attempt inspected 17 maintained documents/index pages. Twelve baseline fingerprints were captured. Five AHA/publisher endpoints returned HTTP 403 and remain flagged as access failures. No clinical data was modified. The report is included in `src/data/source-check-report.json` and exposed in the app’s updates screen. New v0.2–v0.4 sources and VA datasets additionally require initial fingerprints; the original report is not a new full live baseline. Scheduled monitoring is included in the repository; its execution status must be checked in GitHub Actions.
+The live baseline attempt inspected 17 maintained documents/index pages. Twelve baseline fingerprints were captured. Five AHA/publisher endpoints returned HTTP 403 and remain flagged as access failures. No clinical data was modified. The report is included in `src/data/source-check-report.json` and exposed in the app’s updates screen. New v0.2–v0.5 sources and VA datasets additionally require initial fingerprints; the original report is not a new full live baseline. Scheduled monitoring is included in the repository; its execution status must be checked in GitHub Actions.
 
 ## Public deployment
 

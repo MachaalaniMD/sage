@@ -186,7 +186,7 @@ describe('data provenance and library search', () => {
       expect(r.revision).toBeGreaterThan(0); expect(r.evidenceNote).toBeTruthy();
       expect(source!.year).toBeLessThanOrEqual(2026); expect(['2026-11-01','2026-11-02']).toContain(source!.checkedAt);
       const url = new URL(source!.url); expect(url.protocol).toBe('https:');
-      expect(['www.cdc.gov','www.ahajournals.org','healthquality.va.gov','www.healthquality.va.gov','www.heart.org','www.uspreventiveservicestaskforce.org','pmc.ncbi.nlm.nih.gov','diabetesjournals.org','doi.org','kdigo.org','www.asge.org','asmbs.org','journal.chestnet.org','gastro.org','downloads.asam.org','professional.heart.org','www.jacc.org','academic.oup.com','www.accessdata.fda.gov','www.dailymed.nlm.nih.gov']).toContain(url.hostname);
+      expect(['www.cdc.gov','www.ahajournals.org','healthquality.va.gov','www.healthquality.va.gov','www.heart.org','www.uspreventiveservicestaskforce.org','pmc.ncbi.nlm.nih.gov','diabetesjournals.org','doi.org','kdigo.org','www.asge.org','asmbs.org','journal.chestnet.org','gastro.org','downloads.asam.org','professional.heart.org','tools.acc.org','acsjournals.onlinelibrary.wiley.com','www.jacc.org','academic.oup.com','www.accessdata.fda.gov','www.dailymed.nlm.nih.gov']).toContain(url.hostname);
     }
   });
   it('does not invent an ACC evidence grade for other grading systems', () => {

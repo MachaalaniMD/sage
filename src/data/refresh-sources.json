@@ -1,0 +1,68 @@
+[
+  {
+    "id": "acc-statin-intensity-2026",
+    "society": "ACC / AHA",
+    "title": "2026 Dyslipidemia Guideline: statin intensity and dose reference",
+    "year": 2026,
+    "version": "ACC Lipid Manager, 2026 guideline Table 6",
+    "url": "https://tools.acc.org/LDL/",
+    "checkedAt": "2026-11-02",
+    "access": "Official ACC Table 6 text read; expected LDL reductions are population estimates",
+    "topic": "dyslipidemia"
+  },
+  {
+    "id": "hf-definition-2026",
+    "society": "AHA / ACC / ESC / WHF · HFSA / HFA / JHFS",
+    "title": "Second Universal Definition of Heart Failure (2026)",
+    "year": 2026,
+    "version": "June 29, 2026; DOI 10.1161/CIR.0000000000001455",
+    "url": "https://www.ahajournals.org/doi/10.1161/CIR.0000000000001455",
+    "checkedAt": "2026-11-02",
+    "access": "Primary publisher indexed text and official AHA summary checked; direct publisher access restricted",
+    "topic": "heart-failure"
+  },
+  {
+    "id": "mi-definition-2026",
+    "society": "ESC / ACC / AHA / WHF",
+    "title": "Fifth Universal Definition of Myocardial Infarction (2026)",
+    "year": 2026,
+    "version": "August 28, 2026; JACC 88(11):1314–1368; DOI 10.1016/j.jacc.2026.07.025",
+    "url": "https://www.jacc.org/doi/10.1016/j.jacc.2026.07.025",
+    "checkedAt": "2026-11-02",
+    "access": "Primary publisher indexed full text and official society hub checked; direct publisher access restricted",
+    "topic": "secondary-prevention"
+  },
+  {
+    "id": "hfsa-hfmr-2026",
+    "society": "HFSA",
+    "title": "Heart Failure with Mildly Reduced Ejection Fraction: An HFSA Scientific Statement",
+    "year": 2026,
+    "version": "Online April 22, 2026; June 2026 issue; DOI 10.1016/j.cardfail.2026.01.024",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13240707/",
+    "checkedAt": "2026-11-02",
+    "access": "Full primary author manuscript checked; scientific statement, not a new comprehensive GDMT guideline",
+    "topic": "heart-failure"
+  },
+  {
+    "id": "acs-crc-2026",
+    "society": "ACS",
+    "title": "Colorectal cancer screening: An update to the American Cancer Society guideline, 2026",
+    "year": 2026,
+    "version": "Published May 27, 2026; DOI 10.3322/caac.70083",
+    "url": "https://acsjournals.onlinelibrary.wiley.com/doi/10.3322/caac.70083",
+    "checkedAt": "2026-11-02",
+    "access": "Full primary guideline tables checked; test-option rows have no separate ACC COR/LOE",
+    "topic": "screening"
+  },
+  {
+    "id": "va-tobacco-2026",
+    "society": "VA / DoD",
+    "title": "Tobacco Use Treatment: Clinical Practice Guideline",
+    "year": 2026,
+    "version": "January 2026; Table 4, recommendations 3 and 4",
+    "url": "https://www.healthquality.va.gov/HEALTHQUALITY/guidelines/CD/tobacco/Tobacco-Cessation-CPG_2026-Guideline_final_20260109.pdf",
+    "checkedAt": "2026-11-02",
+    "access": "Primary national VA/DoD guideline recommendation table checked",
+    "topic": "lifestyle"
+  }
+]
