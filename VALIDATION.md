@@ -73,7 +73,7 @@ The live baseline attempt inspected 17 maintained documents/index pages. Twelve 
 - GitHub CI test/build run 41378574824 passed. Pages workflow 41378574800, attempt 2, built and deployed successfully after Pages was enabled for Actions.
 - Verified [machaalanimd.github.io/sage](https://machaalanimd.github.io/sage/) in the browser: v0.2 PREVENT calculator loaded, produced the expected published example outputs, and reported no browser console errors.
 - The updated production PWA was reloaded after both local preview servers were stopped. The calculator still produced its expected output offline.
-- Weekly source monitoring is configured in GitHub Actions. The weekly job has not yet executed; the initial source access limitations above remain applicable.
+- Weekly source monitoring is configured in GitHub Actions. The November 2 scheduled run (41536578669, pre-v0.5 commit e09c3a7) reported28 access errors,37 initial observations and12 unchanged fingerprints. It deliberately exited with review-required status, uploaded the report and changed no clinical recommendation data. This observed run is shown in Updates; it is not a live workflow feed.
 
 ## Verification limits
 

@@ -1,0 +1,9 @@
+{
+  "checkedAt": "2026-11-02T22:22:07Z",
+  "commit": "e09c3a75be00c799c8b2d040a6dbaabf2f207d3c",
+  "url": "https://github.com/MachaalaniMD/sage/actions/runs/41536578669",
+  "status": "review-required",
+  "summary": {"access-error": 28, "baseline-needed": 37, "unchanged": 12},
+  "clinicalDataModified": false,
+  "scope": "Observed scheduled run before the v0.5 source-discovery expansion. The workflow retained its report and observations; access failures deliberately produce a failed check. This is a dated observation, not a live workflow feed."
+}
