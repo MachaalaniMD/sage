@@ -1,8 +1,8 @@
 # Sage
 
-A responsive, static Progressive Web App for exploring selected clinical guideline references using **fictional cases only**. Built with React, TypeScript, Vite, Tailwind CSS, shadcn-style Radix UI primitives, and Fuse.js. Live at [machaalanimd.github.io/sage](https://machaalanimd.github.io/sage/); no backend, paid service, or API key is needed.
+A responsive, static Progressive Web App for exploring selected clinical guideline references using **example cases**. Built with React, TypeScript, Vite, Tailwind CSS, shadcn-style Radix UI primitives, and Fuse.js. Live at [machaalanimd.github.io/sage](https://machaalanimd.github.io/sage/); no backend, paid service, or API key is needed.
 
-**Prototype, not clinically validated. Every clinical record and dose table awaits independent medical verification.** Source-specific access dates are retained; the most recent society review was checked November 3, 2026. This is a selected snapshot and does not claim comprehensive or perpetually current coverage.
+**Prototype, not clinically validated. Clinical validation has not been completed.** Source-specific access dates are retained; the most recent society review was checked November 3, 2026. This is a selected snapshot and does not claim comprehensive or perpetually current coverage.
 
 ## Run locally
 
@@ -25,13 +25,17 @@ Service workers and installation are enabled in the production build, not the de
 
 For a self-contained local demonstration, open the included `standalone.html` in a browser. It embeds the app, styles, and reference data, and disables service-worker registration. It does not require a server or an installation. Regenerate it with `npm run standalone`. The hosted production build remains the installable PWA.
 
-## Three primary workflows
+## Home page and three primary workflows
 
-1. **Decision engine** (`#engine`, the default landing page): review a fictional case’s age, vitals, labs and history, then generate care considerations. Related source matches are consolidated into medication, vaccination, screening, monitoring and counseling items. Each item explains why it applies, links its primary sources, and expands to the original population, society/year, strength, evidence level and detailed eligibility record. The VA preventive-visit example demonstrates statin, vaccination and colorectal-screening references together.
+The default landing page (`#home`) introduces Sage, explains the name, and offers the three workflows. It centralizes validation/privacy limits rather than repeating fictional-only or medical-review badges throughout the interface. Underlying pending-review metadata, source records and clinical rules are retained. The Sage brand and breadcrumb return home; existing deep links still work.
+
+### Workflows
+
+1. **Decision engine** (`#engine`): review a fictional case’s age, vitals, labs and history, then generate care considerations. Related source matches are consolidated into medication, vaccination, screening, monitoring and counseling items. Each item explains why it applies, links its primary sources, and expands to the original population, society/year, strength, evidence level and detailed eligibility record. The VA preventive-visit example demonstrates statin, vaccination and colorectal-screening references together.
 2. **Guideline library** (`#library`): search or browse clinical topics without entering case facts. Common-question shortcuts include HFpEF, statins, colorectal screening and vaccines. VA medication access, saved records, source provenance and updates are library subsections, rather than additional primary workspaces.
 3. **Risk calculators** (`#calculators`): PREVENT, FIB-4, CHA₂DS₂-VASc and the FRAX pathway. PREVENT values can explicitly replace the fictional engine inputs; other fields remain labeled fictional defaults for review.
 
-Case and calculator inputs/results remain in memory when switching workflows and clear on reload. Changed inputs flag stale results until recalculation. A persistent action bar generates or updates recommendations; additional case details and evidence expand when needed. Earlier topic, statin and VA links remain valid. `#overview` opens the engine and `#areas` opens the library.
+Case and calculator inputs/results remain in memory when switching workflows and clear on reload. Changed inputs flag stale results until recalculation. A persistent action bar generates or updates recommendations; additional case details and evidence expand when needed. Earlier topic, statin and VA links remain valid. `#overview` opens the home page and `#areas` opens the library.
 
 ## November 3, 2026 society review
 

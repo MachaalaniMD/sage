@@ -5,14 +5,14 @@ export const workflows=[
  {id:'library',title:'Guideline library',description:'Look up a clinical question and its evidence.'},
  {id:'calculators',title:'Risk calculators',description:'Calculate risk and connect it to guidance.'}
 ] as const;
-export type Workflow=typeof workflows[number]['id'];
-const pages=new Set(['engine','library','calculators','va','statins','cardiology','updates','sources','societies','saved',...topics.map(t=>t.id)]);
+export type Workflow=typeof workflows[number]['id']|'home';
+const pages=new Set(['home','engine','library','calculators','va','statins','cardiology','updates','sources','societies','saved',...topics.map(t=>t.id)]);
 export function pageForHash(hash:string):string{
  const page=hash.replace(/^#/,'');
- if(page==='overview')return 'engine';
+ if(page==='overview')return 'home';
  if(page==='areas')return 'library';
- return pages.has(page)?page:'engine';
+ return pages.has(page)?page:'home';
 }
 export function workflowForPage(page:string):Workflow{
- return page==='engine'?'engine':page==='calculators'?'calculators':'library';
+ return page==='home'?'home':page==='engine'?'engine':page==='calculators'?'calculators':'library';
 }

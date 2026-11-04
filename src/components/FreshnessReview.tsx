@@ -15,5 +15,5 @@ export function FreshnessReview(){
 }
 
 export function DataReleaseHistory(){
- return <section className="data-release-history"><h2>Changes in this data release</h2>{recordHistory.map(r=><article className="data-revision" key={r.recordId}><span className="source-kicker">{r.recordType} revision · {r.changedAt}</span><h3>{r.title}</h3><p>{r.reason}</p><dl><div><dt>Previous bundled record</dt><dd>{r.beforeText}</dd></div><div><dt>Updated record · medical review pending</dt><dd>{r.afterText}</dd></div></dl><a href={r.sourceUrl} target="_blank" rel="noreferrer">Check primary source <ArrowUpRight size={12}/></a></article>)}</section>;
+ return <section className="data-release-history"><h2>Changes in this data release</h2>{recordHistory.map(r=><article className="data-revision" key={r.recordId}><span className="source-kicker">{r.recordType} revision · {r.changedAt}</span><h3>{r.title}</h3><p>{r.reason}</p><dl><div><dt>Previous bundled record</dt><dd>{r.beforeText}</dd></div><div><dt>Updated record</dt><dd>{r.afterText}</dd></div></dl><a href={r.sourceUrl} target="_blank" rel="noreferrer">Check primary source <ArrowUpRight size={12}/></a></article>)}</section>;
 }

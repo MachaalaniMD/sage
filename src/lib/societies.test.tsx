@@ -80,9 +80,9 @@ describe('library navigation and creator information',()=>{
  });
  it('credits the creator with the requested personal link and plain purpose',()=>{
   const html=renderToStaticMarkup(<AboutSage/>);
-  expect(html).toContain('Marc Machaalani');expect(html).toContain('href="https://marcmachaalani.github.io"');expect(html).toContain('decision engine');expect(html).toContain('guideline library');expect(html).toContain('risk calculators');expect(html).toContain('medical verification');
+  expect(html).toContain('Marc Machaalani');expect(html).toContain('href="https://marcmachaalani.github.io"');expect(html).toContain('decision engine');expect(html).toContain('guideline library');expect(html).toContain('risk calculators');expect(html).toContain('independent prototype');
  });
  it('shows the previous and revised clinical rule without implying clinical approval',()=>{
-  const html=renderToStaticMarkup(<DataReleaseHistory/>);expect(html).toContain('Previous bundled record');expect(html).toContain('medical review pending');expect(html).toContain('2024');
+  const html=renderToStaticMarkup(<DataReleaseHistory/>);expect(html).toContain('Previous bundled record');expect(html).toContain('Updated record');expect(html).not.toContain('clinically approved');expect(html).toContain('2024');
  });
 });

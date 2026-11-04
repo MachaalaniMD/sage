@@ -4,17 +4,19 @@ import {workflows,pageForHash,workflowForPage} from './navigation';
 import {buildCareSummary} from './care-summary';
 import {evaluateCase,profiles,sourceFor} from './guidelines';
 import {CareSummary} from '../components/CareSummary';
+import {SageHome} from '../components/SageHome';
 import {LibraryHome} from '../components/LibraryHome';
 
 const example=profiles.find(p=>p.id==='va-visit')!.data;
 const result=evaluateCase(example);
 describe('three clear workflows',()=>{
  it('has exactly the three requested primary destinations',()=>expect(workflows.map(w=>w.id)).toEqual(['engine','library','calculators']));
- it.each(['','#overview','#unknown'])('opens the engine from %s',hash=>expect(pageForHash(hash)).toBe('engine'));
+ it.each(['','#overview','#unknown'])('opens the home page from %s',hash=>expect(pageForHash(hash)).toBe('home'));
  it('keeps earlier topic/resource links in the library workflow',()=>{
   for(const page of ['heart-failure','va','updates','sources','statins','saved','cardiology']){expect(pageForHash('#'+page)).toBe(page);expect(workflowForPage(page)).toBe('library');}
   expect(pageForHash('#areas')).toBe('library');expect(workflowForPage('calculators')).toBe('calculators');
  });
+ it('introduces the three workflows and centralizes validation and privacy on the home page',()=>{const html=renderToStaticMarkup(<SageHome navigate={()=>{}}/>);expect(html).toContain('Decision engine');expect(html).toContain('Guideline library');expect(html).toContain('Risk calculators');expect(html).toContain('has not been validated for clinical use');expect(html).toContain('do not enter patient information');expect(html).toContain('WHY SAGE?');});
  it('offers direct library questions without requiring a case form',()=>{
   const html=renderToStaticMarkup(<LibraryHome navigate={()=>{}} onQuestion={()=>{}}/>);
   expect(html).toContain('HFpEF recommendations');expect(html).toContain('Colorectal screening');expect(html).toContain('VA');expect(html).not.toContain('<input');expect(html).not.toContain('<form');
