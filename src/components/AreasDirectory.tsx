@@ -16,7 +16,19 @@ const scope:Partial<Record<Topic,string>>={
  monitoring:'Selected drug-class laboratory intervals. Review baseline values, renal function, dose changes, drug interactions and abnormal results; no monitoring calendar is created.',
  deprescribing:'Review the original indication and harms. A reference match is not a stop order. Benzodiazepines and other dependence-forming drugs require an individualized supervised taper.',
  referral:'Selected kidney and liver thresholds. FIB-4 is available in calculators; KFRE is not implemented. Urgency, local referral pathways and other indications require clinical assessment.',
- lifestyle:'Counseling targets are adapted to health, function, readiness and preferences. These references do not prescribe a personalized exercise or nutrition plan.'
+ lifestyle:'Counseling targets are adapted to health, function, readiness and preferences. These references do not prescribe a personalized exercise or nutrition plan.',
+ 'vascular-disease':'Selected PAD medication harms and structured-exercise options are library references. They do not form a complete diagnostic, antithrombotic or limb-threat pathway.',
+ copd:'Selected GOLD 2026 changes only. Confirm spirometric diagnosis and review symptoms, exacerbations, current therapy and the full initial/follow-up pathway before choosing treatment.',
+ asthma:'Selected adult/adolescent GINA 2026 references, with native evidence categories. Confirm asthma and inhaler technique; pediatric pathways and product-specific dosing are not encoded.',
+ infections:'Selected ATS pneumonia and IDSA infection-treatment references. ATS and IDSA endorsement and dates remain separate. Infection site, severity, susceptibility, source control and exclusions matter; no antibiotic-selection engine is implemented.',
+ 'critical-care':'Selected adult sepsis and recovery references for the appropriate care setting. They are not an emergency triage tool or a complete resuscitation protocol.',
+ endocrine:'Selected primary-aldosteronism screening and treatment references. Assay interpretation, drug interference, diagnostic confirmation and subtype testing need the full source and specialist review.',
+ thyroid:'Selected pregnancy and differentiated-thyroid-cancer questions. These do not cover every thyroid diagnosis or generate an individualized surveillance schedule.',
+ gastroenterology:'Selected diverticulitis, H. pylori and constipation references. Complicated disease, immune status, alarm features and treatment history require full assessment.',
+ liver:'Selected fibrosis assessment, MASH medication and HBV pathways. A FIB-4 result alone does not diagnose MASH, determine drug eligibility or define cancer surveillance.',
+ hematology:'Selected iron-deficiency and ITP references. Inflammation, pregnancy, bleeding and alternative causes change assessment. Treatment decisions require the complete guideline and relevant specialist input.',
+ rheumatology:'Selected ACR osteoarthritis and EULAR rheumatoid-arthritis recommendations. The 2026 ACR board-approved summary precedes its journal manuscript. Eligibility and medication access remain separate questions.',
+ neurology:'Selected migraine-prevention and functional-seizure references. Confirm diagnosis and consider coexisting epilepsy or other drug indications before changing therapy.'
 };
 export function TopicCoverage({topic}:{topic:Topic}){return <div className="coverage-summary"><Info size={17}/><p>{scope[topic]||'Selected pathways and references only. A missing match does not mean no guideline care is indicated. Review the source and full clinical context.'}{['osteoporosis','referral','anticoagulation'].includes(topic)&&<> <a href="#calculators">Open linked risk tools <ArrowUpRight size={12}/></a></>}</p></div>;}
 export function AreasDirectory({navigate}:{navigate:(p:string)=>void}){

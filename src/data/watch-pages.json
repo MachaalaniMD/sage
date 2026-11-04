@@ -537,5 +537,432 @@
     "title": "2025 ACS treatment guideline hub",
     "url": "https://www.jacc.org/guidelines/acute-coronary-syndromes",
     "kind": "discovery"
+  },
+  {
+    "id": "society-acc-0",
+    "society": "ACC",
+    "title": "American College of Cardiology official index",
+    "url": "https://www.acc.org/guidelines",
+    "kind": "discovery"
+  },
+  {
+    "id": "society-acc-5",
+    "society": "ACC",
+    "title": "Adult Immunizations as Part of Cardiovascular Care",
+    "url": "https://www.jacc.org/doi/10.1016/j.jacc.2026.07.004",
+    "kind": "discovery"
+  },
+  {
+    "id": "society-aha-0",
+    "society": "AHA",
+    "title": "American Heart Association official index",
+    "url": "https://professional.heart.org/en/guidelines-statements",
+    "kind": "discovery"
+  },
+  {
+    "id": "society-hfsa-0",
+    "society": "HFSA",
+    "title": "Heart Failure Society of America official index",
+    "url": "https://hfsa.org/research/hfsa-clinical-documents",
+    "kind": "discovery"
+  },
+  {
+    "id": "society-hfsa-3",
+    "society": "HFSA",
+    "title": "2022 AHA/ACC/HFSA Guideline for the Management of Heart Failure",
+    "url": "https://professional.heart.org/en/science-news/2022-guideline-for-the-management-of-heart-failure",
+    "kind": "discovery"
+  },
+  {
+    "id": "society-hrs-0",
+    "society": "HRS",
+    "title": "Heart Rhythm Society official index",
+    "url": "https://www.hrsonline.org/publications-resources/resource-library/hrs-documents/under-development/",
+    "kind": "discovery"
+  },
+  {
+    "id": "society-hrs-1",
+    "society": "HRS",
+    "title": "2026 HRS/AHA/APHRS/EHRA/IDSA/LAHRS/PACES/STS Expert Consensus Statement Update on CIED Lead Management and Extraction",
+    "url": "https://www.hrsonline.org/resource/2026-hrs-aha-aphrs-ehra-idsa-lahrs-paces-sts-expert-consensus-statement-update-on-cardiovascular-implantable-electronic-device-lead-management-and-extraction/",
+    "kind": "discovery"
+  },
+  {
+    "id": "society-chest-0",
+    "society": "CHEST",
+    "title": "American College of Chest Physicians official index",
+    "url": "https://www.chestnet.org/guidelines-and-topic-collections/guidelines",
+    "kind": "discovery"
+  },
+  {
+    "id": "society-chest-1",
+    "society": "CHEST",
+    "title": "Tobacco Treatment in the Inpatient Setting: An American College of Chest Physicians Clinical Practice Guideline",
+    "url": "https://journal.chestnet.org/article/S0012-3692(26)06538-4/fulltext",
+    "kind": "discovery"
+  },
+  {
+    "id": "society-chest-3",
+    "society": "CHEST",
+    "title": "CHEST Guideline Development and Submissions",
+    "url": "https://www.chestnet.org/guidelines-and-topic-collections/guidelines/chest-guideline-development-and-submissions",
+    "kind": "discovery"
+  },
+  {
+    "id": "society-ats-0",
+    "society": "ATS",
+    "title": "American Thoracic Society official index",
+    "url": "https://academic.oup.com/ajrccm/pages/ats-documents",
+    "kind": "discovery"
+  },
+  {
+    "id": "society-ats-2",
+    "society": "ATS",
+    "title": "Noninvasive Respiratory Support for Adult Patients with Acute Respiratory Failure: An Official ATS Clinical Practice Guideline",
+    "url": "https://academic.oup.com/ajrccm/article/212/9/2135/8721554",
+    "kind": "discovery"
+  },
+  {
+    "id": "society-ats-3",
+    "society": "ATS",
+    "title": "IDSA Position Statement: Why IDSA Did Not Endorse the CAP Guidelines 2025 Update",
+    "url": "https://doi.org/10.1093/cid/ciaf625",
+    "kind": "discovery"
+  },
+  {
+    "id": "society-sccm-0",
+    "society": "SCCM",
+    "title": "Society of Critical Care Medicine official index",
+    "url": "https://sccm.org/clinical-resources/guidelines/guidelines",
+    "kind": "discovery"
+  },
+  {
+    "id": "society-idsa-0",
+    "society": "IDSA",
+    "title": "Infectious Diseases Society of America official index",
+    "url": "https://www.idsociety.org/practice-guideline/all-practice-guidelines",
+    "kind": "discovery"
+  },
+  {
+    "id": "society-idsa-4",
+    "society": "IDSA",
+    "title": "Community-Acquired Pneumonia in Adults",
+    "url": "https://www.idsociety.org/practice-guideline/community-acquired-pneumonia-cap-in-adults/",
+    "kind": "discovery"
+  },
+  {
+    "id": "society-aace-0",
+    "society": "AACE",
+    "title": "American Association of Clinical Endocrinology official index",
+    "url": "https://pro.aace.com/clinical-guidance",
+    "kind": "discovery"
+  },
+  {
+    "id": "society-aace-2",
+    "society": "AACE",
+    "title": "Corrigendum to Algorithm for Management of Adults With Type 2 Diabetes—2026 Update",
+    "url": "https://doi.org/10.1016/j.eprac.2026.05.025",
+    "kind": "discovery"
+  },
+  {
+    "id": "society-aace-3",
+    "society": "AACE",
+    "title": "Use of Diabetes Technology for Management of Adults with Diabetes",
+    "url": "https://doi.org/10.1016/j.eprac.2026.06.011",
+    "kind": "discovery"
+  },
+  {
+    "id": "society-aace-4",
+    "society": "AACE",
+    "title": "Algorithm for Evaluation and Treatment of Adults with Obesity/Adiposity-Based Chronic Disease—2025 Update",
+    "url": "https://doi.org/10.1016/j.eprac.2025.07.017",
+    "kind": "discovery"
+  },
+  {
+    "id": "society-aace-5",
+    "society": "AACE",
+    "title": "Pharmacologic Management of Adults With Dyslipidemia",
+    "url": "https://doi.org/10.1016/j.eprac.2024.09.016",
+    "kind": "discovery"
+  },
+  {
+    "id": "society-aace-6",
+    "society": "AACE",
+    "title": "Algorithm for Management of Adults with Dyslipidemia—2025 Update",
+    "url": "https://doi.org/10.1016/j.eprac.2025.07.014",
+    "kind": "discovery"
+  },
+  {
+    "id": "society-endocrine-society-0",
+    "society": "Endocrine Society",
+    "title": "Endocrine Society official index",
+    "url": "https://www.endocrine.org/clinical-practice-guidelines",
+    "kind": "discovery"
+  },
+  {
+    "id": "society-endocrine-society-2",
+    "society": "Endocrine Society",
+    "title": "Correction to Primary Aldosteronism guideline",
+    "url": "https://academic.oup.com/jcem/article/110/11/e3933/8244166",
+    "kind": "discovery"
+  },
+  {
+    "id": "society-endocrine-society-4",
+    "society": "Endocrine Society",
+    "title": "Central Precocious Puberty: An Endocrine Society Clinical Practice Guideline",
+    "url": "https://doi.org/10.1210/clinem/dgag168",
+    "kind": "discovery"
+  },
+  {
+    "id": "society-ata-0",
+    "society": "ATA",
+    "title": "American Thyroid Association official index",
+    "url": "https://www.thyroid.org/professionals/ata-professional-guidelines/",
+    "kind": "discovery"
+  },
+  {
+    "id": "society-acg-0",
+    "society": "ACG",
+    "title": "American College of Gastroenterology official index",
+    "url": "https://gi.org/guidelines/",
+    "kind": "discovery"
+  },
+  {
+    "id": "society-acg-2",
+    "society": "ACG",
+    "title": "Preventive Care for Patients With Cirrhosis",
+    "url": "https://doi.org/10.14309/ajg.0000000000004186",
+    "kind": "discovery"
+  },
+  {
+    "id": "society-acg-3",
+    "society": "ACG",
+    "title": "Diagnosis and Management of Adenomatous Colorectal Polyposis Syndromes",
+    "url": "https://doi.org/10.14309/ajg.0000000000004105",
+    "kind": "discovery"
+  },
+  {
+    "id": "society-acg-5",
+    "society": "ACG",
+    "title": "Ulcerative Colitis in Adults",
+    "url": "https://doi.org/10.14309/ajg.0000000000003463",
+    "kind": "discovery"
+  },
+  {
+    "id": "society-acg-6",
+    "society": "ACG",
+    "title": "Treatment of Helicobacter pylori Infection",
+    "url": "https://doi.org/10.14309/ajg.0000000000002968",
+    "kind": "discovery"
+  },
+  {
+    "id": "society-aga-0",
+    "society": "AGA",
+    "title": "American Gastroenterological Association official index",
+    "url": "https://gastro.org/clinical-guidance/",
+    "kind": "discovery"
+  },
+  {
+    "id": "society-aga-3",
+    "society": "AGA",
+    "title": "Practice Guide on Obesity, Weight Management, Education, and Resources: POWER 2.0",
+    "url": "https://gastro.org/clinical-guidance/power-2-0-practice-guide-on-obesity-weight-management-education-and-resources/",
+    "kind": "discovery"
+  },
+  {
+    "id": "society-aga-4",
+    "society": "AGA",
+    "title": "Risk Stratification and Emerging Surveillance Strategies for HCC",
+    "url": "https://gastro.org/clinical-guidance/risk-stratification-and-emerging-surveillance-strategies-for-hcc/",
+    "kind": "discovery"
+  },
+  {
+    "id": "society-aasld-0",
+    "society": "AASLD",
+    "title": "American Association for the Study of Liver Diseases official index",
+    "url": "https://www.aasld.org/practice-guidelines",
+    "kind": "discovery"
+  },
+  {
+    "id": "society-aasld-1",
+    "society": "AASLD",
+    "title": "AASLD/IDSA Practice Guideline on Treatment of Chronic Hepatitis B",
+    "url": "https://doi.org/10.1097/HEP.0000000000001549",
+    "kind": "discovery"
+  },
+  {
+    "id": "society-aasld-3",
+    "society": "AASLD",
+    "title": "Resmetirom Therapy for MASLD: October 2024 Updates to AASLD Practice Guidance",
+    "url": "https://doi.org/10.1097/HEP.0000000000001112",
+    "kind": "discovery"
+  },
+  {
+    "id": "society-aasld-4",
+    "society": "AASLD",
+    "title": "Clinical Assessment and Management of NAFLD",
+    "url": "https://www.aasld.org/practice-guidelines/clinical-assessment-and-management-metabolic-dysfunction-associated-steatotic",
+    "kind": "discovery"
+  },
+  {
+    "id": "society-ash-0",
+    "society": "ASH",
+    "title": "American Society of Hematology official index",
+    "url": "https://www.hematology.org/resources/clinical-practice-guidelines",
+    "kind": "discovery"
+  },
+  {
+    "id": "society-ash-4",
+    "society": "ASH",
+    "title": "Treatment of iron deficiency with and without anemia",
+    "url": "https://www.hematology.org/Resources/Clinical-Practice-Guidelines/Iron-Deficiency-Anemia-Guidelines/Diagnosis-of-Iron-Deficiency",
+    "kind": "discovery"
+  },
+  {
+    "id": "society-asco-0",
+    "society": "ASCO",
+    "title": "American Society of Clinical Oncology official index",
+    "url": "https://ascopubs.org/guidelines",
+    "kind": "discovery"
+  },
+  {
+    "id": "society-asco-2",
+    "society": "ASCO",
+    "title": "Treatment of Multiple Myeloma: ASCO Living Guideline",
+    "url": "https://ascopubs.org/guidelines/treatment-multiple-myeloma-asco-living-guideline",
+    "kind": "discovery"
+  },
+  {
+    "id": "society-nccn-0",
+    "society": "NCCN",
+    "title": "National Comprehensive Cancer Network official index",
+    "url": "https://www.nccn.org/guidelines/category_1",
+    "kind": "discovery"
+  },
+  {
+    "id": "society-nccn-1",
+    "society": "NCCN",
+    "title": "NCCN Guidelines Insights: Survivorship",
+    "url": "https://doi.org/10.6004/jnccn.2026.0039",
+    "kind": "discovery"
+  },
+  {
+    "id": "society-acr-0",
+    "society": "ACR",
+    "title": "American College of Rheumatology official index",
+    "url": "https://rheumatology.org/clinical-guidance",
+    "kind": "discovery"
+  },
+  {
+    "id": "society-acr-2",
+    "society": "ACR",
+    "title": "2025 ACR Guideline for Treatment of Systemic Lupus Erythematosus",
+    "url": "https://rheumatology.org/api/asset/bltec93920aad624e33",
+    "kind": "discovery"
+  },
+  {
+    "id": "society-aan-0",
+    "society": "AAN",
+    "title": "American Academy of Neurology official index",
+    "url": "https://www.aan.com/Guidelines",
+    "kind": "discovery"
+  },
+  {
+    "id": "society-acp-3",
+    "society": "ACP",
+    "title": "Pharmacologic Treatment of Primary Osteoporosis or Low Bone Mass to Prevent Fractures",
+    "url": "https://doi.org/10.7326/ANNALS-26-02740",
+    "kind": "discovery"
+  },
+  {
+    "id": "society-uspstf-0",
+    "society": "USPSTF",
+    "title": "United States Preventive Services Task Force official index",
+    "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation-topics",
+    "kind": "discovery"
+  },
+  {
+    "id": "society-gold-0",
+    "society": "GOLD",
+    "title": "Global Initiative for Chronic Obstructive Lung Disease official index",
+    "url": "https://goldcopd.org/2026-gold-report-and-pocket-guide/",
+    "kind": "discovery"
+  },
+  {
+    "id": "society-gold-1",
+    "society": "GOLD",
+    "title": "Global Strategy for Prevention, Diagnosis and Management of COPD: 2026 Report",
+    "url": "https://goldcopd.org/wp-content/uploads/2026/01/GOLD-REPORT-2026-v1.3-8Dec2025_WMV2.pdf",
+    "kind": "discovery"
+  },
+  {
+    "id": "society-gina-0",
+    "society": "GINA",
+    "title": "Global Initiative for Asthma official index",
+    "url": "https://ginasthma.org/reports/",
+    "kind": "discovery"
+  },
+  {
+    "id": "society-gina-2",
+    "society": "GINA",
+    "title": "2026 GINA Strategy Report: Executive Summary and Key Changes",
+    "url": "https://academic.oup.com/ajrccm/advance-article/doi/10.1093/ajrccm/aamag542/8885525",
+    "kind": "discovery"
+  },
+  {
+    "id": "society-esc-0",
+    "society": "ESC",
+    "title": "European Society of Cardiology official index",
+    "url": "https://www.escardio.org/guidelines/clinical-practice-guidelines/",
+    "kind": "discovery"
+  },
+  {
+    "id": "society-easl-0",
+    "society": "EASL",
+    "title": "European Association for the Study of the Liver official index",
+    "url": "https://easl.eu/publication-category/clinical-practice-guidelines/",
+    "kind": "discovery"
+  },
+  {
+    "id": "society-easl-3",
+    "society": "EASL",
+    "title": "Management of autoimmune hepatitis",
+    "url": "https://doi.org/10.1016/j.jhep.2025.03.017",
+    "kind": "discovery"
+  },
+  {
+    "id": "society-esmo-0",
+    "society": "ESMO",
+    "title": "European Society for Medical Oncology official index",
+    "url": "https://www.esmo.org/guidelines/guidelines-news",
+    "kind": "discovery"
+  },
+  {
+    "id": "society-esmo-1",
+    "society": "ESMO",
+    "title": "Cervical cancer: diagnosis, treatment and follow-up",
+    "url": "https://doi.org/10.1016/j.esmoop.2026.108364",
+    "kind": "discovery"
+  },
+  {
+    "id": "society-eular-0",
+    "society": "EULAR",
+    "title": "European Alliance of Associations for Rheumatology official index",
+    "url": "https://www.eular.org/recommendations-management",
+    "kind": "discovery"
+  },
+  {
+    "id": "society-eular-2",
+    "society": "EULAR",
+    "title": "2025 recommendations for management of PMR and primary large vessel vasculitis",
+    "url": "https://doi.org/10.1016/j.ard.2026.06.009",
+    "kind": "discovery"
+  },
+  {
+    "id": "society-eular-3",
+    "society": "EULAR",
+    "title": "Physical activity in inflammatory arthritis and OA: 2025 update",
+    "url": "https://doi.org/10.1016/j.ard.2026.03.006",
+    "kind": "discovery"
   }
 ]

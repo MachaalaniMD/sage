@@ -82,9 +82,9 @@ describe('parent entries preserve clinical records',()=>{
  });
 });
 describe('2026 source review and attribution',()=>{
- it('reviews all 18 areas once with primary links and explicit implementation status',()=>{
+ it('reviews all clinical areas once with primary links and explicit implementation status',()=>{
   expect(audit.map(r=>r.topic).sort()).toEqual(topics.map(t=>t.id).sort());
-  for(const r of audit){expect(r.checkedAt).toBe('2026-11-02');expect(r.implementation.length).toBeGreaterThan(10);expect(r.links.length).toBeGreaterThan(0);for(const link of r.links)expect(()=>assertSourceUrl(link.url)).not.toThrow();}
+  for(const r of audit){expect(['2026-11-02','2026-11-03']).toContain(r.checkedAt);expect(r.implementation.length).toBeGreaterThan(10);expect(r.links.length).toBeGreaterThan(0);for(const link of r.links)expect(()=>assertSourceUrl(link.url)).not.toThrow();}
  });
  it('keeps discovery IDs unique and all watched links within the reviewed primary-domain allowlist',()=>{
   expect(new Set(watch.map(r=>r.id)).size).toBe(watch.length);for(const r of watch)expect(()=>assertSourceUrl(r.url),r.id).not.toThrow();

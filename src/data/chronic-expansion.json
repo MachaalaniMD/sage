@@ -431,17 +431,17 @@
   {
     "id": "ckd-kdigo-acearb",
     "topic": "ckd",
-    "title": "Albuminuric diabetic CKD: ACEi or ARB",
-    "summary": "Start an ACE inhibitor or ARB for high BP with diabetic CKD G1–G4 and moderately or severely increased albuminuria (A2/A3).",
-    "population": "Adults with high BP and diabetic CKD.",
-    "sourceId": "kdigo-bp-2021",
-    "locator": "Recommendation 3.2.3",
+    "title": "KDIGO: ACEi or ARB for albuminuric diabetic CKD",
+    "summary": "Recommend an ACE inhibitor or ARB for diabetic CKD G1–G4 with moderately or severely increased albuminuria (A2/A3).",
+    "population": "People with diabetes, CKD G1–G4, and A2/A3 albuminuria.",
+    "sourceId": "kdigo-ckd-2024",
+    "locator": "Recommendation 3.6.3",
     "gradeSystem": "KDIGO GRADE",
     "strength": "1B · Strong",
     "evidenceLevel": null,
-    "evidenceNote": "Original KDIGO 1B retained; not an ACC/AHA evidence level.",
+    "evidenceNote": "Moderate certainty; the 2024 recommendation does not require high BP.",
     "cautions": [
-      "Assess contraindications and monitoring before prescribing."
+      "Check contraindications and BP, creatinine, and potassium monitoring."
     ],
     "tags": [
       "ACE inhibitor",
@@ -450,7 +450,7 @@
       "diabetes"
     ],
     "status": "pending-medical-review",
-    "revision": 1,
+    "revision": 2,
     "rule": "ckd-kdigo-acearb"
   },
   {

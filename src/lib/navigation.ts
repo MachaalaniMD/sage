@@ -6,7 +6,7 @@ export const workflows=[
  {id:'calculators',title:'Risk calculators',description:'Calculate risk and connect it to guidance.'}
 ] as const;
 export type Workflow=typeof workflows[number]['id'];
-const pages=new Set(['engine','library','calculators','va','statins','cardiology','updates','sources','saved',...topics.map(t=>t.id)]);
+const pages=new Set(['engine','library','calculators','va','statins','cardiology','updates','sources','societies','saved',...topics.map(t=>t.id)]);
 export function pageForHash(hash:string):string{
  const page=hash.replace(/^#/,'');
  if(page==='overview')return 'engine';

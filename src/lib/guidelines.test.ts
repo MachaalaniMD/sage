@@ -1,6 +1,8 @@
 import { describe, expect, it } from 'vitest';
 import { doses, evaluateCase, profiles, recommendations, searchRecommendations, sources, validateCase, versions, type FictionalCase } from './guidelines';
 import published from '../data/prevent-coefficients.json';
+// @ts-expect-error Shared URL validator is plain JavaScript; its behavior has dedicated tests.
+import {assertSourceUrl} from '../../scripts/check-sources.mjs';
 
 const run = (overrides: Partial<FictionalCase> = {}, profile = 'diabetes') => evaluateCase({ ...profiles.find(p => p.id === profile)!.data, ...overrides });
 const ids = (overrides: Partial<FictionalCase> = {}, profile = 'diabetes') => run(overrides, profile).matches.map(m => m.recommendation.id);
@@ -184,9 +186,9 @@ describe('data provenance and library search', () => {
       expect(source, r.id).toBeDefined(); expect(r.locator.length).toBeGreaterThan(8);
       expect(r.population.length).toBeGreaterThan(10); expect(r.status).toBe('pending-medical-review');
       expect(r.revision).toBeGreaterThan(0); expect(r.evidenceNote).toBeTruthy();
-      expect(source!.year).toBeLessThanOrEqual(2026); expect(['2026-11-01','2026-11-02']).toContain(source!.checkedAt);
+      expect(source!.year).toBeLessThanOrEqual(2026); expect(['2026-11-01','2026-11-02','2026-11-03']).toContain(source!.checkedAt);
       const url = new URL(source!.url); expect(url.protocol).toBe('https:');
-      expect(['www.cdc.gov','www.ahajournals.org','healthquality.va.gov','www.healthquality.va.gov','www.heart.org','www.uspreventiveservicestaskforce.org','pmc.ncbi.nlm.nih.gov','diabetesjournals.org','doi.org','kdigo.org','www.asge.org','asmbs.org','journal.chestnet.org','gastro.org','downloads.asam.org','professional.heart.org','tools.acc.org','acsjournals.onlinelibrary.wiley.com','www.jacc.org','academic.oup.com','www.accessdata.fda.gov','www.dailymed.nlm.nih.gov']).toContain(url.hostname);
+      expect(()=>assertSourceUrl(source!.url),r.id).not.toThrow();
     }
   });
   it('does not invent an ACC evidence grade for other grading systems', () => {

@@ -1,0 +1,1771 @@
+[
+  {
+    "id": "pe-2026-no-major-reversible",
+    "topic": "anticoagulation",
+    "title": "PE: extended treatment without a major reversible trigger",
+    "summary": "After a first acute PE without a major reversible risk factor, continue anticoagulation beyond the initial 3–6 months.",
+    "population": "First acute PE; no major reversible trigger",
+    "sourceId": "acc-acute-pe-2026",
+    "locator": "Section 5.2, recommendation 1",
+    "gradeSystem": "ACC/AHA COR / LOE",
+    "strength": "Class 1",
+    "evidenceLevel": "A",
+    "evidenceNote": "Original recommendation class and evidence level retained.",
+    "cautions": [
+      "Reassess bleeding risk, preferences and ongoing eligibility; this is not a fixed lifelong prescription."
+    ],
+    "tags": [
+      "PE",
+      "pulmonary embolism",
+      "duration",
+      "extended anticoagulation"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "pe-2026-no-major-reversible",
+    "referenceOnly": true
+  },
+  {
+    "id": "pe-2026-major-reversible",
+    "topic": "anticoagulation",
+    "title": "PE: stopping after a major reversible trigger",
+    "summary": "For a first PE caused by a major reversible factor, stop anticoagulation after the initial 3–6-month phase.",
+    "population": "First acute PE; major reversible trigger",
+    "sourceId": "acc-acute-pe-2026",
+    "locator": "Section 5.2, recommendation 2",
+    "gradeSystem": "ACC/AHA COR / LOE",
+    "strength": "Class 1",
+    "evidenceLevel": "B-NR",
+    "evidenceNote": "Original recommendation class and evidence level retained.",
+    "cautions": [
+      "Confirm the trigger category and any separate indication for anticoagulation."
+    ],
+    "tags": [
+      "PE",
+      "pulmonary embolism",
+      "duration",
+      "provoked"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "pe-2026-major-reversible",
+    "referenceOnly": true
+  },
+  {
+    "id": "pe-2026-minor-reversible",
+    "topic": "anticoagulation",
+    "title": "PE: shared decision after a minor reversible trigger",
+    "summary": "After initial 3–6-month treatment, use shared decision-making about stopping versus extending anticoagulation.",
+    "population": "First acute PE; minor reversible trigger",
+    "sourceId": "acc-acute-pe-2026",
+    "locator": "Section 5.2, recommendation 8",
+    "gradeSystem": "ACC/AHA COR / LOE",
+    "strength": "Class 2a",
+    "evidenceLevel": "B-NR",
+    "evidenceNote": "Original recommendation class and evidence level retained.",
+    "cautions": [
+      "Balance recurrence and bleeding risks; minor and major triggers have different pathways."
+    ],
+    "tags": [
+      "PE",
+      "pulmonary embolism",
+      "duration"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "pe-2026-minor-reversible",
+    "referenceOnly": true
+  },
+  {
+    "id": "laao-oac-contraindication",
+    "topic": "anticoagulation",
+    "title": "LAAO when oral anticoagulation is contraindicated",
+    "summary": "Consider LAAO rather than no stroke-prevention treatment in nonvalvular AF with an OAC contraindication.",
+    "population": "Nonvalvular AF; contraindication to oral anticoagulation",
+    "sourceId": "scai-hrs-laao-2025",
+    "locator": "Recommendation 1.1 and remarks",
+    "gradeSystem": "SCAI / HRS GRADE",
+    "strength": "Conditional",
+    "evidenceLevel": null,
+    "evidenceNote": "Very low certainty evidence.",
+    "cautions": [
+      "Discuss procedural risk and patient preferences. Benefit may be inappropriate with less than 1 year of quality life expectancy."
+    ],
+    "tags": [
+      "AF",
+      "LAAO",
+      "left atrial appendage",
+      "stroke prevention"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "laao-oac-contraindication",
+    "referenceOnly": true
+  },
+  {
+    "id": "laao-postprocedure-therapy",
+    "topic": "anticoagulation",
+    "title": "LAAO: postprocedure antithrombotic options",
+    "summary": "Postprocedural OAC or dual antiplatelet therapy are suggested options after LAAO.",
+    "population": "Nonvalvular AF after LAAO",
+    "sourceId": "scai-hrs-laao-2025",
+    "locator": "Recommendations 5.1–5.2",
+    "gradeSystem": "SCAI / HRS GRADE",
+    "strength": "Conditional",
+    "evidenceLevel": null,
+    "evidenceNote": "Low certainty evidence for OAC or DAPT; single-antiplatelet therapy is a knowledge gap.",
+    "cautions": [
+      "Regimen and duration require the implanting team; no single-antiplatelet regimen is endorsed here."
+    ],
+    "tags": [
+      "AF",
+      "LAAO",
+      "DAPT",
+      "anticoagulation"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "laao-postprocedure-therapy",
+    "referenceOnly": true
+  },
+  {
+    "id": "pad-cilostazol-hf-harm",
+    "topic": "vascular-disease",
+    "title": "Cilostazol: avoid with heart failure",
+    "summary": "Do not administer cilostazol for PAD when heart failure of any severity is present.",
+    "population": "PAD with heart failure",
+    "sourceId": "acc-pad-2024",
+    "locator": "Section 5.7, recommendation 3",
+    "gradeSystem": "ACC/AHA COR / LOE",
+    "strength": "Class 3: Harm",
+    "evidenceLevel": "C-LD",
+    "evidenceNote": "Original recommendation class and evidence level retained.",
+    "cautions": [
+      "Reference only; eligibility and contraindications require individual review."
+    ],
+    "tags": [
+      "PAD",
+      "claudication",
+      "cilostazol",
+      "heart failure"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "pad-cilostazol-hf-harm",
+    "referenceOnly": true
+  },
+  {
+    "id": "pad-pentoxifylline-no-benefit",
+    "topic": "vascular-disease",
+    "title": "Claudication: pentoxifylline has no recommended role",
+    "summary": "Pentoxifylline is not recommended for claudication treatment.",
+    "population": "Chronic symptomatic PAD",
+    "sourceId": "acc-pad-2024",
+    "locator": "Section 5.7, recommendation 4",
+    "gradeSystem": "ACC/AHA COR / LOE",
+    "strength": "Class 3: No Benefit",
+    "evidenceLevel": "B-R",
+    "evidenceNote": "Original recommendation class and evidence level retained.",
+    "cautions": [
+      "Reference only; eligibility and contraindications require individual review."
+    ],
+    "tags": [
+      "PAD",
+      "claudication",
+      "pentoxifylline"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "pad-pentoxifylline-no-benefit",
+    "referenceOnly": true
+  },
+  {
+    "id": "pad-exercise-alternative",
+    "topic": "vascular-disease",
+    "title": "PAD: nonwalking structured exercise",
+    "summary": "Alternative structured exercise, such as arm ergometry or recumbent stepping, can improve function and walking performance.",
+    "population": "Chronic symptomatic PAD",
+    "sourceId": "acc-pad-2024",
+    "locator": "Section 6, recommendation 5",
+    "gradeSystem": "ACC/AHA COR / LOE",
+    "strength": "Class 2a",
+    "evidenceLevel": "A",
+    "evidenceNote": "Original recommendation class and evidence level retained.",
+    "cautions": [
+      "Reference only; eligibility and contraindications require individual review."
+    ],
+    "tags": [
+      "PAD",
+      "exercise",
+      "claudication"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "pad-exercise-alternative",
+    "referenceOnly": true
+  },
+  {
+    "id": "htn-resistant-2026-assessment",
+    "topic": "hypertension",
+    "title": "Resistant hypertension: confirm the diagnosis before escalation",
+    "summary": "Standardize BP measurement and assess adherence and other causes of difficult control before selecting escalation strategies.",
+    "population": "Adults with apparent resistant hypertension",
+    "sourceId": "acc-resistant-htn-2026",
+    "locator": "Official ACC release, October 5, 2026: five-question framework",
+    "gradeSystem": "ACC expert consensus (ungraded)",
+    "strength": "Consensus guidance",
+    "evidenceLevel": null,
+    "evidenceNote": "No recommendation class assigned in the accessed official summary.",
+    "cautions": [
+      "Complements the 2025 BP guideline; no medication sequence or renal-denervation eligibility is automated."
+    ],
+    "tags": [
+      "resistant hypertension",
+      "pseudoresistance",
+      "adherence"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "htn-resistant-2026-assessment",
+    "referenceOnly": true
+  },
+  {
+    "id": "tobacco-chest-inpatient-varenicline",
+    "topic": "lifestyle",
+    "title": "Hospital tobacco treatment: start varenicline",
+    "summary": "CHEST recommends initiating varenicline during admission to support smoking cessation after discharge.",
+    "population": "Hospitalized adults who smoke cigarettes.",
+    "sourceId": "chest-tobacco-2026-summary",
+    "locator": "Official synopsis: Key Recommendations, first statement",
+    "gradeSystem": "CHEST public synopsis",
+    "strength": "Recommendation; formal grade unverified",
+    "evidenceLevel": null,
+    "evidenceNote": "Public synopsis does not display formal strength or certainty; neither is inferred.",
+    "cautions": [
+      "Review contraindications, renal dosing and continuity after discharge."
+    ],
+    "tags": [
+      "smoking",
+      "tobacco",
+      "varenicline",
+      "hospital discharge"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "tobacco-chest-inpatient-varenicline",
+    "referenceOnly": true
+  },
+  {
+    "id": "tobacco-chest-inpatient-counseling",
+    "topic": "lifestyle",
+    "title": "Hospital tobacco treatment: counseling",
+    "summary": "Provide inpatient cessation counseling rather than brief advice; CHEST describes counseling lasting at least 15 minutes.",
+    "population": "Hospitalized adults who smoke cigarettes.",
+    "sourceId": "chest-tobacco-2026-summary",
+    "locator": "Key Recommendations, second statement; counseling-duration panel",
+    "gradeSystem": "CHEST public synopsis",
+    "strength": "Recommendation; formal grade unverified",
+    "evidenceLevel": null,
+    "evidenceNote": "Formal strength and certainty are not displayed in the public synopsis.",
+    "cautions": [],
+    "tags": [
+      "smoking",
+      "tobacco",
+      "counseling"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "tobacco-chest-inpatient-counseling",
+    "referenceOnly": true
+  },
+  {
+    "id": "tobacco-chest-postdischarge-phone",
+    "topic": "lifestyle",
+    "title": "After discharge: telephone cessation support",
+    "summary": "Offer telephone-based cessation counseling after discharge rather than no follow-up counseling.",
+    "population": "Hospitalized adults who smoke cigarettes.",
+    "sourceId": "chest-tobacco-2026-summary",
+    "locator": "Official synopsis: Key Recommendations, third statement",
+    "gradeSystem": "CHEST public synopsis",
+    "strength": "Recommendation; formal grade unverified",
+    "evidenceLevel": null,
+    "evidenceNote": "Formal strength and certainty are not displayed in the public synopsis.",
+    "cautions": [],
+    "tags": [
+      "smoking",
+      "tobacco",
+      "quitline",
+      "hospital discharge"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "tobacco-chest-postdischarge-phone",
+    "referenceOnly": true
+  },
+  {
+    "id": "cap-ats-stable-outpatient-duration",
+    "topic": "infections",
+    "title": "CAP: shorter antibiotic course after stability",
+    "summary": "For clinically stable adult outpatients, ATS suggests fewer than 5 antibiotic days, with a minimum of 3 days.",
+    "population": "Adult outpatients with CAP who reach clinical stability.",
+    "sourceId": "ats-cap-focused-2025",
+    "locator": "Question 3, recommendation 1; Table 1",
+    "gradeSystem": "ATS GRADE",
+    "strength": "Conditional recommendation",
+    "evidenceLevel": null,
+    "evidenceNote": "Low-quality evidence.",
+    "cautions": [
+      "Individualize using daily stability assessment; complications, resistant pathogens and immunocompromise need separate guidance."
+    ],
+    "tags": [
+      "pneumonia",
+      "CAP",
+      "antibiotic duration"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "cap-ats-stable-outpatient-duration",
+    "referenceOnly": true
+  },
+  {
+    "id": "cap-ats-nonsevere-no-steroids",
+    "topic": "infections",
+    "title": "Nonsevere inpatient CAP: avoid routine steroids",
+    "summary": "Do not routinely administer systemic corticosteroids for nonsevere inpatient CAP.",
+    "population": "Adults hospitalized with nonsevere CAP.",
+    "sourceId": "ats-cap-focused-2025",
+    "locator": "Question 4, recommendation 1; Table 1",
+    "gradeSystem": "ATS GRADE",
+    "strength": "Strong recommendation against",
+    "evidenceLevel": null,
+    "evidenceNote": "Low-quality evidence.",
+    "cautions": [
+      "This addresses CAP treatment; another established steroid indication must be considered separately."
+    ],
+    "tags": [
+      "pneumonia",
+      "CAP",
+      "corticosteroids",
+      "against"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "cap-ats-nonsevere-no-steroids",
+    "referenceOnly": true
+  },
+  {
+    "id": "cap-ats-severe-steroids",
+    "topic": "infections",
+    "title": "Severe inpatient CAP: consider steroids",
+    "summary": "ATS suggests systemic corticosteroids for severe inpatient CAP, excluding influenza pneumonia.",
+    "population": "Adults hospitalized with severe CAP.",
+    "sourceId": "ats-cap-focused-2025",
+    "locator": "Question 4, recommendation 2; Table 1",
+    "gradeSystem": "ATS GRADE",
+    "strength": "Conditional recommendation",
+    "evidenceLevel": null,
+    "evidenceNote": "Low-quality evidence.",
+    "cautions": [
+      "Check contraindications and severity; no single drug, dose or duration is established by this recommendation."
+    ],
+    "tags": [
+      "pneumonia",
+      "CAP",
+      "corticosteroids",
+      "severe"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "cap-ats-severe-steroids",
+    "referenceOnly": true
+  },
+  {
+    "id": "sepsis-ssc-2026-antibiotic-timing",
+    "topic": "critical-care",
+    "title": "Septic shock or likely sepsis: immediate antibiotics",
+    "summary": "Give antimicrobials immediately, ideally within 1 hour, for possible/probable/definite septic shock or probable/definite sepsis without shock.",
+    "population": "Adults with septic shock or probable/definite sepsis.",
+    "sourceId": "sccm-ssc-adult-2026",
+    "locator": "Antibiotic initiation: first and second strong recommendations",
+    "gradeSystem": "SSC GRADE",
+    "strength": "Strong recommendation",
+    "evidenceLevel": null,
+    "evidenceNote": "Very low certainty.",
+    "cautions": [
+      "Possible sepsis without shock has a separate assessment pathway; this is an acute-care reference."
+    ],
+    "tags": [
+      "sepsis",
+      "septic shock",
+      "antibiotics",
+      "emergency"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "sepsis-ssc-2026-antibiotic-timing",
+    "referenceOnly": true
+  },
+  {
+    "id": "sepsis-ssc-2026-norepinephrine",
+    "topic": "critical-care",
+    "title": "Septic shock: first-line norepinephrine",
+    "summary": "Use norepinephrine rather than dopamine, epinephrine or selepressin as the first vasopressor.",
+    "population": "Adults with septic shock.",
+    "sourceId": "sccm-ssc-adult-2026",
+    "locator": "Vasopressors: norepinephrine versus dopamine, epinephrine or selepressin",
+    "gradeSystem": "SSC GRADE",
+    "strength": "Strong recommendation",
+    "evidenceLevel": null,
+    "evidenceNote": "High certainty versus dopamine; low versus epinephrine or selepressin.",
+    "cautions": [
+      "Acute monitored care; other vasopressor comparisons carry different grades."
+    ],
+    "tags": [
+      "sepsis",
+      "septic shock",
+      "norepinephrine"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "sepsis-ssc-2026-norepinephrine",
+    "referenceOnly": true
+  },
+  {
+    "id": "sepsis-ssc-2026-survivor-followup",
+    "topic": "critical-care",
+    "title": "After sepsis: recovery follow-up",
+    "summary": "Offer post-critical-illness follow-up services after sepsis hospitalization.",
+    "population": "Adult sepsis or septic-shock survivors.",
+    "sourceId": "sccm-ssc-adult-2026",
+    "locator": "Post-hospital evaluation: post-critical-illness follow-up services",
+    "gradeSystem": "SSC GRADE",
+    "strength": "Conditional recommendation",
+    "evidenceLevel": null,
+    "evidenceNote": "Low certainty.",
+    "cautions": [
+      "Tailor services to needs and resources; a fixed early follow-up interval is not established."
+    ],
+    "tags": [
+      "sepsis",
+      "survivorship",
+      "primary care",
+      "follow-up"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "sepsis-ssc-2026-survivor-followup",
+    "referenceOnly": true
+  },
+  {
+    "id": "sup-sccm-stop-after-risk-resolves",
+    "topic": "deprescribing",
+    "title": "ICU stress-ulcer prophylaxis: reassess and stop",
+    "summary": "Stop stress-ulcer prophylaxis once its bleeding-risk factors resolve; review it before transfer out of the ICU.",
+    "population": "Critically ill adults receiving stress-ulcer prophylaxis.",
+    "sourceId": "sccm-ashp-sup-2024",
+    "locator": "Cessation of SUP: first Good Practice Statement",
+    "gradeSystem": "SCCM / ASHP",
+    "strength": "Good Practice Statement",
+    "evidenceLevel": null,
+    "evidenceNote": "No graded certainty assigned.",
+    "cautions": [
+      "Check for a separate ongoing indication for PPI or H2RA therapy."
+    ],
+    "tags": [
+      "PPI",
+      "H2RA",
+      "deprescribing",
+      "ICU",
+      "hospital discharge"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "sup-sccm-stop-after-risk-resolves",
+    "referenceOnly": true
+  },
+  {
+    "id": "cuti-idsa-short-course",
+    "topic": "infections",
+    "title": "Improving cUTI: shorter treatment courses",
+    "summary": "For improving cUTI on effective therapy, use 5–7 days of a fluoroquinolone or 7 days of a non-fluoroquinolone rather than 10–14 days.",
+    "population": "Adults with cUTI, including pyelonephritis, improving on effective therapy.",
+    "sourceId": "idsa-cuti-2025",
+    "locator": "Duration of Antibiotics for Complicated UTI, recommendation I; definitions and comments",
+    "gradeSystem": "IDSA GRADE",
+    "strength": "Conditional recommendation",
+    "evidenceLevel": null,
+    "evidenceNote": "Moderate certainty for fluoroquinolones; very low for non-fluoroquinolones.",
+    "cautions": [
+      "Count from first effective treatment day. Trials commonly excluded catheters, severe sepsis, immunocompromise, CKD, abscess, prostatitis, obstruction and urologic procedures; individualize."
+    ],
+    "tags": [
+      "UTI",
+      "pyelonephritis",
+      "antibiotic duration",
+      "stewardship"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "cuti-idsa-short-course",
+    "referenceOnly": true
+  },
+  {
+    "id": "cuti-idsa-oral-transition",
+    "topic": "infections",
+    "title": "Improving cUTI: transition from IV to oral",
+    "summary": "Switch to an effective oral antibiotic when clinical improvement, oral intake and an appropriate oral option permit.",
+    "population": "cUTI initially treated intravenously.",
+    "sourceId": "idsa-cuti-2025",
+    "locator": "Timing of Intravenous to Oral Antibiotics Transition, recommendation I; comments",
+    "gradeSystem": "IDSA GRADE",
+    "strength": "Conditional recommendation",
+    "evidenceLevel": null,
+    "evidenceNote": "Low certainty.",
+    "cautions": [
+      "Supporting trials generally required afebrile, hemodynamically stable patients with urinary obstruction relieved. Bacteremia requires adequate bloodstream and tissue exposure."
+    ],
+    "tags": [
+      "UTI",
+      "IV to oral",
+      "stewardship",
+      "hospital discharge"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "cuti-idsa-oral-transition",
+    "referenceOnly": true
+  },
+  {
+    "id": "amr-idsa-esbl-cuti-2026",
+    "topic": "infections",
+    "title": "ESBL cUTI: susceptibility-directed treatment",
+    "summary": "Susceptible TMP-SMX, ciprofloxacin or levofloxacin are preferred. If resistance, intolerance or toxicity prevents use, prefer a carbapenem or cefepime-enmetazobactam.",
+    "population": "cUTI caused by ESBL-producing Enterobacterales.",
+    "sourceId": "idsa-amr-2026",
+    "locator": "Question 1.2, Suggested approach",
+    "gradeSystem": "IDSA clinical guidance",
+    "strength": "Suggested approach (ungraded)",
+    "evidenceLevel": null,
+    "evidenceNote": "Clinical guidance; no formal GRADE strength or certainty assigned.",
+    "cautions": [
+      "Choice requires organism susceptibility, infection site, severity, toxicity and specialist review; this is not a dosing or empiric-treatment protocol."
+    ],
+    "tags": [
+      "ESBL",
+      "AMR",
+      "UTI",
+      "antibiotics",
+      "2026"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "amr-idsa-esbl-cuti-2026",
+    "referenceOnly": true
+  },
+  {
+    "id": "sab-idsa-escmid-followup-cultures",
+    "topic": "infections",
+    "title": "S. aureus bacteremia: document culture clearance",
+    "summary": "Obtain at least 2 follow-up culture sets at 48 hours after the first positive sample, then 1–2 sets every 24–48 hours until negative.",
+    "population": "Adults with S. aureus bacteremia.",
+    "sourceId": "idsa-escmid-sab-2026",
+    "locator": "Consensus Statement 2, Adult Population Consensus Statement and remarks",
+    "gradeSystem": "IDSA / ESCMID consensus",
+    "strength": "Consensus statement",
+    "evidenceLevel": null,
+    "evidenceNote": "Consensus; not a formally graded recommendation.",
+    "cautions": [
+      "Persistent positivity at 48 hours prompts deeper infection and source-control reassessment; monitoring may need intensification."
+    ],
+    "tags": [
+      "S aureus",
+      "bacteremia",
+      "blood cultures",
+      "2026"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "sab-idsa-escmid-followup-cultures",
+    "referenceOnly": true
+  },
+  {
+    "id": "copd-gold-2026-exacerbation-escalation",
+    "topic": "copd",
+    "title": "COPD: one exacerbation can prompt escalation",
+    "summary": "Consider treatment escalation after one moderate exacerbation; GOLD 2026 lowers the prior exacerbation threshold.",
+    "population": "Adults with COPD and a moderate exacerbation.",
+    "sourceId": "gold-changes-2026",
+    "locator": "Page 1, Key Changes item iv; references to Figures 3.7–3.9",
+    "gradeSystem": "GOLD strategy",
+    "strength": "Strategy recommendation (ungraded in summary)",
+    "evidenceLevel": null,
+    "evidenceNote": "Observational evidence cited; no formal certainty category assigned in this summary.",
+    "cautions": [
+      "Review the full follow-up pathway and prior therapy before choosing an inhaler."
+    ],
+    "tags": [
+      "COPD",
+      "exacerbation",
+      "GOLD 2026"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "copd-gold-2026-exacerbation-escalation",
+    "referenceOnly": true
+  },
+  {
+    "id": "copd-gold-2026-treatment-pathway",
+    "topic": "copd",
+    "title": "COPD: initial versus follow-up treatment",
+    "summary": "Use the initial pathway for maintenance-treatment-naïve COPD and the follow-up pathway for patients already receiving maintenance treatment.",
+    "population": "Adults with COPD undergoing maintenance-treatment selection.",
+    "sourceId": "gold-changes-2026",
+    "locator": "Page 1, Key Changes item vi; Figures 3.7–3.9",
+    "gradeSystem": "GOLD strategy",
+    "strength": "Strategy guidance (ungraded in summary)",
+    "evidenceLevel": null,
+    "evidenceNote": "No formal certainty category assigned in this summary.",
+    "cautions": [],
+    "tags": [
+      "COPD",
+      "inhalers",
+      "initial therapy",
+      "follow-up"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "copd-gold-2026-treatment-pathway",
+    "referenceOnly": true
+  },
+  {
+    "id": "asthma-gina-2026-air-initial",
+    "topic": "asthma",
+    "title": "Mild asthma: as-needed ICS-formoterol",
+    "summary": "Preferred initial treatment is as-needed low-dose ICS-formoterol for infrequent symptoms or symptoms below 3–5 days weekly with normal/mildly reduced lung function.",
+    "population": "Adults and adolescents with diagnosed asthma.",
+    "sourceId": "gina-strategy-2026",
+    "locator": "Box 4-4, page 81, first and second symptom rows",
+    "gradeSystem": "GINA evidence categories",
+    "strength": "Preferred strategy recommendation",
+    "evidenceLevel": null,
+    "evidenceNote": "GINA Evidence A; not ACC/AHA Class I or LOE A.",
+    "cautions": [
+      "Check diagnosis, device technique, local labeling and access; SABA-only care is not the preferred pathway."
+    ],
+    "tags": [
+      "asthma",
+      "ICS",
+      "formoterol",
+      "AIR",
+      "mild asthma"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "asthma-gina-2026-air-initial",
+    "referenceOnly": true
+  },
+  {
+    "id": "asthma-gina-2026-mart-initial",
+    "topic": "asthma",
+    "title": "Frequent asthma symptoms: low-dose MART",
+    "summary": "Low-dose ICS-formoterol maintenance-and-reliever therapy is preferred for the Box 4-4 symptoms-most-days, weekly-waking or low-lung-function initial-treatment profile.",
+    "population": "Adults/adolescents meeting Box 4-4 row 3, without features requiring a higher starting step.",
+    "sourceId": "gina-strategy-2026",
+    "locator": "Box 4-4, page 81, third symptom row; compare fourth row for higher starting treatment",
+    "gradeSystem": "GINA evidence categories",
+    "strength": "Preferred strategy recommendation",
+    "evidenceLevel": null,
+    "evidenceNote": "GINA Evidence A.",
+    "cautions": [
+      "Daily symptoms or weekly waking combined with low lung function or recent exacerbation prompts assessment for medium-dose MART instead."
+    ],
+    "tags": [
+      "asthma",
+      "ICS",
+      "formoterol",
+      "MART"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "asthma-gina-2026-mart-initial",
+    "referenceOnly": true
+  },
+  {
+    "id": "asthma-gina-2026-stepdown",
+    "topic": "asthma",
+    "title": "Controlled asthma: supervised step-down",
+    "summary": "Consider step-down after at least 3 months of stable control and lung function; avoid completely stopping ICS-containing therapy.",
+    "population": "Adults/adolescents with controlled asthma.",
+    "sourceId": "gina-strategy-2026",
+    "locator": "Box 4-13, page 112, general principles and Step 2 caution",
+    "gradeSystem": "GINA evidence categories",
+    "strength": "Strategy recommendation",
+    "evidenceLevel": null,
+    "evidenceNote": "GINA Evidence D for timing; Evidence A for avoiding complete ICS cessation.",
+    "cautions": [
+      "Use an action plan and follow-up; exacerbation risk may require closer supervision."
+    ],
+    "tags": [
+      "asthma",
+      "ICS",
+      "step-down",
+      "deprescribing"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "asthma-gina-2026-stepdown",
+    "referenceOnly": true
+  },
+  {
+    "id": "diabetes-ada-cgm-insulin-2026",
+    "topic": "diabetes",
+    "title": "ADA: CGM with insulin therapy",
+    "summary": "Recommend CGM from diabetes onset or later for adults using insulin; select the device around individual circumstances and preferences.",
+    "population": "Adults with diabetes using insulin.",
+    "sourceId": "ada-technology-2026",
+    "locator": "Recommendation 7.15, insulin clause",
+    "gradeSystem": "ADA evidence grade",
+    "strength": "Grade A",
+    "evidenceLevel": null,
+    "evidenceNote": "Insulin-therapy clause: A; individualized device choice: E.",
+    "cautions": [
+      "Device training and reliable access are needed."
+    ],
+    "tags": [
+      "CGM",
+      "insulin",
+      "technology"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "diabetes-ada-cgm-insulin-2026",
+    "referenceOnly": true
+  },
+  {
+    "id": "diabetes-ada-cgm-noninsulin-2026",
+    "topic": "diabetes",
+    "title": "ADA: CGM beyond insulin",
+    "summary": "Recommend CGM for adults using noninsulin therapies that can cause hypoglycemia, or when CGM helps diabetes management.",
+    "population": "Adults with diabetes.",
+    "sourceId": "ada-technology-2026",
+    "locator": "Recommendation 7.15, noninsulin clauses",
+    "gradeSystem": "ADA evidence grade",
+    "strength": "Grade C",
+    "evidenceLevel": null,
+    "evidenceNote": "Both noninsulin clauses carry grade C.",
+    "cautions": [
+      "Individualize device and use."
+    ],
+    "tags": [
+      "CGM",
+      "hypoglycemia",
+      "noninsulin"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "diabetes-ada-cgm-noninsulin-2026",
+    "referenceOnly": true
+  },
+  {
+    "id": "obesity-ada-t2d-preferred-medication-2026",
+    "topic": "obesity",
+    "title": "ADA obesity standards: medication choice with type 2 diabetes",
+    "summary": "For overweight or obesity with type 2 diabetes, prefer a GLP-1 receptor agonist or dual GIP/GLP-1 receptor agonist for weight and glycemic efficacy.",
+    "population": "Adults with overweight or obesity and type 2 diabetes.",
+    "sourceId": "ada-obesity-pharmacotherapy-2026",
+    "locator": "Recommendation 2.8",
+    "gradeSystem": "ADA evidence grade",
+    "strength": "Grade A",
+    "evidenceLevel": null,
+    "evidenceNote": "ADA grade A; not an ACC/AHA class.",
+    "cautions": [
+      "Check contraindications, approved indication, tolerability, and access."
+    ],
+    "tags": [
+      "GLP-1",
+      "GIP",
+      "diabetes",
+      "obesity"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "obesity-ada-t2d-preferred-medication-2026",
+    "referenceOnly": true
+  },
+  {
+    "id": "diabetes-aace-comorbidity-framework-2026",
+    "topic": "diabetes",
+    "title": "AACE: choose diabetes treatment around complications",
+    "summary": "Use comorbidities and complications, alongside glycemia, to guide initial and subsequent drug choices; address weight, blood pressure, and lipids concurrently.",
+    "population": "Adults with type 2 diabetes.",
+    "sourceId": "aace-t2d-algorithm-2026",
+    "locator": "Conclusions; Algorithm Figures 1 and 6",
+    "gradeSystem": "AACE consensus algorithm",
+    "strength": "Consensus guidance · ungraded",
+    "evidenceLevel": null,
+    "evidenceNote": "No formal recommendation grade assigned to this consensus summary.",
+    "cautions": [
+      "Use the complete algorithm for specific drug eligibility."
+    ],
+    "tags": [
+      "AACE",
+      "diabetes",
+      "comorbidities",
+      "cardiorenal"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "diabetes-aace-comorbidity-framework-2026",
+    "referenceOnly": true
+  },
+  {
+    "id": "diabetes-aace-insulin-goal-2026",
+    "topic": "diabetes",
+    "title": "AACE: individualized A1c when using insulin",
+    "summary": "Individualize glycemic targets; A1c ≤6.5% is recommended for most adults using insulin only when safely achievable with minimal or no hypoglycemia.",
+    "population": "Adults with type 2 diabetes using insulin.",
+    "sourceId": "aace-t2d-algorithm-2026",
+    "locator": "Initiating and Titrating Insulin Algorithm; Algorithm Figure 8",
+    "gradeSystem": "AACE consensus algorithm",
+    "strength": "Consensus guidance · ungraded",
+    "evidenceLevel": null,
+    "evidenceNote": "No formal grade assigned in the reviewed consensus passage.",
+    "cautions": [
+      "Reassess treatment burden and hypoglycemia risk."
+    ],
+    "tags": [
+      "A1c",
+      "insulin",
+      "individualized target"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "diabetes-aace-insulin-goal-2026",
+    "referenceOnly": true
+  },
+  {
+    "id": "endocrine-pa-screen-hypertension-2025",
+    "topic": "endocrine",
+    "title": "Primary aldosteronism: broaden screening",
+    "summary": "Suggest screening all people with hypertension using aldosterone and renin with the aldosterone-to-renin ratio; potassium helps interpretation.",
+    "population": "People with hypertension.",
+    "sourceId": "endocrine-pa-2025",
+    "locator": "Recommendations 1 and 3; technical remarks",
+    "gradeSystem": "Endocrine Society GRADE",
+    "strength": "Conditional recommendation (2)",
+    "evidenceLevel": null,
+    "evidenceNote": "Low certainty (⊕⊕OO).",
+    "cautions": [
+      "Feasibility, assay methods, potassium, and interfering drugs affect testing."
+    ],
+    "tags": [
+      "aldosteronism",
+      "aldosterone",
+      "renin",
+      "hypertension"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "endocrine-pa-screen-hypertension-2025",
+    "referenceOnly": true
+  },
+  {
+    "id": "endocrine-pa-specific-treatment-2025",
+    "topic": "endocrine",
+    "title": "Confirmed primary aldosteronism: targeted treatment",
+    "summary": "Suggest PA-specific treatment: MRA therapy for bilateral disease or nonsurgical patients; consider unilateral adrenalectomy for suitable patients with lateralizing disease who want surgery.",
+    "population": "People with hypertension and confirmed primary aldosteronism.",
+    "sourceId": "endocrine-pa-2025",
+    "locator": "Recommendation 2; technical remarks",
+    "gradeSystem": "Endocrine Society GRADE",
+    "strength": "Conditional recommendation (2)",
+    "evidenceLevel": null,
+    "evidenceNote": "Low certainty (⊕⊕OO).",
+    "cautions": [
+      "Confirm subtype and surgical suitability with specialist evaluation."
+    ],
+    "tags": [
+      "aldosteronism",
+      "MRA",
+      "adrenalectomy"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "endocrine-pa-specific-treatment-2025",
+    "referenceOnly": true
+  },
+  {
+    "id": "deprescribing-glucocorticoid-taper-2024",
+    "topic": "deprescribing",
+    "title": "Long-term glucocorticoids: when to taper",
+    "summary": "Attempt tapering long-term glucocorticoids only when the underlying disease is controlled and steroids are no longer needed; taper toward a physiologic dose before withdrawal assessment.",
+    "population": "People taking long-term systemic glucocorticoids for nonendocrine disease.",
+    "sourceId": "endocrine-glucocorticoid-ai-2024",
+    "locator": "Recommendation R 2.2",
+    "gradeSystem": "ESE / Endocrine Society",
+    "strength": "Good clinical practice · ungraded",
+    "evidenceLevel": null,
+    "evidenceNote": "R 2.2 is good clinical practice, without a certainty grade.",
+    "cautions": [
+      "Plan for adrenal-insufficiency risk; this is not a complete taper schedule."
+    ],
+    "tags": [
+      "steroid",
+      "prednisone",
+      "taper",
+      "adrenal insufficiency"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "deprescribing-glucocorticoid-taper-2024",
+    "referenceOnly": true
+  },
+  {
+    "id": "thyroid-ata-dtc-risk-2025",
+    "topic": "thyroid",
+    "title": "Differentiated thyroid cancer: postoperative risk",
+    "summary": "Use the 2025 ATA system with pathology and nodal findings, AJCC stage, postoperative imaging, and appropriate Tg/TgAb testing to estimate persistence or recurrence risk.",
+    "population": "Adults after surgery for differentiated thyroid cancer.",
+    "sourceId": "ata-dtc-2025",
+    "locator": "Recommendation 28A",
+    "gradeSystem": "ATA GRADE",
+    "strength": "Strong recommendation",
+    "evidenceLevel": null,
+    "evidenceNote": "Moderate certainty.",
+    "cautions": [
+      "Specialist interpretation is required."
+    ],
+    "tags": [
+      "thyroid cancer",
+      "Tg",
+      "risk stratification"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "thyroid-ata-dtc-risk-2025",
+    "referenceOnly": true
+  },
+  {
+    "id": "thyroid-ata-dtc-us-deescalation-2025",
+    "topic": "thyroid",
+    "title": "Low-risk thyroid cancer: de-escalate ultrasound",
+    "summary": "After total thyroidectomy plus RAI and a sustained excellent response for 5–8 years, routine ultrasound may stop; continue biochemical follow-up every 1–2 years.",
+    "population": "Low-risk differentiated thyroid cancer with the specified treatment and sustained response.",
+    "sourceId": "ata-dtc-2025",
+    "locator": "Recommendation 48(1)",
+    "gradeSystem": "ATA GRADE",
+    "strength": "Conditional recommendation",
+    "evidenceLevel": null,
+    "evidenceNote": "Low certainty.",
+    "cautions": [
+      "New symptoms or biochemical changes may require imaging."
+    ],
+    "tags": [
+      "thyroid cancer",
+      "ultrasound",
+      "surveillance",
+      "RAI"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "thyroid-ata-dtc-us-deescalation-2025",
+    "referenceOnly": true
+  },
+  {
+    "id": "thyroid-ata-pregnancy-lt4-2026",
+    "topic": "thyroid",
+    "title": "Pregnancy with hypothyroidism: levothyroxine alone",
+    "summary": "Treat maternal hypothyroidism with levothyroxine monotherapy; avoid liothyronine and desiccated thyroid preparations during pregnancy.",
+    "population": "Pregnant people with hypothyroidism requiring replacement.",
+    "sourceId": "ata-pregnancy-2026",
+    "locator": "Recommendations Table 9, third statement; page 499",
+    "gradeSystem": "ATA GRADE",
+    "strength": "Strong recommendation",
+    "evidenceLevel": null,
+    "evidenceNote": "Low certainty; retained as ATA strength and certainty.",
+    "cautions": [
+      "Coordinate dose and laboratory follow-up with pregnancy care."
+    ],
+    "tags": [
+      "hypothyroidism",
+      "pregnancy",
+      "levothyroxine"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "thyroid-ata-pregnancy-lt4-2026",
+    "referenceOnly": true
+  },
+  {
+    "id": "ckd-kdigo-sglt2-low-albuminuria",
+    "topic": "ckd",
+    "title": "KDIGO: SGLT2 with lower albuminuria",
+    "summary": "Suggest an SGLT2 inhibitor when eGFR is 20–45 mL/min/1.73 m² and UACR is <200 mg/g.",
+    "population": "Adults with established CKD, eGFR 20–45 mL/min/1.73 m² and UACR <200 mg/g.",
+    "sourceId": "kdigo-ckd-2024",
+    "locator": "Recommendation 3.7.3",
+    "gradeSystem": "KDIGO GRADE",
+    "strength": "2B · Conditional",
+    "evidenceLevel": null,
+    "evidenceNote": "Moderate certainty.",
+    "cautions": [
+      "Assess contraindications and medication safety."
+    ],
+    "tags": [
+      "SGLT2",
+      "albuminuria",
+      "CKD"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "ckd-kdigo-sglt2-low-albuminuria",
+    "referenceOnly": true
+  },
+  {
+    "id": "ckd-kdigo-nsmra",
+    "topic": "ckd",
+    "title": "KDIGO: nonsteroidal MRA eligibility",
+    "summary": "Suggest a nonsteroidal MRA with proven benefit for T2D, eGFR >25, normal potassium, and albuminuria >30 mg/g despite maximum tolerated RAS inhibition.",
+    "population": "Adults with type 2 diabetes and CKD.",
+    "sourceId": "kdigo-ckd-2024",
+    "locator": "Recommendation 3.8.1",
+    "gradeSystem": "KDIGO GRADE",
+    "strength": "2A · Conditional",
+    "evidenceLevel": null,
+    "evidenceNote": "High certainty.",
+    "cautions": [
+      "eGFR units: mL/min/1.73 m²; monitor potassium."
+    ],
+    "tags": [
+      "nonsteroidal MRA",
+      "finerenone",
+      "albuminuria"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "ckd-kdigo-nsmra",
+    "referenceOnly": true
+  },
+  {
+    "id": "gi-acg-diverticulitis-antibiotics-2026",
+    "topic": "gastroenterology",
+    "title": "Uncomplicated diverticulitis: selective antibiotics",
+    "summary": "Suggest avoiding routine antibiotics in low-risk acute uncomplicated diverticulitis; antibiotics remain appropriate with high-risk features or unsafe outpatient management.",
+    "population": "Adults with acute uncomplicated diverticulitis.",
+    "sourceId": "acg-diverticulitis-2026",
+    "locator": "Recommendation 3; official Antibiotics highlight",
+    "gradeSystem": "ACG GRADE",
+    "strength": "Conditional recommendation",
+    "evidenceLevel": null,
+    "evidenceNote": "Moderate certainty.",
+    "cautions": [
+      "Nonantibiotic care requires immunocompetence, stability, oral intake, and reliable follow-up; exclude frailty and systemic inflammation."
+    ],
+    "tags": [
+      "diverticulitis",
+      "antibiotics",
+      "outpatient"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "gi-acg-diverticulitis-antibiotics-2026",
+    "referenceOnly": true
+  },
+  {
+    "id": "gi-acg-diverticulitis-colonoscopy-2026",
+    "topic": "gastroenterology",
+    "title": "Complicated diverticulitis: follow-up colonoscopy",
+    "summary": "Recommend colonoscopy after recovery from complicated diverticulitis to exclude missed malignancy or premalignant lesions.",
+    "population": "Adults recovering from complicated diverticulitis.",
+    "sourceId": "acg-diverticulitis-2026",
+    "locator": "Recommendation 1; colonoscopy discussion",
+    "gradeSystem": "ACG GRADE",
+    "strength": "Strong recommendation",
+    "evidenceLevel": null,
+    "evidenceNote": "Moderate certainty.",
+    "cautions": [
+      "Avoid colonoscopy during the first 6–8 weeks after the acute episode."
+    ],
+    "tags": [
+      "diverticulitis",
+      "colonoscopy",
+      "follow-up"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "gi-acg-diverticulitis-colonoscopy-2026",
+    "referenceOnly": true
+  },
+  {
+    "id": "gi-acg-hpylori-test-cure-2024",
+    "topic": "gastroenterology",
+    "title": "H. pylori: confirm eradication",
+    "summary": "Confirm cure at least 4 weeks after treatment using a breath, stool-antigen, or biopsy-based test; hold PPIs for 2 weeks and antibiotics/bismuth for 4 weeks.",
+    "population": "People treated for H. pylori infection.",
+    "sourceId": "acg-hpylori-2024",
+    "locator": "Treatment Pearls: test of cure",
+    "gradeSystem": "ACG key concept / official highlights",
+    "strength": "Key concept · ungraded",
+    "evidenceLevel": null,
+    "evidenceNote": "No formal strength or certainty grade assigned to this highlighted key concept.",
+    "cautions": [
+      "Arrange testing and medication instructions before treatment ends."
+    ],
+    "tags": [
+      "H. pylori",
+      "eradication",
+      "test of cure",
+      "PPI"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "gi-acg-hpylori-test-cure-2024",
+    "referenceOnly": true
+  },
+  {
+    "id": "gi-aga-constipation-anorectal-testing-2026",
+    "topic": "gastroenterology",
+    "title": "Constipation: evaluate pelvic floor dysfunction",
+    "summary": "Before labeling chronic constipation refractory, most patients should undergo anorectal manometry and balloon-expulsion testing and complete pelvic-floor biofeedback when indicated.",
+    "population": "Adults with chronic constipation.",
+    "sourceId": "aga-refractory-constipation-2026",
+    "locator": "Best Practice Advice 2",
+    "gradeSystem": "AGA Best Practice Advice",
+    "strength": "Expert advice · ungraded",
+    "evidenceLevel": null,
+    "evidenceNote": "No formal quality or strength rating; systematic reviews were not performed.",
+    "cautions": [
+      "Refer for appropriate physiologic testing."
+    ],
+    "tags": [
+      "constipation",
+      "biofeedback",
+      "anorectal manometry",
+      "referral"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "gi-aga-constipation-anorectal-testing-2026",
+    "referenceOnly": true
+  },
+  {
+    "id": "gi-aga-constipation-secondary-causes-2026",
+    "topic": "gastroenterology",
+    "title": "Refractory constipation: review secondary causes",
+    "summary": "Evaluate medication effects, disordered eating, and neurological or other secondary causes before escalating refractory-constipation treatment.",
+    "population": "Adults with refractory constipation.",
+    "sourceId": "aga-refractory-constipation-2026",
+    "locator": "Best Practice Advice 3",
+    "gradeSystem": "AGA Best Practice Advice",
+    "strength": "Expert advice · ungraded",
+    "evidenceLevel": null,
+    "evidenceNote": "No formal quality or strength rating.",
+    "cautions": [
+      "Review clinically necessary drugs before changing them."
+    ],
+    "tags": [
+      "constipation",
+      "medication review",
+      "secondary causes"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "gi-aga-constipation-secondary-causes-2026",
+    "referenceOnly": true
+  },
+  {
+    "id": "liver-aga-masld-two-tier-2026",
+    "topic": "liver",
+    "title": "MASLD: stepwise fibrosis assessment",
+    "summary": "Use noninvasive fibrosis assessment in two tiers, beginning with FIB-4; low-risk results generally permit primary-care management, while other results need additional assessment.",
+    "population": "Adults evaluated through the MASLD risk-stratification pathway.",
+    "sourceId": "aga-masld-pathway-2026",
+    "locator": "Step 3: two-tier noninvasive fibrosis assessment",
+    "gradeSystem": "AGA clinical care pathway",
+    "strength": "Pathway guidance · ungraded",
+    "evidenceLevel": null,
+    "evidenceNote": "No formal recommendation grade assigned in the official pathway summary.",
+    "cautions": [
+      "FIB-4 does not diagnose MASH or determine drug eligibility alone."
+    ],
+    "tags": [
+      "MASLD",
+      "FIB-4",
+      "fibrosis",
+      "risk assessment"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "liver-aga-masld-two-tier-2026",
+    "referenceOnly": true
+  },
+  {
+    "id": "liver-aasld-hbv-indeterminate-2025",
+    "topic": "liver",
+    "title": "HBV indeterminate phase: discuss antiviral therapy",
+    "summary": "Suggest antivirals through shared decision-making for HBsAg-positive, HBeAg-negative indeterminate-phase HBV without cirrhosis; reassess the decision at follow-up.",
+    "population": "Adults meeting the specified HBV phase and cirrhosis criteria.",
+    "sourceId": "aasld-hbv-treatment-2025",
+    "locator": "Recommendation 4; official slides 24–25",
+    "gradeSystem": "AASLD GRADE",
+    "strength": "Conditional recommendation",
+    "evidenceLevel": null,
+    "evidenceNote": "Very low certainty.",
+    "cautions": [
+      "Confirm disease phase and evaluate other causes of liver injury."
+    ],
+    "tags": [
+      "HBV",
+      "antiviral",
+      "shared decision"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "liver-aasld-hbv-indeterminate-2025",
+    "referenceOnly": true
+  },
+  {
+    "id": "liver-aasld-hbv-treatment-withdrawal-2025",
+    "topic": "liver",
+    "title": "HBV suppression: avoid routine antiviral withdrawal",
+    "summary": "Suggest continuing nucleos(t)ide analogue therapy until HBsAg loss when HBeAg is negative, cirrhosis absent, and HBV DNA remains undetectable on treatment.",
+    "population": "Adults with chronic HBV meeting these conditions.",
+    "sourceId": "aasld-hbv-treatment-2025",
+    "locator": "Recommendation 5; official slide 32",
+    "gradeSystem": "AASLD GRADE",
+    "strength": "Conditional recommendation",
+    "evidenceLevel": null,
+    "evidenceNote": "Very low certainty.",
+    "cautions": [
+      "Exceptional withdrawal requires specialist shared decisions and close monitoring for flares."
+    ],
+    "tags": [
+      "HBV",
+      "antiviral duration",
+      "deprescribing"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "liver-aasld-hbv-treatment-withdrawal-2025",
+    "referenceOnly": true
+  },
+  {
+    "id": "liver-aasld-mash-semaglutide-2025",
+    "topic": "liver",
+    "title": "MASH with F2–F3 fibrosis: semaglutide pathway",
+    "summary": "The focused guidance supports considering semaglutide for adults with MASH and moderate-to-advanced fibrosis consistent with F2–F3, using appropriate fibrosis assessment.",
+    "population": "Adults with noncirrhotic MASH and F2–F3 fibrosis.",
+    "sourceId": "aasld-semaglutide-mash-2025",
+    "locator": "Patient selection; official November 2025 update announcement",
+    "gradeSystem": "AASLD practice guidance",
+    "strength": "Practice guidance · grade not assigned in reviewed summary",
+    "evidenceLevel": null,
+    "evidenceNote": "No formal strength or certainty rating assigned in the accessible summary.",
+    "cautions": [
+      "Confirm diagnosis, contraindications, product labeling, and medication access."
+    ],
+    "tags": [
+      "MASH",
+      "semaglutide",
+      "fibrosis",
+      "F2",
+      "F3"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "liver-aasld-mash-semaglutide-2025",
+    "referenceOnly": true
+  },
+  {
+    "id": "hematology-iron-diagnosis-adult-2026",
+    "topic": "hematology",
+    "title": "Iron deficiency: adult ferritin threshold",
+    "summary": "Use ferritin ≤30 ng/mL rather than ≤15 ng/mL to diagnose iron deficiency, with or without anemia.",
+    "population": "Adults who are not menstruating or pregnant, without known or suspected inflammation.",
+    "sourceId": "ash-iron-diagnosis-2026",
+    "locator": "Recommendation 2 and remarks",
+    "gradeSystem": "ASH GRADE",
+    "strength": "Conditional",
+    "evidenceLevel": null,
+    "evidenceNote": "Low certainty; no ACC/AHA evidence level assigned.",
+    "cautions": [
+      "Symptoms or continuing risk factors may justify a ≤50 ng/mL threshold. Inflammation requires a separate approach."
+    ],
+    "tags": [
+      "iron",
+      "ferritin",
+      "anemia"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "hematology-iron-diagnosis-adult-2026",
+    "referenceOnly": true
+  },
+  {
+    "id": "hematology-itp-second-line-2026",
+    "topic": "hematology",
+    "title": "ITP: treatment after corticosteroids",
+    "summary": "A thrombopoietic agent is recommended; rituximab is an alternative suggested option.",
+    "population": "Adults with primary ITP needing additional treatment after initial corticosteroids, with or without IVIG.",
+    "sourceId": "ash-itp-focused-2026",
+    "locator": "Recommendation 2a and remarks",
+    "gradeSystem": "ASH GRADE",
+    "strength": "Strong for thrombopoietic agent; conditional for rituximab",
+    "evidenceLevel": null,
+    "evidenceNote": "Moderate certainty for thrombopoietic agents; low for rituximab.",
+    "cautions": [
+      "Coordinate with hematology. Rituximab may suit people seeking to avoid chronic therapy or unable to receive a thrombopoietic agent."
+    ],
+    "tags": [
+      "ITP",
+      "platelets",
+      "rituximab"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "hematology-itp-second-line-2026",
+    "referenceOnly": true
+  },
+  {
+    "id": "anticoag-thrombophilia-surgical-vte",
+    "topic": "anticoagulation",
+    "title": "Surgery-provoked VTE: thrombophilia testing",
+    "summary": "Do not routinely test for thrombophilia to decide anticoagulant duration after surgery-provoked VTE.",
+    "population": "Patients who completed primary short-term treatment for surgery-provoked VTE.",
+    "sourceId": "ash-thrombophilia-2023",
+    "locator": "Recommendation 2",
+    "gradeSystem": "ASH GRADE",
+    "strength": "Conditional against testing",
+    "evidenceLevel": null,
+    "evidenceNote": "Very low certainty.",
+    "cautions": [
+      "Do not extend this statement to every provoking factor; the guideline treats nonsurgical transient factors separately."
+    ],
+    "tags": [
+      "VTE",
+      "thrombophilia",
+      "surgery"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "anticoag-thrombophilia-surgical-vte",
+    "referenceOnly": true
+  },
+  {
+    "id": "vax-cancer-status-review",
+    "topic": "vaccinations",
+    "title": "Cancer: review vaccination status",
+    "summary": "Review vaccination status at diagnosis and bring seasonal, age-based and risk-based vaccines up to date.",
+    "population": "Adults newly diagnosed with cancer and about to start treatment.",
+    "sourceId": "asco-cancer-vaccination-2024",
+    "locator": "Table 1, recommendation 1.1",
+    "gradeSystem": "ASCO",
+    "strength": "Strong",
+    "evidenceLevel": null,
+    "evidenceNote": "Moderate-quality evidence.",
+    "cautions": [
+      "Use current vaccine-specific schedules; transplant and cellular-therapy revaccination have separate pathways."
+    ],
+    "tags": [
+      "cancer",
+      "immunization"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "vax-cancer-status-review",
+    "referenceOnly": true
+  },
+  {
+    "id": "vax-cancer-treatment-timing",
+    "topic": "vaccinations",
+    "title": "Cancer: timing nonlive vaccination",
+    "summary": "Ideally vaccinate 2–4 weeks before planned treatment; nonlive vaccines can also be given during or after treatment.",
+    "population": "Adults with cancer.",
+    "sourceId": "asco-cancer-vaccination-2024",
+    "locator": "Table 1, recommendation 1.2",
+    "gradeSystem": "ASCO",
+    "strength": "Strong",
+    "evidenceLevel": null,
+    "evidenceNote": "Moderate-quality evidence.",
+    "cautions": [
+      "Coordinate with oncology. This timing statement does not authorize live vaccines during immunosuppression."
+    ],
+    "tags": [
+      "cancer",
+      "nonlive",
+      "timing"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "vax-cancer-treatment-timing",
+    "referenceOnly": true
+  },
+  {
+    "id": "rheum-oa-exercise-weight-2026",
+    "topic": "rheumatology",
+    "title": "Knee and hip OA: exercise and weight",
+    "summary": "Recommend exercise; recommend weight loss when overweight or obesity is present.",
+    "population": "People with knee or hip osteoarthritis.",
+    "sourceId": "acr-oa-summary-2026",
+    "locator": "Page 1, Behavioral and Physical Approaches",
+    "gradeSystem": "ACR GRADE",
+    "strength": "Strong",
+    "evidenceLevel": null,
+    "evidenceNote": "Moderate certainty for both recommendations.",
+    "cautions": [
+      "Personalize the plan, accounting for function, comorbidities and treatment access."
+    ],
+    "tags": [
+      "osteoarthritis",
+      "exercise",
+      "weight"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "rheum-oa-exercise-weight-2026",
+    "referenceOnly": true
+  },
+  {
+    "id": "rheum-knee-oa-glp1-2026",
+    "topic": "rheumatology",
+    "title": "Knee OA with obesity: GLP-1 RA",
+    "summary": "Consider a GLP-1 receptor agonist with diet and exercise to support weight management.",
+    "population": "People with knee osteoarthritis and obesity.",
+    "sourceId": "acr-oa-summary-2026",
+    "locator": "Page 2, Pharmacologic Approaches; new recommendation",
+    "gradeSystem": "ACR GRADE",
+    "strength": "Conditional",
+    "evidenceLevel": null,
+    "evidenceNote": "Moderate certainty.",
+    "cautions": [
+      "Assess drug-specific eligibility, contraindications and access; this does not establish a VA approval criterion."
+    ],
+    "tags": [
+      "osteoarthritis",
+      "GLP-1",
+      "obesity"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "rheum-knee-oa-glp1-2026",
+    "referenceOnly": true
+  },
+  {
+    "id": "neuro-migraine-prevention-eligibility",
+    "topic": "neurology",
+    "title": "Migraine: offer prevention",
+    "summary": "Offer prevention with ≥4 migraine days/month, ≥4 moderate-to-severe headache days/month, or substantial migraine disability.",
+    "population": "Adults with migraine.",
+    "sourceId": "aan-ahs-migraine-prevention-2026",
+    "locator": "Recommendations 1B–1C",
+    "gradeSystem": "AAN recommendation level",
+    "strength": "Level B",
+    "evidenceLevel": null,
+    "evidenceNote": "Native recommendation level; not an ACC/AHA evidence grade.",
+    "cautions": [
+      "Select treatment with the patient after reviewing comorbidities, contraindications, pregnancy potential and interactions."
+    ],
+    "tags": [
+      "migraine",
+      "prevention"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "neuro-migraine-prevention-eligibility",
+    "referenceOnly": true
+  },
+  {
+    "id": "neuro-migraine-assess-response",
+    "topic": "neurology",
+    "title": "Migraine: allow time to assess prevention",
+    "summary": "Assess most preventives after 8–12 weeks at a tolerated recommended dose; allow 24 weeks for onabotulinumtoxinA.",
+    "population": "Adults receiving migraine preventive medication.",
+    "sourceId": "aan-ahs-migraine-prevention-2026",
+    "locator": "Recommendations 14A–14B",
+    "gradeSystem": "AAN recommendation level",
+    "strength": "Level B",
+    "evidenceLevel": null,
+    "evidenceNote": "Native recommendation level.",
+    "cautions": [
+      "Tolerability and individual response can require earlier reassessment."
+    ],
+    "tags": [
+      "migraine",
+      "monitoring"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "neuro-migraine-assess-response",
+    "referenceOnly": true
+  },
+  {
+    "id": "neuro-functional-seizures-medications",
+    "topic": "neurology",
+    "title": "Functional seizures: medication review",
+    "summary": "Avoid benzodiazepines for abortive treatment and antiseizure drugs solely for functional seizures; taper unnecessary antiseizure medication.",
+    "population": "People with confirmed functional seizures without coexisting epilepsy or another medication indication.",
+    "sourceId": "aan-functional-seizures-2026",
+    "locator": "Recommendations 6B, 6D and 6E",
+    "gradeSystem": "AAN recommendation level",
+    "strength": "Level B",
+    "evidenceLevel": null,
+    "evidenceNote": "Native recommendation levels retained.",
+    "cautions": [
+      "Confirm the diagnosis and other indications. Plan any taper with the treating clinician; do not abruptly stop dependence-forming drugs."
+    ],
+    "tags": [
+      "functional seizures",
+      "deprescribing"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "neuro-functional-seizures-medications",
+    "referenceOnly": true
+  },
+  {
+    "id": "screen-breast-acp-40-49",
+    "topic": "screening",
+    "title": "Breast screening: ACP ages 40–49",
+    "summary": "Discuss benefits, harms, risk and preferences; if screening is chosen, use biennial mammography.",
+    "population": "Asymptomatic average-risk females aged 40–49.",
+    "sourceId": "acp-breast-screening-2026",
+    "locator": "Guidance statement 1",
+    "gradeSystem": "ACP guidance statement",
+    "strength": "Ungraded guidance statement",
+    "evidenceLevel": null,
+    "evidenceNote": "No formal recommendation strength assigned.",
+    "cautions": [
+      "Differs from USPSTF 2024, which recommends biennial screening starting at 40."
+    ],
+    "tags": [
+      "breast",
+      "mammography",
+      "shared decision"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "screen-breast-acp-40-49",
+    "referenceOnly": true
+  },
+  {
+    "id": "screen-breast-acp-50-74",
+    "topic": "screening",
+    "title": "Breast screening: ACP ages 50–74",
+    "summary": "Use mammography every two years.",
+    "population": "Asymptomatic average-risk females aged 50–74.",
+    "sourceId": "acp-breast-screening-2026",
+    "locator": "Guidance statement 2",
+    "gradeSystem": "ACP guidance statement",
+    "strength": "Ungraded guidance statement",
+    "evidenceLevel": null,
+    "evidenceNote": "No formal recommendation strength assigned.",
+    "cautions": [
+      "Symptoms or high-risk history require a separate pathway."
+    ],
+    "tags": [
+      "breast",
+      "mammography",
+      "biennial"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "screen-breast-acp-50-74",
+    "referenceOnly": true
+  },
+  {
+    "id": "infection-syphilis-pregnancy",
+    "topic": "infectious-disease",
+    "title": "Pregnancy: early syphilis screening",
+    "summary": "Screen universally as early as possible; if missed, screen at the first available opportunity.",
+    "population": "All pregnant adolescents and adults, irrespective of risk factors.",
+    "sourceId": "uspstf-syphilis-pregnancy-2025",
+    "locator": "Recommendation summary; clinician summary",
+    "gradeSystem": "USPSTF",
+    "strength": "Grade A",
+    "evidenceLevel": null,
+    "evidenceNote": "High certainty of substantial net benefit.",
+    "cautions": [
+      "Evaluate and treat abnormal results promptly. This does not define repeat-testing requirements later in pregnancy."
+    ],
+    "tags": [
+      "syphilis",
+      "pregnancy"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "infection-syphilis-pregnancy",
+    "referenceOnly": true
+  },
+  {
+    "id": "screen-ipv-reproductive-age",
+    "topic": "screening",
+    "title": "Screen for intimate partner violence",
+    "summary": "Screen for IPV and provide or refer positive screens to multicomponent interventions with ongoing support.",
+    "population": "Women of reproductive age, including pregnant and postpartum women.",
+    "sourceId": "uspstf-ipv-2025",
+    "locator": "Recommendation summary; Pathway to Benefit",
+    "gradeSystem": "USPSTF",
+    "strength": "Grade B",
+    "evidenceLevel": null,
+    "evidenceNote": "Original USPSTF grade retained.",
+    "cautions": [
+      "Evidence is insufficient for routine caregiver-abuse screening in older or vulnerable adults; this is not a recommendation against evaluating suspected abuse."
+    ],
+    "tags": [
+      "IPV",
+      "pregnancy",
+      "screening"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "screen-ipv-reproductive-age",
+    "referenceOnly": true
+  },
+  {
+    "id": "vax-hpv-catchup",
+    "topic": "vaccinations",
+    "title": "HPV: catch-up through age 26",
+    "summary": "Complete vaccination through age 26 if not adequately vaccinated. Starting at ≥15 years uses three doses at 0, 1–2 and 6 months.",
+    "population": "Adults through age 26.",
+    "sourceId": "cdc-hpv-2024",
+    "locator": "Routine recommendations; Dosing schedule",
+    "gradeSystem": "CDC / ACIP",
+    "strength": "Recommended catch-up",
+    "evidenceLevel": null,
+    "evidenceNote": "No recommendation-specific certainty grade displayed.",
+    "cautions": [
+      "A series begun before age 15 usually uses two doses 6–12 months apart; immunocompromised people need three doses."
+    ],
+    "tags": [
+      "HPV",
+      "catch-up"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "vax-hpv-catchup",
+    "referenceOnly": true
+  },
+  {
+    "id": "vax-hpv-shared-27-45",
+    "topic": "vaccinations",
+    "title": "HPV: shared decision ages 27–45",
+    "summary": "Consider vaccination through shared decision making when prior vaccination is incomplete.",
+    "population": "Adults aged 27–45.",
+    "sourceId": "cdc-hpv-2024",
+    "locator": "Routine recommendations; shared clinical decision-making",
+    "gradeSystem": "CDC / ACIP",
+    "strength": "Shared clinical decision-making",
+    "evidenceLevel": null,
+    "evidenceNote": "No recommendation-specific certainty grade displayed.",
+    "cautions": [
+      "Prevents new infection; does not treat existing HPV disease. Benefit is smaller after prior exposure."
+    ],
+    "tags": [
+      "HPV",
+      "shared decision"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "vax-hpv-shared-27-45",
+    "referenceOnly": true
+  },
+  {
+    "id": "liver-hbv-easl-treatment",
+    "topic": "liver",
+    "title": "Hepatitis B: EASL treatment eligibility",
+    "summary": "Treat chronic HBV with DNA ≥2,000 IU/mL plus elevated ALT and/or significant fibrosis.",
+    "population": "HBeAg-positive or HBeAg-negative chronic hepatitis B.",
+    "sourceId": "easl-hbv-2025",
+    "locator": "Treatment indications recommendation table",
+    "gradeSystem": "EASL",
+    "strength": "Strong",
+    "evidenceLevel": null,
+    "evidenceNote": "Native level of evidence 1; not mapped to ACC/AHA.",
+    "cautions": [
+      "Cirrhosis and other special populations have separate criteria; assess with hepatology."
+    ],
+    "tags": [
+      "HBV",
+      "ALT",
+      "antiviral"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "liver-hbv-easl-treatment",
+    "referenceOnly": true
+  },
+  {
+    "id": "liver-hbv-easl-untreated-monitor",
+    "topic": "liver",
+    "title": "Hepatitis B: monitoring before treatment",
+    "summary": "Monitor ALT and HBV DNA every 3–6 months during the first year or until treatment; thereafter individualize to 6–12 months by disease phase.",
+    "population": "Newly diagnosed chronic HBV not yet receiving antivirals.",
+    "sourceId": "easl-hbv-2025",
+    "locator": "Monitoring untreated chronic HBV recommendation table",
+    "gradeSystem": "EASL",
+    "strength": "Strong",
+    "evidenceLevel": null,
+    "evidenceNote": "No numeric level assigned to this monitoring statement in the checked table.",
+    "cautions": [
+      "Do not apply this interval to treated HBV or substitute it for cancer surveillance."
+    ],
+    "tags": [
+      "HBV",
+      "monitoring"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "liver-hbv-easl-untreated-monitor",
+    "referenceOnly": true
+  },
+  {
+    "id": "rheum-ra-start-dmard",
+    "topic": "rheumatology",
+    "title": "RA: prompt disease-modifying therapy",
+    "summary": "Start a DMARD as soon as rheumatoid arthritis is diagnosed.",
+    "population": "People with diagnosed rheumatoid arthritis.",
+    "sourceId": "eular-ra-2025-update-2026",
+    "locator": "Table 1, recommendation 1",
+    "gradeSystem": "EULAR recommendation grade",
+    "strength": "Grade A",
+    "evidenceLevel": null,
+    "evidenceNote": "Native level of evidence 1a.",
+    "cautions": [
+      "Coordinate treatment with rheumatology; this does not recommend DMARDs solely for positive autoantibodies."
+    ],
+    "tags": [
+      "RA",
+      "DMARD",
+      "referral"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "rheum-ra-start-dmard",
+    "referenceOnly": true
+  },
+  {
+    "id": "rheum-ra-first-strategy",
+    "topic": "rheumatology",
+    "title": "RA: initial DMARD strategy",
+    "summary": "Include methotrexate in the first treatment strategy; consider leflunomide or sulfasalazine for contraindication or early intolerance.",
+    "population": "People with rheumatoid arthritis starting disease-modifying treatment.",
+    "sourceId": "eular-ra-2025-update-2026",
+    "locator": "Table 1, recommendation 4",
+    "gradeSystem": "EULAR recommendation grade",
+    "strength": "Grade A",
+    "evidenceLevel": null,
+    "evidenceNote": "Native level of evidence 1a.",
+    "cautions": [
+      "Specialist selection and drug-specific contraindication and monitoring review are required."
+    ],
+    "tags": [
+      "RA",
+      "methotrexate",
+      "DMARD"
+    ],
+    "status": "pending-medical-review",
+    "revision": 1,
+    "rule": "rheum-ra-first-strategy",
+    "referenceOnly": true
+  }
+]

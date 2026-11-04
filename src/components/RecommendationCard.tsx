@@ -11,9 +11,10 @@ export function RecommendationCard({ recommendation: r, saved, onSave, onOpen, r
   return <article className="recommendation-card">
     <div className="recommendation-top"><span className="source-kicker">{source.society} <span>· {source.year}</span></span><button className={`icon-button bookmark-button ${saved ? 'is-saved' : ''}`} onClick={onSave} aria-label={`${saved ? 'Unsave' : 'Save'} ${r.title}`} aria-pressed={saved}><Bookmark size={18} fill={saved ? 'currentColor' : 'none'}/></button></div>
     <button className="recommendation-title" onClick={onOpen}>{r.title}<ChevronRight size={18}/></button>
-    <p>{r.summary}</p>{hasStatinReference(r)&&<StatinQuickReference recommendation={r}/>}
+    {r.referenceOnly&&<span className="reference-only-label">Library reference · not an engine rule</span>}<p>{r.summary}</p>{hasStatinReference(r)&&<StatinQuickReference recommendation={r}/>}
     {reason && <div className="match-reason"><span>WHY THIS MATCHED</span>{reason}{context && <em>{context}</em>}</div>}
     <div className="population"><FileText size={14}/><span>{r.population}</span></div>
+    {r.referenceOnly&&!r.evidenceLevel&&<p className="native-evidence-note"><strong>Evidence:</strong> {r.evidenceNote}</p>}
     <div className="recommendation-bottom"><div className="evidence-tags"><span className={recommendationClass(r)==='3-harm'?'grade grade-harm':recommendationClass(r)==='3-no-benefit'||r.strength==='Grade D'?'grade grade-neutral':'grade'}>{r.strength}</span>{r.evidenceLevel && <span className="evidence">Evidence {r.evidenceLevel}</span>}</div><ReviewLabel compact/></div>
     <div className="card-links"><button onClick={onOpen}>Evidence & details <ChevronRight size={13}/></button><a href={source.url} target="_blank" rel="noreferrer">Primary source <ArrowUpRight size={13}/></a></div>
   </article>;

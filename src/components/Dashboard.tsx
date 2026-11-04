@@ -1,8 +1,8 @@
 import { useState } from 'react';
-import { ArrowRight, ArrowUpRight, BookOpen, ChevronRight, FlaskConical, Heart, Leaf, Search, ShieldCheck, Sparkles, Syringe, Activity, Droplets, History, ScanLine, TestTube2, Pill, Bone, Weight, Stethoscope, ClipboardCheck, RefreshCcw, Salad, Microscope } from 'lucide-react';
+import { ArrowRight, ArrowUpRight, BookOpen, ChevronRight, FlaskConical, Heart, Leaf, Search, ShieldCheck, Sparkles, Syringe, Activity, Droplets, History, ScanLine, TestTube2, Pill, Bone, Weight, Stethoscope, ClipboardCheck, RefreshCcw, Salad, Microscope, Wind, Brain, Dna } from 'lucide-react';
 import { topics, recommendations, sources, versions, type Topic } from '../lib/guidelines';
 import { Button } from './ui/button';
-export const topicIcons = { vaccinations: Syringe, dyslipidemia: Droplets, hypertension: Activity, 'heart-failure': Heart, prevention: ShieldCheck, 'secondary-prevention': Heart,screening:ScanLine,diabetes:TestTube2,ckd:Droplets,anticoagulation:Activity,osteoporosis:Bone,obesity:Weight,'infectious-disease':Microscope,'cancer-surveillance':ScanLine,monitoring:ClipboardCheck,deprescribing:RefreshCcw,referral:Stethoscope,lifestyle:Salad };
+export const topicIcons = { vaccinations: Syringe, dyslipidemia: Droplets, hypertension: Activity, 'heart-failure': Heart, prevention: ShieldCheck, 'secondary-prevention': Heart,screening:ScanLine,diabetes:TestTube2,ckd:Droplets,anticoagulation:Activity,osteoporosis:Bone,obesity:Weight,'infectious-disease':Microscope,'cancer-surveillance':ScanLine,monitoring:ClipboardCheck,deprescribing:RefreshCcw,referral:Stethoscope,lifestyle:Salad,'vascular-disease':Activity,copd:Wind,asthma:Wind,infections:Microscope,'critical-care':Activity,endocrine:TestTube2,thyroid:Dna,gastroenterology:Stethoscope,liver:TestTube2,hematology:Droplets,rheumatology:Bone,neurology:Brain };
 export function Dashboard({ navigate, search, chooseProfile, openUpdate }: {
   navigate: (page: string) => void; search: (query: string) => void;
   chooseProfile: (id: string) => void; openUpdate: (id: string) => void;

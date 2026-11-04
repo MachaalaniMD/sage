@@ -4,6 +4,9 @@ import preventionSources from '../data/prevention-sources.json';
 import medicationSources from '../data/medication-sources.json';
 import cardiacSources from '../data/cardiac-sources.json';
 import refreshSources from '../data/refresh-sources.json';
+import societySources from '../data/society-sources.json';
+import societyData from '../data/society-recommendations.json';
+import { sourceMatchesSociety } from './societies';
 import refreshData from '../data/refresh-recommendations.json';
 import cardiacData from '../data/cardiac-expansion.json';
 import preservedDoseData from '../data/hfpef-doses.json';
@@ -18,12 +21,12 @@ import versionData from '../data/versions.json';
 import Fuse from 'fuse.js';
 import { calculatePrevent, displayRisk, type PreventInputs, type PreventResult } from './prevent';
 
-export type Topic = 'vaccinations' | 'dyslipidemia' | 'hypertension' | 'heart-failure' | 'prevention' | 'secondary-prevention' | 'screening' | 'diabetes' | 'ckd' | 'anticoagulation' | 'osteoporosis' | 'obesity' | 'infectious-disease' | 'cancer-surveillance' | 'monitoring' | 'deprescribing' | 'referral' | 'lifestyle';
-export type Source = { id:string;society:string;title:string;year:number;version:string;url:string;checkedAt:string;access:string;topic:string };
+export type Topic = 'vaccinations' | 'dyslipidemia' | 'hypertension' | 'heart-failure' | 'prevention' | 'secondary-prevention' | 'screening' | 'diabetes' | 'ckd' | 'anticoagulation' | 'osteoporosis' | 'obesity' | 'infectious-disease' | 'cancer-surveillance' | 'monitoring' | 'deprescribing' | 'referral' | 'lifestyle' | 'vascular-disease' | 'copd' | 'asthma' | 'infections' | 'critical-care' | 'endocrine' | 'thyroid' | 'gastroenterology' | 'liver' | 'hematology' | 'rheumatology' | 'neurology';
+export type Source = { id:string;society:string;title:string;year:number;version:string;url:string;checkedAt:string;access:string;topic:string;kind?:string };
 export type HfPhenotype = 'hfref' | 'hfmref' | 'hfpef' | 'hfimpef';
-export type Recommendation = Omit<(typeof recommendationData)[number], 'topic'> & { topic: Topic; hfPhenotypes?: HfPhenotype[] };
-export const sources = [...sourceData,...chronicSources,...preventionSources,...medicationSources,...cardiacSources,...refreshSources];
-export const recommendations = [...recommendationData.map(r=>r.id.startsWith('prevention-osteoporosis')?{...r,topic:'osteoporosis'}:r.topic==='heart-failure'?{...r,hfPhenotypes:['hfref']}:r), ...additionalData,...chronicData,...preventionData,...medicationData,...riskData,...cardiacData,...refreshData] as Recommendation[];
+export type Recommendation = Omit<(typeof recommendationData)[number], 'topic'> & { topic: Topic; hfPhenotypes?: HfPhenotype[]; referenceOnly?:boolean };
+export const sources: Source[] = [...sourceData,...chronicSources,...preventionSources,...medicationSources,...cardiacSources,...refreshSources,...societySources];
+export const recommendations = [...recommendationData.map(r=>r.id.startsWith('prevention-osteoporosis')?{...r,topic:'osteoporosis'}:r.topic==='heart-failure'?{...r,hfPhenotypes:['hfref']}:r), ...additionalData,...chronicData,...preventionData,...medicationData,...riskData,...cardiacData,...refreshData,...societyData] as Recommendation[];
 export const doses = doseData;
 export const preservedDoses = preservedDoseData;
 export const versions = versionData;
@@ -46,7 +49,19 @@ export const topics: { id: Topic; title: string; short: string; description: str
   {"id": "monitoring", "title": "Medication monitoring", "short": "Drug monitoring", "description": "Selected laboratory checks after starting or changing therapy.", "society": "ACC / AHA · KDIGO · ADA", "color": "ochre"},
   {"id": "deprescribing", "title": "Deprescribing", "short": "Deprescribing", "description": "Review indications, benefit, harm, and safe tapering principles.", "society": "AGA · ASAM", "color": "sage"},
   {"id": "referral", "title": "Specialist referral", "short": "Referral criteria", "description": "Kidney and liver thresholds that prompt specialist assessment.", "society": "KDIGO · ACC / AHA", "color": "blue"},
-  {"id": "lifestyle", "title": "Lifestyle recommendations", "short": "Lifestyle", "description": "Physical activity, nutrition, tobacco, and alcohol counseling.", "society": "HHS · AHA · USPSTF", "color": "sage"}
+  {"id": "lifestyle", "title": "Lifestyle recommendations", "short": "Lifestyle", "description": "Physical activity, nutrition, tobacco, and alcohol counseling.", "society": "HHS · AHA · USPSTF · CHEST", "color": "sage"},
+  {id:'vascular-disease',title:'Peripheral artery disease',short:'PAD',description:'Selected claudication therapies, exercise options, and medication harms.',society:'ACC / AHA',color:'rose'},
+  {id:'copd',title:'COPD',short:'COPD',description:'GOLD 2026 exacerbation thresholds and treatment-pathway selection.',society:'GOLD',color:'blue'},
+  {id:'asthma',title:'Asthma',short:'Asthma',description:'GINA 2026 initial therapy, reliever strategy, and supervised step-down.',society:'GINA',color:'sage'},
+  {id:'infections',title:'Infection management',short:'Infections',description:'Pneumonia, complicated UTI, resistant organisms, and bacteremia.',society:'ATS · IDSA',color:'blue'},
+  {id:'critical-care',title:'Sepsis & critical care',short:'Critical care',description:'Selected acute-care recommendations and recovery after sepsis.',society:'SCCM / ESICM',color:'rose'},
+  {id:'endocrine',title:'Adrenal & endocrine care',short:'Endocrine',description:'Primary aldosteronism screening and disease-specific treatment.',society:'Endocrine Society',color:'ochre'},
+  {id:'thyroid',title:'Thyroid care',short:'Thyroid',description:'Pregnancy treatment and differentiated thyroid cancer follow-up.',society:'ATA',color:'sage'},
+  {id:'gastroenterology',title:'Gastrointestinal care',short:'GI care',description:'Diverticulitis, H. pylori testing, and refractory constipation.',society:'ACG · AGA',color:'ochre'},
+  {id:'liver',title:'Liver disease',short:'Liver',description:'MASLD fibrosis assessment, MASH therapy, and chronic hepatitis B.',society:'AASLD · AGA · EASL',color:'blue'},
+  {id:'hematology',title:'Hematology',short:'Hematology',description:'Iron-deficiency diagnosis and selected ITP treatment guidance.',society:'ASH',color:'rose'},
+  {id:'rheumatology',title:'Rheumatology',short:'Rheumatology',description:'Osteoarthritis and rheumatoid arthritis: selected treatment recommendations.',society:'ACR · EULAR',color:'ochre'},
+  {id:'neurology',title:'Neurology',short:'Neurology',description:'Migraine prevention and functional-seizure medication review.',society:'AAN / AHS',color:'blue'}
 ];
 
 const index = new Fuse(recommendations.map(r => ({ ...r, society: sourceFor(r).society, statinTerms:/\bstatins?\b/i.test(r.title+' '+r.summary)?'atorvastatin rosuvastatin simvastatin pravastatin lovastatin fluvastatin pitavastatin statin intensity dose':'' })), {
@@ -56,11 +71,11 @@ const index = new Fuse(recommendations.map(r => ({ ...r, society: sourceFor(r).s
 export function searchRecommendations(query: string, topic?: Topic, society = 'all') {
   const hits = query.trim() ? index.search(query.trim()).map(h => h.item) : recommendations;
   return hits.filter(r => (!topic || r.topic === topic) &&
-    (society === 'all' || sourceFor(r).society.includes(society)));
+    (society === 'all' || sourceMatchesSociety(sourceFor(r),society)));
 }
 
 export type VaccineHistory = 'none' | 'complete' | 'partial' | 'unknown';
-export const cardiacTopics: Topic[] = ['heart-failure','dyslipidemia','hypertension','secondary-prevention','anticoagulation'];
+export const cardiacTopics: Topic[] = ['heart-failure','dyslipidemia','hypertension','secondary-prevention','anticoagulation','vascular-disease'];
 export type ClassFilter = 'all'|'1'|'2a'|'2b'|'3-no-benefit'|'3-harm'|'ungraded';
 export function recommendationClass(r: Recommendation): Exclude<ClassFilter,'all'> {
   const strength=r.strength.toLowerCase();
@@ -277,7 +292,7 @@ export function evaluateCase(c: FictionalCase): { matches: Match[]; gaps: string
     if(c.diabetes)addId('ckd-monitor-frequency','Diabetes and established CKD explicitly selected; reference frequency varies by stage.');
     if(c.egfr>=20&&(c.diabetes&&c.diabetesType==='type2'||c.uacr!==null&&c.uacr>=200&&c.albuminuriaPersistent||c.hf))addId('ckd-kdigo-sglt2','CKD with eGFR ≥20 plus explicitly entered type 2 diabetes, persistent UACR ≥200, or HF.','Medication safety and product-specific eligibility are not fully assessed.');
     if(c.egfr<30||c.uacr!==null&&c.uacr>700&&c.albuminuriaPersistent)addId('referral-kidney','Established CKD with eGFR <30 or persistent UACR >700.','KFRE is not calculated. Other referral criteria and urgency require review.');
-    if(c.diabetes&&c.hypertensionDiagnosis&&c.egfr>=15&&c.uacr!==null&&c.uacr>=30&&c.albuminuriaPersistent)addId('ckd-kdigo-acearb','Diabetic CKD, diagnosed hypertension, eGFR ≥15 and persistent UACR ≥30 explicitly entered.');
+    if(c.diabetes&&!c.dialysis&&c.egfr>=15&&c.uacr!==null&&c.uacr>=30&&c.albuminuriaPersistent)addId('ckd-kdigo-acearb','Diabetic CKD G1–G4 with persistent UACR ≥30 explicitly entered. KDIGO 2024 does not require high BP.','Review BP tolerance, contraindications and creatinine/potassium monitoring.');
     if(c.veteran&&c.diabetes&&c.diabetesType==='type2'&&c.uacr!==null&&c.uacr>30&&c.albuminuriaPersistent&&c.egfr>=25&&c.potassium<4.8&&c.onAceArb&&c.maxAceArb)addId('ckd-va-finerenone','Type 2 diabetes, CKD, persistent UACR >30, eGFR ≥25, K <4.8 and maximally tolerated ACEi/ARB explicitly entered.','Clinical guideline eligibility does not determine VA formulary authorization.');
     if(c.uacr===null)gaps.push('UACR is absent: albuminuria-dependent kidney therapy matches are withheld. eGFR does not substitute for UACR.');
   }

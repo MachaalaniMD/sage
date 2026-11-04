@@ -1,0 +1,1678 @@
+[
+  {
+    "id": "acc",
+    "acronym": "ACC",
+    "name": "American College of Cardiology",
+    "indexUrl": "https://www.acc.org/guidelines",
+    "checkedAt": "2026-11-03",
+    "status": "selected-content-added",
+    "summary": "Added 2026 PE duration pathways and the October 2026 resistant-hypertension consensus. Current lipid/BP/CKM and HFpEF source versions remain distinct.",
+    "documents": [
+      {
+        "title": "Optimizing Blood Pressure Care in Patients With Resistant Hypertension",
+        "url": "https://www.jacc.org/doi/10.1016/j.jacc.2026.08.028",
+        "year": 2026,
+        "version": "Expert Consensus Decision Pathway; October 5, 2026; DOI 10.1016/j.jacc.2026.08.028",
+        "type": "Expert consensus decision pathway",
+        "access": "Official ACC publication summary and publisher metadata read; full publisher access restricted",
+        "topics": [
+          "hypertension"
+        ]
+      },
+      {
+        "title": "Evaluation and Management of Acute Pulmonary Embolism in Adults",
+        "url": "https://www.ahajournals.org/doi/10.1161/CIR.0000000000001415",
+        "year": 2026,
+        "version": "2026 final guideline; DOI 10.1161/CIR.0000000000001415",
+        "type": "Clinical practice guideline",
+        "access": "Primary publisher indexed section 5.2 recommendation table read; direct publisher access restricted",
+        "topics": [
+          "anticoagulation"
+        ]
+      },
+      {
+        "title": "Cardiovascular-Kidney-Metabolic Syndrome Guideline",
+        "url": "https://www.ahajournals.org/doi/10.1161/CIR.0000000000001453",
+        "year": 2026,
+        "version": "2026 final guideline · Table 17",
+        "type": "Clinical practice guideline",
+        "access": "Primary publisher indexed Table 17 checked; direct publisher access restricted",
+        "topics": [
+          "referral"
+        ]
+      },
+      {
+        "title": "2026 Dyslipidemia Guideline: statin intensity and dose reference",
+        "url": "https://tools.acc.org/LDL/",
+        "year": 2026,
+        "version": "ACC Lipid Manager, 2026 guideline Table 6",
+        "type": "Clinical practice guideline",
+        "access": "Official ACC Table 6 text read; expected LDL reductions are population estimates",
+        "topics": [
+          "dyslipidemia"
+        ]
+      },
+      {
+        "title": "Adult Immunizations as Part of Cardiovascular Care",
+        "url": "https://www.jacc.org/doi/10.1016/j.jacc.2026.07.004",
+        "year": 2026,
+        "version": "2026 final; listed in official ACC index",
+        "type": "Concise clinical guidance",
+        "access": "Citation only; new clinical extraction pending",
+        "topics": [
+          "vaccinations"
+        ]
+      },
+      {
+        "title": "Perioperative Cardiovascular Management for Noncardiac Surgery [Reaffirmed]",
+        "url": "https://www.jacc.org/doi/10.1016/j.jacc.2026.06.017",
+        "year": 2026,
+        "version": "2026 reaffirmation",
+        "type": "Reaffirmed guideline",
+        "access": "Citation only; not treated as a de novo replacement",
+        "topics": [
+          "anticoagulation"
+        ]
+      },
+      {
+        "title": "2026 Guideline on the Management of Dyslipidemia",
+        "url": "https://www.ahajournals.org/doi/10.1161/CIR.0000000000001423",
+        "year": 2026,
+        "version": "March 13, 2026",
+        "type": "Clinical practice guideline",
+        "access": "Primary source indexed recommendation table checked; direct publisher access restricted",
+        "topics": [
+          "dyslipidemia"
+        ]
+      },
+      {
+        "title": "2026 Expert Consensus Decision Pathway: Management of HFpEF",
+        "url": "https://www.jacc.org/doi/10.1016/j.jacc.2026.06.018",
+        "year": 2026,
+        "version": "2026; JACC 88(15):1817–1846; DOI 10.1016/j.jacc.2026.06.018",
+        "type": "Expert consensus decision pathway",
+        "access": "Indexed primary publisher text checked; direct publisher access restricted",
+        "topics": [
+          "heart-failure"
+        ]
+      }
+    ],
+    "replaces": [],
+    "limitations": [
+      "Bounded review of selected primary-care and cardiovascular topics; not all ACC documents extracted.",
+      "A consensus pathway, universal definition and reaffirmation are not interchangeable with a new treatment guideline."
+    ]
+  },
+  {
+    "id": "aha",
+    "acronym": "AHA",
+    "name": "American Heart Association",
+    "indexUrl": "https://professional.heart.org/en/guidelines-statements",
+    "checkedAt": "2026-11-03",
+    "status": "selected-content-added",
+    "summary": "Added acute PE and missing PAD references, including harm/no-benefit recommendations. Existing 2026 HF and MI definitions retained separately from treatment rules.",
+    "documents": [
+      {
+        "title": "Evaluation and Management of Acute Pulmonary Embolism in Adults",
+        "url": "https://www.ahajournals.org/doi/10.1161/CIR.0000000000001415",
+        "year": 2026,
+        "version": "2026 final guideline; DOI 10.1161/CIR.0000000000001415",
+        "type": "Clinical practice guideline",
+        "access": "Primary publisher indexed section 5.2 recommendation table read; direct publisher access restricted",
+        "topics": [
+          "anticoagulation"
+        ]
+      },
+      {
+        "title": "Cardiovascular-Kidney-Metabolic Syndrome Guideline",
+        "url": "https://www.ahajournals.org/doi/10.1161/CIR.0000000000001453",
+        "year": 2026,
+        "version": "2026 final guideline · Table 17",
+        "type": "Clinical practice guideline",
+        "access": "Primary publisher indexed Table 17 checked; direct publisher access restricted",
+        "topics": [
+          "referral"
+        ]
+      },
+      {
+        "title": "Management of Lower Extremity Peripheral Artery Disease",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12728805/",
+        "year": 2024,
+        "version": "2024 final guideline; DOI 10.1016/j.jacc.2024.02.013",
+        "type": "Clinical practice guideline",
+        "access": "Primary guideline recommendation tables read; current PAD topic guideline in official ACC index",
+        "topics": [
+          "vascular-disease"
+        ]
+      },
+      {
+        "title": "Second Universal Definition of Heart Failure (2026)",
+        "url": "https://www.ahajournals.org/doi/10.1161/CIR.0000000000001455",
+        "year": 2026,
+        "version": "June 29, 2026; DOI 10.1161/CIR.0000000000001455",
+        "type": "Universal definition",
+        "access": "Primary publisher indexed text and official AHA summary checked; direct publisher access restricted",
+        "topics": [
+          "heart-failure"
+        ]
+      },
+      {
+        "title": "Fifth Universal Definition of Myocardial Infarction (2026)",
+        "url": "https://www.jacc.org/doi/10.1016/j.jacc.2026.07.025",
+        "year": 2026,
+        "version": "August 28, 2026; JACC 88(11):1314–1368; DOI 10.1016/j.jacc.2026.07.025",
+        "type": "Universal definition",
+        "access": "Primary publisher indexed full text and official society hub checked; direct publisher access restricted",
+        "topics": [
+          "secondary-prevention"
+        ]
+      },
+      {
+        "title": "2026 Guideline on the Management of Dyslipidemia",
+        "url": "https://www.ahajournals.org/doi/10.1161/CIR.0000000000001423",
+        "year": 2026,
+        "version": "March 13, 2026",
+        "type": "Clinical practice guideline",
+        "access": "Primary source indexed recommendation table checked; direct publisher access restricted",
+        "topics": [
+          "dyslipidemia"
+        ]
+      }
+    ],
+    "replaces": [],
+    "limitations": [
+      "2026 HF universal definition does not replace the 2022 US treatment guideline.",
+      "Selected documents only; publisher access can be restricted."
+    ]
+  },
+  {
+    "id": "hfsa",
+    "acronym": "HFSA",
+    "name": "Heart Failure Society of America",
+    "indexUrl": "https://hfsa.org/research/hfsa-clinical-documents",
+    "checkedAt": "2026-11-03",
+    "status": "selected-content-added",
+    "summary": "2026 HFmrEF statement retained; newly published right-heart-failure statement recorded for review. The current joint US GDMT reference remains 2022.",
+    "documents": [
+      {
+        "title": "Heart Failure with Mildly Reduced Ejection Fraction: An HFSA Scientific Statement",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13240707/",
+        "year": 2026,
+        "version": "Online April 22, 2026; June 2026 issue; DOI 10.1016/j.cardfail.2026.01.024",
+        "type": "Scientific statement",
+        "access": "Full primary author manuscript checked; scientific statement, not a new comprehensive GDMT guideline",
+        "topics": [
+          "heart-failure"
+        ]
+      },
+      {
+        "title": "HFSA Scientific Statement on Right Heart Failure",
+        "url": "https://doi.org/10.1016/j.cardfail.2026.04.026",
+        "year": 2026,
+        "version": "Online October 27, 2026",
+        "type": "Scientific statement",
+        "access": "Citation only; selected clinical extraction pending",
+        "topics": [
+          "heart-failure"
+        ]
+      },
+      {
+        "title": "2022 AHA/ACC/HFSA Guideline for the Management of Heart Failure",
+        "url": "https://professional.heart.org/en/science-news/2022-guideline-for-the-management-of-heart-failure",
+        "year": 2022,
+        "version": "2022 joint US guideline",
+        "type": "Clinical practice guideline",
+        "access": "Existing HFrEF/HFpEF treatment and dose references retained",
+        "topics": [
+          "heart-failure"
+        ]
+      }
+    ],
+    "replaces": [],
+    "limitations": [
+      "Right-HF statement is citation only in this release; no treatment algorithm inferred from its title.",
+      "Scientific statements retain ungraded source status."
+    ]
+  },
+  {
+    "id": "hrs",
+    "acronym": "HRS",
+    "name": "Heart Rhythm Society",
+    "indexUrl": "https://www.hrsonline.org/publications-resources/resource-library/hrs-documents/under-development/",
+    "checkedAt": "2026-11-03",
+    "status": "selected-content-added",
+    "summary": "Added final 2025 LAAO recommendations; recorded the final April 2026 CIED lead-management update.",
+    "documents": [
+      {
+        "title": "2026 HRS/AHA/APHRS/EHRA/IDSA/LAHRS/PACES/STS Expert Consensus Statement Update on CIED Lead Management and Extraction",
+        "url": "https://www.hrsonline.org/resource/2026-hrs-aha-aphrs-ehra-idsa-lahrs-paces-sts-expert-consensus-statement-update-on-cardiovascular-implantable-electronic-device-lead-management-and-extraction/",
+        "year": 2026,
+        "version": "Published April 23, 2026",
+        "type": "Expert consensus update",
+        "access": "Official index confirms final publication; document access restricted; citation only",
+        "topics": [
+          "anticoagulation"
+        ]
+      },
+      {
+        "title": "Clinical Practice Guidelines on Transcatheter Left Atrial Appendage Occlusion",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12485513/",
+        "year": 2025,
+        "version": "August 4, 2025; J SCAI 4(9):103783; DOI 10.1016/j.jscai.2025.103783",
+        "type": "Clinical practice guideline",
+        "access": "Published primary guideline recommendation summary read; 2026 update remains listed in development",
+        "topics": [
+          "anticoagulation"
+        ]
+      }
+    ],
+    "replaces": [],
+    "limitations": [
+      "The HRS development list still calls a further LAAO guideline update planned for fall 2026; a planned date is not proof of final publication.",
+      "CIED lead-management document is citation only because full text was access restricted."
+    ]
+  },
+  {
+    "id": "chest",
+    "acronym": "CHEST",
+    "name": "American College of Chest Physicians",
+    "indexUrl": "https://www.chestnet.org/guidelines-and-topic-collections/guidelines",
+    "checkedAt": "2026-11-03",
+    "status": "reviewed-with-limitations",
+    "summary": "The September 2026 inpatient tobacco guideline adds practical cessation guidance. The existing CHEST 2022 perioperative source is retained: an expected publication year on the development list is not proof of a final replacement.",
+    "documents": [
+      {
+        "title": "Tobacco Treatment in the Inpatient Setting: An American College of Chest Physicians Clinical Practice Guideline",
+        "url": "https://journal.chestnet.org/article/S0012-3692(26)06538-4/fulltext",
+        "year": 2026,
+        "version": "Published online September 2, 2026; doi:10.1016/j.chest.2026.08.038",
+        "type": "Clinical practice guideline",
+        "access": "Official society synopsis accessible; publisher full text returned 403.",
+        "topics": [
+          "lifestyle"
+        ]
+      },
+      {
+        "title": "Tobacco Treatment in the Inpatient Setting — official synopsis",
+        "url": "https://www.chestnet.org/guidelines-and-topic-collections/guidelines/clinical-pulmonary/tobacco-treatment-in-the-inpatient-setting",
+        "year": 2026,
+        "version": "September 2026",
+        "type": "Official guideline summary",
+        "access": "Public key recommendations read; individual formal grades are not displayed.",
+        "topics": [
+          "lifestyle"
+        ]
+      },
+      {
+        "title": "CHEST Guideline Development and Submissions",
+        "url": "https://www.chestnet.org/guidelines-and-topic-collections/guidelines/chest-guideline-development-and-submissions",
+        "year": 2026,
+        "version": "Development list checked November 3, 2026",
+        "type": "Development registry",
+        "access": "Expected dates only; not used as final clinical recommendations.",
+        "topics": [
+          "anticoagulation",
+          "critical-care"
+        ]
+      }
+    ],
+    "replaces": [],
+    "limitations": [
+      "Only recommendations explicitly visible in the official public synopsis were summarized. Their formal GRADE strength and certainty remain unverified; no grade is inferred from the word recommend.",
+      "The development list includes an expected 2026 VTE update; publication was not verified, so no 2026 CHEST VTE replacement is claimed.",
+      "This is a targeted review of relevant official sources, not an exhaustive extraction of all CHEST publications."
+    ]
+  },
+  {
+    "id": "ats",
+    "acronym": "ATS",
+    "name": "American Thoracic Society",
+    "indexUrl": "https://academic.oup.com/ajrccm/pages/ats-documents",
+    "checkedAt": "2026-11-03",
+    "status": "reviewed-with-limitations",
+    "summary": "Added selected CAP focused-update recommendations with native GRADE labels. The CAP article was published online in July 2025 and appears in the January 2026 issue; it is ATS guidance, not an IDSA-endorsed joint replacement.",
+    "documents": [
+      {
+        "title": "Diagnosis and Management of Community-acquired Pneumonia: An Official ATS Clinical Practice Guideline",
+        "url": "https://academic.oup.com/ajrccm/article/212/1/24/8435770",
+        "year": 2025,
+        "version": "Online July 18, 2025; AJRCCM 212(1):24–44, January 2026",
+        "type": "Focused clinical practice guideline update",
+        "access": "Primary indexed recommendation text checked; direct publisher rendering restricted.",
+        "topics": [
+          "infections"
+        ]
+      },
+      {
+        "title": "Noninvasive Respiratory Support for Adult Patients with Acute Respiratory Failure: An Official ATS Clinical Practice Guideline",
+        "url": "https://academic.oup.com/ajrccm/article/212/9/2135/8721554",
+        "year": 2026,
+        "version": "Online June 29, 2026; September 2026 issue 212(9):2135–2158",
+        "type": "Clinical practice guideline",
+        "access": "Citation and official abstract verified; no recommendation extraction because full text was inaccessible in this review.",
+        "topics": [
+          "critical-care"
+        ]
+      },
+      {
+        "title": "IDSA Position Statement: Why IDSA Did Not Endorse the CAP Guidelines 2025 Update",
+        "url": "https://doi.org/10.1093/cid/ciaf625",
+        "year": 2025,
+        "version": "Online 2025; Clinical Infectious Diseases 82(4):622–624, April 15, 2026",
+        "type": "Society position statement",
+        "access": "Primary indexed statement and official ATS reading-list explanation checked.",
+        "topics": [
+          "infections"
+        ]
+      }
+    ],
+    "replaces": [
+      "The 2025 ATS CAP focused update revises four questions from the 2019 ATS/IDSA document within the ATS pathway; it does not establish IDSA endorsement or replace every 2019 recommendation."
+    ],
+    "limitations": [
+      "IDSA did not endorse the 2025 ATS CAP update, with disagreement about empiric antibiotics in certain viral-positive populations. These pathways must remain separately attributed.",
+      "NIRS 2026 is citation-only until full recommendation wording, strength, certainty and qualifications are checked.",
+      "CAP recommendations are not intended for immunocompromised populations. This is a targeted review, not full ATS coverage."
+    ]
+  },
+  {
+    "id": "sccm",
+    "acronym": "SCCM",
+    "name": "Society of Critical Care Medicine",
+    "indexUrl": "https://sccm.org/clinical-resources/guidelines/guidelines",
+    "checkedAt": "2026-11-03",
+    "status": "reviewed-with-limitations",
+    "summary": "Added adult SSC 2026 sepsis references and post-sepsis follow-up, plus the still-current 2024 stress-ulcer prophylaxis stopping statement useful at care transitions.",
+    "documents": [
+      {
+        "title": "Surviving Sepsis Campaign: International Guidelines for Management of Sepsis and Septic Shock 2026",
+        "url": "https://sccm.org/clinical-resources/guidelines/guidelines/surviving-sepsis-campaign-international-guidelines-for-management-of-sepsis-and-septic-shock-2026",
+        "year": 2026,
+        "version": "Adult guideline; published March 23, 2026",
+        "type": "Clinical practice guideline",
+        "access": "Official complete recommendation list, strength and certainty read.",
+        "topics": [
+          "critical-care",
+          "infections"
+        ]
+      },
+      {
+        "title": "SCCM and ASHP Guideline for the Prevention of Stress-Related Gastrointestinal Bleeding in Critically Ill Adults",
+        "url": "https://sccm.org/clinical-resources/guidelines/guidelines/sccm-ashp-guideline-prevention-of-ugib",
+        "year": 2024,
+        "version": "July 15, 2024; Critical Care Medicine 52(8):e421–e430",
+        "type": "Clinical practice guideline",
+        "access": "Official recommendation list and Good Practice Statements read.",
+        "topics": [
+          "deprescribing",
+          "critical-care"
+        ]
+      }
+    ],
+    "replaces": [
+      "Adult Surviving Sepsis Campaign 2026 updates the 2021 adult SSC guideline; it does not replace separate pediatric guidance."
+    ],
+    "limitations": [
+      "Selected acute-care and recovery references only; no automatic sepsis diagnosis, emergency triage or medication orders.",
+      "The official index still links older guidelines, including 2021 SSC; index presence alone does not establish current precedence."
+    ]
+  },
+  {
+    "id": "idsa",
+    "acronym": "IDSA",
+    "name": "Infectious Diseases Society of America",
+    "indexUrl": "https://www.idsociety.org/practice-guideline/all-practice-guidelines",
+    "checkedAt": "2026-11-03",
+    "status": "reviewed-with-limitations",
+    "summary": "Added cUTI 2025 treatment-duration and oral-transition references, AMR guidance updated July 2026, and September 2026 S. aureus bacteremia consensus follow-up. Formal guidelines, ungraded guidance and consensus statements remain distinct.",
+    "documents": [
+      {
+        "title": "IDSA 2025 Guideline Update on Complicated Urinary Tract Infections",
+        "url": "https://www.idsociety.org/practice-guideline/complicated-urinary-tract-infections/",
+        "year": 2025,
+        "version": "Published July 17, 2025",
+        "type": "Clinical practice guideline",
+        "access": "Official recommendations, certainty and trial exclusions read.",
+        "topics": [
+          "infections"
+        ]
+      },
+      {
+        "title": "IDSA 2026 Guidance on the Treatment of Antimicrobial Resistant Gram-Negative Infections",
+        "url": "https://www.idsociety.org/practice-guideline/amr-guidance/",
+        "year": 2026,
+        "version": "Published July 30, 2026",
+        "type": "Clinical guidance document",
+        "access": "Official suggested approaches and update history read; not formally GRADE-rated.",
+        "topics": [
+          "infections"
+        ]
+      },
+      {
+        "title": "IDSA/ESCMID 2026 Consensus Statements on Staphylococcus aureus Bacteremia",
+        "url": "https://www.idsociety.org/practice-guideline/staphylococcus-aureus-bacteremia/",
+        "year": 2026,
+        "version": "Part 1; September 9, 2026",
+        "type": "Consensus statements",
+        "access": "Official abridged adult consensus statements read.",
+        "topics": [
+          "infections"
+        ]
+      },
+      {
+        "title": "Community-Acquired Pneumonia in Adults",
+        "url": "https://www.idsociety.org/practice-guideline/community-acquired-pneumonia-cap-in-adults/",
+        "year": 2019,
+        "version": "2019; marked current in official IDSA index on review date",
+        "type": "Clinical practice guideline",
+        "access": "Official index verified; retained separately from ATS 2025 focused update.",
+        "topics": [
+          "infections"
+        ]
+      }
+    ],
+    "replaces": [
+      "IDSA 2026 AMR Treatment Guidance expressly replaces earlier AMR guidance, including 2024."
+    ],
+    "limitations": [
+      "The 2026 IDSA/PIDS CAP update is pediatric, not an adult CAP replacement.",
+      "SAB 2026 is Part 1 consensus focused on risk stratification, diagnosis and duration; future manuscripts will address antimicrobial management.",
+      "cUTI short-course evidence excludes many high-risk groups; do not extrapolate automatically. Review is selective, not an exhaustive IDSA catalog."
+    ]
+  },
+  {
+    "id": "ada",
+    "acronym": "ADA",
+    "name": "American Diabetes Association",
+    "indexUrl": "https://professional.diabetes.org/standards-of-care",
+    "checkedAt": "2026-11-03",
+    "status": "reviewed-with-limitations",
+    "summary": "The official hub still identifies the 2026 Standards of Care as current. Add diabetes technology and the separately published 2026 obesity standards; retain existing 2026 glycemia, kidney, eye/foot, and cardiovascular records.",
+    "documents": [
+      {
+        "title": "Standards of Care in Diabetes—2026",
+        "url": "https://professional.diabetes.org/standards-of-care",
+        "year": 2026,
+        "version": "2026 annual edition, with online updates",
+        "type": "final guideline",
+        "access": "Official current-edition hub checked",
+        "topics": [
+          "diabetes",
+          "ckd",
+          "obesity",
+          "monitoring"
+        ]
+      },
+      {
+        "title": "7. Diabetes Technology: Standards of Care in Diabetes—2026",
+        "url": "https://diabetesjournals.org/care/article/49/Supplement_1/S150/163922",
+        "year": 2026,
+        "version": "Section 7; recommendation 7.15",
+        "type": "final guideline",
+        "access": "Primary recommendation text indexed",
+        "topics": [
+          "diabetes",
+          "monitoring"
+        ]
+      },
+      {
+        "title": "Pharmacologic Treatment of Obesity in Adults: Standards of Care in Overweight and Obesity",
+        "url": "https://doi.org/10.2337/doci25-0008",
+        "year": 2026,
+        "version": "Published January 2026; DOI doci25-0008",
+        "type": "final guideline",
+        "access": "Primary article and official PDF recommendation text indexed",
+        "topics": [
+          "obesity",
+          "diabetes"
+        ]
+      },
+      {
+        "title": "Screening, Diagnosis, Evaluation, and Staging of Obesity in Adults: Standards of Care in Overweight and Obesity—2026",
+        "url": "https://doi.org/10.2337/doci26-0003",
+        "year": 2026,
+        "version": "2026 chapter",
+        "type": "final guideline",
+        "access": "Official chapter identified; detailed extraction deferred",
+        "topics": [
+          "obesity"
+        ]
+      }
+    ],
+    "replaces": [
+      "2026 annual Standards replace the 2025 annual edition in the same topics; the obesity standards are a separate publication, not a replacement for all diabetes chapters."
+    ],
+    "limitations": [
+      "No final 2027 annual edition was established by this review. Selected chapters were checked; this is not an extraction of every ADA recommendation."
+    ]
+  },
+  {
+    "id": "aace",
+    "acronym": "AACE",
+    "name": "American Association of Clinical Endocrinology",
+    "indexUrl": "https://pro.aace.com/clinical-guidance",
+    "checkedAt": "2026-11-03",
+    "status": "reviewed-with-limitations",
+    "summary": "The index lists a 2026 type 2 diabetes algorithm and a September 2026 technology consensus, alongside 2025 obesity and lipid guidance. The T2D algorithm is a consensus update rather than a new formally graded diabetes CPG.",
+    "documents": [
+      {
+        "title": "Algorithm for Management of Adults With Type 2 Diabetes—2026 Update",
+        "url": "https://doi.org/10.1016/j.eprac.2026.01.006",
+        "year": 2026,
+        "version": "April 2026; corrected June 2026",
+        "type": "final consensus algorithm",
+        "access": "Primary journal indexed text; direct full-text fetch restricted",
+        "topics": [
+          "diabetes",
+          "obesity",
+          "ckd"
+        ]
+      },
+      {
+        "title": "Corrigendum to Algorithm for Management of Adults With Type 2 Diabetes—2026 Update",
+        "url": "https://doi.org/10.1016/j.eprac.2026.05.025",
+        "year": 2026,
+        "version": "June 12 online; August 2026 print",
+        "type": "published correction",
+        "access": "Correction citation and author-institution abstract read",
+        "topics": [
+          "diabetes"
+        ]
+      },
+      {
+        "title": "Use of Diabetes Technology for Management of Adults with Diabetes",
+        "url": "https://doi.org/10.1016/j.eprac.2026.06.011",
+        "year": 2026,
+        "version": "September 8, 2026 online",
+        "type": "final consensus statement",
+        "access": "Official index and primary abstract checked; citation only",
+        "topics": [
+          "diabetes",
+          "monitoring"
+        ]
+      },
+      {
+        "title": "Algorithm for Evaluation and Treatment of Adults with Obesity/Adiposity-Based Chronic Disease—2025 Update",
+        "url": "https://doi.org/10.1016/j.eprac.2025.07.017",
+        "year": 2025,
+        "version": "2025 update",
+        "type": "final consensus algorithm",
+        "access": "Official index and abstract checked; detailed extraction deferred",
+        "topics": [
+          "obesity"
+        ]
+      },
+      {
+        "title": "Pharmacologic Management of Adults With Dyslipidemia",
+        "url": "https://doi.org/10.1016/j.eprac.2024.09.016",
+        "year": 2025,
+        "version": "2025 CPG",
+        "type": "final guideline",
+        "access": "Official index checked; detailed extraction deferred",
+        "topics": [
+          "lipids"
+        ]
+      },
+      {
+        "title": "Algorithm for Management of Adults with Dyslipidemia—2025 Update",
+        "url": "https://doi.org/10.1016/j.eprac.2025.07.014",
+        "year": 2025,
+        "version": "2025 consensus algorithm",
+        "type": "final consensus algorithm",
+        "access": "Official index checked; detailed extraction deferred",
+        "topics": [
+          "lipids"
+        ]
+      }
+    ],
+    "replaces": [
+      "2026 T2D consensus algorithm updates the 2023 algorithm; it does not erase the 2022 comprehensive-care CPG. The 2026 technology consensus is described as a companion update to the 2021 technology CPG."
+    ],
+    "limitations": [
+      "Full direct journal fetching was restricted; only indexed primary text was summarized. The T2D corrigendum concerns LADA/C-peptide wording; those details are not encoded here. No formal recommendation grade was inferred from the consensus title."
+    ]
+  },
+  {
+    "id": "endocrine-society",
+    "acronym": "Endocrine Society",
+    "name": "Endocrine Society",
+    "indexUrl": "https://www.endocrine.org/clinical-practice-guidelines",
+    "checkedAt": "2026-11-03",
+    "status": "reviewed-with-limitations",
+    "summary": "Adult primary-care additions use the 2025 primary aldosteronism guideline and 2024 joint adrenal-insufficiency guideline. A final 2026 central precocious puberty guideline was identified but is outside this adult prototype scope.",
+    "documents": [
+      {
+        "title": "Primary Aldosteronism: An Endocrine Society Clinical Practice Guideline",
+        "url": "https://www.endocrine.org/clinical-practice-guidelines/primary-aldosteronism-2",
+        "year": 2025,
+        "version": "July 2025; corrected August 2025",
+        "type": "final guideline",
+        "access": "Official graded recommendation list read",
+        "topics": [
+          "endocrine",
+          "hypertension",
+          "referral"
+        ]
+      },
+      {
+        "title": "Correction to Primary Aldosteronism guideline",
+        "url": "https://academic.oup.com/jcem/article/110/11/e3933/8244166",
+        "year": 2025,
+        "version": "Published August 29; November print",
+        "type": "published correction",
+        "access": "Primary correction read",
+        "topics": [
+          "endocrine"
+        ]
+      },
+      {
+        "title": "Diagnosis and Therapy of Glucocorticoid-Induced Adrenal Insufficiency",
+        "url": "https://www.endocrine.org/clinical-practice-guidelines/glucocorticoid-induced-adrenal-insufficiency",
+        "year": 2024,
+        "version": "Joint ESE/Endocrine Society; May 2024",
+        "type": "final guideline",
+        "access": "Official recommendation list read",
+        "topics": [
+          "endocrine",
+          "deprescribing",
+          "referral"
+        ]
+      },
+      {
+        "title": "Central Precocious Puberty: An Endocrine Society Clinical Practice Guideline",
+        "url": "https://doi.org/10.1210/clinem/dgag168",
+        "year": 2026,
+        "version": "June 2026 online",
+        "type": "final guideline",
+        "access": "Official release and primary publication identified; pediatric scope",
+        "topics": [
+          "endocrine"
+        ]
+      }
+    ],
+    "replaces": [
+      "2025 primary aldosteronism guidance replaces the 2016 edition. The correction fixes direct-renin units in Figure 1; corrected screening recommendations are used."
+    ],
+    "limitations": [
+      "No aldosterone/renin numeric assay cutoffs or medication-withdrawal algorithm is automated. A positive screen is not a diagnosis. Other endocrine conditions require separate extraction."
+    ]
+  },
+  {
+    "id": "ata",
+    "acronym": "ATA",
+    "name": "American Thyroid Association",
+    "indexUrl": "https://www.thyroid.org/professionals/ata-professional-guidelines/",
+    "checkedAt": "2026-11-03",
+    "status": "reviewed-with-limitations",
+    "summary": "The official index includes final 2026 preconception/pregnancy/postpartum guidance and 2025 adult differentiated thyroid cancer guidance. Add thyroid care with separate pregnancy and cancer follow-up contexts.",
+    "documents": [
+      {
+        "title": "Thyroid Disease in Preconception, Pregnancy, and Postpartum",
+        "url": "https://journals.sagepub.com/doi/pdf/10.1177/10507256261445624",
+        "year": 2026,
+        "version": "Thyroid 36(5):481–544",
+        "type": "final guideline",
+        "access": "Primary official-journal PDF read",
+        "topics": [
+          "thyroid",
+          "monitoring"
+        ]
+      },
+      {
+        "title": "Management Guidelines for Adult Patients with Differentiated Thyroid Cancer",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13090833/",
+        "year": 2025,
+        "version": "Thyroid 35(8):841–985",
+        "type": "final guideline",
+        "access": "Primary full text read",
+        "topics": [
+          "thyroid",
+          "cancer-surveillance"
+        ]
+      }
+    ],
+    "replaces": [
+      "2026 pregnancy guidance updates the 2017 pregnancy edition. 2025 DTC guidance updates adult cancer management from the 2015 combined nodule/DTC guideline; do not discard remaining nodule-specific guidance outside its scope."
+    ],
+    "limitations": [
+      "Selected recommendations only; cancer response categories require specialist confirmation. No automatic pregnancy treatment or cancer surveillance matching was added."
+    ]
+  },
+  {
+    "id": "kdigo",
+    "acronym": "KDIGO",
+    "name": "Kidney Disease: Improving Global Outcomes",
+    "indexUrl": "https://kdigo.org/guidelines/ckd--evaluation-and-management/",
+    "checkedAt": "2026-11-03",
+    "status": "reviewed-with-limitations",
+    "summary": "Keep final CKD 2024 and Diabetes in CKD 2022 active. Add final 2024 conditional SGLT2 and nonsteroidal MRA recommendations and update the narrower 2021 ACEi/ARB record. Public-review drafts are tracked separately.",
+    "documents": [
+      {
+        "title": "Evaluation and Management of Chronic Kidney Disease",
+        "url": "https://kdigo.org/wp-content/uploads/2024/03/KDIGO-2024-CKD-Guideline.pdf",
+        "year": 2024,
+        "version": "2024 final",
+        "type": "final guideline",
+        "access": "Primary full text read",
+        "topics": [
+          "ckd",
+          "hypertension",
+          "referral",
+          "monitoring"
+        ]
+      },
+      {
+        "title": "Diabetes Management in CKD",
+        "url": "https://kdigo.org/guidelines/diabetes-ckd/",
+        "year": 2022,
+        "version": "2022 current published diabetes guideline",
+        "type": "final guideline",
+        "access": "Official current-edition statement checked",
+        "topics": [
+          "diabetes",
+          "ckd"
+        ]
+      },
+      {
+        "title": "Diabetes Management in CKD: 2026 update draft",
+        "url": "https://kdigo.org/guidelines/diabetes-ckd/",
+        "year": 2026,
+        "version": "Public-review draft; being revised",
+        "type": "public-review draft",
+        "access": "Official status checked; excluded as active guidance",
+        "topics": [
+          "diabetes",
+          "ckd"
+        ]
+      },
+      {
+        "title": "2027 CKD Guideline Focused Update: Medications Management",
+        "url": "https://kdigo.org/guidelines/ckd--evaluation-and-management/",
+        "year": 2027,
+        "version": "Public review through November 4, 2026",
+        "type": "public-review draft",
+        "access": "Official status checked; excluded as active guidance",
+        "topics": [
+          "ckd"
+        ]
+      }
+    ],
+    "replaces": [
+      "CKD 2024 updates the 2012 CKD guideline and updates selected RAS-inhibitor recommendations. It does not replace the distinct 2021 BP guideline wholesale."
+    ],
+    "limitations": [
+      "No final 2026 diabetes update or 2027 CKD medications update was established. Proposed draft recommendations must not replace current finals."
+    ]
+  },
+  {
+    "id": "acg",
+    "acronym": "ACG",
+    "name": "American College of Gastroenterology",
+    "indexUrl": "https://gi.org/guidelines/",
+    "checkedAt": "2026-11-03",
+    "status": "reviewed-with-limitations",
+    "summary": "The official index now lists 2026 diverticulitis, hepatic encephalopathy, adenomatous polyposis, and October cirrhosis preventive-care guidance. Add actionable diverticulitis recommendations and current 2024 H. pylori test-of-cure advice.",
+    "documents": [
+      {
+        "title": "Colonic Diverticulitis",
+        "url": "https://doi.org/10.14309/ajg.0000000000004047",
+        "year": 2026,
+        "version": "July 2026; AJG 121:1549–1561",
+        "type": "final guideline",
+        "access": "Official highlights and indexed primary graded text read",
+        "topics": [
+          "gastroenterology",
+          "cancer-surveillance"
+        ]
+      },
+      {
+        "title": "Preventive Care for Patients With Cirrhosis",
+        "url": "https://doi.org/10.14309/ajg.0000000000004186",
+        "year": 2026,
+        "version": "October 2026",
+        "type": "final guideline",
+        "access": "Official index and primary citation checked; detailed full text restricted",
+        "topics": [
+          "liver",
+          "screening",
+          "monitoring"
+        ]
+      },
+      {
+        "title": "Diagnosis and Management of Adenomatous Colorectal Polyposis Syndromes",
+        "url": "https://doi.org/10.14309/ajg.0000000000004105",
+        "year": 2026,
+        "version": "September 2026",
+        "type": "final guideline",
+        "access": "Official index checked; detailed extraction deferred",
+        "topics": [
+          "gastroenterology",
+          "cancer-surveillance"
+        ]
+      },
+      {
+        "title": "Hepatic Encephalopathy",
+        "url": "https://gi.org/guidelines/",
+        "year": 2026,
+        "version": "March 2026",
+        "type": "final guideline",
+        "access": "Official index checked; detailed extraction deferred",
+        "topics": [
+          "liver"
+        ]
+      },
+      {
+        "title": "Ulcerative Colitis in Adults",
+        "url": "https://doi.org/10.14309/ajg.0000000000003463",
+        "year": 2025,
+        "version": "June 2025 update",
+        "type": "final guideline",
+        "access": "Official graded summary checked; detailed extraction deferred",
+        "topics": [
+          "gastroenterology"
+        ]
+      },
+      {
+        "title": "Treatment of Helicobacter pylori Infection",
+        "url": "https://doi.org/10.14309/ajg.0000000000002968",
+        "year": 2024,
+        "version": "September 2024",
+        "type": "final guideline",
+        "access": "Official highlights and key-concept summary read",
+        "topics": [
+          "gastroenterology"
+        ]
+      }
+    ],
+    "replaces": [
+      "2024 H. pylori guideline updates the 2017 edition. New disease-specific 2025/2026 publications do not replace unrelated GI guidelines."
+    ],
+    "limitations": [
+      "The old gi.org/guideline/treatment-of-helicobacter-pylori-infection page still exposes 2017 wording; use the verified 2024 source. Latest cirrhosis/polyposis/encephalopathy items are citation-only pending detailed review."
+    ]
+  },
+  {
+    "id": "aga",
+    "acronym": "AGA",
+    "name": "American Gastroenterological Association",
+    "indexUrl": "https://gastro.org/clinical-guidance/",
+    "checkedAt": "2026-11-03",
+    "status": "reviewed-with-limitations",
+    "summary": "Add January 2026 refractory-constipation best-practice advice and the March 2026 MASLD care pathway. Keep practice updates, care pathways, and formally graded guidelines distinct.",
+    "documents": [
+      {
+        "title": "Evaluation and Management of Refractory Constipation",
+        "url": "https://gastro.org/clinical-guidance/evaluation-and-management-of-refractory-constipation/",
+        "year": 2026,
+        "version": "January 7, 2026; DOI 10.1016/j.cgh.2025.09.031",
+        "type": "final clinical practice update",
+        "access": "Official advice list and primary methods indexed",
+        "topics": [
+          "gastroenterology",
+          "referral",
+          "deprescribing"
+        ]
+      },
+      {
+        "title": "Clinical Care Pathway for Risk Stratification and Management of Patients With MASLD",
+        "url": "https://gastro.org/clinical-guidance/clinical-care-pathway-for-the-risk-stratification-and-management-of-patients-with-masld/",
+        "year": 2026,
+        "version": "March 9, 2026; DOI 10.1053/j.gastro.2026.01.047",
+        "type": "final clinical care pathway",
+        "access": "Official pathway summary indexed",
+        "topics": [
+          "liver",
+          "risk-based"
+        ]
+      },
+      {
+        "title": "Practice Guide on Obesity, Weight Management, Education, and Resources: POWER 2.0",
+        "url": "https://gastro.org/clinical-guidance/power-2-0-practice-guide-on-obesity-weight-management-education-and-resources/",
+        "year": 2026,
+        "version": "June 17, 2026; DOI 10.1053/j.gastro.2026.04.016",
+        "type": "final white paper",
+        "access": "Official publication summary checked; detailed extraction deferred",
+        "topics": [
+          "obesity"
+        ]
+      },
+      {
+        "title": "Risk Stratification and Emerging Surveillance Strategies for HCC",
+        "url": "https://gastro.org/clinical-guidance/risk-stratification-and-emerging-surveillance-strategies-for-hcc/",
+        "year": 2026,
+        "version": "April 15, 2026; DOI 10.1053/j.gastro.2026.03.006",
+        "type": "final clinical practice update",
+        "access": "Official citation checked; detailed extraction deferred",
+        "topics": [
+          "liver",
+          "cancer-surveillance"
+        ]
+      }
+    ],
+    "replaces": [
+      "2026 MASLD pathway updates the 2021 pathway. The refractory-constipation update supplements broader chronic-constipation guidance; it does not replace all 2023 AGA/ACG pharmacotherapy recommendations."
+    ],
+    "limitations": [
+      "Official pages sometimes returned 403 directly; primary publisher and official indexed text were used without bypassing controls. Best Practice Advice carries no formal quality or strength ratings. These selected additions do not extract every AGA publication or living-guideline update."
+    ]
+  },
+  {
+    "id": "aasld",
+    "acronym": "AASLD",
+    "name": "American Association for the Study of Liver Diseases",
+    "indexUrl": "https://www.aasld.org/practice-guidelines",
+    "checkedAt": "2026-11-03",
+    "status": "reviewed-with-limitations",
+    "summary": "Identify the final November 2025 AASLD/IDSA HBV update and focused MASH medication updates. Add HBV treatment/withdrawal advice and semaglutide candidacy context while preserving the 2023 broader liver assessment guidance.",
+    "documents": [
+      {
+        "title": "AASLD/IDSA Practice Guideline on Treatment of Chronic Hepatitis B",
+        "url": "https://doi.org/10.1097/HEP.0000000000001549",
+        "year": 2025,
+        "version": "November 2025 update",
+        "type": "final guideline",
+        "access": "Official educational slides reproduce graded recommendations; direct journal text restricted",
+        "topics": [
+          "liver",
+          "deprescribing",
+          "cancer-surveillance"
+        ]
+      },
+      {
+        "title": "Semaglutide Therapy for MASH: November 2025 Updates to AASLD Practice Guidance",
+        "url": "https://doi.org/10.1097/HEP.0000000000001608",
+        "year": 2025,
+        "version": "November 7, 2025 online; 2026 print",
+        "type": "final focused practice guidance",
+        "access": "Official release and primary indexed guidance summary read",
+        "topics": [
+          "liver",
+          "obesity",
+          "diabetes"
+        ]
+      },
+      {
+        "title": "Resmetirom Therapy for MASLD: October 2024 Updates to AASLD Practice Guidance",
+        "url": "https://doi.org/10.1097/HEP.0000000000001112",
+        "year": 2024,
+        "version": "October 2024 focused update",
+        "type": "final focused practice guidance",
+        "access": "Official MASLD guidance hub checked; detailed extraction deferred",
+        "topics": [
+          "liver"
+        ]
+      },
+      {
+        "title": "Clinical Assessment and Management of NAFLD",
+        "url": "https://www.aasld.org/practice-guidelines/clinical-assessment-and-management-metabolic-dysfunction-associated-steatotic",
+        "year": 2023,
+        "version": "2023 baseline with nomenclature and medication supplements",
+        "type": "final practice guidance",
+        "access": "Official hub checked",
+        "topics": [
+          "liver",
+          "risk-based"
+        ]
+      }
+    ],
+    "replaces": [
+      "2025 HBV update addresses selected PICO questions; older 2018 guidance remains relevant outside the updated questions. Semaglutide 2025 and resmetirom 2024 are focused updates to 2023 MASLD/NAFLD guidance, not full replacements."
+    ],
+    "limitations": [
+      "Direct journal access was restricted for some documents; only accessible official summaries and graded slides were summarized. Do not redistribute the full guidance or slides. Clinical eligibility does not establish VA formulary approval. No complete MASH prescribing protocol was extracted."
+    ]
+  },
+  {
+    "id": "ash",
+    "acronym": "ASH",
+    "name": "American Society of Hematology",
+    "indexUrl": "https://www.hematology.org/resources/clinical-practice-guidelines",
+    "checkedAt": "2026-11-03",
+    "status": "reviewed-selected",
+    "summary": "New 2026 iron-deficiency diagnosis and adult ITP guidance identified. Existing 2020 VTE treatment guidance is a separate topic; thrombophilia testing adds a 2023 reference.",
+    "documents": [
+      {
+        "title": "2026 guidelines for diagnosis of iron deficiency",
+        "url": "https://doi.org/10.1182/bloodadvances.2025015950",
+        "year": 2026,
+        "version": "First online September 16, 2026; November 10 issue",
+        "type": "Final guideline",
+        "access": "Public primary article indexed text and official visual summary checked",
+        "topics": [
+          "hematology"
+        ]
+      },
+      {
+        "title": "2026 guidelines for immune thrombocytopenia: initial and second-line therapy for adults with primary ITP",
+        "url": "https://ashpublications.org/bloodadvances/article/10/20/7076/570274/American-Society-of-Hematology-2026-guidelines-for",
+        "year": 2026,
+        "version": "First online August 19; issue October 16, 2026",
+        "type": "Focused guideline update",
+        "access": "Public primary recommendation text checked",
+        "topics": [
+          "hematology"
+        ]
+      },
+      {
+        "title": "2023 guidelines for management of VTE: thrombophilia testing",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10709681/",
+        "year": 2023,
+        "version": "May 2023 online; November 2023 issue",
+        "type": "Final guideline",
+        "access": "Open primary full text",
+        "topics": [
+          "anticoagulation"
+        ]
+      },
+      {
+        "title": "Treatment of iron deficiency with and without anemia",
+        "url": "https://www.hematology.org/Resources/Clinical-Practice-Guidelines/Iron-Deficiency-Anemia-Guidelines/Diagnosis-of-Iron-Deficiency",
+        "year": 2026,
+        "version": "Draft; public comment closes November 5, 2026",
+        "type": "Draft recommendations",
+        "access": "Official development notice only",
+        "topics": [
+          "hematology"
+        ]
+      }
+    ],
+    "replaces": [
+      "Selected adult initial/second-line ITP recommendations from 2019 are superseded by the 2026 focused update; no existing Sage ITP record was found."
+    ],
+    "limitations": [
+      "Selected adult primary-care references, not all ASH disease pathways. Iron treatment draft is not implemented.",
+      "The ITP update does not replace all 2019 diagnosis, pregnancy, pediatric or treatment-threshold recommendations."
+    ]
+  },
+  {
+    "id": "asco",
+    "acronym": "ASCO",
+    "name": "American Society of Clinical Oncology",
+    "indexUrl": "https://ascopubs.org/guidelines",
+    "checkedAt": "2026-11-03",
+    "status": "reviewed-selected",
+    "summary": "2026 living-guideline publications identified; added practical vaccination references from the final 2024 guideline. Its update is listed as in development.",
+    "documents": [
+      {
+        "title": "Treatment of Advanced Biliary Tract Cancer: ASCO Living Guideline",
+        "url": "https://ascopubs.org/guidelines",
+        "year": 2026,
+        "version": "Version 2026.1.0; October 14, 2026",
+        "type": "Living guideline",
+        "access": "Official index citation only",
+        "topics": [
+          "oncology"
+        ]
+      },
+      {
+        "title": "Treatment of Multiple Myeloma: ASCO Living Guideline",
+        "url": "https://ascopubs.org/guidelines/treatment-multiple-myeloma-asco-living-guideline",
+        "year": 2026,
+        "version": "Version 2026.1.3; updated September 14; communication September 30, 2026",
+        "type": "Living guideline",
+        "access": "Official dynamic version metadata checked",
+        "topics": [
+          "oncology"
+        ]
+      },
+      {
+        "title": "Vaccination of Adults With Cancer",
+        "url": "https://ascopubs.org/doi/10.1200/JCO.24.00032",
+        "year": 2024,
+        "version": "March 18, 2024; recommendations 1.1–1.2",
+        "type": "Final guideline",
+        "access": "Public primary recommendation table checked",
+        "topics": [
+          "vaccinations"
+        ]
+      }
+    ],
+    "replaces": [],
+    "limitations": [
+      "Tumor-specific treatment algorithms are not reproduced.",
+      "2024 vaccine product/season tables do not replace current CDC or IDSA schedules. An update in development is not a final replacement."
+    ]
+  },
+  {
+    "id": "nccn",
+    "acronym": "NCCN",
+    "name": "National Comprehensive Cancer Network",
+    "indexUrl": "https://www.nccn.org/guidelines/category_1",
+    "checkedAt": "2026-11-03",
+    "status": "citation-only",
+    "summary": "Provider portal could not be inspected. A published 2026 Survivorship Insights version was identified; current portal versions remain unverified.",
+    "documents": [
+      {
+        "title": "NCCN Guidelines Insights: Survivorship",
+        "url": "https://doi.org/10.6004/jnccn.2026.0039",
+        "year": 2026,
+        "version": "Version 3.2026; August 2026 journal publication",
+        "type": "Published guideline insights",
+        "access": "Citation-only; bibliographic metadata checked",
+        "topics": [
+          "oncology",
+          "cancer-surveillance"
+        ]
+      }
+    ],
+    "replaces": [],
+    "limitations": [
+      "No claim that version 3.2026 is the latest provider-portal revision.",
+      "No proprietary recommendation tables, algorithms, regimens or surveillance intervals copied. Provider access and reuse permissions require separate review."
+    ]
+  },
+  {
+    "id": "acr",
+    "acronym": "ACR",
+    "name": "American College of Rheumatology",
+    "indexUrl": "https://rheumatology.org/clinical-guidance",
+    "checkedAt": "2026-11-03",
+    "status": "reviewed-selected",
+    "summary": "2026 osteoarthritis recommendations add conditional GLP-1 RA use for knee OA with obesity. The official board-approved summary precedes its journal manuscript.",
+    "documents": [
+      {
+        "title": "2026 Update of ACR Recommendations for Management of Osteoarthritis of the Knee, Hip, and Hand",
+        "url": "https://assets.contentstack.io/v3/assets/bltee37abb6b278ab2c/bltb3d12c34020da842/oa-guideline-summary-2026.pdf",
+        "year": 2026,
+        "version": "Board approved September 8; posted September 14, 2026",
+        "type": "Board-approved recommendation summary",
+        "access": "Public official graded summary checked",
+        "topics": [
+          "rheumatology",
+          "obesity"
+        ]
+      },
+      {
+        "title": "2025 ACR Guideline for Treatment of Systemic Lupus Erythematosus",
+        "url": "https://rheumatology.org/api/asset/bltec93920aad624e33",
+        "year": 2025,
+        "version": "2025 guideline summary; nonrenal SLE",
+        "type": "Final guideline",
+        "access": "Public official summary checked",
+        "topics": [
+          "rheumatology"
+        ]
+      }
+    ],
+    "replaces": [
+      "2026 OA summary updates 2019 ACR/Arthritis Foundation recommendations; no existing Sage OA record was found."
+    ],
+    "limitations": [
+      "ACR here means Rheumatology, as requested.",
+      "The OA full manuscript is described as awaiting submission in the posted summary. Do not label the summary a peer-reviewed journal publication.",
+      "Specialist SLE and erosive-hand-OA treatment pathways require separate medical review."
+    ]
+  },
+  {
+    "id": "aan",
+    "acronym": "AAN",
+    "name": "American Academy of Neurology",
+    "indexUrl": "https://www.aan.com/Guidelines",
+    "checkedAt": "2026-11-03",
+    "status": "reviewed-selected",
+    "summary": "2026 AAN/AHS migraine prevention update identified; added eligibility and response-assessment references, plus final functional-seizure medication guidance.",
+    "documents": [
+      {
+        "title": "Pharmacologic Treatment for Migraine Prevention in Adults Practice Guideline Recommendations",
+        "url": "https://www.neurology.org/doi/10.1212/WNL.0000000000214881",
+        "year": 2026,
+        "version": "August 31, 2026; Neurology 107:e214881",
+        "type": "Final guideline update",
+        "access": "Primary published recommendation statements checked",
+        "topics": [
+          "neurology"
+        ]
+      },
+      {
+        "title": "Management of Functional Seizures Practice Guideline Executive Summary",
+        "url": "https://www.neurology.org/doi/10.1212/WNL.0000000000214466",
+        "year": 2026,
+        "version": "Online December 2025; Neurology 2026;106:e214466",
+        "type": "Final guideline",
+        "access": "Primary recommendation statements and official clinician summary checked",
+        "topics": [
+          "neurology",
+          "deprescribing"
+        ]
+      }
+    ],
+    "replaces": [
+      "2026 migraine prevention guideline updates the 2012 AAN/AHS pharmacologic prevention topic; no existing Sage migraine record was found."
+    ],
+    "limitations": [
+      "No automated diagnosis of migraine or functional seizures.",
+      "Confidential or draft development protocols are excluded. AAN recommendation levels are not ACC/AHA evidence levels."
+    ]
+  },
+  {
+    "id": "acp",
+    "acronym": "ACP",
+    "name": "American College of Physicians",
+    "indexUrl": "https://www.acponline.org/clinical-information/clinical-guidelines-recommendations",
+    "checkedAt": "2026-11-03",
+    "status": "reviewed-selected",
+    "summary": "2026 breast guidance adds a society-specific alternative to USPSTF. Latest index also lists COVID practice points v3 and a September osteoporosis update alert.",
+    "documents": [
+      {
+        "title": "Screening for Breast Cancer in Asymptomatic, Average-Risk Adult Females",
+        "url": "https://doi.org/10.7326/ANNALS-25-05116",
+        "year": 2026,
+        "version": "Version 2; April 17, 2026",
+        "type": "Guidance statement",
+        "access": "Primary indexed statements and official ACP summary checked",
+        "topics": [
+          "screening"
+        ]
+      },
+      {
+        "title": "Outpatient Treatment of Confirmed COVID-19 in Symptomatic Adults",
+        "url": "https://www.acponline.org/clinical-information/clinical-guidelines-recommendations",
+        "year": 2026,
+        "version": "Version 3; February 2026",
+        "type": "Living rapid practice points",
+        "access": "Official index; treatment text not extracted",
+        "topics": [
+          "infectious-disease"
+        ]
+      },
+      {
+        "title": "Pharmacologic Treatment of Primary Osteoporosis or Low Bone Mass to Prevent Fractures",
+        "url": "https://doi.org/10.7326/ANNALS-26-02740",
+        "year": 2026,
+        "version": "Version 1: Update Alert 2; September 8, 2026",
+        "type": "Living guideline update alert",
+        "access": "Citation checked; full alert unavailable",
+        "topics": [
+          "osteoporosis"
+        ]
+      }
+    ],
+    "replaces": [],
+    "limitations": [
+      "Do not treat an update alert alone as proof of changed recommendations.",
+      "ACP and USPSTF differ on routine mammography at ages 40–49. Both remain attributed alternatives; no silent replacement."
+    ]
+  },
+  {
+    "id": "uspstf",
+    "acronym": "USPSTF",
+    "name": "United States Preventive Services Task Force",
+    "indexUrl": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation-topics",
+    "checkedAt": "2026-11-03",
+    "status": "reviewed-selected",
+    "summary": "Final 2025 syphilis-in-pregnancy and IPV recommendations add missing screening topics. Existing final cervical screening remains 2018; its 2024 draft is not substituted.",
+    "documents": [
+      {
+        "title": "Syphilis Infection During Pregnancy: Screening",
+        "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/syphilis-infection-in-pregnancy-screening",
+        "year": 2025,
+        "version": "May 13, 2025",
+        "type": "Final recommendation",
+        "access": "Public primary statement",
+        "topics": [
+          "infectious-disease"
+        ]
+      },
+      {
+        "title": "Intimate Partner Violence and Caregiver Abuse of Older or Vulnerable Adults: Screening",
+        "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/intimate-partner-violence-and-abuse-of-elderly-and-vulnerable-adults-screening",
+        "year": 2025,
+        "version": "June 24, 2025",
+        "type": "Final recommendation",
+        "access": "Public primary statement",
+        "topics": [
+          "screening"
+        ]
+      },
+      {
+        "title": "Cervical Cancer: Screening",
+        "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/cervical-cancer-screening",
+        "year": 2018,
+        "version": "August 21, 2018; final currently displayed",
+        "type": "Final recommendation",
+        "access": "Public primary statement",
+        "topics": [
+          "screening"
+        ]
+      }
+    ],
+    "replaces": [],
+    "limitations": [
+      "2026 HRSA/WPSI cervical guidance is a separate organization, not a 2026 USPSTF final statement.",
+      "Review was bounded to adult PCP recommendations and final-versus-draft checks; not every USPSTF topic was re-extracted."
+    ]
+  },
+  {
+    "id": "cdc-acip",
+    "acronym": "CDC/ACIP",
+    "name": "Centers for Disease Control and Prevention / Advisory Committee on Immunization Practices",
+    "indexUrl": "https://www.cdc.gov/vaccines/hcp/imz-schedules/adult-age.html",
+    "checkedAt": "2026-11-03",
+    "status": "reviewed-selected",
+    "summary": "CDC identifies its July 2, 2025 adult schedule, amended April 27, 2026, as current. Added missing adult HPV eligibility and schedules.",
+    "documents": [
+      {
+        "title": "Adult Immunization Schedule by Age",
+        "url": "https://www.cdc.gov/vaccines/hcp/imz-schedules/adult-age.html",
+        "year": 2025,
+        "version": "July 2, 2025; amended April 27, 2026",
+        "type": "Current CDC schedule",
+        "access": "Official current-version notice checked",
+        "topics": [
+          "vaccinations"
+        ]
+      },
+      {
+        "title": "HPV Vaccine Recommendations",
+        "url": "https://www.cdc.gov/hpv/hcp/vaccination-considerations/",
+        "year": 2024,
+        "version": "July 9, 2024; current topic page checked November 3, 2026",
+        "type": "Current topic guidance",
+        "access": "Public primary page",
+        "topics": [
+          "vaccinations"
+        ]
+      }
+    ],
+    "replaces": [],
+    "limitations": [
+      "Current schedule carries a notice of court stays affecting later 2025 ACIP votes; a new calendar year alone does not establish a replacement.",
+      "COVID topic-page date discrepancy already recorded in Sage remains unresolved. Vaccine-specific guidance and legal/adoption status need ongoing review."
+    ]
+  },
+  {
+    "id": "gold",
+    "acronym": "GOLD",
+    "name": "Global Initiative for Chronic Obstructive Lung Disease",
+    "indexUrl": "https://goldcopd.org/2026-gold-report-and-pocket-guide/",
+    "checkedAt": "2026-11-03",
+    "status": "reviewed-with-limitations",
+    "summary": "Verified the 2026 report and its official change summary. Added the lower exacerbation threshold for considering escalation and the distinction between initial and follow-up treatment pathways.",
+    "documents": [
+      {
+        "title": "Global Strategy for Prevention, Diagnosis and Management of COPD: 2026 Report",
+        "url": "https://goldcopd.org/wp-content/uploads/2026/01/GOLD-REPORT-2026-v1.3-8Dec2025_WMV2.pdf",
+        "year": 2026,
+        "version": "v1.3, December 8, 2025; file served January 2026",
+        "type": "Annual strategy report",
+        "access": "Official current link verified; PDF exceeds browser text-extraction size limit, so detailed full-report algorithms are citation-only.",
+        "topics": [
+          "copd"
+        ]
+      },
+      {
+        "title": "GOLD Report 2026 Key Changes Summary",
+        "url": "https://goldcopd.org/wp-content/uploads/2025/11/KEY-CHANGES-GOLD-2026-10Nov2025.pdf",
+        "year": 2026,
+        "version": "November 10, 2025; 18-page official summary",
+        "type": "Official report update summary",
+        "access": "Official PDF read.",
+        "topics": [
+          "copd"
+        ]
+      }
+    ],
+    "replaces": [
+      "2026 report is the annual update to GOLD 2025. A final 2027 report was not verified as published by November 3, 2026."
+    ],
+    "limitations": [
+      "Short original paraphrases only; no GOLD tables, images, full algorithms or redistributed PDFs are included.",
+      "Full-report inhaler algorithms, biologic eligibility, spirometry and evidence categories require further direct verification; secondary summaries were not substituted for primary text."
+    ]
+  },
+  {
+    "id": "gina",
+    "acronym": "GINA",
+    "name": "Global Initiative for Asthma",
+    "indexUrl": "https://ginasthma.org/reports/",
+    "checkedAt": "2026-11-03",
+    "status": "reviewed-with-limitations",
+    "summary": "Added selected adult/adolescent 2026 initial-treatment and step-down references. GINA evidence categories are retained in the evidence note, without translating them to ACC/AHA classes.",
+    "documents": [
+      {
+        "title": "Global Strategy for Asthma Management and Prevention, 2026",
+        "url": "https://ginasthma.org/wp-content/uploads/2026/05/GINA-2026-Strategy-Report-WMS.pdf",
+        "year": 2026,
+        "version": "Updated May 2026",
+        "type": "Annual strategy report",
+        "access": "Primary indexed Box 4-4 and Box 4-13 wording and evidence categories checked; full PDF exceeds browser extraction size limit.",
+        "topics": [
+          "asthma"
+        ]
+      },
+      {
+        "title": "2026 GINA Strategy Report: Executive Summary and Key Changes",
+        "url": "https://academic.oup.com/ajrccm/advance-article/doi/10.1093/ajrccm/aamag542/8885525",
+        "year": 2026,
+        "version": "Published October 23, 2026; accepted manuscript",
+        "type": "Official strategy executive summary",
+        "access": "Primary abstract and publication status verified; not a separate replacement guideline.",
+        "topics": [
+          "asthma"
+        ]
+      }
+    ],
+    "replaces": [
+      "May 2026 strategy report updates the 2025 annual GINA strategy. October executive summary summarizes the 2026 report; it is not another clinical version."
+    ],
+    "limitations": [
+      "GINA documents are copyrighted. Only brief independently phrased factual summaries and direct links are included; no figures, tables or PDFs are redistributed.",
+      "These additions cover adults/adolescents; pediatric and severe-asthma biologic pathways need separate validation. Confirm local labeling, inhaler availability and payer eligibility."
+    ]
+  },
+  {
+    "id": "esc",
+    "acronym": "ESC",
+    "name": "European Society of Cardiology",
+    "indexUrl": "https://www.escardio.org/guidelines/clinical-practice-guidelines/",
+    "checkedAt": "2026-11-03",
+    "status": "selected-content-added",
+    "summary": "2026 HF and CVD/CKD guidelines found. Preserved separate ESC and US pathways and the focused-update scope of 2025 dyslipidaemia guidance.",
+    "documents": [
+      {
+        "title": "2026 ESC Guidelines for the management of cardiovascular disease and chronic kidney disease",
+        "url": "https://doi.org/10.1093/eurheartj/ehag098",
+        "year": 2026,
+        "version": "August 28, 2026",
+        "type": "Clinical practice guideline",
+        "access": "Citation only; software reuse/licensing and full extraction review pending",
+        "topics": [
+          "ckd"
+        ]
+      },
+      {
+        "title": "2026 ESC Guidelines for the management of heart failure",
+        "url": "https://academic.oup.com/eurheartj/article/47/38/5346/8766302",
+        "year": 2026,
+        "version": "2026; DOI 10.1093/eurheartj/ehag100",
+        "type": "Clinical practice guideline",
+        "access": "Selected independent reference summaries already included; no new ESC algorithm extracted",
+        "topics": [
+          "heart-failure"
+        ]
+      },
+      {
+        "title": "2025 Focused Update of the 2019 ESC/EAS Guidelines for the management of dyslipidaemias",
+        "url": "https://www.escardio.org/guidelines/clinical-practice-guidelines/all-esc-practice-guidelines/dyslipidaemias/",
+        "year": 2025,
+        "version": "2025 focused update; 2019 foundation retained",
+        "type": "Focused update",
+        "access": "Citation only; not a complete replacement of 2019 guidance",
+        "topics": [
+          "dyslipidemia"
+        ]
+      },
+      {
+        "title": "2024 ESC Guidelines for the management of atrial fibrillation",
+        "url": "https://www.escardio.org/guidelines/clinical-practice-guidelines/all-esc-practice-guidelines/atrial-fibrillation",
+        "year": 2024,
+        "version": "2024 final guideline",
+        "type": "Clinical practice guideline",
+        "access": "Citation only; CHA2DS2-VA pathway not implemented",
+        "topics": [
+          "anticoagulation"
+        ]
+      }
+    ],
+    "replaces": [],
+    "limitations": [
+      "No ESC tables, figures or algorithms reproduced; additional extraction/software permissions require review.",
+      "Sage does not implement SCORE2/CKD Add-On, SMART2 or the ESC CHA2DS2-VA pathway; US PREVENT and CHA2DS2-VASc are not substitutes."
+    ]
+  },
+  {
+    "id": "easl",
+    "acronym": "EASL",
+    "name": "European Association for the Study of the Liver",
+    "indexUrl": "https://easl.eu/publication-category/clinical-practice-guidelines/",
+    "checkedAt": "2026-11-03",
+    "status": "reviewed-selected",
+    "summary": "2025 hepatitis B guidance adds treatment and monitoring references. Official index also identifies vascular-liver and autoimmune-hepatitis updates.",
+    "documents": [
+      {
+        "title": "Management of hepatitis B virus infection",
+        "url": "https://doi.org/10.1016/j.jhep.2025.03.018",
+        "year": 2025,
+        "version": "Online May 9, 2025; August 2025 issue",
+        "type": "Final guideline",
+        "access": "Public publisher-indexed recommendation text checked",
+        "topics": [
+          "liver",
+          "monitoring"
+        ]
+      },
+      {
+        "title": "Vascular diseases of the liver",
+        "url": "https://easl.eu/publication-category/clinical-practice-guidelines/",
+        "year": 2025,
+        "version": "Posted December 5, 2025",
+        "type": "Final guideline",
+        "access": "Official index citation only",
+        "topics": [
+          "liver"
+        ]
+      },
+      {
+        "title": "Management of autoimmune hepatitis",
+        "url": "https://doi.org/10.1016/j.jhep.2025.03.017",
+        "year": 2025,
+        "version": "2025 update; official index May 15, 2025",
+        "type": "Final guideline",
+        "access": "Official index and publisher metadata",
+        "topics": [
+          "liver"
+        ]
+      }
+    ],
+    "replaces": [],
+    "limitations": [
+      "Some EASL resource pages require a MyEASL profile; no account access attempted. Selected public recommendation text only.",
+      "2026 teaching webinars do not change the 2025 guideline publication year. European thresholds remain attributed separately from US guidance."
+    ]
+  },
+  {
+    "id": "esmo",
+    "acronym": "ESMO",
+    "name": "European Society for Medical Oncology",
+    "indexUrl": "https://www.esmo.org/guidelines/guidelines-news",
+    "checkedAt": "2026-11-03",
+    "status": "citation-only",
+    "summary": "2026 cervical guideline and living breast/lung versions identified. Detailed treatment and follow-up tables were not accessible for extraction.",
+    "documents": [
+      {
+        "title": "Cervical cancer: diagnosis, treatment and follow-up",
+        "url": "https://doi.org/10.1016/j.esmoop.2026.108364",
+        "year": 2026,
+        "version": "Online September 24; October 2026 issue; committee update July 2026",
+        "type": "Final guideline",
+        "access": "Citation and public publisher highlights checked",
+        "topics": [
+          "oncology",
+          "cancer-surveillance"
+        ]
+      },
+      {
+        "title": "Metastatic Breast Cancer Living Guideline",
+        "url": "https://www.esmo.org/guidelines/guidelines-news",
+        "year": 2026,
+        "version": "Version 2.0; August 2026; original Ann Oncol 37:1203–1219",
+        "type": "Living guideline",
+        "access": "Official version index checked",
+        "topics": [
+          "oncology"
+        ]
+      },
+      {
+        "title": "Early and Locally Advanced NSCLC Living Guideline",
+        "url": "https://www.esmo.org/guidelines/guidelines-news",
+        "year": 2026,
+        "version": "Version 1.3; August 2026; original 2025 guideline retained in citation",
+        "type": "Living guideline",
+        "access": "Official version index checked",
+        "topics": [
+          "oncology"
+        ]
+      }
+    ],
+    "replaces": [
+      "2026 cervical guideline explicitly supersedes Ann Oncol 2017;28(suppl 4):iv72–iv83. No corresponding existing Sage record was found."
+    ],
+    "limitations": [
+      "Detailed clinical recommendation tables were access restricted in this check; no regimen or surveillance interval was extracted.",
+      "No unsupported clinical regimen or surveillance interval added.",
+      "A living update year is distinct from its foundational guideline year; retain both in citations."
+    ]
+  },
+  {
+    "id": "eular",
+    "acronym": "EULAR",
+    "name": "European Alliance of Associations for Rheumatology",
+    "indexUrl": "https://www.eular.org/recommendations-management",
+    "checkedAt": "2026-11-03",
+    "status": "reviewed-selected",
+    "summary": "Final 2025-named RA and PMR/large-vessel-vasculitis updates were published in 2026. Added RA disease-modifying treatment references.",
+    "documents": [
+      {
+        "title": "Management of RA with synthetic and biologic DMARDs: 2025 update",
+        "url": "https://doi.org/10.1016/j.ard.2026.01.023",
+        "year": 2026,
+        "version": "Online March 12; June 2026 issue",
+        "type": "Final recommendations update",
+        "access": "Primary published table checked; public author repository copy available",
+        "topics": [
+          "rheumatology"
+        ]
+      },
+      {
+        "title": "2025 recommendations for management of PMR and primary large vessel vasculitis",
+        "url": "https://doi.org/10.1016/j.ard.2026.06.009",
+        "year": 2026,
+        "version": "Online July 21, 2026",
+        "type": "Final recommendations",
+        "access": "Official index and publication metadata checked",
+        "topics": [
+          "rheumatology"
+        ]
+      },
+      {
+        "title": "Physical activity in inflammatory arthritis and OA: 2025 update",
+        "url": "https://doi.org/10.1016/j.ard.2026.03.006",
+        "year": 2026,
+        "version": "Online April 26, 2026",
+        "type": "Final recommendations",
+        "access": "Official index citation checked",
+        "topics": [
+          "rheumatology",
+          "lifestyle"
+        ]
+      }
+    ],
+    "replaces": [
+      "2025 RA update published in 2026 replaces the 2022 topic update; no existing Sage RA record was found."
+    ],
+    "limitations": [
+      "Named update year and actual publication year are stored separately.",
+      "Selected references only; not a complete DMARD prescribing, toxicity-monitoring or vasculitis pathway."
+    ]
+  }
+]

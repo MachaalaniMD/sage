@@ -1,6 +1,8 @@
-import groupData from '../data/recommendation-groups.json';
+import originalGroups from '../data/recommendation-groups.json';
+import societyGroups from '../data/society-groups.json';
 import type { Recommendation } from './guidelines';
 
+const groupData=[...originalGroups,...societyGroups];
 export const recommendationGroups=groupData;
 export interface RecommendationGroup {id:string;title:string;description:string;records:Recommendation[];parent:boolean;total:number}
 const parentById=new Map(groupData.flatMap(g=>g.recordIds.map(id=>[id,g] as const)));

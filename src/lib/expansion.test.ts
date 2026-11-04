@@ -4,7 +4,7 @@ import {documentsForDrug,searchVaDrugs,statusDefinitions,vaDrugUrl,vaSnapshot} f
 const run=(changes:Partial<FictionalCase>={})=>evaluateCase({...profiles[0].data,...changes});
 const ids=(changes:Partial<FictionalCase>={})=>run(changes).matches.map(m=>m.recommendation.id);
 describe('expanded clinical matching safeguards',()=>{
- it('represents every requested reference area with sourced records',()=>{for(const t of topics)expect(recommendations.some(r=>r.topic===t.id),t.id).toBe(true);expect(topics.length).toBe(18);});
+ it('represents every requested reference area with sourced records',()=>{for(const t of topics)expect(recommendations.some(r=>r.topic===t.id),t.id).toBe(true);expect(topics.length).toBe(30);});
  it('requires type and duration for diabetes-specific kidney screening',()=>{expect(ids({diabetesType:'unknown'})).not.toContain('ckd-diabetes-annual');expect(ids({diabetesType:'type1',type1Years:4})).not.toContain('ckd-diabetes-annual');expect(ids({diabetesType:'type1',type1Years:5})).toContain('ckd-diabetes-annual');});
  it('keeps unknown albuminuria unknown',()=>{const r=run({ckd:true,diabetesType:'unknown',uacr:null});expect(r.matches.map(m=>m.recommendation.id)).not.toContain('ckd-va-finerenone');expect(r.gaps.some(g=>g.includes('UACR is absent'))).toBe(true);});
  it('checks SGLT2 kidney threshold inclusively',()=>{expect(ids({ckd:true,egfr:20})).toContain('ckd-kdigo-sglt2');expect(ids({ckd:true,egfr:19})).not.toContain('ckd-kdigo-sglt2');});

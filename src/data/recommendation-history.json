@@ -1,0 +1,94 @@
+[
+  {
+    "recordId": "ckd-kdigo-acearb",
+    "recordType": "recommendation",
+    "changedAt": "2026-11-03",
+    "reason": "Sage retains a narrower 2021 high-BP requirement; final 2024 Recommendation 3.6.3 omits that requirement.",
+    "title": "KDIGO: ACEi or ARB for albuminuric diabetic CKD",
+    "beforeText": "Start an ACE inhibitor or ARB for high BP with diabetic CKD G1–G4 and moderately or severely increased albuminuria (A2/A3).",
+    "afterText": "Recommend an ACE inhibitor or ARB for diabetic CKD G1–G4 with moderately or severely increased albuminuria (A2/A3).",
+    "sourceUrl": "https://kdigo.org/wp-content/uploads/2024/03/KDIGO-2024-CKD-Guideline.pdf",
+    "previous": {
+      "id": "ckd-kdigo-acearb",
+      "topic": "ckd",
+      "title": "Albuminuric diabetic CKD: ACEi or ARB",
+      "summary": "Start an ACE inhibitor or ARB for high BP with diabetic CKD G1–G4 and moderately or severely increased albuminuria (A2/A3).",
+      "population": "Adults with high BP and diabetic CKD.",
+      "sourceId": "kdigo-bp-2021",
+      "locator": "Recommendation 3.2.3",
+      "gradeSystem": "KDIGO GRADE",
+      "strength": "1B · Strong",
+      "evidenceLevel": null,
+      "evidenceNote": "Original KDIGO 1B retained; not an ACC/AHA evidence level.",
+      "cautions": [
+        "Assess contraindications and monitoring before prescribing."
+      ],
+      "tags": [
+        "ACE inhibitor",
+        "ARB",
+        "albuminuria",
+        "diabetes"
+      ],
+      "status": "pending-medical-review",
+      "revision": 1,
+      "rule": "ckd-kdigo-acearb"
+    },
+    "updated": {
+      "id": "ckd-kdigo-acearb",
+      "topic": "ckd",
+      "title": "KDIGO: ACEi or ARB for albuminuric diabetic CKD",
+      "summary": "Recommend an ACE inhibitor or ARB for diabetic CKD G1–G4 with moderately or severely increased albuminuria (A2/A3).",
+      "population": "People with diabetes, CKD G1–G4, and A2/A3 albuminuria.",
+      "sourceId": "kdigo-ckd-2024",
+      "locator": "Recommendation 3.6.3",
+      "gradeSystem": "KDIGO GRADE",
+      "strength": "1B · Strong",
+      "evidenceLevel": null,
+      "evidenceNote": "Moderate certainty; the 2024 recommendation does not require high BP.",
+      "cautions": [
+        "Check contraindications and BP, creatinine, and potassium monitoring."
+      ],
+      "tags": [
+        "ACE inhibitor",
+        "ARB",
+        "albuminuria",
+        "diabetes"
+      ],
+      "status": "pending-medical-review",
+      "revision": 2,
+      "rule": "ckd-kdigo-acearb"
+    }
+  },
+  {
+    "recordId": "cdc-adult-2025",
+    "recordType": "source",
+    "changedAt": "2026-11-03",
+    "reason": "Current adult schedule is still July 2025, with an explicit April 2026 amendment; update source metadata without changing vaccine rules.",
+    "title": "Adult Immunization Schedule Notes",
+    "beforeText": "July 2, 2025",
+    "afterText": "July 2, 2025; adult schedule amended April 27, 2026",
+    "sourceUrl": "https://www.cdc.gov/vaccines/hcp/imz-schedules/adult-notes.html",
+    "previous": {
+      "id": "cdc-adult-2025",
+      "society": "CDC / ACIP",
+      "title": "Adult Immunization Schedule Notes",
+      "year": 2025,
+      "version": "July 2, 2025",
+      "url": "https://www.cdc.gov/vaccines/hcp/imz-schedules/adult-notes.html",
+      "checkedAt": "2026-11-01",
+      "access": "Primary source read",
+      "topic": "vaccinations"
+    },
+    "updated": {
+      "id": "cdc-adult-2025",
+      "society": "CDC / ACIP",
+      "title": "Adult Immunization Schedule Notes",
+      "year": 2025,
+      "version": "July 2, 2025; adult schedule amended April 27, 2026",
+      "url": "https://www.cdc.gov/vaccines/hcp/imz-schedules/adult-notes.html",
+      "checkedAt": "2026-11-03",
+      "access": "Primary adult schedule version notice and current notes checked; later ACIP votes subject to court-stay notice.",
+      "topic": "vaccinations"
+    }
+  }
+]

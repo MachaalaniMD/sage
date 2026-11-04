@@ -1,0 +1,189 @@
+[
+  {
+    "id": "pe-duration-2026",
+    "title": "Pulmonary embolism: duration by trigger",
+    "description": "2026 multisociety guidance distinguishes major, minor and absent reversible triggers.",
+    "recordIds": [
+      "pe-2026-no-major-reversible",
+      "pe-2026-major-reversible",
+      "pe-2026-minor-reversible"
+    ]
+  },
+  {
+    "id": "laao-management",
+    "title": "Left atrial appendage occlusion",
+    "description": "Patient selection and postprocedure antithrombotic therapy retain their conditional evidence grades.",
+    "recordIds": [
+      "laao-oac-contraindication",
+      "laao-postprocedure-therapy"
+    ]
+  },
+  {
+    "id": "inpatient-tobacco-treatment",
+    "title": "Tobacco treatment in hospital and after discharge",
+    "description": "CHEST 2026 public synopsis; formal grades remain unverified.",
+    "recordIds": [
+      "tobacco-chest-inpatient-varenicline",
+      "tobacco-chest-inpatient-counseling",
+      "tobacco-chest-postdischarge-phone"
+    ]
+  },
+  {
+    "id": "cap-ats-focused-update",
+    "title": "Community-acquired pneumonia",
+    "description": "Selected ATS focused-update recommendations; steroid choices depend on severity. IDSA endorsement is not implied.",
+    "recordIds": [
+      "cap-ats-stable-outpatient-duration",
+      "cap-ats-nonsevere-no-steroids",
+      "cap-ats-severe-steroids"
+    ]
+  },
+  {
+    "id": "sepsis-treatment-and-recovery",
+    "title": "Sepsis: acute care and recovery",
+    "description": "SCCM/ESICM 2026 references; no automated acute-care protocol.",
+    "recordIds": [
+      "sepsis-ssc-2026-antibiotic-timing",
+      "sepsis-ssc-2026-norepinephrine",
+      "sepsis-ssc-2026-survivor-followup"
+    ]
+  },
+  {
+    "id": "complicated-uti-management",
+    "title": "Complicated UTI",
+    "description": "IDSA duration, oral transition and a separately ungraded AMR approach.",
+    "recordIds": [
+      "cuti-idsa-short-course",
+      "cuti-idsa-oral-transition",
+      "amr-idsa-esbl-cuti-2026"
+    ]
+  },
+  {
+    "id": "copd-gold-2026-updates",
+    "title": "COPD: 2026 strategy changes",
+    "description": "Brief references to the official GOLD update; detailed inhaler algorithms require further verification.",
+    "recordIds": [
+      "copd-gold-2026-exacerbation-escalation",
+      "copd-gold-2026-treatment-pathway"
+    ]
+  },
+  {
+    "id": "asthma-gina-2026-management",
+    "title": "Asthma: adult and adolescent treatment",
+    "description": "Selected GINA 2026 starting and step-down recommendations with native evidence categories.",
+    "recordIds": [
+      "asthma-gina-2026-air-initial",
+      "asthma-gina-2026-mart-initial",
+      "asthma-gina-2026-stepdown"
+    ]
+  },
+  {
+    "id": "diabetes-cgm",
+    "title": "Continuous glucose monitoring",
+    "description": "Separate ADA grades for insulin and noninsulin use.",
+    "recordIds": [
+      "diabetes-ada-cgm-insulin-2026",
+      "diabetes-ada-cgm-noninsulin-2026"
+    ]
+  },
+  {
+    "id": "primary-aldosteronism",
+    "title": "Primary aldosteronism",
+    "description": "Screening and targeted care from the 2025 Endocrine Society guideline.",
+    "recordIds": [
+      "endocrine-pa-screen-hypertension-2025",
+      "endocrine-pa-specific-treatment-2025"
+    ]
+  },
+  {
+    "id": "thyroid-cancer-followup",
+    "title": "Differentiated thyroid cancer",
+    "description": "Postoperative risk and selected surveillance recommendations.",
+    "recordIds": [
+      "thyroid-ata-dtc-risk-2025",
+      "thyroid-ata-dtc-us-deescalation-2025"
+    ]
+  },
+  {
+    "id": "diverticulitis-care",
+    "title": "Diverticulitis",
+    "description": "Antibiotic selection and follow-up colonoscopy from ACG 2026.",
+    "recordIds": [
+      "gi-acg-diverticulitis-antibiotics-2026",
+      "gi-acg-diverticulitis-colonoscopy-2026"
+    ]
+  },
+  {
+    "id": "constipation-assessment",
+    "title": "Refractory constipation",
+    "description": "Evaluate pelvic floor and secondary causes before escalation.",
+    "recordIds": [
+      "gi-aga-constipation-anorectal-testing-2026",
+      "gi-aga-constipation-secondary-causes-2026"
+    ]
+  },
+  {
+    "id": "hbv-treatment",
+    "title": "Chronic hepatitis B treatment",
+    "description": "Selected AASLD/IDSA 2025 initiation and withdrawal recommendations.",
+    "recordIds": [
+      "liver-aasld-hbv-indeterminate-2025",
+      "liver-aasld-hbv-treatment-withdrawal-2025"
+    ]
+  },
+  {
+    "id": "breast-screening-guideline-options",
+    "title": "Breast screening",
+    "description": "Compare attributed USPSTF and ACP age-based recommendations.",
+    "recordIds": [
+      "screen-breast-40-74",
+      "screen-breast-acp-40-49",
+      "screen-breast-acp-50-74"
+    ]
+  },
+  {
+    "id": "hpv-vaccination",
+    "title": "HPV vaccination",
+    "description": "Catch-up eligibility and shared decisions by age.",
+    "recordIds": [
+      "vax-hpv-catchup",
+      "vax-hpv-shared-27-45"
+    ]
+  },
+  {
+    "id": "osteoarthritis-management",
+    "title": "Osteoarthritis management",
+    "description": "2026 ACR recommendations for exercise, weight and selected treatment.",
+    "recordIds": [
+      "rheum-oa-exercise-weight-2026",
+      "rheum-knee-oa-glp1-2026"
+    ]
+  },
+  {
+    "id": "migraine-prevention",
+    "title": "Migraine prevention",
+    "description": "When to offer prevention and when to assess response.",
+    "recordIds": [
+      "neuro-migraine-prevention-eligibility",
+      "neuro-migraine-assess-response"
+    ]
+  },
+  {
+    "id": "rheumatoid-arthritis-treatment",
+    "title": "Rheumatoid arthritis",
+    "description": "Current EULAR initial disease-modifying strategy.",
+    "recordIds": [
+      "rheum-ra-start-dmard",
+      "rheum-ra-first-strategy"
+    ]
+  },
+  {
+    "id": "hepatitis-b-easl",
+    "title": "Hepatitis B: EASL",
+    "description": "Treatment eligibility and monitoring remain attributed to EASL.",
+    "recordIds": [
+      "liver-hbv-easl-treatment",
+      "liver-hbv-easl-untreated-monitor"
+    ]
+  }
+]

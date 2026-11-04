@@ -2,7 +2,7 @@
 
 A responsive, static Progressive Web App for exploring selected clinical guideline references using **fictional cases only**. Built with React, TypeScript, Vite, Tailwind CSS, shadcn-style Radix UI primitives, and Fuse.js. Live at [machaalanimd.github.io/sage](https://machaalanimd.github.io/sage/); no backend, paid service, or API key is needed.
 
-**Prototype, not clinically validated. Every clinical record and dose table awaits independent medical verification.** Source-specific access dates are retained; the expanded snapshot was checked November 2, 2026. This is a selected snapshot and does not claim comprehensive or perpetually current coverage.
+**Prototype, not clinically validated. Every clinical record and dose table awaits independent medical verification.** Source-specific access dates are retained; the most recent society review was checked November 3, 2026. This is a selected snapshot and does not claim comprehensive or perpetually current coverage.
 
 ## Run locally
 
@@ -33,14 +33,22 @@ For a self-contained local demonstration, open the included `standalone.html` in
 
 Case and calculator inputs/results remain in memory when switching workflows and clear on reload. Changed inputs flag stale results until recalculation. A persistent action bar generates or updates recommendations; additional case details and evidence expand when needed. Earlier topic, statin and VA links remain valid. `#overview` opens the engine and `#areas` opens the library.
 
+## November 3, 2026 society review
+
+The `#societies` library page records a bounded review of official indexes and selected documents from all 30 requested organizations. ACR means the American College of Rheumatology. The release adds 70 library references and 12 specialty areas: PAD, COPD, asthma, infection management, sepsis/critical care, endocrine, thyroid, GI, liver, hematology, rheumatology and neurology. Specialty filters keep the expanded library navigable. New references are explicitly labeled and are not automatically evaluated by the decision engine.
+
+NCCN and ESMO remain citation-only where access did not permit clinical extraction. Final guidelines, focused updates, consensus statements, board-approved summaries, public-review drafts and publication/print dates retain their distinctions. The review is not an exhaustive extraction of all 30 societies’ publications. KDIGO drafts are excluded as active guidance. The final 2024 ACEi/ARB recommendation replaces the narrower 2021 record and the engine no longer requires hypertension for that albuminuric diabetic-CKD path. Its G1–G4, persistent albuminuria and dialysis exclusions have boundary tests. The CDC adult-schedule source metadata now records July 2025 with the April 2026 amendment. Both previous records are retained in `recommendation-history.json` and shown at `#updates`.
+
+The About dialog explains the three workflows, source limitations and fictional-only privacy model in plain language. Sage was created by [Marc Machaalani](https://marcmachaalani.github.io).
+
 ## What works
 
-- Eighteen clinical areas covering the requested primary-care subjects plus selected primary/secondary prevention. Each area has explicit coverage limits.
-- 131 draft recommendations, 72 source records, searchable society-specific grades, eight selected HFrEF dose references and four separate HFpEF/HFmrEF label-dose entries.
+- Thirty clinical areas covering the requested primary-care subjects plus selected primary/secondary prevention. Each area has explicit coverage limits.
+- 201 recommendation records awaiting medical review, 111 source records, searchable society-specific grades, eight selected HFrEF dose references and four separate HFpEF/HFmrEF label-dose entries.
 - National VA primary-care workspace and a West Haven / VA Connecticut view. Search 5,581 source formulary entries, distinguish formulations/indications/status, and open active CFU/guidance documents with revision dates.
 - Related recommendations are consolidated into expandable parent entries, including colorectal screening with its three USPSTF age bands and separate ACS 2026 test options. Filtering occurs before grouping; each child retains its source, year, grade, population, matching reason and bookmark. Screening stays separate from surveillance.
 - High/moderate/low statin intensity definitions and a drug-dose matrix (ACC/AHA 2026 Table 6), available at `#statins` and beside statin references. Maximally tolerated is not automatically high intensity.
-- A dated primary-source publication review spans all 18 clinical areas at `#updates`, with per-area findings, direct links, access limits and explicit added-versus-pending status.
+- A dated primary-source publication review spans all 30 clinical areas at `#updates`, with per-area findings, direct links, access limits and explicit added-versus-pending status.
 - The 2026 Second Universal Definition of HF and Fifth Universal Definition of MI are separate ungraded diagnostic references. A 2026 HFSA HFmrEF statement supplements the dated treatment guideline; a 2026 VA/DoD tobacco-treatment source adds original Strong-for recommendations.
 - Search by recommendation, condition, medication, or society; topic, society, recommendation-class and independent evidence-level filters. A cardiac collection includes Class 1, 2a, 2b, Class 3 No Benefit and Class 3 Harm records, plus consensus without a fabricated COR.
 - Fictional-case matching with age, comorbidities, labs, average BP, vaccine history, and VA/DoD context.
@@ -83,6 +91,9 @@ Very-high-risk ASCVD status requires explicit confirmation against Figure 10; on
 
 - `src/data/sources.json` and `*-sources.json`: source IDs, society, publication year, version, URL, access check and access method. All catalogs are included in source monitoring.
 - `src/data/recommendations.json`, `additional-recommendations.json`, and `*-expansion.json`: record revision, population, source locator, evidence system, original grade when extracted, cautions, and `pending-medical-review` status.
+- `src/data/society-review.json`: organization-level review dates, selected document versions/types, official indexes, access limitations and scope.
+- `src/data/society-recommendations.json`, `society-sources.json`, and `society-groups.json`: new reference-only content, source provenance, and topic parents.
+- `src/data/recommendation-history.json`: exact previous and updated records with a dated reason for each deliberate replacement.
 - `src/data/prevent-coefficients.json`: public model coefficients, source cell ranges, checksum and original numerical fixtures.
 - `src/data/doses.json`: selected Table 14 initial/target doses, with row-level source and locator.
 - `src/data/versions.json`: selected before/after summaries linked to the source's update table; not complete historical guideline reproductions.
@@ -119,7 +130,7 @@ The baseline command establishes **missing** fingerprints only; it never advance
 
 Reports distinguish `baseline-needed`, `unchanged`, `changed-review-required`, `baseline-mismatch`, and `access-error`. Access failures and anti-bot challenges are never treated as unchanged. The checker exits 2 on access errors and 1 on changes requiring review, while retaining the full report. A changed hash can reflect page maintenance rather than clinical content. Discovery index monitoring flags possible new publications for a person to inspect; it does not guarantee detection of every guideline release.
 
-The initial v0.1 baseline attempt recorded 12 of 17 monitored pages/documents. The v0.2–v0.5 additions and newly reviewed discovery pages require initial fingerprints; the displayed report remains the original dated check, not a live complete report. Five AHA/publisher endpoints returned HTTP 403 and remain flagged; those documents cannot currently be monitored automatically from this environment. The initial report is retained in `src/data/source-check-report.json` and summarized in the app. Readable indexed text and official PDFs accessed through the research tools supported the source catalog, but automated access and medical verification remain separate questions.
+The initial v0.1 baseline attempt recorded 12 of 17 monitored pages/documents. The v0.2–v0.7 additions and newly reviewed discovery pages require initial fingerprints; the displayed report remains the original dated check, not a live complete report. Five AHA/publisher endpoints returned HTTP 403 and remain flagged; those documents cannot currently be monitored automatically from this environment. The initial report is retained in `src/data/source-check-report.json` and summarized in the app. Readable indexed text and official PDFs accessed through the research tools supported the source catalog, but automated access and medical verification remain separate questions.
 
 The included weekly GitHub workflow checks source documents and discovery pages, restores the original baseline, writes a workflow summary, and uploads the report. Baseline cache eviction can cause reinitialization; preserve a medically reviewed baseline in the tracked JSON file to avoid this. Changed fingerprints never replace active recommendation data. After reviewing a change, update the corresponding fingerprint deliberately in a reviewed commit. No issues, emails, or messages are automatically sent. GitHub's normal workflow-failure notification preferences may apply to access failures.
 
