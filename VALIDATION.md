@@ -1,10 +1,10 @@
-# Prototype validation — November 2, 2026
+# Prototype validation — November 3, 2026
 
 This records software checks, not clinical approval. Every clinical recommendation, comparison, and dose remains pending independent medical verification.
 
 ## Automated checks
 
-- 211 Vitest tests passed: 22 statin/grouping/source-refresh and render checks, 66 core rule/provenance tests, 28 HF/grade/dose tests, 17 expansion/VA tests, 34 PREVENT tests, 25 other risk-tool tests, 11 monitor tests and 8 VA importer tests.
+- 226 Vitest tests passed: 14 workflow/care-summary checks, 22 statin/grouping/source-refresh and render checks, 67 core rule/provenance tests, 28 HF/grade/dose tests, 17 expansion/VA tests, 34 PREVENT tests, 25 other risk-tool tests, 11 monitor tests and 8 VA importer tests.
 - PREVENT matches all 12 original spreadsheet outputs (sex × endpoint × horizon) within 1e-12, plus the primary paper’s rounded worked examples.
 - Post-MI tests cover ASCVD implication, explicit risk classification, lipid thresholds, ACS/CCD timing, bleeding/OAC exclusions and first-event score withholding.
 - TypeScript checking and the Vite production build passed.
@@ -62,6 +62,15 @@ This records software checks, not clinical approval. Every clinical recommendati
 - The colorectal parent expanded to five child references with USPSTF age-specific A/B/C grades and two distinct ACS2026 test-option records. Statin quick help and individual bookmarks worked inside grouped entries.
 - The PWA update prompt successfully loaded a rebuilt snapshot. The source-review screen displayed all18 areas and the CKD final-versus-draft distinction. The HF view labeled its2022 treatment bands, and HFSA filtering retained separate source attribution.
 - The HFpEF fictional example generated grouped SGLT2 and MRA references with explicit matching reasons. No browser console errors were observed.
+
+## v0.6 workflow checks
+
+- Exactly three primary destinations: engine, library and calculators. Empty/legacy overview links open the engine; topic, VA, statin, saved, source and update links remain under the library workflow.
+- The fictional VA preventive visit returns the statin, vaccine and colorectal items together. Summary grouping retains every original match once, its source, year, grade and reason; it does not change clinical eligibility. An existing statin becomes a therapy-review label, and an I statement is labeled as insufficient evidence.
+- The library opens to common questions and 18 clinical topics. Its HFpEF shortcut directly selects that treatment band without requiring case input. Advanced evidence filters, source review and VA resources remain available within the library.
+- Browser checks: an age edit survived a library HFpEF lookup and return to the engine, with the stale-result warning intact. PREVENT produced the published 14.7%/9.2%/8.1% ten-year outputs and transferred explicitly to the engine with the defaults notice. A statin item linked directly to the VA medication/access workspace, where West Haven resources remained available.
+- Desktop1440×1000 and mobile390×844 had no horizontal page overflow. Mobile navigation exposes the same three workflows; the action bar remains visible, and generating results scrolls the recommendation heading below the sticky controls.
+- Clinical content remains pending medical verification. Case summaries are considerations requiring contraindication, prior-care and preference review, not signed orders or due-date calculations.
 
 ## Source-monitor check
 

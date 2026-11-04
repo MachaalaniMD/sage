@@ -129,6 +129,8 @@ export const profiles: { id: string; name: string; description: string; data: Fi
 profiles.push({id:'hfpef',name:'HFpEF overview',description:'Age 72 · LVEF 60% · NYHA II',data:{...profiles[2].data,age:72,sex:'female',ef:60,egfr:55,hypertensionDiagnosis:true,hfEfHistory:'never-reduced',hfFillingPressureEvidence:true,hfVolumeOverload:true}});
 profiles.push({id:'kidney',name:'Diabetes & CKD',description:'Age 61 · eGFR 35 · UACR 450',data:{...profiles[0].data,age:61,ckd:true,diabetesType:'type2',uacr:450,albuminuriaPersistent:true,egfr:35,potassium:4.6,bmi:32,onAceArb:true,maxAceArb:true,hypertensionDiagnosis:true,bpTreatment:true,statin:true,ldl:90,preventionContext:false}});
 
+profiles.push({id:'va-visit',name:'VA preventive visit',description:'Age 58 · type 2 diabetes · routine screening',data:{...profiles[0].data,age:58,veteran:true,riskEnabled:false,preventionContext:true,influenza:'none',zoster:'none',pneumococcal:'unknown',hepb:'none'}});
+
 export function heartFailurePhenotype(c: FictionalCase): HfPhenotype|'none'|'unclassified' {
   if(!c.hf)return 'none';
   if(c.ef<=40)return 'hfref';
