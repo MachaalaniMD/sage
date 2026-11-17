@@ -54,6 +54,18 @@ describe('statin gap analysis', () => {
   });
 });
 
+describe('diabetes outside the statin age band', () => {
+  it('says so in general mode and recommends a statin in VA mode', () => {
+    const d = base('va-visit', { age: 36, ckd: true, smoker: true, diabetes: true });
+    const gen = buildPlan(d, 'general');
+    expect(find(gen, 'statin-outside')!.kind).toBe('check');
+    expect(find(gen, 'statin-outside')!.detail).toContain('CKD');
+    expect(find(gen, 'statin')).toBeUndefined();
+    expect(find(buildPlan(d, 'va'), 'statin')!.kind).toBe('start');
+    expect(find(buildPlan(d, 'va'), 'statin-outside')).toBeUndefined();
+  });
+});
+
 describe('other therapy gaps', () => {
   it('suggests an SGLT2 inhibitor in diabetic CKD and adds GLP-1 RA in VA mode', () => {
     const k = base('kidney', { onAceArb: true, maxAceArb: true });

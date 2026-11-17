@@ -96,6 +96,14 @@ export function buildPlan(input: FictionalCase, mode: Mode): Plan {
       add({ id: 'statin', kind: 'ok', title: 'Statin intensity meets guidance', detail: `On ${curLabel}. Recommended: ${requirement}.`, recs: lipidRecs });
     }
   }
+  // Diabetes outside the encoded 40–75 statin recommendation: say so instead of staying silent.
+  if (!required && !onStatin && !hasAscvd && c.diabetes && (c.age < 40 || c.age > 75)) {
+    const factors = [c.ckd && `CKD (eGFR ${c.egfr})`, c.uacr !== null && c.uacr >= 30 && `UACR ${c.uacr}`, c.smoker && 'current smoking', c.hypertensionDiagnosis && 'hypertension', c.ldl >= 160 && `LDL-C ${c.ldl}`].filter(Boolean);
+    const ascvd10 = result.risk?.tenYear?.ascvd;
+    add({ id: 'statin-outside', kind: 'check', title: `Statin: age ${c.age} is outside the 40–75 diabetes recommendation`,
+      detail: `The encoded ACC/AHA diabetes statin recommendation covers ages 40–75, so Sage neither recommends nor excludes one here. ${factors.length ? `Entered: ${factors.join(', ')}. ` : ''}${ascvd10 !== undefined ? `PREVENT 10-year ASCVD ${(ascvd10 * 100).toFixed(1)}%. ` : ''}Individualize.`,
+      recs: mk('lipids-diabetes', 'Diabetes without clinical ASCVD.'), formulary: ['statin-moderate'] });
+  }
   // LDL above goal on a high-intensity or maximally tolerated statin (ASCVD)
   const goal = c.veryHighRisk === 'yes' ? 55 : 70;
   if (hasAscvd && onStatin && (cur === 'high' || c.maxStatin) && c.ldl >= goal) {
