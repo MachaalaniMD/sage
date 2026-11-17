@@ -1043,8 +1043,7 @@
     ],
     "status": "pending-medical-review",
     "revision": 1,
-    "rule": "ckd-kdigo-nsmra",
-    "referenceOnly": true
+    "rule": "ckd-kdigo-nsmra"
   },
   {
     "id": "gi-acg-diverticulitis-antibiotics-2026",

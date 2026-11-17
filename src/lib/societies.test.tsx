@@ -38,8 +38,8 @@ describe('society review and clinical provenance',()=>{
   expect(sourceMatchesSociety({society:'CDC'},'CDC/ACIP')).toBe(true);
   expect(searchRecommendations('',undefined,'Endocrine Society').length).toBeGreaterThan(0);
  });
- it('keeps all 70 new summaries out of automatic case matching',()=>{
-  expect(recommendations.filter(r=>r.referenceOnly)).toHaveLength(70);
+ it('keeps the 69 reference-only summaries out of automatic case matching',()=>{
+  expect(recommendations.filter(r=>r.referenceOnly)).toHaveLength(69);
   for(const p of profiles)expect(evaluateCase(p.data).matches.some(m=>m.recommendation.referenceOnly)).toBe(false);
  });
  it('preserves non-Class-I cardiac recommendations and native GRADE certainty',()=>{
@@ -80,7 +80,7 @@ describe('library navigation and creator information',()=>{
  });
  it('credits the creator with the requested personal link and plain purpose',()=>{
   const html=renderToStaticMarkup(<AboutSage/>);
-  expect(html).toContain('Marc Machaalani');expect(html).toContain('href="https://marcmachaalani.github.io"');expect(html).toContain('decision engine');expect(html).toContain('guideline library');expect(html).toContain('risk calculators');expect(html).toContain('independent prototype');
+  expect(html).toContain('Marc Machaalani');expect(html).toContain('href="https://marcmachaalani.github.io"');expect(html).toContain('West Haven VA mode');expect(html).toContain('formulary');expect(html).toContain('what to change, start, check or offer');
  });
  it('shows the previous and revised clinical rule without implying clinical approval',()=>{
   const html=renderToStaticMarkup(<DataReleaseHistory/>);expect(html).toContain('Previous bundled record');expect(html).toContain('Updated record');expect(html).not.toContain('clinically approved');expect(html).toContain('2024');

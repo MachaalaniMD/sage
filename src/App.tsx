@@ -1,8 +1,8 @@
 import { lazy, Suspense, useEffect, useRef, useState } from 'react';
-import { Calculator, Activity, ArrowDownToLine, ArrowRight, ArrowUpRight, BookOpen, Bookmark, Check, ChevronDown, ChevronRight, CircleHelp, Command, FileText, FlaskConical, History, Info, LayoutGrid, Leaf, Library, Menu, Search, ShieldCheck, SlidersHorizontal, Sparkles, WifiOff } from 'lucide-react';
+import { Activity, ArrowDownToLine, ArrowRight, ArrowUpRight, BookOpen, Bookmark, Check, ChevronDown, ChevronRight, CircleHelp, Command, FileText, FlaskConical, History, Info, LayoutGrid, Leaf, Library, Menu, Search, ShieldCheck, SlidersHorizontal, Sparkles, WifiOff } from 'lucide-react';
 import { useRegisterSW } from 'virtual:pwa-register/react';
 import { topicIcons } from './components/Dashboard';
-import { Engine } from './components/Engine';
+import { CasePage } from './components/CasePage';
 import { Calculators } from './components/Calculators';
 import { ReviewLabel } from './components/RecommendationCard';
 import { Button } from './components/ui/button';
@@ -17,11 +17,11 @@ import { hasStatinReference } from './lib/statins';
 import { TopicFreshness, FreshnessReview, DataReleaseHistory } from './components/FreshnessReview';
 import { TopicCoverage } from './components/AreasDirectory';
 import { LibraryHome, LibraryNavigation } from './components/LibraryHome';
-import { SageHome } from './components/SageHome';
 import { SocietyReview } from './components/SocietyReview';
 import { AboutSage } from './components/AboutSage';
 import { societyFilters } from './lib/societies';
-import { pageForHash, workflowForPage, workflows } from './lib/navigation';
+import { pageForHash, workflowForPage } from './lib/navigation';
+import type { Mode } from './lib/plan';
 const VAWorkspace=lazy(()=>import('./components/VAWorkspace'));
 import publicationAlerts from './data/publication-alerts.json';
 import monitorReport from './data/source-check-report.json';
@@ -40,7 +40,9 @@ export default function App() {
   const [detail, setDetail] = useState<Recommendation | null>(null);
   const [updateId, setUpdateId] = useState<string | null>(null);
   const [info, setInfo] = useState<'about' | 'install' | null>(null);
-  const [profile, setProfile] = useState('va-visit');
+  const [mode, setModeState] = useState<Mode>(() => { try { return localStorage.getItem('sage-mode') === 'va' ? 'va' : 'general'; } catch { return 'general'; } });
+  const setMode = (m: Mode) => { setModeState(m); try { localStorage.setItem('sage-mode', m); } catch { /* storage unavailable */ } };
+  const [menu, setMenu] = useState(false);
   const [customCase,setCustomCase] = useState<FictionalCase|null>(null);
   const [engineKey, setEngineKey] = useState(0);
   const [online, setOnline] = useState(navigator.onLine);
@@ -61,33 +63,29 @@ export default function App() {
   }, []);
   const navigate = (p: string) => { window.location.hash = p; setPage(p); clearFilters(); window.scrollTo({ top: 0, behavior: 'instant' }); requestAnimationFrame(() => mainRef.current?.focus({ preventScroll: true })); };
   const search = (q: string) => { navigate('library'); setQuery(q); requestAnimationFrame(() => searchRef.current?.focus()); };
-  const chooseProfile = (id: string) => { setCustomCase(null); setProfile(id); setEngineKey(k => k + 1); navigate('engine'); };
+  const chooseProfile = (id: string) => { setCustomCase(profiles.find(p => p.id === id)?.data ?? null); setEngineKey(k => k + 1); navigate('case'); };
   const toggleSave = (id: string) => setSaved(p => { const next = new Set(p); if (next.has(id)) next.delete(id); else next.add(id); return next; });
   const workflow=workflowForPage(page);
   const libraryHome=page==='library'&&!query.trim()&&society==='all'&&strength==='all'&&evidence==='all';
   const openQuestion=(q:string)=>{if(q.startsWith('HFpEF')){navigate('heart-failure');setHfPhenotype('hfpef');}else if(q.startsWith('Statin'))navigate('dyslipidemia');else if(q.startsWith('Colorectal')){navigate('screening');setQuery('colorectal');}else navigate('vaccinations');};
   const topic = topics.find(t => t.id === page);
-  const pageTitle = topic?.title || ({ home:'Sage', overview: 'Overview', areas:'Clinical areas',va:'VA medications & access', cardiology:'Cardiac recommendations', statins:'Statin dose reference', library: 'Guideline library', engine: 'Decision engine', calculators: 'Risk calculators', updates: 'Guideline updates', sources: 'Source library', societies:'Societies & guideline versions', saved: 'Saved references' } as Record<string, string>)[page];
+  const pageTitle = topic?.title || ({ case:'Case', home:'Sage', overview: 'Overview', areas:'Clinical areas',va:'VA medications & access', cardiology:'Cardiac recommendations', statins:'Statin dose reference', library: 'Guideline library', engine: 'Decision engine', calculators: 'Risk calculators', updates: 'Guideline updates', sources: 'Source library', societies:'Societies & guideline versions', saved: 'Saved references' } as Record<string, string>)[page];
   const libraryRows=searchRecommendations(query,topic?.id,society).filter(r=>page==='cardiology'?cardiacTopics.includes(r.topic):page==='saved'?saved.has(r.id):true);
   const filtered=filterEvidence(libraryRows,strength,evidence,topic?.id==='heart-failure'?hfPhenotype:'all');
   const evidenceLevels=[...new Set(recommendations.map(r=>r.evidenceLevel||'ungraded'))].sort();
   const showEvidenceFilters=page==='library'||page==='cardiology'||!!topic&&cardiacTopics.includes(topic.id);
   const selectedUpdate = versions.find(v => v.id === updateId);
-  const workflowIcons={engine:Sparkles,library:BookOpen,calculators:Calculator};
-  const renderSidebar=()=> <><a className="brand" href="#home" onClick={e=>{e.preventDefault();navigate('home');}} aria-label="Sage home"><span className="brand-symbol"><Leaf size={25} strokeWidth={1.6}/></span><span>sage<span className="brand-period">.</span></span></a><div className="brand-caption">Clinical decisions. Clear evidence.</div><button className={`sage-home-nav ${page==='home'?'active':''}`} onClick={()=>navigate('home')}>Home <ArrowRight size={14}/></button><nav className="workflow-navigation" aria-label="Primary workflows">{workflows.map((w,index)=>{const Icon=workflowIcons[w.id];return <button className={`workflow-nav-item ${workflow===w.id?'active':''}`} key={w.id} onClick={()=>navigate(w.id)} aria-current={workflow===w.id?'page':undefined}><span className="workflow-nav-number">0{index+1}</span><Icon size={20}/><span><strong>{w.title}</strong><small>{w.description}</small></span></button>;})}</nav><div className="sidebar-bottom"><button className="install-button" onClick={()=>setInfo('install')}><ArrowDownToLine size={16}/>{installed?'Sage is installed':'Install Sage'}<ArrowUpRight size={14}/></button><div className="sidebar-version"><span>v0.8</span><button onClick={()=>setInfo('about')}>About Sage <ArrowUpRight size={11}/></button></div></div></>;
-  return <><a className="skip-link" href="#main-content" onClick={e => { e.preventDefault(); mainRef.current?.focus(); }}>Skip to content</a><aside className="sidebar">{renderSidebar()}</aside>
-    <div className="app-shell"><header className="topbar"><div className="breadcrumb">{page!=='home'&&<><button className="sage-home-crumb" onClick={()=>navigate('home')}>Sage</button><ChevronRight size={13}/></>}{page!==workflow&&<><span className="breadcrumb-home">{workflows.find(w=>w.id===workflow)!.title}</span><ChevronRight size={13}/></>}<span>{pageTitle}</span></div><div className="topbar-actions"><button className="global-search" onClick={() => search('')} aria-label="Open guideline search"><Search size={17}/><span>Search guidelines</span><kbd>⌘ K</kbd></button><button className="icon-button help-button" aria-label="About Sage and clinical verification" onClick={() => setInfo('about')}><CircleHelp size={19}/></button></div></header><nav className="mobile-workflows" aria-label="Primary workflows">{workflows.map(w=>{const Icon=workflowIcons[w.id];return <button key={w.id} className={workflow===w.id?'active':''} onClick={()=>navigate(w.id)} aria-current={workflow===w.id?'page':undefined}><Icon size={17}/><span>{w.title}</span></button>;})}</nav>
+  return <><a className="skip-link" href="#main-content" onClick={e => { e.preventDefault(); mainRef.current?.focus(); }}>Skip to content</a><div className="app-shell"><header className="app-header"><a className="brand-mini" href="#case" onClick={e=>{e.preventDefault();navigate('case');}} aria-label="Sage case"><Leaf size={19} strokeWidth={1.7}/><span>sage<i>.</i></span></a><div className="mode-toggle" role="group" aria-label="Guidance mode"><button type="button" className={mode==='general'?'on':''} aria-pressed={mode==='general'} onClick={()=>setMode('general')}>General</button><button type="button" className={mode==='va'?'on va':''} aria-pressed={mode==='va'} onClick={()=>setMode('va')}>West Haven VA</button></div><div className="header-right"><button className="hdr-search" onClick={() => search('')} aria-label="Search guidelines"><Search size={15}/><kbd>⌘ K</kbd></button><div className="ref-wrap"><button className="ref-btn" aria-expanded={menu} aria-haspopup="menu" onClick={()=>setMenu(m=>!m)}>Reference <ChevronDown size={14}/></button>{menu&&<><div className="ref-backdrop" onClick={()=>setMenu(false)}/><nav className="ref-menu" aria-label="Reference">{([['library','Guideline library'],['va','VA medications & formulary'],['statins','Statin doses'],['calculators','Risk calculators'],['societies','Societies & versions'],['updates','Updates'],['sources','Sources'],['saved','Saved']] as const).map(([id,label])=><button key={id} onClick={()=>{setMenu(false);navigate(id);}}>{label}</button>)}<div className="ref-sep"/><button onClick={()=>{setMenu(false);setInfo('install');}}>{installed?'Installed':'Install app'}</button><button onClick={()=>{setMenu(false);setInfo('about');}}>About</button></nav></>}</div></div></header>{page!=='case'&&<div className="back-bar"><button onClick={()=>navigate('case')}><ArrowRight size={13} style={{transform:'rotate(180deg)'}}/> Back to case</button><span>{pageTitle}</span></div>}
 
     {!online && <div className="connection-banner"><WifiOff size={15}/>You’re offline. Showing the bundled reference snapshot; check source-specific dates. External sources require a connection.</div>}
     {needRefresh && <div className="connection-banner"><Info size={15}/>A new app snapshot is available. Updating clears the current case.<button onClick={() => updateServiceWorker(true)}>Reload & update <ArrowRight size={13}/></button></div>}
-    <main id="main-content" className="main-content" ref={mainRef} tabIndex={-1}>
-      {page==='home'&&<SageHome navigate={navigate}/>}
+    <main id="main-content" className={`main-content ${page==='case'?'main-case':''}`} ref={mainRef} tabIndex={-1}>
       {workflow==='library'&&<LibraryNavigation page={page} navigate={navigate}/>}
       {page==='statins'&&<StatinReference standalone/>}
       {page==='societies'&&<SocietyReview onBrowse={value=>{navigate('library');setSociety(value);}}/>}
       {page==='va' && <Suspense fallback={<div className="source-summary">Loading the bundled VA formulary snapshot…</div>}><VAWorkspace/></Suspense>}
-      <div hidden={page!=='calculators'} className="calculator-workflow-panel"><Calculators onEngine={inputs=>{setCustomCase({...profiles[0].data,...inputs,veteran:false});setEngineKey(k=>k+1);navigate('engine');}}/></div>
-      <div hidden={page!=='engine'} className="engine-workflow-panel"><Engine key={engineKey} initialProfile={profile} initialCase={customCase} saved={saved} toggleSave={toggleSave} onOpen={setDetail} onLibrary={navigate} onVa={()=>navigate('va')}/></div>
+      <div hidden={page!=='calculators'} className="calculator-workflow-panel"><Calculators onEngine={inputs=>{setCustomCase({...profiles[0].data,...inputs,veteran:false});setEngineKey(k=>k+1);navigate('case');}}/></div>
+      <div hidden={page!=='case'} className="case-panel"><CasePage key={engineKey} mode={mode} seed={customCase} saved={saved} toggleSave={toggleSave} onOpen={setDetail}/></div>
       {(page === 'library' || page==='cardiology' || topic || page === 'saved') && <div className="page-enter"><div className="page-heading"><div className="eyebrow">{page === 'saved' ? 'YOUR REFERENCE DESK' : '02 / GUIDELINE LIBRARY'}</div><h1>{topic?.title || (page==='cardiology'?'Cardiac recommendations':page === 'saved' ? 'Keep the evidence close.' : 'Guideline library')}</h1><p>{topic?.description || (page==='cardiology'?'Heart failure, lipids, blood pressure, PAD, secondary prevention and anticoagulation, with original recommendation classes and evidence levels.':page === 'saved' ? 'References saved in this session. Your collection clears on reload.' : 'Look up a clinical question, browse recommendations and review the evidence. No case entry required.')}</p></div>{topic && <div className="topic-context"><span className={`topic-icon topic-${topic.color}`}>{(() => { const Icon = topicIcons[topic.id]; return <Icon size={24}/>; })()}</span><div><strong>{topic.society}</strong><p>{topic.id === 'heart-failure' ? 'Chronic HF across EF phenotypes · Separate US, ACC consensus and ESC source versions' : 'Each record retains its own publication year and source version.'}</p></div></div>}
       {topic&&<details className="library-context-note"><summary>Scope & source review <ChevronDown size={14}/></summary><TopicCoverage topic={topic.id}/><TopicFreshness topic={topic.id}/></details>}{topic&&['dyslipidemia','secondary-prevention'].includes(topic.id)&&<StatinReference/>}{topic?.id==='heart-failure'&&<HeartFailureContext value={hfPhenotype} onChange={setHfPhenotype} onCase={chooseProfile}/>}<div className="library-toolbar"><div className="library-search"><Search size={18}/><input ref={searchRef} aria-label="Search reference library" value={query} onChange={e => setQuery(e.target.value)} placeholder="Search recommendations, conditions, or medications…" autoComplete="off" spellCheck={false}/>{query && <button onClick={() => setQuery('')} aria-label="Clear search">Clear</button>}</div><label className="society-select"><SlidersHorizontal size={15}/><span className="sr-only">Filter by society</span><select value={society} onChange={e => setSociety(e.target.value)}><option value="all">All societies</option>{societyFilters.map(s=><option key={s.value} value={s.value}>{s.label}</option>)}</select><ChevronDown size={13}/></label></div>
       {showEvidenceFilters&&!libraryHome&&<details className="library-filter-disclosure"><summary>Recommendation class & evidence filters <ChevronDown size={14}/></summary><EvidenceFilters strength={strength} evidence={evidence} onStrength={setStrength} onEvidence={setEvidence} levels={evidenceLevels}/></details>}

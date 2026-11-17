@@ -12,7 +12,7 @@ export default defineConfig(({ mode }) => ({
     includeAssets: ['favicon.svg', 'icon-192.png', 'icon-512.png'],
     manifest: {
       name: 'Sage · Clinical reference', short_name: 'Sage',
-      description: 'A fictional-case prototype for traceable clinical guideline reference. Medical verification pending.',
+      description: 'Guideline-based decision support from a patient\u2019s numbers and current medications.',
       theme_color: '#2e5145', background_color: '#f8f9f6', display: 'standalone',
       icons: [
         { src: 'icon-192.png', sizes: '192x192', type: 'image/png', purpose: 'any' },
