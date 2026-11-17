@@ -54,6 +54,25 @@ describe('statin gap analysis', () => {
   });
 });
 
+describe('concrete options', () => {
+  it('names the statins behind "high intensity" and how to step up', () => {
+    const a = find(buildPlan(base('post-mi', { statinDrug: 'atorvastatin', statinDose: 20, maxStatin: false }), 'general'), 'statin')!;
+    expect(a.options!.map(o => o.name)).toEqual(['Atorvastatin', 'Rosuvastatin']);
+    expect(a.options![0].detail).toBe('40–80 mg daily');
+    expect(a.detail).toContain('Raise atorvastatin to 40–80 mg');
+    expect(a.optionsNote).toContain('50%');
+    const start = find(buildPlan(base('post-mi', { statinDrug: 'none' }), 'general'), 'statin')!;
+    expect(start.options!.map(o => o.name)).toEqual(['Atorvastatin', 'Rosuvastatin']);
+  });
+  it('lists first-line BP classes with doses and adapts to the case', () => {
+    const bp = (o: object) => find(buildPlan(base('va-visit', { sbp: 152, dbp: 90, ...o }), 'general'), 'bp')!;
+    expect(bp({}).options!.map(o => o.name)).toEqual(['Thiazide-type diuretic', 'ACE inhibitor or ARB', 'Dihydropyridine calcium channel blocker']);
+    expect(bp({}).optionsNote).toContain('two agents');
+    expect(bp({ uacr: 200, ckd: true }).options![0].name).toBe('ACE inhibitor or ARB');
+    expect(bp({ onAceArb: true, bpTreatment: true }).options!.map(o => o.name)).not.toContain('ACE inhibitor or ARB');
+  });
+});
+
 describe('diabetes outside the statin age band', () => {
   it('says so in general mode and recommends a statin in VA mode', () => {
     const d = base('va-visit', { age: 36, ckd: true, smoker: true, diabetes: true });

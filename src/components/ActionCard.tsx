@@ -51,6 +51,7 @@ export function ActionCard({ action: a, mode, onOpen }: { action: Action; mode: 
   return <article className={`act act-${a.kind}`}>
     <div className="act-head"><span className="act-kind">{a.kind === 'ok' && <Check size={11}/>}{kindLabel[a.kind]}</span><h3>{a.title}</h3></div>
     {a.detail && <p className="act-detail">{a.detail}</p>}
+    {a.options && <div className="act-options"><ul>{a.options.map(o => <li key={o.name}><b>{o.name}</b> <span>{o.detail}</span></li>)}</ul>{a.optionsNote && <p>{a.optionsNote}</p>}</div>}
     {a.bullets && <ul className="act-bullets">{a.bullets.map(b => <li key={b}>{b}</li>)}</ul>}
     {mode === 'va' && a.formulary && a.formulary.length > 0 && <Formulary classes={a.formulary}/>}
     {count > 0 && <details className="act-why"><summary>Why · {a.primary.map(m => sourceFor(m.recommendation).society.split(' ·')[0]).filter((v, i, arr) => arr.indexOf(v) === i).join(', ')}{a.alt.length ? ` · ${a.alt.length} from ${a.altLabel || 'other societies'}` : ''}</summary>
