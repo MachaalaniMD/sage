@@ -120,3 +120,10 @@
  .main-case{padding:12px 12px 28px!important}
  .formulary-class{flex-basis:100%}
 }
+
+.act-options{margin:8px 0 0;padding:9px 12px;border-radius:8px;background:#f5f8f3}
+.act-options ul{list-style:none;margin:0;padding:0;display:grid;gap:3px}
+.act-options li{font-size:13.5px;color:#2c3d34}
+.act-options li b{font-weight:600}
+.act-options li span{color:#55645b}
+.act-options p{margin:7px 0 0;font-size:12px;line-height:1.45;color:#6b766e}

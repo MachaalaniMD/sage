@@ -15,6 +15,9 @@ export interface Action {
   alt: Match[];
   altLabel?: string;
   bullets?: string[];
+  /** Concrete choices to pick from, with a one-line note on what they are. */
+  options?: { name: string; detail: string }[];
+  optionsNote?: string;
   formulary?: FormularyClass[];
 }
 
@@ -61,6 +64,7 @@ export function buildPlan(input: FictionalCase, mode: Mode): Plan {
 
   const hasAscvd = c.ascvd || c.priorMi;
   const va = mode === 'va';
+  const hfType = heartFailurePhenotype(c);
 
   // ---- Statin and lipids ---------------------------------------------------
   const cur: StatinIntensity = statinIntensity(c.statinDrug, c.statinDose);
@@ -69,6 +73,12 @@ export function buildPlan(input: FictionalCase, mode: Mode): Plan {
   const accReq: 'high' | 'moderate' | null = hasAscvd || has('diabetes-high-risk', 'lipids-prevent-high') ? 'high'
     : has('diabetes-statin', 'lipids-prevent-intermediate') ? 'moderate' : null;
   const vaRule = hasAscvd ? 'secondary' : has('va-statin') ? 'primary' : null;
+  const statinOptions = (level: 'high' | 'moderate') => level === 'high'
+    ? { optionsNote: 'High intensity = lowers LDL-C by about 50% or more (ACC/AHA 2026 Table 6).', options: [{ name: 'Atorvastatin', detail: '40–80 mg daily' }, { name: 'Rosuvastatin', detail: '20–40 mg daily' }] }
+    : { optionsNote: 'Moderate intensity = lowers LDL-C by about 30–49% (ACC/AHA 2026 Table 6).', options: [{ name: 'Atorvastatin', detail: '10–20 mg daily' }, { name: 'Rosuvastatin', detail: '5–10 mg daily' }, { name: 'Simvastatin', detail: '20–40 mg daily' }, { name: 'Pravastatin', detail: '40–80 mg daily' }, { name: 'Lovastatin', detail: '40–80 mg daily' }, { name: 'Pitavastatin', detail: '1–4 mg daily' }] };
+  const stepUp = c.statinDrug === 'atorvastatin' ? 'Raise atorvastatin to 40–80 mg, or switch to rosuvastatin 20–40 mg.'
+    : c.statinDrug === 'rosuvastatin' ? 'Raise rosuvastatin to 20–40 mg, or switch to atorvastatin 40–80 mg.'
+    : 'Switch to atorvastatin 40–80 mg or rosuvastatin 20–40 mg.';
   const lipidRecs = pick('diabetes-statin', 'diabetes-high-risk', 'lipids-prevent-high', 'lipids-prevent-intermediate', 'va-statin', 'secondary-lipids-standard', 'secondary-lipids-very-high', 'secondary-va-lipids');
   if (hasAscvd) lipidRecs.push(...mk('secondary-lipids-standard', 'Clinical ASCVD.'), ...mk('secondary-va-lipids', 'Clinical ASCVD.'));
   const nonstatin = c.ezetimibe || c.pcsk9;
@@ -87,14 +97,22 @@ export function buildPlan(input: FictionalCase, mode: Mode): Plan {
   }
   if (required) {
     if (!onStatin) {
-      add({ id: 'statin', kind: 'start', title: `Start ${required}-intensity statin`, detail: `No statin entered. Recommended: ${requirement}.`, recs: lipidRecs, formulary: [required === 'high' ? 'statin-high' : 'statin-moderate', ...(va && vaRule === 'secondary' ? ['ezetimibe' as const] : [])] });
+      add({ id: 'statin', kind: 'start', title: `Start ${required}-intensity statin`, detail: `No statin entered. Recommended: ${requirement}.`, recs: lipidRecs, ...statinOptions(required), formulary: [required === 'high' ? 'statin-high' : 'statin-moderate', ...(va && vaRule === 'secondary' ? ['ezetimibe' as const] : [])] });
     } else if (!satisfied && c.maxStatin) {
       add({ id: 'statin', kind: 'check', title: 'Below recommended intensity, marked maximally tolerated', detail: `On ${curLabel}. Recommended: ${requirement}. A nonstatin add-on is the usual route when the statin cannot be raised.`, recs: lipidRecs, formulary: ['ezetimibe'] });
     } else if (!satisfied) {
-      add({ id: 'statin', kind: 'change', title: `Intensify statin to ${required} intensity`, detail: `On ${curLabel}. Recommended: ${requirement}.${va && vaRule === 'secondary' ? ' Adding ezetimibe to the current moderate-intensity statin also meets the VA/DoD suggestion.' : ''}`, recs: lipidRecs, formulary: [required === 'high' ? 'statin-high' : 'statin-moderate', ...(va && vaRule === 'secondary' ? ['ezetimibe' as const] : [])] });
+      add({ id: 'statin', kind: 'change', title: `Intensify statin to ${required} intensity`, detail: `On ${curLabel}. Recommended: ${requirement}. ${required === 'high' ? stepUp : ''}${va && vaRule === 'secondary' ? ' Adding ezetimibe to the current moderate-intensity statin also meets the VA/DoD suggestion.' : ''}`, recs: lipidRecs, ...statinOptions(required), formulary: [required === 'high' ? 'statin-high' : 'statin-moderate', ...(va && vaRule === 'secondary' ? ['ezetimibe' as const] : [])] });
     } else {
       add({ id: 'statin', kind: 'ok', title: 'Statin intensity meets guidance', detail: `On ${curLabel}. Recommended: ${requirement}.`, recs: lipidRecs });
     }
+  }
+  // Diabetes outside the encoded 40–75 statin recommendation: say so instead of staying silent.
+  if (!required && !onStatin && !hasAscvd && c.diabetes && (c.age < 40 || c.age > 75)) {
+    const factors = [c.ckd && `CKD (eGFR ${c.egfr})`, c.uacr !== null && c.uacr >= 30 && `UACR ${c.uacr}`, c.smoker && 'current smoking', c.hypertensionDiagnosis && 'hypertension', c.ldl >= 160 && `LDL-C ${c.ldl}`].filter(Boolean);
+    const ascvd10 = result.risk?.tenYear?.ascvd;
+    add({ id: 'statin-outside', kind: 'check', title: `Statin: age ${c.age} is outside the 40–75 diabetes recommendation`,
+      detail: `The encoded ACC/AHA diabetes statin recommendation covers ages 40–75, so Sage neither recommends nor excludes one here. ${factors.length ? `Entered: ${factors.join(', ')}. ` : ''}${ascvd10 !== undefined ? `PREVENT 10-year ASCVD ${(ascvd10 * 100).toFixed(1)}%. ` : ''}Individualize.`,
+      recs: mk('lipids-diabetes', 'Diabetes without clinical ASCVD.'), formulary: ['statin-moderate'] });
   }
   // LDL above goal on a high-intensity or maximally tolerated statin (ASCVD)
   const goal = c.veryHighRisk === 'yes' ? 55 : 70;
@@ -116,7 +134,18 @@ export function buildPlan(input: FictionalCase, mode: Mode): Plan {
     const recs = [...bpRecs, ...(va ? mk('va-htn-target', 'VA/DoD systolic goal <130 mmHg.') : [])];
     const goalText = va ? 'VA/DoD goal: systolic <130 mmHg.' : hasAscvd || c.diabetes || c.ckd ? 'Treatment threshold: systolic ≥130 or diastolic ≥80 in this group.' : 'Treatment threshold: ≥140/90.';
     const albuminuric = c.diabetes && c.uacr !== null && c.uacr >= 30;
-    add({ id: 'bp', kind: c.bpTreatment ? 'check' : 'start', title: c.bpTreatment ? 'BP above goal on treatment' : 'Start BP treatment', detail: `Average ${c.sbp}/${c.dbp} mmHg. ${goalText}${albuminuric ? ' Albuminuria: ACEi/ARB preferred.' : ''}`, recs, formulary: albuminuric ? ['acearb', 'thiazide', 'ccb'] : ['thiazide', 'acearb', 'ccb'] });
+    const ace = { name: 'ACE inhibitor or ARB', detail: 'lisinopril 10–40 mg daily, or losartan 50–100 mg daily' };
+    const thiazide = { name: 'Thiazide-type diuretic', detail: 'chlorthalidone 12.5–25 mg daily' };
+    const ccb = { name: 'Dihydropyridine calcium channel blocker', detail: 'amlodipine 5–10 mg daily' };
+    const twoDrugs = c.sbp >= 150 || c.dbp >= 100;
+    const bpNotes = [
+      'Usual first-line classes; typical dose ranges, confirm before prescribing.',
+      albuminuric ? 'Albuminuria: ACEi/ARB first.' : '',
+      hfType === 'hfref' ? 'HFrEF: use the HF drugs first (see the HFrEF card).' : '',
+      twoDrugs ? 'About 20/10 or more above goal: starting two agents, ideally as a single-pill combination, is usual.' : '',
+      c.onAceArb ? 'Already on an ACEi/ARB: add a thiazide-type diuretic or calcium channel blocker, or raise the dose.' : ''
+    ].filter(Boolean).join(' ');
+    add({ id: 'bp', kind: c.bpTreatment ? 'check' : 'start', title: c.bpTreatment ? 'BP above goal on treatment' : 'Start BP treatment', detail: `Average ${c.sbp}/${c.dbp} mmHg. ${goalText}`, optionsNote: bpNotes, options: c.onAceArb ? [thiazide, ccb, { name: 'Raise ACEi/ARB dose', detail: 'to maximum tolerated' }] : albuminuric ? [ace, thiazide, ccb] : [thiazide, ace, ccb], recs, formulary: albuminuric ? ['acearb', 'thiazide', 'ccb'] : ['thiazide', 'acearb', 'ccb'] });
   } else if (c.hypertensionDiagnosis && c.bpTreatment) {
     add({ id: 'bp', kind: 'ok', title: 'BP at goal on treatment', detail: `Average ${c.sbp}/${c.dbp} mmHg.`, recs: pick('htn-acc-general-goal', 'va-htn-target') });
   }
@@ -137,7 +166,6 @@ export function buildPlan(input: FictionalCase, mode: Mode): Plan {
   const nsmra = pick('ckd-va-finerenone', 'ckd-kdigo-nsmra');
   if (nsmra.length) add({ id: 'nsmra', kind: c.onMra ? 'ok' : 'start', title: c.onMra ? 'On an MRA' : 'Consider finerenone', detail: `Type 2 diabetes, UACR ${c.uacr} mg/g, eGFR ${c.egfr}, K ${c.potassium} on maximally tolerated ACEi/ARB.`, recs: nsmra, formulary: c.onMra ? undefined : ['nsmra'] });
 
-  const hfType = heartFailurePhenotype(c);
   if (hfType === 'hfref') {
     const missing: string[] = [];
     const formulary: FormularyClass[] = [];
